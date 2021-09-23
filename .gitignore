@@ -129,4 +129,4 @@ dmypy.json
 .pyre/
 
 # Extras
-.tsv
+*.tsv
