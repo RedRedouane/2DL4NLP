@@ -3,9 +3,9 @@ name: "BIG_model"
 data:
     src: "en"
     trg: "fr"
-    train: "../../../joeynmt/test/data/test_data/train"
-    dev: "../../../joeynmt/test/data/test_data/val"
-    test: "../../../joeynmt/test/data/test_data/test"
+    train: "test/data/test_data/train"
+    dev: "test/data/test_data/val"
+    test: "test/data/test_data/test"
     level: "bpe"
     lowercase: False
     max_sent_length: 50

@@ -4,9 +4,9 @@ data:
     src: "en"
     trg: "fr"
     # generate data with scripts/generate_reverse_task.py
-    train: "../../../joeynmt/test/data/test_data/train"
-    dev: "../../../joeynmt/test/data/test_data/val"
-    test: "../../../joeynmt/test/data/test_data/test"
+    train: "test/data/test_data/train"
+    dev: "test/data/test_data/val"
+    test: "test/data/test_data/test"
     level: "word"
     lowercase: True
     max_sent_length: 25
