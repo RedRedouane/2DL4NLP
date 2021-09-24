@@ -134,3 +134,4 @@ dmypy.json
 
 # Extras
 *.tsv
+*.DS_Store
