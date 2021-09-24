@@ -77,6 +77,10 @@ target/
 # Jupyter Notebook
 .ipynb_checkpoints
 
+# Environment ignore
+jnmt
+joeynmt
+
 # IPython
 profile_default/
 ipython_config.py
