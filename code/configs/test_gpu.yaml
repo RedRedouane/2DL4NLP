@@ -35,7 +35,7 @@ training:
     logging_freq: 1000
     eval_metric: "bleu"
     model_dir: "models/BIG_model"
-    overwrite: False
+    overwrite: True
     shuffle: True
     use_cuda: True
     max_output_length: 100
