@@ -20,6 +20,6 @@ module load NCCL/2.5.6-CUDA-10.1.243
 # Your job starts in the directory where you call sbatch
 cd $HOME/2DL4NLP/code/
 # Activate your environment
-source $HOME/jnmt/bin/activate
+source $HOME/joeynmt/jnmt/bin/activate
 # Run your code
 srun python -u -m joeynmt train configs/test_gpu.yaml
