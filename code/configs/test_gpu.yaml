@@ -45,19 +45,19 @@ model:
     encoder:
         rnn_type: "lstm"
         embeddings:
-            embedding_dim: 500
+            embedding_dim: 100
             scale: False
-        hidden_size: 500
+        hidden_size: 100
         bidirectional: True
         dropout: 0.2
         num_layers: 1
     decoder:
         rnn_type: "lstm"
         embeddings:
-            embedding_dim: 500
+            embedding_dim: 100
             scale: False
         emb_scale: False
-        hidden_size: 1000
+        hidden_size: 200
         dropout: 0.2
         hidden_dropout: 0.2
         num_layers: 1
