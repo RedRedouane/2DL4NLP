@@ -22,4 +22,4 @@ cd $HOME/joeynmt/
 # Activate your environment
 source $HOME/joeynmt/jnmt/bin/activate
 # Run your code
-srun python -u -m joeynmt train configs/test_gpu.yaml
+srun python -u -m joeynmt train ../2DL4NLP/code/configs/test_gpu.yaml
