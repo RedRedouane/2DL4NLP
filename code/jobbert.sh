@@ -5,7 +5,7 @@
 #SBATCH --job-name=test_JOEYNMT
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=4
-#SBATCH --time=1:00:00
+#SBATCH --time=24:00:00
 #SBATCH --mem=32000M
 #SBATCH --output=test_JOEYNMT.out
 
