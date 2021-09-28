@@ -2,12 +2,12 @@
 
 #SBATCH --partition=gpu_shared_course
 #SBATCH --gres=gpu:1
-#SBATCH --job-name=test_JOEYNMT
+#SBATCH --job-name=test_JOEYNMT_TR_EN
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=4
 #SBATCH --time=24:00:00
 #SBATCH --mem=32000M
-#SBATCH --output=test_JOEYNMT.out
+#SBATCH --output=test_JOEYNMT_TR_EN.out
 
 module purge
 module load 2019
