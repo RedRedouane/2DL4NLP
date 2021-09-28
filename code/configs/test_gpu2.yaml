@@ -42,8 +42,6 @@ training:
     print_valid_sents: [0, 1, 2]
 
 model:
-    initializer: "uniform"              # Zoph & Luong
-    init_weight: [-0.08, 0.08]          # Zoph & Luong
     encoder:
         rnn_type: "lstm"
         embeddings:
