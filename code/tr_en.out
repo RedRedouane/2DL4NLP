@@ -1,11 +1,19 @@
+2021-09-30 18:29:56,641 - INFO - root - Hello! This is Joey-NMT (version 1.3).
+2021-09-30 18:29:56,718 - INFO - joeynmt.data - Loading training data...
 Traceback (most recent call last):
   File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 193, in _run_module_as_main
-srun: error: r31n4: task 0: Exited with exit code 1
     "__main__", mod_spec)
   File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 85, in _run_code
     exec(code, run_globals)
-  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 3, in <module>
-    from joeynmt.training import train
-  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 17, in <module>
-    import torch
-ModuleNotFoundError: No module named 'torch'
+  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 48, in <module>
+    main()
+  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 35, in main
+    train(cfg_file=args.config_path, skip_test=args.skip_test)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 817, in train
+    data_cfg=cfg["data"])
+  File "/home/lcur0008/joeynmt/joeynmt/data.py", line 81, in load_data
+    lambda x: len(vars(x)['src'])
+  File "/home/lcur0008/.local/lib/python3.7/site-packages/torchtext/legacy/datasets/translation.py", line 37, in __init__
+    with io.open(src_path, mode='r', encoding='utf-8') as src_file, \
+FileNotFoundError: [Errno 2] No such file or directory: '../2DL4NLP/all_data/train.tr'
+srun: error: r31n4: task 0: Exited with exit code 1
