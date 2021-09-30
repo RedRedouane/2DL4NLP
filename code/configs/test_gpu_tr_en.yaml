@@ -3,9 +3,9 @@ name: "BIG_model"
 data:
     src: "tr"
     trg: "en"
-    train: "test/data/en_tr/train"
-    dev: "test/data/en_tr/val"
-    test: "test/data/en_tr/test"
+    train: "test/data/en_tr/en_tr_train"
+    dev: "test/data/en_tr/en_tr_val"
+    test: "test/data/en_tr/en_tr_test"
     level: "bpe"
     lowercase: False
     max_sent_length: 50                 # Luong
@@ -48,7 +48,7 @@ model:
             embedding_dim: 620          # Gulcehre
             scale: False
         hidden_size: 1000               # Luong & Zoph
-        bidirectional: False            # all
+        bidirectional: True            # all
         dropout: 0.2
         num_layers: 1
     decoder:
