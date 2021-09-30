@@ -3,9 +3,9 @@ name: "BIG_model"
 data:
     src: "tr"
     trg: "en"
-    train: "test/data/en_tr/en_tr_train"
-    dev: "test/data/en_tr/en_tr_val"
-    test: "test/data/en_tr/en_tr_test"
+    train: "../2DL4NLP/data/train"
+    dev: "../2DL4NLP/data/val"
+    test: "../2DL4NLP/data/test"
     level: "bpe"
     lowercase: False
     max_sent_length: 50                 # Luong
