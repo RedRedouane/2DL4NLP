@@ -1,0 +1,11 @@
+Traceback (most recent call last):
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 193, in _run_module_as_main
+srun: error: r31n4: task 0: Exited with exit code 1
+    "__main__", mod_spec)
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 3, in <module>
+    from joeynmt.training import train
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 17, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
