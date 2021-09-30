@@ -3,9 +3,9 @@ name: "tr_en_model"
 data:
     src: "tr"
     trg: "en"
-    train: "../2DL4NLP/data/train"
-    dev: "../2DL4NLP/data/val"
-    test: "../2DL4NLP/data/test"
+    train: "../2DL4NLP/all_data/train"
+    dev: "../2DL4NLP/all_data/val"
+    test: "../2DL4NLP/all_data/test"
     level: "bpe"
     lowercase: False
     max_sent_length: 50                 # Luong
