@@ -3,9 +3,9 @@ name: "BIG_model"
 data:
     src: "tr"
     trg: "en"
-    train: "test/data/test_data/train"
-    dev: "test/data/test_data/val"
-    test: "test/data/test_data/test"
+    train: "data/train"
+    dev: "data/val"
+    test: "data/test"
     level: "bpe"
     lowercase: False
     max_sent_length: 50                 # Luong
@@ -54,7 +54,7 @@ model:
     decoder:
         rnn_type: "lstm"
         embeddings:
-            embedding_dim: 620          # uncertain
+            embedding_dim: 1000         # uncertain
             scale: False
         emb_scale: False
         hidden_size: 1000               # all
