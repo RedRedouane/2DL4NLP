@@ -7,7 +7,7 @@ data:
     train: "../2DL4NLP/all_data/train"
     dev: "../2DL4NLP/all_data/val"
     test: "../2DL4NLP/all_data/test"
-    level: "word"
+    level: "bpe"
     lowercase: True
     max_sent_length: 50
     src_voc_min_freq: 0
