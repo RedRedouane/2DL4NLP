@@ -1,0 +1,76 @@
+name: "tr_en_model_new"
+
+data:
+    src: "tr"
+    trg: "en"
+    # generate data with scripts/generate_reverse_task.py
+    train: "../2DL4NLP/all_data/train"
+    dev: "../2DL4NLP/all_data/val"
+    test: "../2DL4NLP/all_data/test"
+    level: "word"
+    lowercase: True
+    max_sent_length: 50
+    src_voc_min_freq: 0
+    src_voc_limit: 10000
+    trg_voc_min_freq: 0
+    trg_voc_limit: 10000
+    #src_vocab: "reverse_model/src_vocab.txt"
+    #trg_vocab: "reverse_model/trg_vocab.txt"
+
+testing:
+    beam_size: 5
+    alpha: 1.0
+
+training:
+    random_seed: 42
+    optimizer: "sgd"
+    learning_rate: 0.5
+    learning_rate_min: 0.0002
+    weight_decay: 0.0
+    clip_grad_norm: 5.0
+    batch_size: 80
+    batch_type: "sentence"
+    scheduling: "plateau"
+    patience: 1
+    decrease_factor: 0.9
+    early_stopping_metric: "eval_metric"
+    epochs: 2
+    validation_freq: 1000
+    logging_freq: 100
+    eval_metric: "bleu"
+    model_dir: "models/tr_en_model_new"
+    overwrite: False
+    shuffle: True
+    use_cuda: True
+    max_output_length: 30
+    print_valid_sents: [0, 3, 6]
+    keep_best_ckpts: 2
+
+model:
+    initializer: "xavier"
+    embed_initializer: "normal"
+    embed_init_weight: 0.1
+    bias_initializer: "zeros"
+    init_rnn_orthogonal: False
+    lstm_forget_gate: 0.
+    encoder:
+        rnn_type: "lstm"
+        embeddings:
+            embedding_dim: 620
+            scale: False
+        hidden_size: 1000
+        bidirectional: True
+        dropout: 0.1
+        num_layers: 1
+    decoder:
+        rnn_type: "lstm"
+        embeddings:
+            embedding_dim: 620
+            scale: False
+        hidden_size: 1000
+        dropout: 0.1
+        hidden_dropout: 0.1
+        num_layers: 1
+        input_feeding: True
+        init_hidden: "zero"
+        attention: "luong"
