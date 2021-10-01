@@ -1,12 +1,12 @@
-name: "ka_en_model"
+name: "el_en_short_model"
 
 data:
-    src: "ka"
+    src: "el"
     trg: "en"
     train: "../2DL4NLP/all_data/train"
     dev: "../2DL4NLP/all_data/val"
     test: "../2DL4NLP/all_data/test"
-    level: "bpe"
+    level: "word"
     lowercase: False
     max_sent_length: 50                 # Luong
     src_voc_min_freq: 0
@@ -20,26 +20,27 @@ testing:
 
 training:
     random_seed: 42
-    optimizer: "sgd"                    # all
+    optimizer: "adam"                    # all
     learning_rate: 0.5                  # Zoph
     learning_rate_min: 0.0000005
     weight_decay: 0.0
     clip_grad_norm: 5.0                 # all
-    batch_size: 80                      # Gulcehre
+    batch_size: 10                      # Gulcehre
     scheduling: "plateau"
     patience: 1                         # Zoph
     decrease_factor: 0.9                # Zoph
     early_stopping_metric: "eval_metric"
-    epochs: 100                         # Zoph
+    epochs: 6                         # Zoph
     validation_freq: 7362
     logging_freq: 1000
     eval_metric: "bleu"
-    model_dir: "models/ka_en_model"
-    overwrite: True
+    model_dir: "models/el_en_short_model"
+    overwrite: False
     shuffle: True
     use_cuda: True
-    max_output_length: 60
+    max_output_length: 30
     print_valid_sents: [0, 1, 2]
+    keep_best_ckpts: 2
 
 model:
     encoder:

@@ -1,0 +1,145 @@
+2021-10-01 12:03:01,024 - INFO - root - Hello! This is Joey-NMT (version 1.3).
+2021-10-01 12:03:01,095 - INFO - joeynmt.data - Loading training data...
+2021-10-01 12:03:01,195 - INFO - joeynmt.data - Building vocabulary...
+2021-10-01 12:03:03,543 - INFO - joeynmt.data - Loading dev data...
+2021-10-01 12:03:03,553 - INFO - joeynmt.data - Loading test data...
+2021-10-01 12:03:03,569 - INFO - joeynmt.data - Data loaded.
+2021-10-01 12:03:03,570 - INFO - joeynmt.model - Building an encoder-decoder model...
+2021-10-01 12:03:04,714 - INFO - joeynmt.model - Enc-dec model built.
+2021-10-01 12:03:04,722 - INFO - joeynmt.training - Total params: 51313120
+2021-10-01 12:03:09,243 - INFO - joeynmt.helpers - cfg.name                           : el_en_short_model
+2021-10-01 12:03:09,243 - INFO - joeynmt.helpers - cfg.data.src                       : el
+2021-10-01 12:03:09,244 - INFO - joeynmt.helpers - cfg.data.trg                       : en
+2021-10-01 12:03:09,244 - INFO - joeynmt.helpers - cfg.data.train                     : ../2DL4NLP/all_data/train
+2021-10-01 12:03:09,244 - INFO - joeynmt.helpers - cfg.data.dev                       : ../2DL4NLP/all_data/val
+2021-10-01 12:03:09,244 - INFO - joeynmt.helpers - cfg.data.test                      : ../2DL4NLP/all_data/test
+2021-10-01 12:03:09,244 - INFO - joeynmt.helpers - cfg.data.level                     : word
+2021-10-01 12:03:09,244 - INFO - joeynmt.helpers - cfg.data.lowercase                 : False
+2021-10-01 12:03:09,244 - INFO - joeynmt.helpers - cfg.data.max_sent_length           : 50
+2021-10-01 12:03:09,244 - INFO - joeynmt.helpers - cfg.data.src_voc_min_freq          : 0
+2021-10-01 12:03:09,244 - INFO - joeynmt.helpers - cfg.data.src_voc_limit             : 10000
+2021-10-01 12:03:09,244 - INFO - joeynmt.helpers - cfg.data.trg_voc_min_freq          : 0
+2021-10-01 12:03:09,244 - INFO - joeynmt.helpers - cfg.data.trg_voc_limit             : 10000
+2021-10-01 12:03:09,244 - INFO - joeynmt.helpers - cfg.testing.beam_size              : 5
+2021-10-01 12:03:09,244 - INFO - joeynmt.helpers - cfg.testing.alpha                  : 1.0
+2021-10-01 12:03:09,244 - INFO - joeynmt.helpers - cfg.training.random_seed           : 42
+2021-10-01 12:03:09,244 - INFO - joeynmt.helpers - cfg.training.optimizer             : adam
+2021-10-01 12:03:09,245 - INFO - joeynmt.helpers - cfg.training.learning_rate         : 0.5
+2021-10-01 12:03:09,245 - INFO - joeynmt.helpers - cfg.training.learning_rate_min     : 5e-07
+2021-10-01 12:03:09,245 - INFO - joeynmt.helpers - cfg.training.weight_decay          : 0.0
+2021-10-01 12:03:09,245 - INFO - joeynmt.helpers - cfg.training.clip_grad_norm        : 5.0
+2021-10-01 12:03:09,245 - INFO - joeynmt.helpers - cfg.training.batch_size            : 10
+2021-10-01 12:03:09,245 - INFO - joeynmt.helpers - cfg.training.scheduling            : plateau
+2021-10-01 12:03:09,245 - INFO - joeynmt.helpers - cfg.training.patience              : 1
+2021-10-01 12:03:09,245 - INFO - joeynmt.helpers - cfg.training.decrease_factor       : 0.9
+2021-10-01 12:03:09,245 - INFO - joeynmt.helpers - cfg.training.early_stopping_metric : eval_metric
+2021-10-01 12:03:09,245 - INFO - joeynmt.helpers - cfg.training.epochs                : 6
+2021-10-01 12:03:09,245 - INFO - joeynmt.helpers - cfg.training.validation_freq       : 7362
+2021-10-01 12:03:09,245 - INFO - joeynmt.helpers - cfg.training.logging_freq          : 1000
+2021-10-01 12:03:09,245 - INFO - joeynmt.helpers - cfg.training.eval_metric           : bleu
+2021-10-01 12:03:09,245 - INFO - joeynmt.helpers - cfg.training.model_dir             : models/el_en_short_model
+2021-10-01 12:03:09,245 - INFO - joeynmt.helpers - cfg.training.overwrite             : False
+2021-10-01 12:03:09,245 - INFO - joeynmt.helpers - cfg.training.shuffle               : True
+2021-10-01 12:03:09,246 - INFO - joeynmt.helpers - cfg.training.use_cuda              : True
+2021-10-01 12:03:09,246 - INFO - joeynmt.helpers - cfg.training.max_output_length     : 30
+2021-10-01 12:03:09,246 - INFO - joeynmt.helpers - cfg.training.print_valid_sents     : [0, 1, 2]
+2021-10-01 12:03:09,246 - INFO - joeynmt.helpers - cfg.training.keep_best_ckpts       : 2
+2021-10-01 12:03:09,246 - INFO - joeynmt.helpers - cfg.model.encoder.rnn_type         : lstm
+2021-10-01 12:03:09,246 - INFO - joeynmt.helpers - cfg.model.encoder.embeddings.embedding_dim : 620
+2021-10-01 12:03:09,246 - INFO - joeynmt.helpers - cfg.model.encoder.embeddings.scale : False
+2021-10-01 12:03:09,246 - INFO - joeynmt.helpers - cfg.model.encoder.hidden_size      : 1000
+2021-10-01 12:03:09,246 - INFO - joeynmt.helpers - cfg.model.encoder.bidirectional    : True
+2021-10-01 12:03:09,246 - INFO - joeynmt.helpers - cfg.model.encoder.dropout          : 0.2
+2021-10-01 12:03:09,246 - INFO - joeynmt.helpers - cfg.model.encoder.num_layers       : 1
+2021-10-01 12:03:09,246 - INFO - joeynmt.helpers - cfg.model.decoder.rnn_type         : lstm
+2021-10-01 12:03:09,246 - INFO - joeynmt.helpers - cfg.model.decoder.embeddings.embedding_dim : 620
+2021-10-01 12:03:09,246 - INFO - joeynmt.helpers - cfg.model.decoder.embeddings.scale : False
+2021-10-01 12:03:09,246 - INFO - joeynmt.helpers - cfg.model.decoder.emb_scale        : False
+2021-10-01 12:03:09,247 - INFO - joeynmt.helpers - cfg.model.decoder.hidden_size      : 1000
+2021-10-01 12:03:09,247 - INFO - joeynmt.helpers - cfg.model.decoder.dropout          : 0.2
+2021-10-01 12:03:09,247 - INFO - joeynmt.helpers - cfg.model.decoder.hidden_dropout   : 0.2
+2021-10-01 12:03:09,247 - INFO - joeynmt.helpers - cfg.model.decoder.num_layers       : 1
+2021-10-01 12:03:09,247 - INFO - joeynmt.helpers - cfg.model.decoder.input_feeding    : True
+2021-10-01 12:03:09,247 - INFO - joeynmt.helpers - cfg.model.decoder.init_hidden      : bridge
+2021-10-01 12:03:09,247 - INFO - joeynmt.helpers - cfg.model.decoder.attention        : bahdanau
+2021-10-01 12:03:09,247 - INFO - joeynmt.helpers - Data set sizes: 
+	train 5551,
+	valid 551,
+	test 602
+2021-10-01 12:03:09,247 - INFO - joeynmt.helpers - First training example:
+	[SRC] el
+	[TRG] en
+--- Logging error ---
+Traceback (most recent call last):
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/logging/__init__.py", line 1036, in emit
+    stream.write(msg)
+UnicodeEncodeError: 'latin-1' codec can't encode characters in position 126-127: ordinal not in range(256)
+Call stack:
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 48, in <module>
+    main()
+  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 35, in main
+    train(cfg_file=args.config_path, skip_test=args.skip_test)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 835, in train
+    trg_vocab=trg_vocab)
+  File "/home/lcur0008/joeynmt/joeynmt/helpers.py", line 164, in log_data_info
+    " ".join('(%d) %s' % (i, t) for i, t in enumerate(src_vocab.itos[:10])))
+Message: 'First 10 words (src): %s'
+Arguments: ('(0) <unk> (1) <pad> (2) <s> (3) </s> (4) , (5) . (6) \u03bd\u03b1 (7) ." (8) \u03c4\u03bf (9) \u03ba\u03b1\u03b9',)
+2021-10-01 12:03:09,247 - INFO - joeynmt.helpers - First 10 words (src): (0) <unk> (1) <pad> (2) <s> (3) </s> (4) , (5) . (6) \u03bd\u03b1 (7) ." (8) \u03c4\u03bf (9) \u03ba\u03b1\u03b9
+2021-10-01 12:03:09,250 - INFO - joeynmt.helpers - First 10 words (trg): (0) <unk> (1) <pad> (2) <s> (3) </s> (4) , (5) the (6) . (7) ." (8) of (9) to
+2021-10-01 12:03:09,250 - INFO - joeynmt.helpers - Number of Src words (types): 10004
+2021-10-01 12:03:09,250 - INFO - joeynmt.helpers - Number of Trg words (types): 8422
+2021-10-01 12:03:09,250 - INFO - joeynmt.training - Model(
+	encoder=RecurrentEncoder(LSTM(620, 1000, batch_first=True, bidirectional=True)),
+	decoder=RecurrentDecoder(rnn=LSTM(1620, 1000, batch_first=True), attention=BahdanauAttention),
+	src_embed=Embeddings(embedding_dim=620, vocab_size=10004),
+	trg_embed=Embeddings(embedding_dim=620, vocab_size=8422))
+2021-10-01 12:03:09,275 - INFO - joeynmt.training - Train stats:
+	device: cuda
+	n_gpu: 1
+	16-bits training: False
+	gradient accumulation: 1
+	batch size per device: 10
+	total batch size (w. parallel & accumulation): 10
+2021-10-01 12:03:09,275 - INFO - joeynmt.training - EPOCH 1
+/home/lcur0008/joeynmt/joeynmt/builders.py:39: FutureWarning: Non-finite norm encountered in torch.nn.utils.clip_grad_norm_; continuing anyway. Note that the default behavior will change in a future release to error out if a non-finite total norm is encountered. At that point, setting error_if_nonfinite=false will be required to retain the old behavior.
+  nn.utils.clip_grad_norm_(parameters=params, max_norm=max_norm)
+2021-10-01 12:04:17,125 - INFO - joeynmt.training - Epoch   1: total training loss 16242320.73
+2021-10-01 12:04:17,126 - INFO - joeynmt.training - EPOCH 2
+2021-10-01 12:05:10,277 - INFO - joeynmt.training - Epoch   2, Step:     1000, Batch Loss: 72428.242188, Tokens per Sec:     1510, Lr: 0.500000
+2021-10-01 12:05:23,949 - INFO - joeynmt.training - Epoch   2: total training loss 26256308.79
+2021-10-01 12:05:23,950 - INFO - joeynmt.training - EPOCH 3
+2021-10-01 12:06:31,358 - INFO - joeynmt.training - Epoch   3: total training loss 19044595.42
+2021-10-01 12:06:31,359 - INFO - joeynmt.training - EPOCH 4
+2021-10-01 12:07:11,062 - INFO - joeynmt.training - Epoch   4, Step:     2000, Batch Loss: 25136.294922, Tokens per Sec:     1510, Lr: 0.500000
+2021-10-01 12:07:38,310 - INFO - joeynmt.training - Epoch   4: total training loss 15571002.41
+2021-10-01 12:07:38,310 - INFO - joeynmt.training - EPOCH 5
+2021-10-01 12:08:45,458 - INFO - joeynmt.training - Epoch   5: total training loss 17941360.31
+2021-10-01 12:08:45,458 - INFO - joeynmt.training - EPOCH 6
+2021-10-01 12:09:12,522 - INFO - joeynmt.training - Epoch   6, Step:     3000, Batch Loss: 35587.070312, Tokens per Sec:     1488, Lr: 0.500000
+2021-10-01 12:09:52,652 - INFO - joeynmt.training - Epoch   6: total training loss 25595040.31
+2021-10-01 12:09:52,652 - INFO - joeynmt.training - Training ended after   6 epochs.
+2021-10-01 12:09:52,652 - INFO - joeynmt.training - Best validation result (greedy) at step        0:   -inf eval_metric.
+2021-10-01 12:09:52,680 - INFO - joeynmt.prediction - Process device: cuda, n_gpu: 1, batch_size per device: 10
+2021-10-01 12:09:52,680 - INFO - joeynmt.prediction - Loading model from models/el_en_short_model/0.ckpt
+Traceback (most recent call last):
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 48, in <module>
+    main()
+  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 35, in main
+    train(cfg_file=args.config_path, skip_test=args.skip_test)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 863, in train
+    datasets=datasets_to_test)
+  File "/home/lcur0008/joeynmt/joeynmt/prediction.py", line 321, in test
+    model_checkpoint = load_checkpoint(ckpt, use_cuda=use_cuda)
+  File "/home/lcur0008/joeynmt/joeynmt/helpers.py", line 284, in load_checkpoint
+    assert os.path.isfile(path), "Checkpoint %s not found" % path
+AssertionError: Checkpoint models/el_en_short_model/0.ckpt not found
+srun: error: r31n6: task 0: Exited with exit code 1
