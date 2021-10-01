@@ -34,7 +34,7 @@ training:
     validation_freq: 7362
     logging_freq: 1000
     eval_metric: "bleu"
-    model_dir: "models/BIG_model"
+    model_dir: "models/th_en_model"
     overwrite: True
     shuffle: True
     use_cuda: True
