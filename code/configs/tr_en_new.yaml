@@ -54,7 +54,7 @@ model:
             embedding_dim: 256          # Gulcehre
             scale: False
         hidden_size: 1000               # Luong & Zoph
-        bidirectional: True            # all
+        bidirectional: False            # all
         dropout: 0.2
         num_layers: 1
     decoder:
