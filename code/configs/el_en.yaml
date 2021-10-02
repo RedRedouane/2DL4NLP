@@ -20,22 +20,22 @@ testing:
 
 training:
     random_seed: 42
-    optimizer: "sgd"                    # all
-    learning_rate: 0.5                  # Zoph
-    learning_rate_min: 0.0000005
+    optimizer: "adam"                    # all
+    # learning_rate: 0.5                  # Zoph
+    # learning_rate_min: 0.0000005
     weight_decay: 0.0
-    clip_grad_norm: 5.0                 # all
+    # clip_grad_norm: 5.0                 # all
     batch_size: 80                      # Gulcehre
     scheduling: "plateau"
     patience: 1                         # Zoph
-    decrease_factor: 0.9                # Zoph
+    # decrease_factor: 0.9                # Zoph
     early_stopping_metric: "eval_metric"
     epochs: 100                         # Zoph
-    validation_freq: 7362
+    validation_freq: 1000
     logging_freq: 1000
     eval_metric: "bleu"
     model_dir: "models/el_en_model"
-    overwrite: True
+    overwrite: False
     shuffle: True
     use_cuda: True
     max_output_length: 60
@@ -45,16 +45,16 @@ model:
     encoder:
         rnn_type: "lstm"
         embeddings:
-            embedding_dim: 620          # Gulcehre
+            embedding_dim: 64          # Gulcehre
             scale: False
-        hidden_size: 1000               # Luong & Zoph
+        hidden_size: 100               # Luong & Zoph
         bidirectional: True            # all
         dropout: 0.2
         num_layers: 1
     decoder:
         rnn_type: "lstm"
         embeddings:
-            embedding_dim: 620          # uncertain
+            embedding_dim: 64          # uncertain
             scale: False
         emb_scale: False
         hidden_size: 1000               # all
