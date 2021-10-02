@@ -13,8 +13,8 @@ data:
     src_voc_limit: 10000                # I took the minimum of the 3 papers
     trg_voc_min_freq: 0
     trg_voc_limit: 10000                # here as well
-    src_vocab: "../2DL4NLP/all_data/tr_en_vocab.txt"
-    trg_vocab: "../2DL4NLP/all_data/tr_en_vocab.txt"
+    src_vocab: "../2DL4NLP/all_data/vocab.tr"
+    trg_vocab: "../2DL4NLP/all_data/vocab.en"
 
 
 testing:
@@ -51,19 +51,19 @@ model:
     encoder:
         rnn_type: "lstm"
         embeddings:
-            embedding_dim: 256          # Gulcehre
+            embedding_dim: 128          # Gulcehre
             scale: False
-        hidden_size: 1000               # Luong & Zoph
+        hidden_size: 128               # Luong & Zoph
         bidirectional: False            # all
         dropout: 0.2
         num_layers: 1
     decoder:
         rnn_type: "lstm"
         embeddings:
-            embedding_dim: 256          # uncertain
+            embedding_dim: 128          # uncertain
             scale: False
         emb_scale: False
-        hidden_size: 1000               # all
+        hidden_size: 128               # all
         dropout: 0.2
         hidden_dropout: 0.2
         num_layers: 1
