@@ -49,6 +49,8 @@ training:
     use_cuda: True
     max_output_length: 60
     print_valid_sents: [0, 1, 2]
+    keep_best_ckpts: 1
+    save_latest_ckpt: True
 
 model:
     encoder:
