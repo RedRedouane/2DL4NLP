@@ -1,71 +1,67 @@
-2021-09-30 18:35:42,916 - INFO - root - Hello! This is Joey-NMT (version 1.3).
-2021-09-30 18:35:43,020 - INFO - joeynmt.data - Loading training data...
-2021-09-30 18:35:43,109 - INFO - joeynmt.data - Building vocabulary...
-2021-09-30 18:35:45,458 - INFO - joeynmt.data - Loading dev data...
-2021-09-30 18:35:45,470 - INFO - joeynmt.data - Loading test data...
-2021-09-30 18:35:45,482 - INFO - joeynmt.data - Data loaded.
-2021-09-30 18:35:45,482 - INFO - joeynmt.model - Building an encoder-decoder model...
-2021-09-30 18:35:46,622 - INFO - joeynmt.model - Enc-dec model built.
-2021-09-30 18:35:46,629 - INFO - joeynmt.training - Total params: 51386020
-2021-09-30 18:35:51,132 - INFO - joeynmt.helpers - cfg.name                           : ka_en_model
-2021-09-30 18:35:51,133 - INFO - joeynmt.helpers - cfg.data.src                       : ka
-2021-09-30 18:35:51,133 - INFO - joeynmt.helpers - cfg.data.trg                       : en
-2021-09-30 18:35:51,133 - INFO - joeynmt.helpers - cfg.data.train                     : ../2DL4NLP/all_data/train
-2021-09-30 18:35:51,133 - INFO - joeynmt.helpers - cfg.data.dev                       : ../2DL4NLP/all_data/val
-2021-09-30 18:35:51,133 - INFO - joeynmt.helpers - cfg.data.test                      : ../2DL4NLP/all_data/test
-2021-09-30 18:35:51,133 - INFO - joeynmt.helpers - cfg.data.level                     : bpe
-2021-09-30 18:35:51,133 - INFO - joeynmt.helpers - cfg.data.lowercase                 : False
-2021-09-30 18:35:51,134 - INFO - joeynmt.helpers - cfg.data.max_sent_length           : 50
-2021-09-30 18:35:51,134 - INFO - joeynmt.helpers - cfg.data.src_voc_min_freq          : 0
-2021-09-30 18:35:51,134 - INFO - joeynmt.helpers - cfg.data.src_voc_limit             : 10000
-2021-09-30 18:35:51,134 - INFO - joeynmt.helpers - cfg.data.trg_voc_min_freq          : 0
-2021-09-30 18:35:51,134 - INFO - joeynmt.helpers - cfg.data.trg_voc_limit             : 10000
-2021-09-30 18:35:51,134 - INFO - joeynmt.helpers - cfg.testing.beam_size              : 5
-2021-09-30 18:35:51,134 - INFO - joeynmt.helpers - cfg.testing.alpha                  : 1.0
-2021-09-30 18:35:51,134 - INFO - joeynmt.helpers - cfg.training.random_seed           : 42
-2021-09-30 18:35:51,134 - INFO - joeynmt.helpers - cfg.training.optimizer             : sgd
-2021-09-30 18:35:51,135 - INFO - joeynmt.helpers - cfg.training.learning_rate         : 0.5
-2021-09-30 18:35:51,135 - INFO - joeynmt.helpers - cfg.training.learning_rate_min     : 5e-07
-2021-09-30 18:35:51,135 - INFO - joeynmt.helpers - cfg.training.weight_decay          : 0.0
-2021-09-30 18:35:51,135 - INFO - joeynmt.helpers - cfg.training.clip_grad_norm        : 5.0
-2021-09-30 18:35:51,135 - INFO - joeynmt.helpers - cfg.training.batch_size            : 80
-2021-09-30 18:35:51,135 - INFO - joeynmt.helpers - cfg.training.scheduling            : plateau
-2021-09-30 18:35:51,135 - INFO - joeynmt.helpers - cfg.training.patience              : 1
-2021-09-30 18:35:51,135 - INFO - joeynmt.helpers - cfg.training.decrease_factor       : 0.9
-2021-09-30 18:35:51,135 - INFO - joeynmt.helpers - cfg.training.early_stopping_metric : eval_metric
-2021-09-30 18:35:51,136 - INFO - joeynmt.helpers - cfg.training.epochs                : 100
-2021-09-30 18:35:51,136 - INFO - joeynmt.helpers - cfg.training.validation_freq       : 7362
-2021-09-30 18:35:51,136 - INFO - joeynmt.helpers - cfg.training.logging_freq          : 1000
-2021-09-30 18:35:51,136 - INFO - joeynmt.helpers - cfg.training.eval_metric           : bleu
-2021-09-30 18:35:51,136 - INFO - joeynmt.helpers - cfg.training.model_dir             : models/BIG_model
-2021-09-30 18:35:51,136 - INFO - joeynmt.helpers - cfg.training.overwrite             : True
-2021-09-30 18:35:51,136 - INFO - joeynmt.helpers - cfg.training.shuffle               : True
-2021-09-30 18:35:51,136 - INFO - joeynmt.helpers - cfg.training.use_cuda              : True
-2021-09-30 18:35:51,136 - INFO - joeynmt.helpers - cfg.training.max_output_length     : 60
-2021-09-30 18:35:51,137 - INFO - joeynmt.helpers - cfg.training.print_valid_sents     : [0, 1, 2]
-2021-09-30 18:35:51,137 - INFO - joeynmt.helpers - cfg.model.encoder.rnn_type         : lstm
-2021-09-30 18:35:51,137 - INFO - joeynmt.helpers - cfg.model.encoder.embeddings.embedding_dim : 620
-2021-09-30 18:35:51,137 - INFO - joeynmt.helpers - cfg.model.encoder.embeddings.scale : False
-2021-09-30 18:35:51,137 - INFO - joeynmt.helpers - cfg.model.encoder.hidden_size      : 1000
-2021-09-30 18:35:51,137 - INFO - joeynmt.helpers - cfg.model.encoder.bidirectional    : True
-2021-09-30 18:35:51,137 - INFO - joeynmt.helpers - cfg.model.encoder.dropout          : 0.2
-2021-09-30 18:35:51,137 - INFO - joeynmt.helpers - cfg.model.encoder.num_layers       : 1
-2021-09-30 18:35:51,138 - INFO - joeynmt.helpers - cfg.model.decoder.rnn_type         : lstm
-2021-09-30 18:35:51,138 - INFO - joeynmt.helpers - cfg.model.decoder.embeddings.embedding_dim : 620
-2021-09-30 18:35:51,138 - INFO - joeynmt.helpers - cfg.model.decoder.embeddings.scale : False
-2021-09-30 18:35:51,138 - INFO - joeynmt.helpers - cfg.model.decoder.emb_scale        : False
-2021-09-30 18:35:51,138 - INFO - joeynmt.helpers - cfg.model.decoder.hidden_size      : 1000
-2021-09-30 18:35:51,138 - INFO - joeynmt.helpers - cfg.model.decoder.dropout          : 0.2
-2021-09-30 18:35:51,138 - INFO - joeynmt.helpers - cfg.model.decoder.hidden_dropout   : 0.2
-2021-09-30 18:35:51,138 - INFO - joeynmt.helpers - cfg.model.decoder.num_layers       : 1
-2021-09-30 18:35:51,138 - INFO - joeynmt.helpers - cfg.model.decoder.input_feeding    : True
-2021-09-30 18:35:51,139 - INFO - joeynmt.helpers - cfg.model.decoder.init_hidden      : bridge
-2021-09-30 18:35:51,139 - INFO - joeynmt.helpers - cfg.model.decoder.attention        : bahdanau
-2021-09-30 18:35:51,139 - INFO - joeynmt.helpers - Data set sizes: 
+2021-10-01 14:34:31,191 - INFO - root - Hello! This is Joey-NMT (version 1.3).
+2021-10-01 14:34:31,250 - INFO - joeynmt.data - Loading training data...
+2021-10-01 14:34:31,339 - INFO - joeynmt.data - Building vocabulary...
+2021-10-01 14:34:33,696 - INFO - joeynmt.data - Loading dev data...
+2021-10-01 14:34:33,706 - INFO - joeynmt.data - Loading test data...
+2021-10-01 14:34:33,717 - INFO - joeynmt.data - Data loaded.
+2021-10-01 14:34:33,718 - INFO - joeynmt.model - Building an encoder-decoder model...
+2021-10-01 14:34:34,184 - INFO - joeynmt.model - Enc-dec model built.
+2021-10-01 14:34:34,192 - INFO - joeynmt.training - Total params: 20648944
+2021-10-01 14:34:38,323 - INFO - joeynmt.helpers - cfg.name                           : ka_en_model
+2021-10-01 14:34:38,323 - INFO - joeynmt.helpers - cfg.data.src                       : ka
+2021-10-01 14:34:38,323 - INFO - joeynmt.helpers - cfg.data.trg                       : en
+2021-10-01 14:34:38,323 - INFO - joeynmt.helpers - cfg.data.train                     : ../2DL4NLP/all_data/train
+2021-10-01 14:34:38,323 - INFO - joeynmt.helpers - cfg.data.dev                       : ../2DL4NLP/all_data/val
+2021-10-01 14:34:38,324 - INFO - joeynmt.helpers - cfg.data.test                      : ../2DL4NLP/all_data/test
+2021-10-01 14:34:38,324 - INFO - joeynmt.helpers - cfg.data.level                     : bpe
+2021-10-01 14:34:38,324 - INFO - joeynmt.helpers - cfg.data.lowercase                 : False
+2021-10-01 14:34:38,324 - INFO - joeynmt.helpers - cfg.data.max_sent_length           : 50
+2021-10-01 14:34:38,324 - INFO - joeynmt.helpers - cfg.data.src_voc_min_freq          : 0
+2021-10-01 14:34:38,324 - INFO - joeynmt.helpers - cfg.data.src_voc_limit             : 10000
+2021-10-01 14:34:38,324 - INFO - joeynmt.helpers - cfg.data.trg_voc_min_freq          : 0
+2021-10-01 14:34:38,324 - INFO - joeynmt.helpers - cfg.data.trg_voc_limit             : 10000
+2021-10-01 14:34:38,324 - INFO - joeynmt.helpers - cfg.testing.beam_size              : 5
+2021-10-01 14:34:38,324 - INFO - joeynmt.helpers - cfg.testing.alpha                  : 1.0
+2021-10-01 14:34:38,324 - INFO - joeynmt.helpers - cfg.training.random_seed           : 42
+2021-10-01 14:34:38,324 - INFO - joeynmt.helpers - cfg.training.optimizer             : adam
+2021-10-01 14:34:38,324 - INFO - joeynmt.helpers - cfg.training.weight_decay          : 0.0
+2021-10-01 14:34:38,324 - INFO - joeynmt.helpers - cfg.training.batch_size            : 80
+2021-10-01 14:34:38,324 - INFO - joeynmt.helpers - cfg.training.scheduling            : plateau
+2021-10-01 14:34:38,324 - INFO - joeynmt.helpers - cfg.training.patience              : 1
+2021-10-01 14:34:38,325 - INFO - joeynmt.helpers - cfg.training.early_stopping_metric : eval_metric
+2021-10-01 14:34:38,325 - INFO - joeynmt.helpers - cfg.training.epochs                : 100
+2021-10-01 14:34:38,325 - INFO - joeynmt.helpers - cfg.training.validation_freq       : 1000
+2021-10-01 14:34:38,325 - INFO - joeynmt.helpers - cfg.training.logging_freq          : 1000
+2021-10-01 14:34:38,325 - INFO - joeynmt.helpers - cfg.training.eval_metric           : bleu
+2021-10-01 14:34:38,325 - INFO - joeynmt.helpers - cfg.training.model_dir             : models/ka_en_model
+2021-10-01 14:34:38,325 - INFO - joeynmt.helpers - cfg.training.overwrite             : False
+2021-10-01 14:34:38,325 - INFO - joeynmt.helpers - cfg.training.shuffle               : True
+2021-10-01 14:34:38,325 - INFO - joeynmt.helpers - cfg.training.use_cuda              : True
+2021-10-01 14:34:38,325 - INFO - joeynmt.helpers - cfg.training.max_output_length     : 60
+2021-10-01 14:34:38,325 - INFO - joeynmt.helpers - cfg.training.print_valid_sents     : [0, 1, 2]
+2021-10-01 14:34:38,325 - INFO - joeynmt.helpers - cfg.model.encoder.rnn_type         : lstm
+2021-10-01 14:34:38,325 - INFO - joeynmt.helpers - cfg.model.encoder.embeddings.embedding_dim : 64
+2021-10-01 14:34:38,325 - INFO - joeynmt.helpers - cfg.model.encoder.embeddings.scale : False
+2021-10-01 14:34:38,325 - INFO - joeynmt.helpers - cfg.model.encoder.hidden_size      : 100
+2021-10-01 14:34:38,325 - INFO - joeynmt.helpers - cfg.model.encoder.bidirectional    : True
+2021-10-01 14:34:38,326 - INFO - joeynmt.helpers - cfg.model.encoder.dropout          : 0.2
+2021-10-01 14:34:38,326 - INFO - joeynmt.helpers - cfg.model.encoder.num_layers       : 1
+2021-10-01 14:34:38,326 - INFO - joeynmt.helpers - cfg.model.decoder.rnn_type         : lstm
+2021-10-01 14:34:38,326 - INFO - joeynmt.helpers - cfg.model.decoder.embeddings.embedding_dim : 64
+2021-10-01 14:34:38,326 - INFO - joeynmt.helpers - cfg.model.decoder.embeddings.scale : False
+2021-10-01 14:34:38,326 - INFO - joeynmt.helpers - cfg.model.decoder.emb_scale        : False
+2021-10-01 14:34:38,326 - INFO - joeynmt.helpers - cfg.model.decoder.hidden_size      : 1000
+2021-10-01 14:34:38,326 - INFO - joeynmt.helpers - cfg.model.decoder.dropout          : 0.2
+2021-10-01 14:34:38,326 - INFO - joeynmt.helpers - cfg.model.decoder.hidden_dropout   : 0.2
+2021-10-01 14:34:38,326 - INFO - joeynmt.helpers - cfg.model.decoder.num_layers       : 1
+2021-10-01 14:34:38,326 - INFO - joeynmt.helpers - cfg.model.decoder.input_feeding    : True
+2021-10-01 14:34:38,326 - INFO - joeynmt.helpers - cfg.model.decoder.init_hidden      : bridge
+2021-10-01 14:34:38,326 - INFO - joeynmt.helpers - cfg.model.decoder.attention        : bahdanau
+2021-10-01 14:34:38,326 - INFO - joeynmt.helpers - Data set sizes: 
 	train 5565,
 	valid 551,
 	test 602
-2021-09-30 18:35:51,139 - INFO - joeynmt.helpers - First training example:
+2021-10-01 14:34:38,326 - INFO - joeynmt.helpers - First training example:
 	[SRC] ka
 	[TRG] en
 --- Logging error ---
@@ -88,234 +84,67 @@ Call stack:
     " ".join('(%d) %s' % (i, t) for i, t in enumerate(src_vocab.itos[:10])))
 Message: 'First 10 words (src): %s'
 Arguments: ('(0) <unk> (1) <pad> (2) <s> (3) </s> (4) , (5) . (6) ." (7) \u10d3\u10d0 (8) &quot; (9) \u10e0\u10dd\u10db',)
-2021-09-30 18:35:51,139 - INFO - joeynmt.helpers - First 10 words (src): (0) <unk> (1) <pad> (2) <s> (3) </s> (4) , (5) . (6) ." (7) \u10d3\u10d0 (8) &quot; (9) \u10e0\u10dd\u10db
-2021-09-30 18:35:51,142 - INFO - joeynmt.helpers - First 10 words (trg): (0) <unk> (1) <pad> (2) <s> (3) </s> (4) , (5) the (6) . (7) ." (8) of (9) to
-2021-09-30 18:35:51,142 - INFO - joeynmt.helpers - Number of Src words (types): 10004
-2021-09-30 18:35:51,142 - INFO - joeynmt.helpers - Number of Trg words (types): 8467
-2021-09-30 18:35:51,143 - INFO - joeynmt.training - Model(
-	encoder=RecurrentEncoder(LSTM(620, 1000, batch_first=True, bidirectional=True)),
-	decoder=RecurrentDecoder(rnn=LSTM(1620, 1000, batch_first=True), attention=BahdanauAttention),
-	src_embed=Embeddings(embedding_dim=620, vocab_size=10004),
-	trg_embed=Embeddings(embedding_dim=620, vocab_size=8467))
-2021-09-30 18:35:51,167 - INFO - joeynmt.training - Train stats:
+2021-10-01 14:34:38,327 - INFO - joeynmt.helpers - First 10 words (src): (0) <unk> (1) <pad> (2) <s> (3) </s> (4) , (5) . (6) ." (7) \u10d3\u10d0 (8) &quot; (9) \u10e0\u10dd\u10db
+2021-10-01 14:34:38,329 - INFO - joeynmt.helpers - First 10 words (trg): (0) <unk> (1) <pad> (2) <s> (3) </s> (4) , (5) the (6) . (7) ." (8) of (9) to
+2021-10-01 14:34:38,329 - INFO - joeynmt.helpers - Number of Src words (types): 10004
+2021-10-01 14:34:38,329 - INFO - joeynmt.helpers - Number of Trg words (types): 8467
+2021-10-01 14:34:38,330 - INFO - joeynmt.training - Model(
+	encoder=RecurrentEncoder(LSTM(64, 100, batch_first=True, bidirectional=True)),
+	decoder=RecurrentDecoder(rnn=LSTM(1064, 1000, batch_first=True), attention=BahdanauAttention),
+	src_embed=Embeddings(embedding_dim=64, vocab_size=10004),
+	trg_embed=Embeddings(embedding_dim=64, vocab_size=8467))
+2021-10-01 14:34:38,354 - INFO - joeynmt.training - Train stats:
 	device: cuda
 	n_gpu: 1
 	16-bits training: False
 	gradient accumulation: 1
 	batch size per device: 80
 	total batch size (w. parallel & accumulation): 80
-2021-09-30 18:35:51,168 - INFO - joeynmt.training - EPOCH 1
-2021-09-30 18:36:10,253 - INFO - joeynmt.training - Epoch   1: total training loss 11412.08
-2021-09-30 18:36:10,254 - INFO - joeynmt.training - EPOCH 2
-2021-09-30 18:36:29,177 - INFO - joeynmt.training - Epoch   2: total training loss 9819.56
-2021-09-30 18:36:29,179 - INFO - joeynmt.training - EPOCH 3
-2021-09-30 18:36:47,996 - INFO - joeynmt.training - Epoch   3: total training loss 9509.04
-2021-09-30 18:36:47,997 - INFO - joeynmt.training - EPOCH 4
-2021-09-30 18:37:06,805 - INFO - joeynmt.training - Epoch   4: total training loss 9052.51
-2021-09-30 18:37:06,806 - INFO - joeynmt.training - EPOCH 5
-2021-09-30 18:37:25,554 - INFO - joeynmt.training - Epoch   5: total training loss 8629.58
-2021-09-30 18:37:25,556 - INFO - joeynmt.training - EPOCH 6
-2021-09-30 18:37:44,495 - INFO - joeynmt.training - Epoch   6: total training loss 8451.32
-2021-09-30 18:37:44,496 - INFO - joeynmt.training - EPOCH 7
-2021-09-30 18:38:03,329 - INFO - joeynmt.training - Epoch   7: total training loss 8124.66
-2021-09-30 18:38:03,330 - INFO - joeynmt.training - EPOCH 8
-2021-09-30 18:38:22,219 - INFO - joeynmt.training - Epoch   8: total training loss 7809.76
-2021-09-30 18:38:22,219 - INFO - joeynmt.training - EPOCH 9
-2021-09-30 18:38:40,944 - INFO - joeynmt.training - Epoch   9: total training loss 7564.83
-2021-09-30 18:38:40,945 - INFO - joeynmt.training - EPOCH 10
-2021-09-30 18:38:59,948 - INFO - joeynmt.training - Epoch  10: total training loss 7288.93
-2021-09-30 18:38:59,949 - INFO - joeynmt.training - EPOCH 11
-2021-09-30 18:39:18,644 - INFO - joeynmt.training - Epoch  11: total training loss 6988.23
-2021-09-30 18:39:18,645 - INFO - joeynmt.training - EPOCH 12
-2021-09-30 18:39:37,655 - INFO - joeynmt.training - Epoch  12: total training loss 6776.24
-2021-09-30 18:39:37,656 - INFO - joeynmt.training - EPOCH 13
-2021-09-30 18:39:56,351 - INFO - joeynmt.training - Epoch  13: total training loss 6589.80
-2021-09-30 18:39:56,352 - INFO - joeynmt.training - EPOCH 14
-2021-09-30 18:40:15,278 - INFO - joeynmt.training - Epoch  14: total training loss 6435.99
-2021-09-30 18:40:15,279 - INFO - joeynmt.training - EPOCH 15
-2021-09-30 18:40:20,843 - INFO - joeynmt.training - Epoch  15, Step:     1000, Batch Loss:    96.218262, Tokens per Sec:     5273, Lr: 0.500000
-2021-09-30 18:40:34,207 - INFO - joeynmt.training - Epoch  15: total training loss 6265.15
-2021-09-30 18:40:34,208 - INFO - joeynmt.training - EPOCH 16
-2021-09-30 18:40:53,181 - INFO - joeynmt.training - Epoch  16: total training loss 6095.38
-2021-09-30 18:40:53,182 - INFO - joeynmt.training - EPOCH 17
-2021-09-30 18:41:11,840 - INFO - joeynmt.training - Epoch  17: total training loss 5915.28
-2021-09-30 18:41:11,840 - INFO - joeynmt.training - EPOCH 18
-2021-09-30 18:41:30,785 - INFO - joeynmt.training - Epoch  18: total training loss 5747.54
-2021-09-30 18:41:30,786 - INFO - joeynmt.training - EPOCH 19
-2021-09-30 18:41:49,678 - INFO - joeynmt.training - Epoch  19: total training loss 5559.14
-2021-09-30 18:41:49,679 - INFO - joeynmt.training - EPOCH 20
-2021-09-30 18:42:08,515 - INFO - joeynmt.training - Epoch  20: total training loss 5373.74
-2021-09-30 18:42:08,516 - INFO - joeynmt.training - EPOCH 21
-2021-09-30 18:42:27,433 - INFO - joeynmt.training - Epoch  21: total training loss 5166.09
-2021-09-30 18:42:27,434 - INFO - joeynmt.training - EPOCH 22
-2021-09-30 18:42:46,364 - INFO - joeynmt.training - Epoch  22: total training loss 4974.47
-2021-09-30 18:42:46,365 - INFO - joeynmt.training - EPOCH 23
-2021-09-30 18:43:05,248 - INFO - joeynmt.training - Epoch  23: total training loss 4759.49
-2021-09-30 18:43:05,249 - INFO - joeynmt.training - EPOCH 24
-2021-09-30 18:43:24,151 - INFO - joeynmt.training - Epoch  24: total training loss 4541.26
-2021-09-30 18:43:24,152 - INFO - joeynmt.training - EPOCH 25
-2021-09-30 18:43:42,861 - INFO - joeynmt.training - Epoch  25: total training loss 4327.45
-2021-09-30 18:43:42,862 - INFO - joeynmt.training - EPOCH 26
-2021-09-30 18:44:01,618 - INFO - joeynmt.training - Epoch  26: total training loss 4111.84
-2021-09-30 18:44:01,619 - INFO - joeynmt.training - EPOCH 27
-2021-09-30 18:44:20,475 - INFO - joeynmt.training - Epoch  27: total training loss 3899.54
-2021-09-30 18:44:20,476 - INFO - joeynmt.training - EPOCH 28
-2021-09-30 18:44:39,238 - INFO - joeynmt.training - Epoch  28: total training loss 3681.67
-2021-09-30 18:44:39,239 - INFO - joeynmt.training - EPOCH 29
-2021-09-30 18:44:49,836 - INFO - joeynmt.training - Epoch  29, Step:     2000, Batch Loss:    46.061443, Tokens per Sec:     5514, Lr: 0.500000
-2021-09-30 18:44:57,902 - INFO - joeynmt.training - Epoch  29: total training loss 3467.07
-2021-09-30 18:44:57,903 - INFO - joeynmt.training - EPOCH 30
-2021-09-30 18:45:16,743 - INFO - joeynmt.training - Epoch  30: total training loss 3273.00
-2021-09-30 18:45:16,744 - INFO - joeynmt.training - EPOCH 31
-2021-09-30 18:45:35,459 - INFO - joeynmt.training - Epoch  31: total training loss 3059.76
-2021-09-30 18:45:35,460 - INFO - joeynmt.training - EPOCH 32
-2021-09-30 18:45:54,245 - INFO - joeynmt.training - Epoch  32: total training loss 2869.87
-2021-09-30 18:45:54,246 - INFO - joeynmt.training - EPOCH 33
-2021-09-30 18:46:12,989 - INFO - joeynmt.training - Epoch  33: total training loss 2678.34
-2021-09-30 18:46:12,989 - INFO - joeynmt.training - EPOCH 34
-2021-09-30 18:46:31,893 - INFO - joeynmt.training - Epoch  34: total training loss 2489.14
-2021-09-30 18:46:31,894 - INFO - joeynmt.training - EPOCH 35
-2021-09-30 18:46:50,698 - INFO - joeynmt.training - Epoch  35: total training loss 2319.77
-2021-09-30 18:46:50,699 - INFO - joeynmt.training - EPOCH 36
-2021-09-30 18:47:09,245 - INFO - joeynmt.training - Epoch  36: total training loss 2158.24
-2021-09-30 18:47:09,245 - INFO - joeynmt.training - EPOCH 37
-2021-09-30 18:47:28,156 - INFO - joeynmt.training - Epoch  37: total training loss 1999.02
-2021-09-30 18:47:28,157 - INFO - joeynmt.training - EPOCH 38
-2021-09-30 18:47:46,905 - INFO - joeynmt.training - Epoch  38: total training loss 1855.85
-2021-09-30 18:47:46,905 - INFO - joeynmt.training - EPOCH 39
-2021-09-30 18:48:05,813 - INFO - joeynmt.training - Epoch  39: total training loss 1726.58
-2021-09-30 18:48:05,814 - INFO - joeynmt.training - EPOCH 40
-2021-09-30 18:48:24,759 - INFO - joeynmt.training - Epoch  40: total training loss 1587.21
-2021-09-30 18:48:24,760 - INFO - joeynmt.training - EPOCH 41
-2021-09-30 18:48:43,463 - INFO - joeynmt.training - Epoch  41: total training loss 1480.94
-2021-09-30 18:48:43,464 - INFO - joeynmt.training - EPOCH 42
-2021-09-30 18:49:02,098 - INFO - joeynmt.training - Epoch  42: total training loss 1360.39
-2021-09-30 18:49:02,098 - INFO - joeynmt.training - EPOCH 43
-2021-09-30 18:49:18,541 - INFO - joeynmt.training - Epoch  43, Step:     3000, Batch Loss:    20.178406, Tokens per Sec:     5296, Lr: 0.500000
-2021-09-30 18:49:21,146 - INFO - joeynmt.training - Epoch  43: total training loss 1261.57
-2021-09-30 18:49:21,147 - INFO - joeynmt.training - EPOCH 44
-2021-09-30 18:49:39,898 - INFO - joeynmt.training - Epoch  44: total training loss 1164.41
-2021-09-30 18:49:39,898 - INFO - joeynmt.training - EPOCH 45
-2021-09-30 18:49:58,859 - INFO - joeynmt.training - Epoch  45: total training loss 1083.03
-2021-09-30 18:49:58,859 - INFO - joeynmt.training - EPOCH 46
-2021-09-30 18:50:17,506 - INFO - joeynmt.training - Epoch  46: total training loss 999.62
-2021-09-30 18:50:17,506 - INFO - joeynmt.training - EPOCH 47
-2021-09-30 18:50:36,566 - INFO - joeynmt.training - Epoch  47: total training loss 934.69
-2021-09-30 18:50:36,566 - INFO - joeynmt.training - EPOCH 48
-2021-09-30 18:50:55,550 - INFO - joeynmt.training - Epoch  48: total training loss 865.94
-2021-09-30 18:50:55,551 - INFO - joeynmt.training - EPOCH 49
-2021-09-30 18:51:14,266 - INFO - joeynmt.training - Epoch  49: total training loss 813.12
-2021-09-30 18:51:14,267 - INFO - joeynmt.training - EPOCH 50
-2021-09-30 18:51:33,056 - INFO - joeynmt.training - Epoch  50: total training loss 763.66
-2021-09-30 18:51:33,056 - INFO - joeynmt.training - EPOCH 51
-2021-09-30 18:51:51,897 - INFO - joeynmt.training - Epoch  51: total training loss 709.98
-2021-09-30 18:51:51,897 - INFO - joeynmt.training - EPOCH 52
-2021-09-30 18:52:10,547 - INFO - joeynmt.training - Epoch  52: total training loss 672.15
-2021-09-30 18:52:10,547 - INFO - joeynmt.training - EPOCH 53
-2021-09-30 18:52:29,194 - INFO - joeynmt.training - Epoch  53: total training loss 635.21
-2021-09-30 18:52:29,194 - INFO - joeynmt.training - EPOCH 54
-2021-09-30 18:52:47,820 - INFO - joeynmt.training - Epoch  54: total training loss 605.91
-2021-09-30 18:52:47,821 - INFO - joeynmt.training - EPOCH 55
-2021-09-30 18:53:06,854 - INFO - joeynmt.training - Epoch  55: total training loss 569.58
-2021-09-30 18:53:06,854 - INFO - joeynmt.training - EPOCH 56
-2021-09-30 18:53:25,600 - INFO - joeynmt.training - Epoch  56: total training loss 539.46
-2021-09-30 18:53:25,601 - INFO - joeynmt.training - EPOCH 57
-2021-09-30 18:53:44,359 - INFO - joeynmt.training - Epoch  57: total training loss 515.56
-2021-09-30 18:53:44,360 - INFO - joeynmt.training - EPOCH 58
-2021-09-30 18:53:46,991 - INFO - joeynmt.training - Epoch  58, Step:     4000, Batch Loss:     7.086408, Tokens per Sec:     5701, Lr: 0.500000
-2021-09-30 18:54:03,222 - INFO - joeynmt.training - Epoch  58: total training loss 495.26
-2021-09-30 18:54:03,222 - INFO - joeynmt.training - EPOCH 59
-2021-09-30 18:54:22,096 - INFO - joeynmt.training - Epoch  59: total training loss 473.21
-2021-09-30 18:54:22,097 - INFO - joeynmt.training - EPOCH 60
-2021-09-30 18:54:40,965 - INFO - joeynmt.training - Epoch  60: total training loss 451.40
-2021-09-30 18:54:40,965 - INFO - joeynmt.training - EPOCH 61
-2021-09-30 18:54:59,844 - INFO - joeynmt.training - Epoch  61: total training loss 443.94
-2021-09-30 18:54:59,844 - INFO - joeynmt.training - EPOCH 62
-2021-09-30 18:55:18,740 - INFO - joeynmt.training - Epoch  62: total training loss 426.51
-2021-09-30 18:55:18,741 - INFO - joeynmt.training - EPOCH 63
-2021-09-30 18:55:37,459 - INFO - joeynmt.training - Epoch  63: total training loss 409.09
-2021-09-30 18:55:37,459 - INFO - joeynmt.training - EPOCH 64
-2021-09-30 18:55:56,319 - INFO - joeynmt.training - Epoch  64: total training loss 395.53
-2021-09-30 18:55:56,319 - INFO - joeynmt.training - EPOCH 65
-2021-09-30 18:56:15,130 - INFO - joeynmt.training - Epoch  65: total training loss 378.97
-2021-09-30 18:56:15,131 - INFO - joeynmt.training - EPOCH 66
-2021-09-30 18:56:34,013 - INFO - joeynmt.training - Epoch  66: total training loss 371.70
-2021-09-30 18:56:34,014 - INFO - joeynmt.training - EPOCH 67
-2021-09-30 18:56:52,658 - INFO - joeynmt.training - Epoch  67: total training loss 358.85
-2021-09-30 18:56:52,659 - INFO - joeynmt.training - EPOCH 68
-2021-09-30 18:57:11,441 - INFO - joeynmt.training - Epoch  68: total training loss 347.39
-2021-09-30 18:57:11,442 - INFO - joeynmt.training - EPOCH 69
-2021-09-30 18:57:30,320 - INFO - joeynmt.training - Epoch  69: total training loss 342.90
-2021-09-30 18:57:30,321 - INFO - joeynmt.training - EPOCH 70
-2021-09-30 18:57:49,171 - INFO - joeynmt.training - Epoch  70: total training loss 330.78
-2021-09-30 18:57:49,172 - INFO - joeynmt.training - EPOCH 71
-2021-09-30 18:58:07,995 - INFO - joeynmt.training - Epoch  71: total training loss 322.41
-2021-09-30 18:58:07,996 - INFO - joeynmt.training - EPOCH 72
-2021-09-30 18:58:15,987 - INFO - joeynmt.training - Epoch  72, Step:     5000, Batch Loss:     4.529450, Tokens per Sec:     5486, Lr: 0.500000
-2021-09-30 18:58:26,830 - INFO - joeynmt.training - Epoch  72: total training loss 312.59
-2021-09-30 18:58:26,831 - INFO - joeynmt.training - EPOCH 73
-2021-09-30 18:58:45,639 - INFO - joeynmt.training - Epoch  73: total training loss 310.41
-2021-09-30 18:58:45,640 - INFO - joeynmt.training - EPOCH 74
-2021-09-30 18:59:04,192 - INFO - joeynmt.training - Epoch  74: total training loss 297.26
-2021-09-30 18:59:04,193 - INFO - joeynmt.training - EPOCH 75
-2021-09-30 18:59:23,089 - INFO - joeynmt.training - Epoch  75: total training loss 291.15
-2021-09-30 18:59:23,089 - INFO - joeynmt.training - EPOCH 76
-2021-09-30 18:59:41,804 - INFO - joeynmt.training - Epoch  76: total training loss 286.07
-2021-09-30 18:59:41,805 - INFO - joeynmt.training - EPOCH 77
-2021-09-30 19:00:00,688 - INFO - joeynmt.training - Epoch  77: total training loss 281.69
-2021-09-30 19:00:00,689 - INFO - joeynmt.training - EPOCH 78
-2021-09-30 19:00:19,403 - INFO - joeynmt.training - Epoch  78: total training loss 274.45
-2021-09-30 19:00:19,404 - INFO - joeynmt.training - EPOCH 79
-2021-09-30 19:00:38,242 - INFO - joeynmt.training - Epoch  79: total training loss 273.24
-2021-09-30 19:00:38,243 - INFO - joeynmt.training - EPOCH 80
-2021-09-30 19:00:57,031 - INFO - joeynmt.training - Epoch  80: total training loss 264.09
-2021-09-30 19:00:57,031 - INFO - joeynmt.training - EPOCH 81
-2021-09-30 19:01:15,967 - INFO - joeynmt.training - Epoch  81: total training loss 264.22
-2021-09-30 19:01:15,967 - INFO - joeynmt.training - EPOCH 82
-2021-09-30 19:01:34,609 - INFO - joeynmt.training - Epoch  82: total training loss 254.23
-2021-09-30 19:01:34,609 - INFO - joeynmt.training - EPOCH 83
-2021-09-30 19:01:53,311 - INFO - joeynmt.training - Epoch  83: total training loss 256.70
-2021-09-30 19:01:53,312 - INFO - joeynmt.training - EPOCH 84
-2021-09-30 19:02:12,029 - INFO - joeynmt.training - Epoch  84: total training loss 252.03
-2021-09-30 19:02:12,030 - INFO - joeynmt.training - EPOCH 85
-2021-09-30 19:02:30,665 - INFO - joeynmt.training - Epoch  85: total training loss 245.47
-2021-09-30 19:02:30,666 - INFO - joeynmt.training - EPOCH 86
-2021-09-30 19:02:44,080 - INFO - joeynmt.training - Epoch  86, Step:     6000, Batch Loss:     3.845133, Tokens per Sec:     5421, Lr: 0.500000
-2021-09-30 19:02:49,420 - INFO - joeynmt.training - Epoch  86: total training loss 241.43
-2021-09-30 19:02:49,421 - INFO - joeynmt.training - EPOCH 87
-2021-09-30 19:03:08,166 - INFO - joeynmt.training - Epoch  87: total training loss 236.76
-2021-09-30 19:03:08,166 - INFO - joeynmt.training - EPOCH 88
-2021-09-30 19:03:26,733 - INFO - joeynmt.training - Epoch  88: total training loss 239.65
-2021-09-30 19:03:26,733 - INFO - joeynmt.training - EPOCH 89
-2021-09-30 19:03:45,694 - INFO - joeynmt.training - Epoch  89: total training loss 233.98
-2021-09-30 19:03:45,695 - INFO - joeynmt.training - EPOCH 90
-2021-09-30 19:04:04,410 - INFO - joeynmt.training - Epoch  90: total training loss 230.56
-2021-09-30 19:04:04,411 - INFO - joeynmt.training - EPOCH 91
-2021-09-30 19:04:23,260 - INFO - joeynmt.training - Epoch  91: total training loss 230.76
-2021-09-30 19:04:23,260 - INFO - joeynmt.training - EPOCH 92
-2021-09-30 19:04:42,135 - INFO - joeynmt.training - Epoch  92: total training loss 227.48
-2021-09-30 19:04:42,136 - INFO - joeynmt.training - EPOCH 93
-2021-09-30 19:05:00,718 - INFO - joeynmt.training - Epoch  93: total training loss 220.79
-2021-09-30 19:05:00,718 - INFO - joeynmt.training - EPOCH 94
-2021-09-30 19:05:19,446 - INFO - joeynmt.training - Epoch  94: total training loss 224.22
-2021-09-30 19:05:19,446 - INFO - joeynmt.training - EPOCH 95
-2021-09-30 19:05:38,178 - INFO - joeynmt.training - Epoch  95: total training loss 218.14
-2021-09-30 19:05:38,178 - INFO - joeynmt.training - EPOCH 96
-2021-09-30 19:05:57,013 - INFO - joeynmt.training - Epoch  96: total training loss 218.32
-2021-09-30 19:05:57,013 - INFO - joeynmt.training - EPOCH 97
-2021-09-30 19:06:15,926 - INFO - joeynmt.training - Epoch  97: total training loss 215.60
-2021-09-30 19:06:15,927 - INFO - joeynmt.training - EPOCH 98
-2021-09-30 19:06:34,648 - INFO - joeynmt.training - Epoch  98: total training loss 211.18
-2021-09-30 19:06:34,649 - INFO - joeynmt.training - EPOCH 99
-2021-09-30 19:06:53,662 - INFO - joeynmt.training - Epoch  99: total training loss 209.76
-2021-09-30 19:06:53,663 - INFO - joeynmt.training - EPOCH 100
-2021-09-30 19:07:12,630 - INFO - joeynmt.training - Epoch 100, Step:     7000, Batch Loss:     3.676039, Tokens per Sec:     5335, Lr: 0.500000
-2021-09-30 19:07:12,631 - INFO - joeynmt.training - Epoch 100: total training loss 209.59
-2021-09-30 19:07:12,631 - INFO - joeynmt.training - Training ended after 100 epochs.
-2021-09-30 19:07:12,631 - INFO - joeynmt.training - Best validation result (greedy) at step        0:   -inf eval_metric.
-2021-09-30 19:07:12,660 - INFO - joeynmt.prediction - Process device: cuda, n_gpu: 1, batch_size per device: 80
-2021-09-30 19:07:12,660 - INFO - joeynmt.prediction - Loading model from models/BIG_model/0.ckpt
+2021-10-01 14:34:38,354 - INFO - joeynmt.training - EPOCH 1
+2021-10-01 14:34:51,101 - INFO - joeynmt.training - Epoch   1: total training loss 8558.10
+2021-10-01 14:34:51,101 - INFO - joeynmt.training - EPOCH 2
+2021-10-01 14:35:03,831 - INFO - joeynmt.training - Epoch   2: total training loss 7758.39
+2021-10-01 14:35:03,832 - INFO - joeynmt.training - EPOCH 3
+2021-10-01 14:35:16,484 - INFO - joeynmt.training - Epoch   3: total training loss 7640.90
+2021-10-01 14:35:16,485 - INFO - joeynmt.training - EPOCH 4
+2021-10-01 14:35:29,167 - INFO - joeynmt.training - Epoch   4: total training loss 7541.80
+2021-10-01 14:35:29,168 - INFO - joeynmt.training - EPOCH 5
+2021-10-01 14:35:41,738 - INFO - joeynmt.training - Epoch   5: total training loss 7372.49
+2021-10-01 14:35:41,738 - INFO - joeynmt.training - EPOCH 6
+2021-10-01 14:35:54,499 - INFO - joeynmt.training - Epoch   6: total training loss 7211.57
+2021-10-01 14:35:54,500 - INFO - joeynmt.training - EPOCH 7
+2021-10-01 14:36:07,104 - INFO - joeynmt.training - Epoch   7: total training loss 7016.82
+2021-10-01 14:36:07,105 - INFO - joeynmt.training - EPOCH 8
+2021-10-01 14:36:19,830 - INFO - joeynmt.training - Epoch   8: total training loss 6850.45
+2021-10-01 14:36:19,831 - INFO - joeynmt.training - EPOCH 9
+2021-10-01 14:36:32,398 - INFO - joeynmt.training - Epoch   9: total training loss 6705.78
+2021-10-01 14:36:32,399 - INFO - joeynmt.training - EPOCH 10
+2021-10-01 14:36:45,144 - INFO - joeynmt.training - Epoch  10: total training loss 6585.29
+2021-10-01 14:36:45,144 - INFO - joeynmt.training - EPOCH 11
+2021-10-01 14:36:57,696 - INFO - joeynmt.training - Epoch  11: total training loss 6472.31
+2021-10-01 14:36:57,696 - INFO - joeynmt.training - EPOCH 12
+2021-10-01 14:37:10,489 - INFO - joeynmt.training - Epoch  12: total training loss 6389.77
+2021-10-01 14:37:10,489 - INFO - joeynmt.training - EPOCH 13
+2021-10-01 14:37:23,050 - INFO - joeynmt.training - Epoch  13: total training loss 6304.43
+2021-10-01 14:37:23,050 - INFO - joeynmt.training - EPOCH 14
+2021-10-01 14:37:35,731 - INFO - joeynmt.training - Epoch  14: total training loss 6224.60
+2021-10-01 14:37:35,731 - INFO - joeynmt.training - EPOCH 15
+2021-10-01 14:37:39,456 - INFO - joeynmt.training - Epoch  15, Step:     1000, Batch Loss:    93.155678, Tokens per Sec:     7876, Lr: 0.000300
+2021-10-01 14:37:41,270 - WARNING - sacrebleu - That's 100 lines that end in a tokenized period ('.')
+2021-10-01 14:37:41,270 - WARNING - sacrebleu - It looks like you forgot to detokenize your test data, which may hurt your score.
+2021-10-01 14:37:41,270 - WARNING - sacrebleu - If you insist your data is detokenized, or don't care, you can suppress this message with the `force` parameter.
+2021-10-01 14:37:41,274 - INFO - joeynmt.training - Hooray! New best validation result [eval_metric]!
+2021-10-01 14:37:42,040 - INFO - joeynmt.training - Example #0
+2021-10-01 14:37:42,040 - INFO - joeynmt.training - 	Source:     ka
+2021-10-01 14:37:42,040 - INFO - joeynmt.training - 	Reference:  en
+2021-10-01 14:37:42,041 - INFO - joeynmt.training - 	Hypothesis: 
+2021-10-01 14:37:42,041 - INFO - joeynmt.training - Example #1
+--- Logging error ---
 Traceback (most recent call last):
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/logging/__init__.py", line 1036, in emit
+    stream.write(msg)
+UnicodeEncodeError: 'latin-1' codec can't encode characters in position 73-79: ordinal not in range(256)
+Call stack:
   File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 193, in _run_module_as_main
     "__main__", mod_spec)
   File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 85, in _run_code
@@ -324,11 +153,101 @@ Traceback (most recent call last):
     main()
   File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 35, in main
     train(cfg_file=args.config_path, skip_test=args.skip_test)
-  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 863, in train
-    datasets=datasets_to_test)
-  File "/home/lcur0008/joeynmt/joeynmt/prediction.py", line 321, in test
-    model_checkpoint = load_checkpoint(ckpt, use_cuda=use_cuda)
-  File "/home/lcur0008/joeynmt/joeynmt/helpers.py", line 284, in load_checkpoint
-    assert os.path.isfile(path), "Checkpoint %s not found" % path
-AssertionError: Checkpoint models/BIG_model/0.ckpt not found
-srun: error: r31n4: task 0: Exited with exit code 1
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 846, in train
+    trainer.train_and_validate(train_data=train_data, valid_data=dev_data)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 497, in train_and_validate
+    valid_duration = self._validate(valid_data, epoch_no)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 642, in _validate
+    references=valid_references)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 731, in _log_examples
+    logger.debug("\tRaw source:     %s", sources_raw[p])
+Message: '\tRaw source:     %s'
+Arguments: (['"\u10e0\u10dd\u10d3\u10d4\u10e1\u10d0\u10ea', '11', '\u10ec\u10da\u10d8\u10e1', '\u10d5\u10d8\u10e7\u10d0\u10d5\u10d8', ',', '\u10db\u10d4', '\u10db\u10d0\u10ee\u10e1\u10dd\u10d5\u10e1', '\u10e1\u10d8\u10ee\u10d0\u10e0\u10e3\u10da\u10d8\u10e1', '\u10dc\u10dd\u10e2\u10d0\u10d6\u10d4', '\u10d2\u10d0\u10e6\u10d5\u10d8\u10eb\u10d4\u10d1\u10d0', '\u10d4\u10e0\u10d7', '\u10d3\u10d8\u10da\u10d0\u10e1', '."'],)
+--- Logging error ---
+Traceback (most recent call last):
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/logging/__init__.py", line 1036, in emit
+    stream.write(msg)
+UnicodeEncodeError: 'latin-1' codec can't encode characters in position 66-72: ordinal not in range(256)
+Call stack:
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 48, in <module>
+    main()
+  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 35, in main
+    train(cfg_file=args.config_path, skip_test=args.skip_test)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 846, in train
+    trainer.train_and_validate(train_data=train_data, valid_data=dev_data)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 497, in train_and_validate
+    valid_duration = self._validate(valid_data, epoch_no)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 642, in _validate
+    references=valid_references)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 737, in _log_examples
+    logger.info("\tSource:     %s", sources[p])
+Message: '\tSource:     %s'
+Arguments: ('"\u10e0\u10dd\u10d3\u10d4\u10e1\u10d0\u10ea 11 \u10ec\u10da\u10d8\u10e1 \u10d5\u10d8\u10e7\u10d0\u10d5\u10d8 , \u10db\u10d4 \u10db\u10d0\u10ee\u10e1\u10dd\u10d5\u10e1 \u10e1\u10d8\u10ee\u10d0\u10e0\u10e3\u10da\u10d8\u10e1 \u10dc\u10dd\u10e2\u10d0\u10d6\u10d4 \u10d2\u10d0\u10e6\u10d5\u10d8\u10eb\u10d4\u10d1\u10d0 \u10d4\u10e0\u10d7 \u10d3\u10d8\u10da\u10d0\u10e1 ."',)
+2021-10-01 14:37:42,044 - INFO - joeynmt.training - 	Source:     "\u10e0\u10dd\u10d3\u10d4\u10e1\u10d0\u10ea 11 \u10ec\u10da\u10d8\u10e1 \u10d5\u10d8\u10e7\u10d0\u10d5\u10d8 , \u10db\u10d4 \u10db\u10d0\u10ee\u10e1\u10dd\u10d5\u10e1 \u10e1\u10d8\u10ee\u10d0\u10e0\u10e3\u10da\u10d8\u10e1 \u10dc\u10dd\u10e2\u10d0\u10d6\u10d4 \u10d2\u10d0\u10e6\u10d5\u10d8\u10eb\u10d4\u10d1\u10d0 \u10d4\u10e0\u10d7 \u10d3\u10d8\u10da\u10d0\u10e1 ."
+2021-10-01 14:37:42,045 - INFO - joeynmt.training - 	Reference:  "When I was 11 , I remember waking up one morning to the sound of joy in my house ."
+2021-10-01 14:37:42,045 - INFO - joeynmt.training - 	Hypothesis: "And I , the first , , , , , , , the same dimensions , the same dimensions ."
+2021-10-01 14:37:42,045 - INFO - joeynmt.training - Example #2
+--- Logging error ---
+Traceback (most recent call last):
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/logging/__init__.py", line 1036, in emit
+    stream.write(msg)
+UnicodeEncodeError: 'latin-1' codec can't encode characters in position 72-79: ordinal not in range(256)
+Call stack:
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 48, in <module>
+    main()
+  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 35, in main
+    train(cfg_file=args.config_path, skip_test=args.skip_test)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 846, in train
+    trainer.train_and_validate(train_data=train_data, valid_data=dev_data)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 497, in train_and_validate
+    valid_duration = self._validate(valid_data, epoch_no)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 642, in _validate
+    references=valid_references)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 731, in _log_examples
+    logger.debug("\tRaw source:     %s", sources_raw[p])
+Message: '\tRaw source:     %s'
+Arguments: (['\u10db\u10d0\u10db\u10d0\u10e9\u10d4\u10db\u10d8', '\u10e3\u10e1\u10db\u10d4\u10dc\u10d3\u10d0', '&quot;', '&quot;', '\u10d1\u10d8\u10d1\u10d8\u10e1\u10d8\u10e1', '&quot;', '&quot;', '\u10e1\u10d8\u10d0\u10ee\u10da\u10d4\u10d4\u10d1\u10e1', '\u10d7\u10d0\u10d5\u10d8\u10e1', '\u10de\u10d0\u10e2\u10d0\u10e0\u10d0', '\u10dc\u10d0\u10ea\u10e0\u10d8\u10e1\u10e4\u10d4\u10e0', '\u10e0\u10d0\u10d3\u10d8\u10dd\u10e8\u10d8', '.'],)
+--- Logging error ---
+Traceback (most recent call last):
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/logging/__init__.py", line 1036, in emit
+    stream.write(msg)
+UnicodeEncodeError: 'latin-1' codec can't encode characters in position 65-72: ordinal not in range(256)
+Call stack:
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 48, in <module>
+    main()
+  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 35, in main
+    train(cfg_file=args.config_path, skip_test=args.skip_test)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 846, in train
+    trainer.train_and_validate(train_data=train_data, valid_data=dev_data)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 497, in train_and_validate
+    valid_duration = self._validate(valid_data, epoch_no)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 642, in _validate
+    references=valid_references)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 737, in _log_examples
+    logger.info("\tSource:     %s", sources[p])
+Message: '\tSource:     %s'
+Arguments: ('\u10db\u10d0\u10db\u10d0\u10e9\u10d4\u10db\u10d8 \u10e3\u10e1\u10db\u10d4\u10dc\u10d3\u10d0 &quot; &quot; \u10d1\u10d8\u10d1\u10d8\u10e1\u10d8\u10e1 &quot; &quot; \u10e1\u10d8\u10d0\u10ee\u10da\u10d4\u10d4\u10d1\u10e1 \u10d7\u10d0\u10d5\u10d8\u10e1 \u10de\u10d0\u10e2\u10d0\u10e0\u10d0 \u10dc\u10d0\u10ea\u10e0\u10d8\u10e1\u10e4\u10d4\u10e0 \u10e0\u10d0\u10d3\u10d8\u10dd\u10e8\u10d8 .',)
+2021-10-01 14:37:42,046 - INFO - joeynmt.training - 	Source:     \u10db\u10d0\u10db\u10d0\u10e9\u10d4\u10db\u10d8 \u10e3\u10e1\u10db\u10d4\u10dc\u10d3\u10d0 &quot; &quot; \u10d1\u10d8\u10d1\u10d8\u10e1\u10d8\u10e1 &quot; &quot; \u10e1\u10d8\u10d0\u10ee\u10da\u10d4\u10d4\u10d1\u10e1 \u10d7\u10d0\u10d5\u10d8\u10e1 \u10de\u10d0\u10e2\u10d0\u10e0\u10d0 \u10dc\u10d0\u10ea\u10e0\u10d8\u10e1\u10e4\u10d4\u10e0 \u10e0\u10d0\u10d3\u10d8\u10dd\u10e8\u10d8 .
+2021-10-01 14:37:42,047 - INFO - joeynmt.training - 	Reference:  "My father was listening to BBC News on his small , gray radio ."
+2021-10-01 14:37:42,047 - INFO - joeynmt.training - 	Hypothesis: "And I &apos;s the first , , , , , the lot of the world of the world ."
+2021-10-01 14:37:42,047 - INFO - joeynmt.training - Validation result (greedy) at epoch  15, step     1000: bleu:   2.92, loss: 67765.6875, ppl: 380.2050, duration: 2.5907s
+/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/site-packages/matplotlib/image.py:863: UserWarning: Attempting to set identical left==right results
+in singular transformations; automatically expanding.
+left=-0.5, right=-0.5
+  self.axes.set_xlim((xmin, xmax), auto=None)
+2021-10-01 14:37:52,288 - INFO - joeynmt.training - Epoch  15: total training loss 6150.31
+2021-10-01 14:37:52,289 - INFO - joeynmt.training - EPOCH 16
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+slurmstepd: error: *** JOB 8220912 ON r31n2 CANCELLED AT 2021-10-01T14:37:58 ***
