@@ -31,7 +31,7 @@ training:
     # decrease_factor: 0.9                # Zoph
     early_stopping_metric: "eval_metric"
     epochs: 100                         # Zoph
-    validation_freq: 1000
+    validation_freq: 100
     logging_freq: 1000
     eval_metric: "bleu"
     model_dir: "models/tr_en_model"
@@ -45,7 +45,7 @@ model:
     encoder:
         rnn_type: "lstm"
         embeddings:
-            embedding_dim: 512          # Gulcehre
+            embedding_dim: 256          # Gulcehre
             scale: False
         hidden_size: 1000               # Luong & Zoph
         bidirectional: False            # all
@@ -54,7 +54,7 @@ model:
     decoder:
         rnn_type: "lstm"
         embeddings:
-            embedding_dim: 512          # uncertain
+            embedding_dim: 256          # uncertain
             scale: False
         emb_scale: False
         hidden_size: 1000               # all
