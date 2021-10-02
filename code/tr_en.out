@@ -1,3 +1,85 @@
+<<<<<<< HEAD
+2021-10-01 14:03:39,119 - INFO - root - Hello! This is Joey-NMT (version 1.3).
+2021-10-01 14:03:39,178 - INFO - joeynmt.data - Loading training data...
+2021-10-01 14:03:39,265 - INFO - joeynmt.data - Building vocabulary...
+2021-10-01 14:03:41,687 - INFO - joeynmt.data - Loading dev data...
+2021-10-01 14:03:41,700 - INFO - joeynmt.data - Loading test data...
+2021-10-01 14:03:41,711 - INFO - joeynmt.data - Data loaded.
+2021-10-01 14:03:41,711 - INFO - joeynmt.model - Building an encoder-decoder model...
+2021-10-01 14:03:42,853 - INFO - joeynmt.model - Enc-dec model built.
+2021-10-01 14:03:42,861 - INFO - joeynmt.training - Total params: 51390880
+2021-10-01 14:03:47,016 - INFO - joeynmt.helpers - cfg.name                           : tr_en_model
+2021-10-01 14:03:47,016 - INFO - joeynmt.helpers - cfg.data.src                       : tr
+2021-10-01 14:03:47,016 - INFO - joeynmt.helpers - cfg.data.trg                       : en
+2021-10-01 14:03:47,016 - INFO - joeynmt.helpers - cfg.data.train                     : ../2DL4NLP/all_data/train
+2021-10-01 14:03:47,017 - INFO - joeynmt.helpers - cfg.data.dev                       : ../2DL4NLP/all_data/val
+2021-10-01 14:03:47,017 - INFO - joeynmt.helpers - cfg.data.test                      : ../2DL4NLP/all_data/test
+2021-10-01 14:03:47,017 - INFO - joeynmt.helpers - cfg.data.level                     : bpe
+2021-10-01 14:03:47,017 - INFO - joeynmt.helpers - cfg.data.lowercase                 : False
+2021-10-01 14:03:47,017 - INFO - joeynmt.helpers - cfg.data.max_sent_length           : 50
+2021-10-01 14:03:47,017 - INFO - joeynmt.helpers - cfg.data.src_voc_min_freq          : 0
+2021-10-01 14:03:47,017 - INFO - joeynmt.helpers - cfg.data.src_voc_limit             : 10000
+2021-10-01 14:03:47,017 - INFO - joeynmt.helpers - cfg.data.trg_voc_min_freq          : 0
+2021-10-01 14:03:47,017 - INFO - joeynmt.helpers - cfg.data.trg_voc_limit             : 10000
+2021-10-01 14:03:47,017 - INFO - joeynmt.helpers - cfg.testing.beam_size              : 5
+2021-10-01 14:03:47,017 - INFO - joeynmt.helpers - cfg.testing.alpha                  : 1.0
+2021-10-01 14:03:47,017 - INFO - joeynmt.helpers - cfg.training.random_seed           : 42
+2021-10-01 14:03:47,017 - INFO - joeynmt.helpers - cfg.training.optimizer             : sgd
+2021-10-01 14:03:47,017 - INFO - joeynmt.helpers - cfg.training.learning_rate         : 0.5
+2021-10-01 14:03:47,017 - INFO - joeynmt.helpers - cfg.training.learning_rate_min     : 5e-07
+2021-10-01 14:03:47,017 - INFO - joeynmt.helpers - cfg.training.weight_decay          : 0.0
+2021-10-01 14:03:47,018 - INFO - joeynmt.helpers - cfg.training.clip_grad_norm        : 5.0
+2021-10-01 14:03:47,018 - INFO - joeynmt.helpers - cfg.training.batch_size            : 80
+2021-10-01 14:03:47,018 - INFO - joeynmt.helpers - cfg.training.scheduling            : plateau
+2021-10-01 14:03:47,018 - INFO - joeynmt.helpers - cfg.training.patience              : 1
+2021-10-01 14:03:47,018 - INFO - joeynmt.helpers - cfg.training.decrease_factor       : 0.9
+2021-10-01 14:03:47,018 - INFO - joeynmt.helpers - cfg.training.early_stopping_metric : eval_metric
+2021-10-01 14:03:47,018 - INFO - joeynmt.helpers - cfg.training.epochs                : 100
+2021-10-01 14:03:47,018 - INFO - joeynmt.helpers - cfg.training.validation_freq       : 7362
+2021-10-01 14:03:47,018 - INFO - joeynmt.helpers - cfg.training.logging_freq          : 1000
+2021-10-01 14:03:47,018 - INFO - joeynmt.helpers - cfg.training.eval_metric           : bleu
+2021-10-01 14:03:47,018 - INFO - joeynmt.helpers - cfg.training.model_dir             : models/tr_en_model_tho
+2021-10-01 14:03:47,018 - INFO - joeynmt.helpers - cfg.training.overwrite             : True
+2021-10-01 14:03:47,018 - INFO - joeynmt.helpers - cfg.training.shuffle               : True
+2021-10-01 14:03:47,018 - INFO - joeynmt.helpers - cfg.training.use_cuda              : True
+2021-10-01 14:03:47,018 - INFO - joeynmt.helpers - cfg.training.max_output_length     : 60
+2021-10-01 14:03:47,018 - INFO - joeynmt.helpers - cfg.training.print_valid_sents     : [0, 1, 2]
+2021-10-01 14:03:47,019 - INFO - joeynmt.helpers - cfg.model.encoder.rnn_type         : lstm
+2021-10-01 14:03:47,019 - INFO - joeynmt.helpers - cfg.model.encoder.embeddings.embedding_dim : 620
+2021-10-01 14:03:47,019 - INFO - joeynmt.helpers - cfg.model.encoder.embeddings.scale : False
+2021-10-01 14:03:47,019 - INFO - joeynmt.helpers - cfg.model.encoder.hidden_size      : 1000
+2021-10-01 14:03:47,019 - INFO - joeynmt.helpers - cfg.model.encoder.bidirectional    : True
+2021-10-01 14:03:47,019 - INFO - joeynmt.helpers - cfg.model.encoder.dropout          : 0.2
+2021-10-01 14:03:47,019 - INFO - joeynmt.helpers - cfg.model.encoder.num_layers       : 1
+2021-10-01 14:03:47,019 - INFO - joeynmt.helpers - cfg.model.decoder.rnn_type         : lstm
+2021-10-01 14:03:47,019 - INFO - joeynmt.helpers - cfg.model.decoder.embeddings.embedding_dim : 620
+2021-10-01 14:03:47,019 - INFO - joeynmt.helpers - cfg.model.decoder.embeddings.scale : False
+2021-10-01 14:03:47,019 - INFO - joeynmt.helpers - cfg.model.decoder.emb_scale        : False
+2021-10-01 14:03:47,019 - INFO - joeynmt.helpers - cfg.model.decoder.hidden_size      : 1000
+2021-10-01 14:03:47,019 - INFO - joeynmt.helpers - cfg.model.decoder.dropout          : 0.2
+2021-10-01 14:03:47,019 - INFO - joeynmt.helpers - cfg.model.decoder.hidden_dropout   : 0.2
+2021-10-01 14:03:47,019 - INFO - joeynmt.helpers - cfg.model.decoder.num_layers       : 1
+2021-10-01 14:03:47,019 - INFO - joeynmt.helpers - cfg.model.decoder.input_feeding    : True
+2021-10-01 14:03:47,019 - INFO - joeynmt.helpers - cfg.model.decoder.init_hidden      : bridge
+2021-10-01 14:03:47,020 - INFO - joeynmt.helpers - cfg.model.decoder.attention        : bahdanau
+2021-10-01 14:03:47,020 - INFO - joeynmt.helpers - Data set sizes: 
+	train 5566,
+	valid 551,
+	test 602
+2021-10-01 14:03:47,020 - INFO - joeynmt.helpers - First training example:
+	[SRC] tr
+	[TRG] en
+2021-10-01 14:03:47,020 - INFO - joeynmt.helpers - First 10 words (src): (0) <unk> (1) <pad> (2) <s> (3) </s> (4) , (5) . (6) bir (7) ." (8) ve (9) &quot;
+2021-10-01 14:03:47,020 - INFO - joeynmt.helpers - First 10 words (trg): (0) <unk> (1) <pad> (2) <s> (3) </s> (4) , (5) the (6) . (7) ." (8) of (9) to
+2021-10-01 14:03:47,020 - INFO - joeynmt.helpers - Number of Src words (types): 10004
+2021-10-01 14:03:47,020 - INFO - joeynmt.helpers - Number of Trg words (types): 8470
+2021-10-01 14:03:47,020 - INFO - joeynmt.training - Model(
+	encoder=RecurrentEncoder(LSTM(620, 1000, batch_first=True, bidirectional=True)),
+	decoder=RecurrentDecoder(rnn=LSTM(1620, 1000, batch_first=True), attention=BahdanauAttention),
+	src_embed=Embeddings(embedding_dim=620, vocab_size=10004),
+	trg_embed=Embeddings(embedding_dim=620, vocab_size=8470))
+2021-10-01 14:03:47,038 - INFO - joeynmt.training - Train stats:
+=======
 2021-10-01 15:01:21,081 - INFO - root - Hello! This is Joey-NMT (version 1.3).
 2021-10-01 15:01:21,155 - INFO - joeynmt.data - Loading training data...
 2021-10-01 15:01:21,241 - INFO - joeynmt.data - Building vocabulary...
@@ -74,12 +156,16 @@
 	src_embed=Embeddings(embedding_dim=512, vocab_size=10004),
 	trg_embed=Embeddings(embedding_dim=512, vocab_size=8470))
 2021-10-01 15:01:28,989 - INFO - joeynmt.training - Train stats:
+>>>>>>> cbdca450890e4f538d59dab3d2ba4fcf383017af
 	device: cuda
 	n_gpu: 1
 	16-bits training: False
 	gradient accumulation: 1
 	batch size per device: 80
 	total batch size (w. parallel & accumulation): 80
+<<<<<<< HEAD
+2021-10-01 14:03:47,038 - INFO - joeynmt.training - EPOCH 1
+=======
 2021-10-01 15:01:28,990 - INFO - joeynmt.training - EPOCH 1
 2021-10-01 15:01:44,768 - INFO - joeynmt.training - Epoch   1: total training loss 8485.85
 2021-10-01 15:01:44,768 - INFO - joeynmt.training - EPOCH 2
@@ -120,6 +206,7 @@
 2021-10-01 15:05:18,785 - INFO - joeynmt.training - 	Hypothesis: The first is .
 2021-10-01 15:05:18,785 - INFO - joeynmt.training - Example #1
 --- Logging error ---
+>>>>>>> cbdca450890e4f538d59dab3d2ba4fcf383017af
 Traceback (most recent call last):
   File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/logging/__init__.py", line 1036, in emit
     stream.write(msg)
@@ -129,10 +216,40 @@ Call stack:
     "__main__", mod_spec)
   File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 85, in _run_code
     exec(code, run_globals)
-  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 48, in <module>
+  File "/home/lcur0007/joeynmt/joeynmt/__main__.py", line 48, in <module>
     main()
-  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 35, in main
+  File "/home/lcur0007/joeynmt/joeynmt/__main__.py", line 35, in main
     train(cfg_file=args.config_path, skip_test=args.skip_test)
+<<<<<<< HEAD
+  File "/home/lcur0007/joeynmt/joeynmt/training.py", line 846, in train
+    trainer.train_and_validate(train_data=train_data, valid_data=dev_data)
+  File "/home/lcur0007/joeynmt/joeynmt/training.py", line 447, in train_and_validate
+    batch_loss += self._train_step(batch)
+  File "/home/lcur0007/joeynmt/joeynmt/training.py", line 539, in _train_step
+    batch_loss, _, _, _ = self.model(return_type="loss", **vars(batch))
+  File "/home/lcur0007/.local/lib/python3.7/site-packages/torch/nn/modules/module.py", line 1051, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/lcur0007/joeynmt/joeynmt/model.py", line 84, in forward
+    out, _, _, _ = self._encode_decode(**kwargs)
+  File "/home/lcur0007/joeynmt/joeynmt/model.py", line 136, in _encode_decode
+    trg_mask=trg_mask, **kwargs)
+  File "/home/lcur0007/joeynmt/joeynmt/model.py", line 177, in _decode
+    **_kwargs)
+  File "/home/lcur0007/.local/lib/python3.7/site-packages/torch/nn/modules/module.py", line 1051, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/lcur0007/joeynmt/joeynmt/decoders.py", line 334, in forward
+    hidden = self._init_hidden(encoder_hidden)
+  File "/home/lcur0007/joeynmt/joeynmt/decoders.py", line 437, in _init_hidden
+    self.bridge_layer(encoder_final)).unsqueeze(0).repeat(
+  File "/home/lcur0007/.local/lib/python3.7/site-packages/torch/nn/modules/module.py", line 1051, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/lcur0007/.local/lib/python3.7/site-packages/torch/nn/modules/linear.py", line 96, in forward
+    return F.linear(input, self.weight, self.bias)
+  File "/home/lcur0007/.local/lib/python3.7/site-packages/torch/nn/functional.py", line 1847, in linear
+    return torch._C._nn.linear(input, weight, bias)
+RuntimeError: mat1 and mat2 shapes cannot be multiplied (80x1000 and 2000x1000)
+srun: error: r31n1: task 0: Exited with exit code 1
+=======
   File "/home/lcur0008/joeynmt/joeynmt/training.py", line 846, in train
     trainer.train_and_validate(train_data=train_data, valid_data=dev_data)
   File "/home/lcur0008/joeynmt/joeynmt/training.py", line 497, in train_and_validate
@@ -1094,3 +1211,4 @@ Arguments: ('"Babam BBC Haber kanal\u0131n\u0131 dinliyordu ; o ufak , gri radyo
 2021-10-01 15:28:38,578 - WARNING - sacrebleu - If you insist your data is detokenized, or don't care, you can suppress this message with the `force` parameter.
 2021-10-01 15:28:38,582 - INFO - joeynmt.prediction - test bleu[13a]:   5.71 [Beam search decoding with beam size = 5 and alpha = 1.0]
 2021-10-01 15:28:38,585 - INFO - joeynmt.prediction - Translations saved to: models/tr_en_model/00003000.hyps.test
+>>>>>>> cbdca450890e4f538d59dab3d2ba4fcf383017af
