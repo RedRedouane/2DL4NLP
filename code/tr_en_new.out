@@ -1,98 +1,98 @@
-2021-10-02 13:15:44,589 - INFO - root - Hello! This is Joey-NMT (version 1.3).
-2021-10-02 13:15:44,659 - INFO - joeynmt.data - Loading training data...
-2021-10-02 13:15:44,767 - INFO - joeynmt.data - Building vocabulary...
-2021-10-02 13:15:45,228 - INFO - joeynmt.data - Loading dev data...
-2021-10-02 13:15:45,241 - INFO - joeynmt.data - Loading test data...
-2021-10-02 13:15:45,252 - INFO - joeynmt.data - Data loaded.
-2021-10-02 13:15:45,252 - INFO - joeynmt.model - Building an encoder-decoder model...
-2021-10-02 13:15:45,306 - INFO - joeynmt.model - Enc-dec model built.
-2021-10-02 13:15:45,312 - INFO - joeynmt.training - Total params: 2000256
-2021-10-02 13:15:49,694 - INFO - joeynmt.helpers - cfg.name                           : tr_en_bpe_model
-2021-10-02 13:15:49,695 - INFO - joeynmt.helpers - cfg.data.src                       : tr
-2021-10-02 13:15:49,695 - INFO - joeynmt.helpers - cfg.data.trg                       : en
-2021-10-02 13:15:49,695 - INFO - joeynmt.helpers - cfg.data.train                     : ../2DL4NLP/all_data/train.bpe
-2021-10-02 13:15:49,695 - INFO - joeynmt.helpers - cfg.data.dev                       : ../2DL4NLP/all_data/val.bpe
-2021-10-02 13:15:49,695 - INFO - joeynmt.helpers - cfg.data.test                      : ../2DL4NLP/all_data/test.bpe
-2021-10-02 13:15:49,695 - INFO - joeynmt.helpers - cfg.data.level                     : bpe
-2021-10-02 13:15:49,696 - INFO - joeynmt.helpers - cfg.data.lowercase                 : False
-2021-10-02 13:15:49,696 - INFO - joeynmt.helpers - cfg.data.max_sent_length           : 50
-2021-10-02 13:15:49,696 - INFO - joeynmt.helpers - cfg.data.src_voc_min_freq          : 0
-2021-10-02 13:15:49,696 - INFO - joeynmt.helpers - cfg.data.src_voc_limit             : 10000
-2021-10-02 13:15:49,696 - INFO - joeynmt.helpers - cfg.data.trg_voc_min_freq          : 0
-2021-10-02 13:15:49,696 - INFO - joeynmt.helpers - cfg.data.trg_voc_limit             : 10000
-2021-10-02 13:15:49,696 - INFO - joeynmt.helpers - cfg.data.src_vocab                 : ../2DL4NLP/all_data/tr_en_vocab.txt
-2021-10-02 13:15:49,696 - INFO - joeynmt.helpers - cfg.data.trg_vocab                 : ../2DL4NLP/all_data/tr_en_vocab.txt
-2021-10-02 13:15:49,696 - INFO - joeynmt.helpers - cfg.testing.beam_size              : 5
-2021-10-02 13:15:49,696 - INFO - joeynmt.helpers - cfg.testing.alpha                  : 1.0
-2021-10-02 13:15:49,697 - INFO - joeynmt.helpers - cfg.testing.sacrebleu.remove_whitespace : True
-2021-10-02 13:15:49,697 - INFO - joeynmt.helpers - cfg.testing.sacrebleu.tokenize     : none
-2021-10-02 13:15:49,697 - INFO - joeynmt.helpers - cfg.training.random_seed           : 42
-2021-10-02 13:15:49,697 - INFO - joeynmt.helpers - cfg.training.optimizer             : adam
-2021-10-02 13:15:49,697 - INFO - joeynmt.helpers - cfg.training.weight_decay          : 0.0
-2021-10-02 13:15:49,697 - INFO - joeynmt.helpers - cfg.training.batch_size            : 80
-2021-10-02 13:15:49,697 - INFO - joeynmt.helpers - cfg.training.scheduling            : plateau
-2021-10-02 13:15:49,697 - INFO - joeynmt.helpers - cfg.training.patience              : 1
-2021-10-02 13:15:49,697 - INFO - joeynmt.helpers - cfg.training.early_stopping_metric : eval_metric
-2021-10-02 13:15:49,698 - INFO - joeynmt.helpers - cfg.training.epochs                : 100
-2021-10-02 13:15:49,698 - INFO - joeynmt.helpers - cfg.training.validation_freq       : 100
-2021-10-02 13:15:49,698 - INFO - joeynmt.helpers - cfg.training.logging_freq          : 1000
-2021-10-02 13:15:49,698 - INFO - joeynmt.helpers - cfg.training.eval_metric           : bleu
-2021-10-02 13:15:49,698 - INFO - joeynmt.helpers - cfg.training.model_dir             : models/tr_en_bpe_model
-2021-10-02 13:15:49,698 - INFO - joeynmt.helpers - cfg.training.overwrite             : False
-2021-10-02 13:15:49,698 - INFO - joeynmt.helpers - cfg.training.shuffle               : True
-2021-10-02 13:15:49,698 - INFO - joeynmt.helpers - cfg.training.use_cuda              : True
-2021-10-02 13:15:49,698 - INFO - joeynmt.helpers - cfg.training.max_output_length     : 60
-2021-10-02 13:15:49,698 - INFO - joeynmt.helpers - cfg.training.print_valid_sents     : [0, 1, 2]
-2021-10-02 13:15:49,699 - INFO - joeynmt.helpers - cfg.model.encoder.rnn_type         : lstm
-2021-10-02 13:15:49,699 - INFO - joeynmt.helpers - cfg.model.encoder.embeddings.embedding_dim : 128
-2021-10-02 13:15:49,699 - INFO - joeynmt.helpers - cfg.model.encoder.embeddings.scale : False
-2021-10-02 13:15:49,699 - INFO - joeynmt.helpers - cfg.model.encoder.hidden_size      : 128
-2021-10-02 13:15:49,699 - INFO - joeynmt.helpers - cfg.model.encoder.bidirectional    : False
-2021-10-02 13:15:49,699 - INFO - joeynmt.helpers - cfg.model.encoder.dropout          : 0.2
-2021-10-02 13:15:49,699 - INFO - joeynmt.helpers - cfg.model.encoder.num_layers       : 1
-2021-10-02 13:15:49,699 - INFO - joeynmt.helpers - cfg.model.decoder.rnn_type         : lstm
-2021-10-02 13:15:49,699 - INFO - joeynmt.helpers - cfg.model.decoder.embeddings.embedding_dim : 128
-2021-10-02 13:15:49,700 - INFO - joeynmt.helpers - cfg.model.decoder.embeddings.scale : False
-2021-10-02 13:15:49,700 - INFO - joeynmt.helpers - cfg.model.decoder.emb_scale        : False
-2021-10-02 13:15:49,700 - INFO - joeynmt.helpers - cfg.model.decoder.hidden_size      : 128
-2021-10-02 13:15:49,700 - INFO - joeynmt.helpers - cfg.model.decoder.dropout          : 0.2
-2021-10-02 13:15:49,700 - INFO - joeynmt.helpers - cfg.model.decoder.hidden_dropout   : 0.2
-2021-10-02 13:15:49,700 - INFO - joeynmt.helpers - cfg.model.decoder.num_layers       : 1
-2021-10-02 13:15:49,700 - INFO - joeynmt.helpers - cfg.model.decoder.input_feeding    : True
-2021-10-02 13:15:49,700 - INFO - joeynmt.helpers - cfg.model.decoder.init_hidden      : bridge
-2021-10-02 13:15:49,700 - INFO - joeynmt.helpers - cfg.model.decoder.attention        : bahdanau
-2021-10-02 13:15:49,701 - INFO - joeynmt.helpers - Data set sizes: 
+2021-10-02 13:21:56,449 - INFO - root - Hello! This is Joey-NMT (version 1.3).
+2021-10-02 13:21:56,517 - INFO - joeynmt.data - Loading training data...
+2021-10-02 13:21:56,622 - INFO - joeynmt.data - Building vocabulary...
+2021-10-02 13:21:56,821 - INFO - joeynmt.data - Loading dev data...
+2021-10-02 13:21:56,833 - INFO - joeynmt.data - Loading test data...
+2021-10-02 13:21:56,843 - INFO - joeynmt.data - Data loaded.
+2021-10-02 13:21:56,843 - INFO - joeynmt.model - Building an encoder-decoder model...
+2021-10-02 13:21:56,882 - INFO - joeynmt.model - Enc-dec model built.
+2021-10-02 13:21:56,888 - INFO - joeynmt.training - Total params: 1410688
+2021-10-02 13:22:01,305 - INFO - joeynmt.helpers - cfg.name                           : tr_en_bpe_model
+2021-10-02 13:22:01,306 - INFO - joeynmt.helpers - cfg.data.src                       : tr
+2021-10-02 13:22:01,306 - INFO - joeynmt.helpers - cfg.data.trg                       : en
+2021-10-02 13:22:01,306 - INFO - joeynmt.helpers - cfg.data.train                     : ../2DL4NLP/all_data/train.bpe
+2021-10-02 13:22:01,306 - INFO - joeynmt.helpers - cfg.data.dev                       : ../2DL4NLP/all_data/val.bpe
+2021-10-02 13:22:01,306 - INFO - joeynmt.helpers - cfg.data.test                      : ../2DL4NLP/all_data/test.bpe
+2021-10-02 13:22:01,306 - INFO - joeynmt.helpers - cfg.data.level                     : bpe
+2021-10-02 13:22:01,306 - INFO - joeynmt.helpers - cfg.data.lowercase                 : False
+2021-10-02 13:22:01,307 - INFO - joeynmt.helpers - cfg.data.max_sent_length           : 50
+2021-10-02 13:22:01,307 - INFO - joeynmt.helpers - cfg.data.src_voc_min_freq          : 0
+2021-10-02 13:22:01,307 - INFO - joeynmt.helpers - cfg.data.src_voc_limit             : 10000
+2021-10-02 13:22:01,307 - INFO - joeynmt.helpers - cfg.data.trg_voc_min_freq          : 0
+2021-10-02 13:22:01,307 - INFO - joeynmt.helpers - cfg.data.trg_voc_limit             : 10000
+2021-10-02 13:22:01,307 - INFO - joeynmt.helpers - cfg.data.src_vocab                 : ../2DL4NLP/all_data/vocab.tr
+2021-10-02 13:22:01,307 - INFO - joeynmt.helpers - cfg.data.trg_vocab                 : ../2DL4NLP/all_data/vocab.en
+2021-10-02 13:22:01,307 - INFO - joeynmt.helpers - cfg.testing.beam_size              : 5
+2021-10-02 13:22:01,307 - INFO - joeynmt.helpers - cfg.testing.alpha                  : 1.0
+2021-10-02 13:22:01,307 - INFO - joeynmt.helpers - cfg.testing.sacrebleu.remove_whitespace : True
+2021-10-02 13:22:01,307 - INFO - joeynmt.helpers - cfg.testing.sacrebleu.tokenize     : none
+2021-10-02 13:22:01,308 - INFO - joeynmt.helpers - cfg.training.random_seed           : 42
+2021-10-02 13:22:01,308 - INFO - joeynmt.helpers - cfg.training.optimizer             : adam
+2021-10-02 13:22:01,308 - INFO - joeynmt.helpers - cfg.training.weight_decay          : 0.0
+2021-10-02 13:22:01,308 - INFO - joeynmt.helpers - cfg.training.batch_size            : 80
+2021-10-02 13:22:01,308 - INFO - joeynmt.helpers - cfg.training.scheduling            : plateau
+2021-10-02 13:22:01,308 - INFO - joeynmt.helpers - cfg.training.patience              : 1
+2021-10-02 13:22:01,308 - INFO - joeynmt.helpers - cfg.training.early_stopping_metric : eval_metric
+2021-10-02 13:22:01,308 - INFO - joeynmt.helpers - cfg.training.epochs                : 100
+2021-10-02 13:22:01,308 - INFO - joeynmt.helpers - cfg.training.validation_freq       : 100
+2021-10-02 13:22:01,308 - INFO - joeynmt.helpers - cfg.training.logging_freq          : 1000
+2021-10-02 13:22:01,308 - INFO - joeynmt.helpers - cfg.training.eval_metric           : bleu
+2021-10-02 13:22:01,308 - INFO - joeynmt.helpers - cfg.training.model_dir             : models/tr_en_bpe_model
+2021-10-02 13:22:01,309 - INFO - joeynmt.helpers - cfg.training.overwrite             : False
+2021-10-02 13:22:01,309 - INFO - joeynmt.helpers - cfg.training.shuffle               : True
+2021-10-02 13:22:01,309 - INFO - joeynmt.helpers - cfg.training.use_cuda              : True
+2021-10-02 13:22:01,309 - INFO - joeynmt.helpers - cfg.training.max_output_length     : 60
+2021-10-02 13:22:01,309 - INFO - joeynmt.helpers - cfg.training.print_valid_sents     : [0, 1, 2]
+2021-10-02 13:22:01,309 - INFO - joeynmt.helpers - cfg.model.encoder.rnn_type         : lstm
+2021-10-02 13:22:01,309 - INFO - joeynmt.helpers - cfg.model.encoder.embeddings.embedding_dim : 128
+2021-10-02 13:22:01,309 - INFO - joeynmt.helpers - cfg.model.encoder.embeddings.scale : False
+2021-10-02 13:22:01,309 - INFO - joeynmt.helpers - cfg.model.encoder.hidden_size      : 128
+2021-10-02 13:22:01,309 - INFO - joeynmt.helpers - cfg.model.encoder.bidirectional    : False
+2021-10-02 13:22:01,309 - INFO - joeynmt.helpers - cfg.model.encoder.dropout          : 0.2
+2021-10-02 13:22:01,309 - INFO - joeynmt.helpers - cfg.model.encoder.num_layers       : 1
+2021-10-02 13:22:01,309 - INFO - joeynmt.helpers - cfg.model.decoder.rnn_type         : lstm
+2021-10-02 13:22:01,309 - INFO - joeynmt.helpers - cfg.model.decoder.embeddings.embedding_dim : 128
+2021-10-02 13:22:01,309 - INFO - joeynmt.helpers - cfg.model.decoder.embeddings.scale : False
+2021-10-02 13:22:01,310 - INFO - joeynmt.helpers - cfg.model.decoder.emb_scale        : False
+2021-10-02 13:22:01,310 - INFO - joeynmt.helpers - cfg.model.decoder.hidden_size      : 128
+2021-10-02 13:22:01,310 - INFO - joeynmt.helpers - cfg.model.decoder.dropout          : 0.2
+2021-10-02 13:22:01,310 - INFO - joeynmt.helpers - cfg.model.decoder.hidden_dropout   : 0.2
+2021-10-02 13:22:01,310 - INFO - joeynmt.helpers - cfg.model.decoder.num_layers       : 1
+2021-10-02 13:22:01,310 - INFO - joeynmt.helpers - cfg.model.decoder.input_feeding    : True
+2021-10-02 13:22:01,310 - INFO - joeynmt.helpers - cfg.model.decoder.init_hidden      : bridge
+2021-10-02 13:22:01,310 - INFO - joeynmt.helpers - cfg.model.decoder.attention        : bahdanau
+2021-10-02 13:22:01,310 - INFO - joeynmt.helpers - Data set sizes: 
 	train 5177,
 	valid 551,
 	test 602
-2021-10-02 13:15:49,701 - INFO - joeynmt.helpers - First training example:
+2021-10-02 13:22:01,310 - INFO - joeynmt.helpers - First training example:
 	[SRC] t@@ r
 	[TRG] en
-2021-10-02 13:15:49,701 - INFO - joeynmt.helpers - First 10 words (src): (0) <unk> (1) <pad> (2) <s> (3) </s> (4) , (5) . (6) ." (7) the (8) a (9) &quot;
-2021-10-02 13:15:49,701 - INFO - joeynmt.helpers - First 10 words (trg): (0) <unk> (1) <pad> (2) <s> (3) </s> (4) , (5) . (6) ." (7) the (8) a (9) &quot;
-2021-10-02 13:15:49,701 - INFO - joeynmt.helpers - Number of Src words (types): 4136
-2021-10-02 13:15:49,702 - INFO - joeynmt.helpers - Number of Trg words (types): 4136
-2021-10-02 13:15:49,702 - INFO - joeynmt.training - Model(
+2021-10-02 13:22:01,310 - INFO - joeynmt.helpers - First 10 words (src): (0) <unk> (1) <pad> (2) <s> (3) </s> (4) , 4112 (5) . 3684 (6) bir 2321 (7) ." 2189 (8) ve 1549 (9) &quot; 1441
+2021-10-02 13:22:01,310 - INFO - joeynmt.helpers - First 10 words (trg): (0) <unk> (1) <pad> (2) <s> (3) </s> (4) , 5864 (5) the 4384 (6) . 3044 (7) ." 2705 (8) of 2594 (9) to 2411
+2021-10-02 13:22:01,310 - INFO - joeynmt.helpers - Number of Src words (types): 2976
+2021-10-02 13:22:01,311 - INFO - joeynmt.helpers - Number of Trg words (types): 2413
+2021-10-02 13:22:01,311 - INFO - joeynmt.training - Model(
 	encoder=RecurrentEncoder(LSTM(128, 128, batch_first=True)),
 	decoder=RecurrentDecoder(rnn=LSTM(256, 128, batch_first=True), attention=BahdanauAttention),
-	src_embed=Embeddings(embedding_dim=128, vocab_size=4136),
-	trg_embed=Embeddings(embedding_dim=128, vocab_size=4136))
-2021-10-02 13:15:49,712 - INFO - joeynmt.training - Train stats:
+	src_embed=Embeddings(embedding_dim=128, vocab_size=2976),
+	trg_embed=Embeddings(embedding_dim=128, vocab_size=2413))
+2021-10-02 13:22:01,319 - INFO - joeynmt.training - Train stats:
 	device: cuda
 	n_gpu: 1
 	16-bits training: False
 	gradient accumulation: 1
 	batch size per device: 80
 	total batch size (w. parallel & accumulation): 80
-2021-10-02 13:15:49,713 - INFO - joeynmt.training - EPOCH 1
-2021-10-02 13:15:59,196 - INFO - joeynmt.training - Epoch   1: total training loss 10453.86
-2021-10-02 13:15:59,197 - INFO - joeynmt.training - EPOCH 2
-2021-10-02 13:16:04,651 - INFO - joeynmt.training - Hooray! New best validation result [eval_metric]!
-2021-10-02 13:16:04,741 - INFO - joeynmt.training - Example #0
-2021-10-02 13:16:04,742 - INFO - joeynmt.training - 	Source:     tr
-2021-10-02 13:16:04,742 - INFO - joeynmt.training - 	Reference:  en
-2021-10-02 13:16:04,742 - INFO - joeynmt.training - 	Hypothesis: 
-2021-10-02 13:16:04,742 - INFO - joeynmt.training - Example #1
+2021-10-02 13:22:01,319 - INFO - joeynmt.training - EPOCH 1
+2021-10-02 13:22:10,868 - INFO - joeynmt.training - Epoch   1: total training loss 5896.69
+2021-10-02 13:22:10,869 - INFO - joeynmt.training - EPOCH 2
+2021-10-02 13:22:16,561 - INFO - joeynmt.training - Hooray! New best validation result [eval_metric]!
+2021-10-02 13:22:16,629 - INFO - joeynmt.training - Example #0
+2021-10-02 13:22:16,629 - INFO - joeynmt.training - 	Source:     tr
+2021-10-02 13:22:16,629 - INFO - joeynmt.training - 	Reference:  en
+2021-10-02 13:22:16,629 - INFO - joeynmt.training - 	Hypothesis: <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk>
+2021-10-02 13:22:16,630 - INFO - joeynmt.training - Example #1
 --- Logging error ---
 Traceback (most recent call last):
   File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/logging/__init__.py", line 1036, in emit
@@ -141,10 +141,10 @@ Call stack:
     logger.info("\tSource:     %s", sources[p])
 Message: '\tSource:     %s'
 Arguments: ('11 ya\u015f\u0131ndayken bir sabah evimdeki sevinç ç\u0131\u011fl\u0131klar\u0131yla uyand\u0131\u011f\u0131m\u0131 hat\u0131rl\u0131yorum .',)
-2021-10-02 13:16:04,746 - INFO - joeynmt.training - 	Source:     11 ya\u015f\u0131ndayken bir sabah evimdeki sevinç ç\u0131\u011fl\u0131klar\u0131yla uyand\u0131\u011f\u0131m\u0131 hat\u0131rl\u0131yorum .
-2021-10-02 13:16:04,746 - INFO - joeynmt.training - 	Reference:  "When I was 11 , I remember waking up one morning to the sound of joy in my house ."
-2021-10-02 13:16:04,747 - INFO - joeynmt.training - 	Hypothesis: 
-2021-10-02 13:16:04,747 - INFO - joeynmt.training - Example #2
+2021-10-02 13:22:16,633 - INFO - joeynmt.training - 	Source:     11 ya\u015f\u0131ndayken bir sabah evimdeki sevinç ç\u0131\u011fl\u0131klar\u0131yla uyand\u0131\u011f\u0131m\u0131 hat\u0131rl\u0131yorum .
+2021-10-02 13:22:16,633 - INFO - joeynmt.training - 	Reference:  "When I was 11 , I remember waking up one morning to the sound of joy in my house ."
+2021-10-02 13:22:16,633 - INFO - joeynmt.training - 	Hypothesis: <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk>
+2021-10-02 13:22:16,634 - INFO - joeynmt.training - Example #2
 --- Logging error ---
 Traceback (most recent call last):
   File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/logging/__init__.py", line 1036, in emit
@@ -193,23 +193,19 @@ Call stack:
     logger.info("\tSource:     %s", sources[p])
 Message: '\tSource:     %s'
 Arguments: ('"Babam BBC Haber kanal\u0131n\u0131 dinliyordu ; o ufak , gri radyosundan ."',)
-2021-10-02 13:16:04,748 - INFO - joeynmt.training - 	Source:     "Babam BBC Haber kanal\u0131n\u0131 dinliyordu ; o ufak , gri radyosundan ."
-2021-10-02 13:16:04,748 - INFO - joeynmt.training - 	Reference:  "My father was listening to BBC News on his small , gray radio ."
-2021-10-02 13:16:04,748 - INFO - joeynmt.training - 	Hypothesis: 
-2021-10-02 13:16:04,749 - INFO - joeynmt.training - Validation result (greedy) at epoch   2, step      100: bleu:   0.00, loss: 75510.6328, ppl: 749.7012, duration: 0.6222s
-/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/site-packages/matplotlib/image.py:863: UserWarning: Attempting to set identical left==right results
-in singular transformations; automatically expanding.
-left=-0.5, right=-0.5
-  self.axes.set_xlim((xmin, xmax), auto=None)
-2021-10-02 13:16:09,306 - INFO - joeynmt.training - Epoch   2: total training loss 9000.57
-2021-10-02 13:16:09,307 - INFO - joeynmt.training - EPOCH 3
-2021-10-02 13:16:17,477 - INFO - joeynmt.training - Epoch   3: total training loss 8910.61
-2021-10-02 13:16:17,477 - INFO - joeynmt.training - EPOCH 4
-2021-10-02 13:16:18,643 - INFO - joeynmt.training - Example #0
-2021-10-02 13:16:18,644 - INFO - joeynmt.training - 	Source:     tr
-2021-10-02 13:16:18,644 - INFO - joeynmt.training - 	Reference:  en
-2021-10-02 13:16:18,644 - INFO - joeynmt.training - 	Hypothesis: 
-2021-10-02 13:16:18,644 - INFO - joeynmt.training - Example #1
+2021-10-02 13:22:16,634 - INFO - joeynmt.training - 	Source:     "Babam BBC Haber kanal\u0131n\u0131 dinliyordu ; o ufak , gri radyosundan ."
+2021-10-02 13:22:16,635 - INFO - joeynmt.training - 	Reference:  "My father was listening to BBC News on his small , gray radio ."
+2021-10-02 13:22:16,635 - INFO - joeynmt.training - 	Hypothesis: <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk>
+2021-10-02 13:22:16,635 - INFO - joeynmt.training - Validation result (greedy) at epoch   2, step      100: bleu:   0.00, loss: 4097.5967, ppl:   1.4322, duration: 1.2951s
+2021-10-02 13:22:24,917 - INFO - joeynmt.training - Epoch   2: total training loss 626.53
+2021-10-02 13:22:24,918 - INFO - joeynmt.training - EPOCH 3
+2021-10-02 13:22:33,086 - INFO - joeynmt.training - Epoch   3: total training loss 348.75
+2021-10-02 13:22:33,087 - INFO - joeynmt.training - EPOCH 4
+2021-10-02 13:22:34,931 - INFO - joeynmt.training - Example #0
+2021-10-02 13:22:34,932 - INFO - joeynmt.training - 	Source:     tr
+2021-10-02 13:22:34,932 - INFO - joeynmt.training - 	Reference:  en
+2021-10-02 13:22:34,932 - INFO - joeynmt.training - 	Hypothesis: <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk>
+2021-10-02 13:22:34,932 - INFO - joeynmt.training - Example #1
 --- Logging error ---
 Traceback (most recent call last):
   File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/logging/__init__.py", line 1036, in emit
@@ -258,10 +254,10 @@ Call stack:
     logger.info("\tSource:     %s", sources[p])
 Message: '\tSource:     %s'
 Arguments: ('11 ya\u015f\u0131ndayken bir sabah evimdeki sevinç ç\u0131\u011fl\u0131klar\u0131yla uyand\u0131\u011f\u0131m\u0131 hat\u0131rl\u0131yorum .',)
-2021-10-02 13:16:18,646 - INFO - joeynmt.training - 	Source:     11 ya\u015f\u0131ndayken bir sabah evimdeki sevinç ç\u0131\u011fl\u0131klar\u0131yla uyand\u0131\u011f\u0131m\u0131 hat\u0131rl\u0131yorum .
-2021-10-02 13:16:18,646 - INFO - joeynmt.training - 	Reference:  "When I was 11 , I remember waking up one morning to the sound of joy in my house ."
-2021-10-02 13:16:18,646 - INFO - joeynmt.training - 	Hypothesis: ,
-2021-10-02 13:16:18,646 - INFO - joeynmt.training - Example #2
+2021-10-02 13:22:34,934 - INFO - joeynmt.training - 	Source:     11 ya\u015f\u0131ndayken bir sabah evimdeki sevinç ç\u0131\u011fl\u0131klar\u0131yla uyand\u0131\u011f\u0131m\u0131 hat\u0131rl\u0131yorum .
+2021-10-02 13:22:34,935 - INFO - joeynmt.training - 	Reference:  "When I was 11 , I remember waking up one morning to the sound of joy in my house ."
+2021-10-02 13:22:34,935 - INFO - joeynmt.training - 	Hypothesis: <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk>
+2021-10-02 13:22:34,935 - INFO - joeynmt.training - Example #2
 --- Logging error ---
 Traceback (most recent call last):
   File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/logging/__init__.py", line 1036, in emit
@@ -310,18 +306,17 @@ Call stack:
     logger.info("\tSource:     %s", sources[p])
 Message: '\tSource:     %s'
 Arguments: ('"Babam BBC Haber kanal\u0131n\u0131 dinliyordu ; o ufak , gri radyosundan ."',)
-2021-10-02 13:16:18,647 - INFO - joeynmt.training - 	Source:     "Babam BBC Haber kanal\u0131n\u0131 dinliyordu ; o ufak , gri radyosundan ."
-2021-10-02 13:16:18,647 - INFO - joeynmt.training - 	Reference:  "My father was listening to BBC News on his small , gray radio ."
-2021-10-02 13:16:18,647 - INFO - joeynmt.training - 	Hypothesis: ,
-2021-10-02 13:16:18,647 - INFO - joeynmt.training - Validation result (greedy) at epoch   4, step      200: bleu:   0.00, loss: 76761.1250, ppl: 836.5615, duration: 0.5343s
-2021-10-02 13:16:26,867 - INFO - joeynmt.training - Epoch   4: total training loss 8840.46
-2021-10-02 13:16:26,868 - INFO - joeynmt.training - EPOCH 5
-2021-10-02 13:16:32,454 - INFO - joeynmt.training - Hooray! New best validation result [eval_metric]!
-2021-10-02 13:16:32,547 - INFO - joeynmt.training - Example #0
-2021-10-02 13:16:32,548 - INFO - joeynmt.training - 	Source:     tr
-2021-10-02 13:16:32,548 - INFO - joeynmt.training - 	Reference:  en
-2021-10-02 13:16:32,548 - INFO - joeynmt.training - 	Hypothesis: ,
-2021-10-02 13:16:32,548 - INFO - joeynmt.training - Example #1
+2021-10-02 13:22:34,936 - INFO - joeynmt.training - 	Source:     "Babam BBC Haber kanal\u0131n\u0131 dinliyordu ; o ufak , gri radyosundan ."
+2021-10-02 13:22:34,937 - INFO - joeynmt.training - 	Reference:  "My father was listening to BBC News on his small , gray radio ."
+2021-10-02 13:22:34,937 - INFO - joeynmt.training - 	Hypothesis: <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk>
+2021-10-02 13:22:34,937 - INFO - joeynmt.training - Validation result (greedy) at epoch   4, step      200: bleu:   0.00, loss: 2670.6475, ppl:   1.2638, duration: 1.2140s
+2021-10-02 13:22:46,902 - INFO - joeynmt.training - Epoch   4: total training loss 309.58
+2021-10-02 13:22:46,902 - INFO - joeynmt.training - EPOCH 5
+2021-10-02 13:22:53,177 - INFO - joeynmt.training - Example #0
+2021-10-02 13:22:53,178 - INFO - joeynmt.training - 	Source:     tr
+2021-10-02 13:22:53,178 - INFO - joeynmt.training - 	Reference:  en
+2021-10-02 13:22:53,179 - INFO - joeynmt.training - 	Hypothesis: <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk>
+2021-10-02 13:22:53,179 - INFO - joeynmt.training - Example #1
 --- Logging error ---
 Traceback (most recent call last):
   File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/logging/__init__.py", line 1036, in emit
@@ -370,10 +365,10 @@ Call stack:
     logger.info("\tSource:     %s", sources[p])
 Message: '\tSource:     %s'
 Arguments: ('11 ya\u015f\u0131ndayken bir sabah evimdeki sevinç ç\u0131\u011fl\u0131klar\u0131yla uyand\u0131\u011f\u0131m\u0131 hat\u0131rl\u0131yorum .',)
-2021-10-02 13:16:32,550 - INFO - joeynmt.training - 	Source:     11 ya\u015f\u0131ndayken bir sabah evimdeki sevinç ç\u0131\u011fl\u0131klar\u0131yla uyand\u0131\u011f\u0131m\u0131 hat\u0131rl\u0131yorum .
-2021-10-02 13:16:32,551 - INFO - joeynmt.training - 	Reference:  "When I was 11 , I remember waking up one morning to the sound of joy in my house ."
-2021-10-02 13:16:32,551 - INFO - joeynmt.training - 	Hypothesis: "And , , ,
-2021-10-02 13:16:32,551 - INFO - joeynmt.training - Example #2
+2021-10-02 13:22:53,181 - INFO - joeynmt.training - 	Source:     11 ya\u015f\u0131ndayken bir sabah evimdeki sevinç ç\u0131\u011fl\u0131klar\u0131yla uyand\u0131\u011f\u0131m\u0131 hat\u0131rl\u0131yorum .
+2021-10-02 13:22:53,182 - INFO - joeynmt.training - 	Reference:  "When I was 11 , I remember waking up one morning to the sound of joy in my house ."
+2021-10-02 13:22:53,182 - INFO - joeynmt.training - 	Hypothesis: <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk>
+2021-10-02 13:22:53,182 - INFO - joeynmt.training - Example #2
 --- Logging error ---
 Traceback (most recent call last):
   File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/logging/__init__.py", line 1036, in emit
@@ -422,20 +417,19 @@ Call stack:
     logger.info("\tSource:     %s", sources[p])
 Message: '\tSource:     %s'
 Arguments: ('"Babam BBC Haber kanal\u0131n\u0131 dinliyordu ; o ufak , gri radyosundan ."',)
-2021-10-02 13:16:32,552 - INFO - joeynmt.training - 	Source:     "Babam BBC Haber kanal\u0131n\u0131 dinliyordu ; o ufak , gri radyosundan ."
-2021-10-02 13:16:32,552 - INFO - joeynmt.training - 	Reference:  "My father was listening to BBC News on his small , gray radio ."
-2021-10-02 13:16:32,553 - INFO - joeynmt.training - 	Hypothesis: "And , , ,
-2021-10-02 13:16:32,553 - INFO - joeynmt.training - Validation result (greedy) at epoch   5, step      300: bleu:   0.00, loss: 77255.5469, ppl: 873.6183, duration: 0.6654s
-2021-10-02 13:16:36,641 - INFO - joeynmt.training - Epoch   5: total training loss 8789.62
-2021-10-02 13:16:36,641 - INFO - joeynmt.training - EPOCH 6
-2021-10-02 13:16:44,814 - INFO - joeynmt.training - Epoch   6: total training loss 8737.71
-2021-10-02 13:16:44,815 - INFO - joeynmt.training - EPOCH 7
-2021-10-02 13:16:47,199 - INFO - joeynmt.training - Hooray! New best validation result [eval_metric]!
-2021-10-02 13:16:47,293 - INFO - joeynmt.training - Example #0
-2021-10-02 13:16:47,294 - INFO - joeynmt.training - 	Source:     tr
-2021-10-02 13:16:47,294 - INFO - joeynmt.training - 	Reference:  en
-2021-10-02 13:16:47,294 - INFO - joeynmt.training - 	Hypothesis: "And
-2021-10-02 13:16:47,294 - INFO - joeynmt.training - Example #1
+2021-10-02 13:22:53,183 - INFO - joeynmt.training - 	Source:     "Babam BBC Haber kanal\u0131n\u0131 dinliyordu ; o ufak , gri radyosundan ."
+2021-10-02 13:22:53,184 - INFO - joeynmt.training - 	Reference:  "My father was listening to BBC News on his small , gray radio ."
+2021-10-02 13:22:53,184 - INFO - joeynmt.training - 	Hypothesis: <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk>
+2021-10-02 13:22:53,184 - INFO - joeynmt.training - Validation result (greedy) at epoch   5, step      300: bleu:   0.00, loss: 2443.1750, ppl:   1.2388, duration: 1.2216s
+2021-10-02 13:23:01,284 - INFO - joeynmt.training - Epoch   5: total training loss 294.10
+2021-10-02 13:23:01,284 - INFO - joeynmt.training - EPOCH 6
+2021-10-02 13:23:10,412 - INFO - joeynmt.training - Epoch   6: total training loss 290.95
+2021-10-02 13:23:10,412 - INFO - joeynmt.training - EPOCH 7
+2021-10-02 13:23:12,879 - INFO - joeynmt.training - Example #0
+2021-10-02 13:23:12,879 - INFO - joeynmt.training - 	Source:     tr
+2021-10-02 13:23:12,879 - INFO - joeynmt.training - 	Reference:  en
+2021-10-02 13:23:12,879 - INFO - joeynmt.training - 	Hypothesis: <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk>
+2021-10-02 13:23:12,880 - INFO - joeynmt.training - Example #1
 --- Logging error ---
 Traceback (most recent call last):
   File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/logging/__init__.py", line 1036, in emit
@@ -484,10 +478,10 @@ Call stack:
     logger.info("\tSource:     %s", sources[p])
 Message: '\tSource:     %s'
 Arguments: ('11 ya\u015f\u0131ndayken bir sabah evimdeki sevinç ç\u0131\u011fl\u0131klar\u0131yla uyand\u0131\u011f\u0131m\u0131 hat\u0131rl\u0131yorum .',)
-2021-10-02 13:16:47,297 - INFO - joeynmt.training - 	Source:     11 ya\u015f\u0131ndayken bir sabah evimdeki sevinç ç\u0131\u011fl\u0131klar\u0131yla uyand\u0131\u011f\u0131m\u0131 hat\u0131rl\u0131yorum .
-2021-10-02 13:16:47,297 - INFO - joeynmt.training - 	Reference:  "When I was 11 , I remember waking up one morning to the sound of joy in my house ."
-2021-10-02 13:16:47,297 - INFO - joeynmt.training - 	Hypothesis: "And , , , , , , , , , , , , , , , , , , , , , , , , , , , , , ,
-2021-10-02 13:16:47,298 - INFO - joeynmt.training - Example #2
+2021-10-02 13:23:12,880 - INFO - joeynmt.training - 	Source:     11 ya\u015f\u0131ndayken bir sabah evimdeki sevinç ç\u0131\u011fl\u0131klar\u0131yla uyand\u0131\u011f\u0131m\u0131 hat\u0131rl\u0131yorum .
+2021-10-02 13:23:12,881 - INFO - joeynmt.training - 	Reference:  "When I was 11 , I remember waking up one morning to the sound of joy in my house ."
+2021-10-02 13:23:12,881 - INFO - joeynmt.training - 	Hypothesis: <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk>
+2021-10-02 13:23:12,881 - INFO - joeynmt.training - Example #2
 --- Logging error ---
 Traceback (most recent call last):
   File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/logging/__init__.py", line 1036, in emit
@@ -536,17 +530,17 @@ Call stack:
     logger.info("\tSource:     %s", sources[p])
 Message: '\tSource:     %s'
 Arguments: ('"Babam BBC Haber kanal\u0131n\u0131 dinliyordu ; o ufak , gri radyosundan ."',)
-2021-10-02 13:16:47,298 - INFO - joeynmt.training - 	Source:     "Babam BBC Haber kanal\u0131n\u0131 dinliyordu ; o ufak , gri radyosundan ."
-2021-10-02 13:16:47,299 - INFO - joeynmt.training - 	Reference:  "My father was listening to BBC News on his small , gray radio ."
-2021-10-02 13:16:47,299 - INFO - joeynmt.training - 	Hypothesis: "And , , , , , , , , , , , , , , , , , , , , , , , , , , ,
-2021-10-02 13:16:47,299 - INFO - joeynmt.training - Validation result (greedy) at epoch   7, step      400: bleu:   0.02, loss: 77195.0547, ppl: 868.9979, duration: 1.2118s
-2021-10-02 13:16:55,679 - INFO - joeynmt.training - Epoch   7: total training loss 8680.14
-2021-10-02 13:16:55,680 - INFO - joeynmt.training - EPOCH 8
-2021-10-02 13:17:02,545 - INFO - joeynmt.training - Example #0
-2021-10-02 13:17:02,546 - INFO - joeynmt.training - 	Source:     tr
-2021-10-02 13:17:02,546 - INFO - joeynmt.training - 	Reference:  en
-2021-10-02 13:17:02,546 - INFO - joeynmt.training - 	Hypothesis: "And
-2021-10-02 13:17:02,546 - INFO - joeynmt.training - Example #1
+2021-10-02 13:23:12,881 - INFO - joeynmt.training - 	Source:     "Babam BBC Haber kanal\u0131n\u0131 dinliyordu ; o ufak , gri radyosundan ."
+2021-10-02 13:23:12,882 - INFO - joeynmt.training - 	Reference:  "My father was listening to BBC News on his small , gray radio ."
+2021-10-02 13:23:12,882 - INFO - joeynmt.training - 	Hypothesis: <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk>
+2021-10-02 13:23:12,882 - INFO - joeynmt.training - Validation result (greedy) at epoch   7, step      400: bleu:   0.00, loss: 2430.3152, ppl:   1.2375, duration: 1.1881s
+2021-10-02 13:23:24,363 - INFO - joeynmt.training - Epoch   7: total training loss 289.89
+2021-10-02 13:23:24,363 - INFO - joeynmt.training - EPOCH 8
+2021-10-02 13:23:31,223 - INFO - joeynmt.training - Example #0
+2021-10-02 13:23:31,223 - INFO - joeynmt.training - 	Source:     tr
+2021-10-02 13:23:31,223 - INFO - joeynmt.training - 	Reference:  en
+2021-10-02 13:23:31,224 - INFO - joeynmt.training - 	Hypothesis: <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk>
+2021-10-02 13:23:31,224 - INFO - joeynmt.training - Example #1
 --- Logging error ---
 Traceback (most recent call last):
   File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/logging/__init__.py", line 1036, in emit
@@ -595,10 +589,10 @@ Call stack:
     logger.info("\tSource:     %s", sources[p])
 Message: '\tSource:     %s'
 Arguments: ('11 ya\u015f\u0131ndayken bir sabah evimdeki sevinç ç\u0131\u011fl\u0131klar\u0131yla uyand\u0131\u011f\u0131m\u0131 hat\u0131rl\u0131yorum .',)
-2021-10-02 13:17:02,547 - INFO - joeynmt.training - 	Source:     11 ya\u015f\u0131ndayken bir sabah evimdeki sevinç ç\u0131\u011fl\u0131klar\u0131yla uyand\u0131\u011f\u0131m\u0131 hat\u0131rl\u0131yorum .
-2021-10-02 13:17:02,548 - INFO - joeynmt.training - 	Reference:  "When I was 11 , I remember waking up one morning to the sound of joy in my house ."
-2021-10-02 13:17:02,548 - INFO - joeynmt.training - 	Hypothesis: "And , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , ,
-2021-10-02 13:17:02,548 - INFO - joeynmt.training - Example #2
+2021-10-02 13:23:31,224 - INFO - joeynmt.training - 	Source:     11 ya\u015f\u0131ndayken bir sabah evimdeki sevinç ç\u0131\u011fl\u0131klar\u0131yla uyand\u0131\u011f\u0131m\u0131 hat\u0131rl\u0131yorum .
+2021-10-02 13:23:31,225 - INFO - joeynmt.training - 	Reference:  "When I was 11 , I remember waking up one morning to the sound of joy in my house ."
+2021-10-02 13:23:31,225 - INFO - joeynmt.training - 	Hypothesis: <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk>
+2021-10-02 13:23:31,225 - INFO - joeynmt.training - Example #2
 --- Logging error ---
 Traceback (most recent call last):
   File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/logging/__init__.py", line 1036, in emit
@@ -647,19 +641,19 @@ Call stack:
     logger.info("\tSource:     %s", sources[p])
 Message: '\tSource:     %s'
 Arguments: ('"Babam BBC Haber kanal\u0131n\u0131 dinliyordu ; o ufak , gri radyosundan ."',)
-2021-10-02 13:17:02,549 - INFO - joeynmt.training - 	Source:     "Babam BBC Haber kanal\u0131n\u0131 dinliyordu ; o ufak , gri radyosundan ."
-2021-10-02 13:17:02,550 - INFO - joeynmt.training - 	Reference:  "My father was listening to BBC News on his small , gray radio ."
-2021-10-02 13:17:02,550 - INFO - joeynmt.training - 	Hypothesis: "And , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , ,
-2021-10-02 13:17:02,550 - INFO - joeynmt.training - Validation result (greedy) at epoch   8, step      500: bleu:   0.01, loss: 77300.3750, ppl: 877.0585, duration: 1.2504s
-2021-10-02 13:17:08,056 - INFO - joeynmt.training - Epoch   8: total training loss 8623.07
-2021-10-02 13:17:08,057 - INFO - joeynmt.training - EPOCH 9
-2021-10-02 13:17:16,174 - INFO - joeynmt.training - Epoch   9: total training loss 8561.40
-2021-10-02 13:17:16,175 - INFO - joeynmt.training - EPOCH 10
-2021-10-02 13:17:19,295 - INFO - joeynmt.training - Example #0
-2021-10-02 13:17:19,295 - INFO - joeynmt.training - 	Source:     tr
-2021-10-02 13:17:19,295 - INFO - joeynmt.training - 	Reference:  en
-2021-10-02 13:17:19,296 - INFO - joeynmt.training - 	Hypothesis: "And
-2021-10-02 13:17:19,296 - INFO - joeynmt.training - Example #1
+2021-10-02 13:23:31,225 - INFO - joeynmt.training - 	Source:     "Babam BBC Haber kanal\u0131n\u0131 dinliyordu ; o ufak , gri radyosundan ."
+2021-10-02 13:23:31,226 - INFO - joeynmt.training - 	Reference:  "My father was listening to BBC News on his small , gray radio ."
+2021-10-02 13:23:31,226 - INFO - joeynmt.training - 	Hypothesis: <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk>
+2021-10-02 13:23:31,226 - INFO - joeynmt.training - Validation result (greedy) at epoch   8, step      500: bleu:   0.00, loss: 2417.1655, ppl:   1.2360, duration: 1.1939s
+2021-10-02 13:23:38,189 - INFO - joeynmt.training - Epoch   8: total training loss 288.89
+2021-10-02 13:23:38,190 - INFO - joeynmt.training - EPOCH 9
+2021-10-02 13:23:46,710 - INFO - joeynmt.training - Epoch   9: total training loss 288.55
+2021-10-02 13:23:46,711 - INFO - joeynmt.training - EPOCH 10
+2021-10-02 13:23:50,234 - INFO - joeynmt.training - Example #0
+2021-10-02 13:23:50,234 - INFO - joeynmt.training - 	Source:     tr
+2021-10-02 13:23:50,235 - INFO - joeynmt.training - 	Reference:  en
+2021-10-02 13:23:50,235 - INFO - joeynmt.training - 	Hypothesis: <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk>
+2021-10-02 13:23:50,235 - INFO - joeynmt.training - Example #1
 --- Logging error ---
 Traceback (most recent call last):
   File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/logging/__init__.py", line 1036, in emit
@@ -708,10 +702,10 @@ Call stack:
     logger.info("\tSource:     %s", sources[p])
 Message: '\tSource:     %s'
 Arguments: ('11 ya\u015f\u0131ndayken bir sabah evimdeki sevinç ç\u0131\u011fl\u0131klar\u0131yla uyand\u0131\u011f\u0131m\u0131 hat\u0131rl\u0131yorum .',)
-2021-10-02 13:17:19,298 - INFO - joeynmt.training - 	Source:     11 ya\u015f\u0131ndayken bir sabah evimdeki sevinç ç\u0131\u011fl\u0131klar\u0131yla uyand\u0131\u011f\u0131m\u0131 hat\u0131rl\u0131yorum .
-2021-10-02 13:17:19,299 - INFO - joeynmt.training - 	Reference:  "When I was 11 , I remember waking up one morning to the sound of joy in my house ."
-2021-10-02 13:17:19,299 - INFO - joeynmt.training - 	Hypothesis: "And , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , ,
-2021-10-02 13:17:19,299 - INFO - joeynmt.training - Example #2
+2021-10-02 13:23:50,237 - INFO - joeynmt.training - 	Source:     11 ya\u015f\u0131ndayken bir sabah evimdeki sevinç ç\u0131\u011fl\u0131klar\u0131yla uyand\u0131\u011f\u0131m\u0131 hat\u0131rl\u0131yorum .
+2021-10-02 13:23:50,238 - INFO - joeynmt.training - 	Reference:  "When I was 11 , I remember waking up one morning to the sound of joy in my house ."
+2021-10-02 13:23:50,238 - INFO - joeynmt.training - 	Hypothesis: <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk>
+2021-10-02 13:23:50,238 - INFO - joeynmt.training - Example #2
 --- Logging error ---
 Traceback (most recent call last):
   File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/logging/__init__.py", line 1036, in emit
@@ -760,18 +754,17 @@ Call stack:
     logger.info("\tSource:     %s", sources[p])
 Message: '\tSource:     %s'
 Arguments: ('"Babam BBC Haber kanal\u0131n\u0131 dinliyordu ; o ufak , gri radyosundan ."',)
-2021-10-02 13:17:19,300 - INFO - joeynmt.training - 	Source:     "Babam BBC Haber kanal\u0131n\u0131 dinliyordu ; o ufak , gri radyosundan ."
-2021-10-02 13:17:19,301 - INFO - joeynmt.training - 	Reference:  "My father was listening to BBC News on his small , gray radio ."
-2021-10-02 13:17:19,301 - INFO - joeynmt.training - 	Hypothesis: "And , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , ,
-2021-10-02 13:17:19,301 - INFO - joeynmt.training - Validation result (greedy) at epoch  10, step      600: bleu:   0.01, loss: 76945.5781, ppl: 850.1986, duration: 1.2710s
-2021-10-02 13:17:28,634 - INFO - joeynmt.training - Epoch  10: total training loss 8508.71
-2021-10-02 13:17:28,635 - INFO - joeynmt.training - EPOCH 11
-2021-10-02 13:17:37,181 - INFO - joeynmt.helpers - delete models/tr_en_bpe_model/100.ckpt
-2021-10-02 13:17:37,193 - INFO - joeynmt.training - Example #0
-2021-10-02 13:17:37,194 - INFO - joeynmt.training - 	Source:     tr
-2021-10-02 13:17:37,194 - INFO - joeynmt.training - 	Reference:  en
-2021-10-02 13:17:37,194 - INFO - joeynmt.training - 	Hypothesis: "And
-2021-10-02 13:17:37,194 - INFO - joeynmt.training - Example #1
+2021-10-02 13:23:50,239 - INFO - joeynmt.training - 	Source:     "Babam BBC Haber kanal\u0131n\u0131 dinliyordu ; o ufak , gri radyosundan ."
+2021-10-02 13:23:50,240 - INFO - joeynmt.training - 	Reference:  "My father was listening to BBC News on his small , gray radio ."
+2021-10-02 13:23:50,240 - INFO - joeynmt.training - 	Hypothesis: <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk>
+2021-10-02 13:23:50,240 - INFO - joeynmt.training - Validation result (greedy) at epoch  10, step      600: bleu:   0.00, loss: 2415.7615, ppl:   1.2359, duration: 1.4458s
+2021-10-02 13:24:02,099 - INFO - joeynmt.training - Epoch  10: total training loss 288.47
+2021-10-02 13:24:02,099 - INFO - joeynmt.training - EPOCH 11
+2021-10-02 13:24:10,621 - INFO - joeynmt.training - Example #0
+2021-10-02 13:24:10,621 - INFO - joeynmt.training - 	Source:     tr
+2021-10-02 13:24:10,622 - INFO - joeynmt.training - 	Reference:  en
+2021-10-02 13:24:10,622 - INFO - joeynmt.training - 	Hypothesis: <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk>
+2021-10-02 13:24:10,622 - INFO - joeynmt.training - Example #1
 --- Logging error ---
 Traceback (most recent call last):
   File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/logging/__init__.py", line 1036, in emit
@@ -820,10 +813,10 @@ Call stack:
     logger.info("\tSource:     %s", sources[p])
 Message: '\tSource:     %s'
 Arguments: ('11 ya\u015f\u0131ndayken bir sabah evimdeki sevinç ç\u0131\u011fl\u0131klar\u0131yla uyand\u0131\u011f\u0131m\u0131 hat\u0131rl\u0131yorum .',)
-2021-10-02 13:17:37,196 - INFO - joeynmt.training - 	Source:     11 ya\u015f\u0131ndayken bir sabah evimdeki sevinç ç\u0131\u011fl\u0131klar\u0131yla uyand\u0131\u011f\u0131m\u0131 hat\u0131rl\u0131yorum .
-2021-10-02 13:17:37,196 - INFO - joeynmt.training - 	Reference:  "When I was 11 , I remember waking up one morning to the sound of joy in my house ."
-2021-10-02 13:17:37,197 - INFO - joeynmt.training - 	Hypothesis: "And , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , ,
-2021-10-02 13:17:37,197 - INFO - joeynmt.training - Example #2
+2021-10-02 13:24:10,624 - INFO - joeynmt.training - 	Source:     11 ya\u015f\u0131ndayken bir sabah evimdeki sevinç ç\u0131\u011fl\u0131klar\u0131yla uyand\u0131\u011f\u0131m\u0131 hat\u0131rl\u0131yorum .
+2021-10-02 13:24:10,625 - INFO - joeynmt.training - 	Reference:  "When I was 11 , I remember waking up one morning to the sound of joy in my house ."
+2021-10-02 13:24:10,625 - INFO - joeynmt.training - 	Hypothesis: <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk>
+2021-10-02 13:24:10,625 - INFO - joeynmt.training - Example #2
 --- Logging error ---
 Traceback (most recent call last):
   File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/logging/__init__.py", line 1036, in emit
@@ -872,20 +865,19 @@ Call stack:
     logger.info("\tSource:     %s", sources[p])
 Message: '\tSource:     %s'
 Arguments: ('"Babam BBC Haber kanal\u0131n\u0131 dinliyordu ; o ufak , gri radyosundan ."',)
-2021-10-02 13:17:37,198 - INFO - joeynmt.training - 	Source:     "Babam BBC Haber kanal\u0131n\u0131 dinliyordu ; o ufak , gri radyosundan ."
-2021-10-02 13:17:37,198 - INFO - joeynmt.training - 	Reference:  "My father was listening to BBC News on his small , gray radio ."
-2021-10-02 13:17:37,198 - INFO - joeynmt.training - 	Hypothesis: "And , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , ,
-2021-10-02 13:17:37,198 - INFO - joeynmt.training - Validation result (greedy) at epoch  11, step      700: bleu:   0.01, loss: 76912.1484, ppl: 847.7107, duration: 1.2822s
-2021-10-02 13:17:42,297 - INFO - joeynmt.training - Epoch  11: total training loss 8485.95
-2021-10-02 13:17:42,297 - INFO - joeynmt.training - EPOCH 12
-2021-10-02 13:17:51,793 - INFO - joeynmt.training - Epoch  12: total training loss 8475.44
-2021-10-02 13:17:51,794 - INFO - joeynmt.training - EPOCH 13
-2021-10-02 13:17:55,969 - INFO - joeynmt.helpers - delete models/tr_en_bpe_model/300.ckpt
-2021-10-02 13:17:55,981 - INFO - joeynmt.training - Example #0
-2021-10-02 13:17:55,982 - INFO - joeynmt.training - 	Source:     tr
-2021-10-02 13:17:55,982 - INFO - joeynmt.training - 	Reference:  en
-2021-10-02 13:17:55,982 - INFO - joeynmt.training - 	Hypothesis: "And
-2021-10-02 13:17:55,982 - INFO - joeynmt.training - Example #1
+2021-10-02 13:24:10,626 - INFO - joeynmt.training - 	Source:     "Babam BBC Haber kanal\u0131n\u0131 dinliyordu ; o ufak , gri radyosundan ."
+2021-10-02 13:24:10,626 - INFO - joeynmt.training - 	Reference:  "My father was listening to BBC News on his small , gray radio ."
+2021-10-02 13:24:10,627 - INFO - joeynmt.training - 	Hypothesis: <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk>
+2021-10-02 13:24:10,627 - INFO - joeynmt.training - Validation result (greedy) at epoch  11, step      700: bleu:   0.00, loss: 2414.2156, ppl:   1.2357, duration: 1.1952s
+2021-10-02 13:24:17,355 - INFO - joeynmt.training - Epoch  11: total training loss 288.28
+2021-10-02 13:24:17,356 - INFO - joeynmt.training - EPOCH 12
+2021-10-02 13:24:26,478 - INFO - joeynmt.training - Epoch  12: total training loss 288.20
+2021-10-02 13:24:26,479 - INFO - joeynmt.training - EPOCH 13
+2021-10-02 13:24:30,700 - INFO - joeynmt.training - Example #0
+2021-10-02 13:24:30,700 - INFO - joeynmt.training - 	Source:     tr
+2021-10-02 13:24:30,700 - INFO - joeynmt.training - 	Reference:  en
+2021-10-02 13:24:30,700 - INFO - joeynmt.training - 	Hypothesis: <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk>
+2021-10-02 13:24:30,700 - INFO - joeynmt.training - Example #1
 --- Logging error ---
 Traceback (most recent call last):
   File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/logging/__init__.py", line 1036, in emit
@@ -934,10 +926,10 @@ Call stack:
     logger.info("\tSource:     %s", sources[p])
 Message: '\tSource:     %s'
 Arguments: ('11 ya\u015f\u0131ndayken bir sabah evimdeki sevinç ç\u0131\u011fl\u0131klar\u0131yla uyand\u0131\u011f\u0131m\u0131 hat\u0131rl\u0131yorum .',)
-2021-10-02 13:17:55,984 - INFO - joeynmt.training - 	Source:     11 ya\u015f\u0131ndayken bir sabah evimdeki sevinç ç\u0131\u011fl\u0131klar\u0131yla uyand\u0131\u011f\u0131m\u0131 hat\u0131rl\u0131yorum .
-2021-10-02 13:17:55,985 - INFO - joeynmt.training - 	Reference:  "When I was 11 , I remember waking up one morning to the sound of joy in my house ."
-2021-10-02 13:17:55,985 - INFO - joeynmt.training - 	Hypothesis: "And , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , ,
-2021-10-02 13:17:55,985 - INFO - joeynmt.training - Example #2
+2021-10-02 13:24:30,701 - INFO - joeynmt.training - 	Source:     11 ya\u015f\u0131ndayken bir sabah evimdeki sevinç ç\u0131\u011fl\u0131klar\u0131yla uyand\u0131\u011f\u0131m\u0131 hat\u0131rl\u0131yorum .
+2021-10-02 13:24:30,702 - INFO - joeynmt.training - 	Reference:  "When I was 11 , I remember waking up one morning to the sound of joy in my house ."
+2021-10-02 13:24:30,702 - INFO - joeynmt.training - 	Hypothesis: <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk>
+2021-10-02 13:24:30,702 - INFO - joeynmt.training - Example #2
 --- Logging error ---
 Traceback (most recent call last):
   File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/logging/__init__.py", line 1036, in emit
@@ -986,18 +978,17 @@ Call stack:
     logger.info("\tSource:     %s", sources[p])
 Message: '\tSource:     %s'
 Arguments: ('"Babam BBC Haber kanal\u0131n\u0131 dinliyordu ; o ufak , gri radyosundan ."',)
-2021-10-02 13:17:55,985 - INFO - joeynmt.training - 	Source:     "Babam BBC Haber kanal\u0131n\u0131 dinliyordu ; o ufak , gri radyosundan ."
-2021-10-02 13:17:55,986 - INFO - joeynmt.training - 	Reference:  "My father was listening to BBC News on his small , gray radio ."
-2021-10-02 13:17:55,986 - INFO - joeynmt.training - 	Hypothesis: "And , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , ,
-2021-10-02 13:17:55,986 - INFO - joeynmt.training - Validation result (greedy) at epoch  13, step      800: bleu:   0.01, loss: 76885.1719, ppl: 845.7081, duration: 1.2798s
-2021-10-02 13:18:05,333 - INFO - joeynmt.training - Epoch  13: total training loss 8472.41
-2021-10-02 13:18:05,334 - INFO - joeynmt.training - EPOCH 14
-2021-10-02 13:18:14,510 - INFO - joeynmt.helpers - delete models/tr_en_bpe_model/700.ckpt
-2021-10-02 13:18:14,521 - INFO - joeynmt.training - Example #0
-2021-10-02 13:18:14,522 - INFO - joeynmt.training - 	Source:     tr
-2021-10-02 13:18:14,522 - INFO - joeynmt.training - 	Reference:  en
-2021-10-02 13:18:14,522 - INFO - joeynmt.training - 	Hypothesis: "And
-2021-10-02 13:18:14,522 - INFO - joeynmt.training - Example #1
+2021-10-02 13:24:30,702 - INFO - joeynmt.training - 	Source:     "Babam BBC Haber kanal\u0131n\u0131 dinliyordu ; o ufak , gri radyosundan ."
+2021-10-02 13:24:30,703 - INFO - joeynmt.training - 	Reference:  "My father was listening to BBC News on his small , gray radio ."
+2021-10-02 13:24:30,703 - INFO - joeynmt.training - 	Hypothesis: <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk>
+2021-10-02 13:24:30,703 - INFO - joeynmt.training - Validation result (greedy) at epoch  13, step      800: bleu:   0.00, loss: 2414.0449, ppl:   1.2357, duration: 1.4369s
+2021-10-02 13:24:41,347 - INFO - joeynmt.training - Epoch  13: total training loss 288.26
+2021-10-02 13:24:41,348 - INFO - joeynmt.training - EPOCH 14
+2021-10-02 13:24:49,451 - INFO - joeynmt.training - Example #0
+2021-10-02 13:24:49,451 - INFO - joeynmt.training - 	Source:     tr
+2021-10-02 13:24:49,451 - INFO - joeynmt.training - 	Reference:  en
+2021-10-02 13:24:49,451 - INFO - joeynmt.training - 	Hypothesis: <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk>
+2021-10-02 13:24:49,451 - INFO - joeynmt.training - Example #1
 --- Logging error ---
 Traceback (most recent call last):
   File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/logging/__init__.py", line 1036, in emit
@@ -1046,10 +1037,10 @@ Call stack:
     logger.info("\tSource:     %s", sources[p])
 Message: '\tSource:     %s'
 Arguments: ('11 ya\u015f\u0131ndayken bir sabah evimdeki sevinç ç\u0131\u011fl\u0131klar\u0131yla uyand\u0131\u011f\u0131m\u0131 hat\u0131rl\u0131yorum .',)
-2021-10-02 13:18:14,524 - INFO - joeynmt.training - 	Source:     11 ya\u015f\u0131ndayken bir sabah evimdeki sevinç ç\u0131\u011fl\u0131klar\u0131yla uyand\u0131\u011f\u0131m\u0131 hat\u0131rl\u0131yorum .
-2021-10-02 13:18:14,524 - INFO - joeynmt.training - 	Reference:  "When I was 11 , I remember waking up one morning to the sound of joy in my house ."
-2021-10-02 13:18:14,524 - INFO - joeynmt.training - 	Hypothesis: "And , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , ,
-2021-10-02 13:18:14,525 - INFO - joeynmt.training - Example #2
+2021-10-02 13:24:49,452 - INFO - joeynmt.training - 	Source:     11 ya\u015f\u0131ndayken bir sabah evimdeki sevinç ç\u0131\u011fl\u0131klar\u0131yla uyand\u0131\u011f\u0131m\u0131 hat\u0131rl\u0131yorum .
+2021-10-02 13:24:49,453 - INFO - joeynmt.training - 	Reference:  "When I was 11 , I remember waking up one morning to the sound of joy in my house ."
+2021-10-02 13:24:49,453 - INFO - joeynmt.training - 	Hypothesis: <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk>
+2021-10-02 13:24:49,453 - INFO - joeynmt.training - Example #2
 --- Logging error ---
 Traceback (most recent call last):
   File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/logging/__init__.py", line 1036, in emit
@@ -1098,20 +1089,20 @@ Call stack:
     logger.info("\tSource:     %s", sources[p])
 Message: '\tSource:     %s'
 Arguments: ('"Babam BBC Haber kanal\u0131n\u0131 dinliyordu ; o ufak , gri radyosundan ."',)
-2021-10-02 13:18:14,525 - INFO - joeynmt.training - 	Source:     "Babam BBC Haber kanal\u0131n\u0131 dinliyordu ; o ufak , gri radyosundan ."
-2021-10-02 13:18:14,526 - INFO - joeynmt.training - 	Reference:  "My father was listening to BBC News on his small , gray radio ."
-2021-10-02 13:18:14,526 - INFO - joeynmt.training - 	Hypothesis: "And , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , ,
-2021-10-02 13:18:14,526 - INFO - joeynmt.training - Validation result (greedy) at epoch  14, step      900: bleu:   0.01, loss: 76878.1250, ppl: 845.1860, duration: 1.5196s
-2021-10-02 13:18:18,891 - INFO - joeynmt.training - Epoch  14: total training loss 8472.84
-2021-10-02 13:18:18,892 - INFO - joeynmt.training - EPOCH 15
-2021-10-02 13:18:27,063 - INFO - joeynmt.training - Epoch  15: total training loss 8468.08
-2021-10-02 13:18:27,064 - INFO - joeynmt.training - EPOCH 16
-2021-10-02 13:18:30,199 - INFO - joeynmt.training - Epoch  16, Step:     1000, Batch Loss:   131.500381, Tokens per Sec:    13663, Lr: 0.000003
-2021-10-02 13:18:31,381 - INFO - joeynmt.training - Example #0
-2021-10-02 13:18:31,382 - INFO - joeynmt.training - 	Source:     tr
-2021-10-02 13:18:31,382 - INFO - joeynmt.training - 	Reference:  en
-2021-10-02 13:18:31,383 - INFO - joeynmt.training - 	Hypothesis: "And
-2021-10-02 13:18:31,383 - INFO - joeynmt.training - Example #1
+2021-10-02 13:24:49,453 - INFO - joeynmt.training - 	Source:     "Babam BBC Haber kanal\u0131n\u0131 dinliyordu ; o ufak , gri radyosundan ."
+2021-10-02 13:24:49,454 - INFO - joeynmt.training - 	Reference:  "My father was listening to BBC News on his small , gray radio ."
+2021-10-02 13:24:49,454 - INFO - joeynmt.training - 	Hypothesis: <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk>
+2021-10-02 13:24:49,454 - INFO - joeynmt.training - Validation result (greedy) at epoch  14, step      900: bleu:   0.00, loss: 2413.8633, ppl:   1.2357, duration: 1.1890s
+2021-10-02 13:24:55,150 - INFO - joeynmt.training - Epoch  14: total training loss 288.22
+2021-10-02 13:24:55,151 - INFO - joeynmt.training - EPOCH 15
+2021-10-02 13:25:03,302 - INFO - joeynmt.training - Epoch  15: total training loss 288.17
+2021-10-02 13:25:03,303 - INFO - joeynmt.training - EPOCH 16
+2021-10-02 13:25:06,430 - INFO - joeynmt.training - Epoch  16, Step:     1000, Batch Loss:     4.490579, Tokens per Sec:    13698, Lr: 0.000000
+2021-10-02 13:25:07,629 - INFO - joeynmt.training - Example #0
+2021-10-02 13:25:07,629 - INFO - joeynmt.training - 	Source:     tr
+2021-10-02 13:25:07,629 - INFO - joeynmt.training - 	Reference:  en
+2021-10-02 13:25:07,629 - INFO - joeynmt.training - 	Hypothesis: <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk>
+2021-10-02 13:25:07,629 - INFO - joeynmt.training - Example #1
 --- Logging error ---
 Traceback (most recent call last):
   File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/logging/__init__.py", line 1036, in emit
@@ -1160,10 +1151,10 @@ Call stack:
     logger.info("\tSource:     %s", sources[p])
 Message: '\tSource:     %s'
 Arguments: ('11 ya\u015f\u0131ndayken bir sabah evimdeki sevinç ç\u0131\u011fl\u0131klar\u0131yla uyand\u0131\u011f\u0131m\u0131 hat\u0131rl\u0131yorum .',)
-2021-10-02 13:18:31,385 - INFO - joeynmt.training - 	Source:     11 ya\u015f\u0131ndayken bir sabah evimdeki sevinç ç\u0131\u011fl\u0131klar\u0131yla uyand\u0131\u011f\u0131m\u0131 hat\u0131rl\u0131yorum .
-2021-10-02 13:18:31,386 - INFO - joeynmt.training - 	Reference:  "When I was 11 , I remember waking up one morning to the sound of joy in my house ."
-2021-10-02 13:18:31,386 - INFO - joeynmt.training - 	Hypothesis: "And , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , ,
-2021-10-02 13:18:31,386 - INFO - joeynmt.training - Example #2
+2021-10-02 13:25:07,632 - INFO - joeynmt.training - 	Source:     11 ya\u015f\u0131ndayken bir sabah evimdeki sevinç ç\u0131\u011fl\u0131klar\u0131yla uyand\u0131\u011f\u0131m\u0131 hat\u0131rl\u0131yorum .
+2021-10-02 13:25:07,633 - INFO - joeynmt.training - 	Reference:  "When I was 11 , I remember waking up one morning to the sound of joy in my house ."
+2021-10-02 13:25:07,633 - INFO - joeynmt.training - 	Hypothesis: <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk>
+2021-10-02 13:25:07,633 - INFO - joeynmt.training - Example #2
 --- Logging error ---
 Traceback (most recent call last):
   File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/logging/__init__.py", line 1036, in emit
@@ -1212,17 +1203,17 @@ Call stack:
     logger.info("\tSource:     %s", sources[p])
 Message: '\tSource:     %s'
 Arguments: ('"Babam BBC Haber kanal\u0131n\u0131 dinliyordu ; o ufak , gri radyosundan ."',)
-2021-10-02 13:18:31,387 - INFO - joeynmt.training - 	Source:     "Babam BBC Haber kanal\u0131n\u0131 dinliyordu ; o ufak , gri radyosundan ."
-2021-10-02 13:18:31,388 - INFO - joeynmt.training - 	Reference:  "My father was listening to BBC News on his small , gray radio ."
-2021-10-02 13:18:31,388 - INFO - joeynmt.training - 	Hypothesis: "And , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , ,
-2021-10-02 13:18:31,388 - INFO - joeynmt.training - Validation result (greedy) at epoch  16, step     1000: bleu:   0.01, loss: 76880.5234, ppl: 845.3638, duration: 1.1889s
-2021-10-02 13:18:39,281 - INFO - joeynmt.training - Epoch  16: total training loss 8474.75
-2021-10-02 13:18:39,281 - INFO - joeynmt.training - EPOCH 17
-2021-10-02 13:18:48,609 - INFO - joeynmt.training - Example #0
-2021-10-02 13:18:48,610 - INFO - joeynmt.training - 	Source:     tr
-2021-10-02 13:18:48,610 - INFO - joeynmt.training - 	Reference:  en
-2021-10-02 13:18:48,610 - INFO - joeynmt.training - 	Hypothesis: "And
-2021-10-02 13:18:48,610 - INFO - joeynmt.training - Example #1
+2021-10-02 13:25:07,634 - INFO - joeynmt.training - 	Source:     "Babam BBC Haber kanal\u0131n\u0131 dinliyordu ; o ufak , gri radyosundan ."
+2021-10-02 13:25:07,635 - INFO - joeynmt.training - 	Reference:  "My father was listening to BBC News on his small , gray radio ."
+2021-10-02 13:25:07,635 - INFO - joeynmt.training - 	Hypothesis: <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk>
+2021-10-02 13:25:07,635 - INFO - joeynmt.training - Validation result (greedy) at epoch  16, step     1000: bleu:   0.00, loss: 2413.8464, ppl:   1.2357, duration: 1.2044s
+2021-10-02 13:25:17,993 - INFO - joeynmt.training - Epoch  16: total training loss 288.26
+2021-10-02 13:25:17,993 - INFO - joeynmt.training - EPOCH 17
+2021-10-02 13:25:28,007 - INFO - joeynmt.training - Example #0
+2021-10-02 13:25:28,007 - INFO - joeynmt.training - 	Source:     tr
+2021-10-02 13:25:28,007 - INFO - joeynmt.training - 	Reference:  en
+2021-10-02 13:25:28,007 - INFO - joeynmt.training - 	Hypothesis: <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk>
+2021-10-02 13:25:28,007 - INFO - joeynmt.training - Example #1
 --- Logging error ---
 Traceback (most recent call last):
   File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/logging/__init__.py", line 1036, in emit
@@ -1271,10 +1262,10 @@ Call stack:
     logger.info("\tSource:     %s", sources[p])
 Message: '\tSource:     %s'
 Arguments: ('11 ya\u015f\u0131ndayken bir sabah evimdeki sevinç ç\u0131\u011fl\u0131klar\u0131yla uyand\u0131\u011f\u0131m\u0131 hat\u0131rl\u0131yorum .',)
-2021-10-02 13:18:48,612 - INFO - joeynmt.training - 	Source:     11 ya\u015f\u0131ndayken bir sabah evimdeki sevinç ç\u0131\u011fl\u0131klar\u0131yla uyand\u0131\u011f\u0131m\u0131 hat\u0131rl\u0131yorum .
-2021-10-02 13:18:48,613 - INFO - joeynmt.training - 	Reference:  "When I was 11 , I remember waking up one morning to the sound of joy in my house ."
-2021-10-02 13:18:48,613 - INFO - joeynmt.training - 	Hypothesis: "And , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , ,
-2021-10-02 13:18:48,613 - INFO - joeynmt.training - Example #2
+2021-10-02 13:25:28,008 - INFO - joeynmt.training - 	Source:     11 ya\u015f\u0131ndayken bir sabah evimdeki sevinç ç\u0131\u011fl\u0131klar\u0131yla uyand\u0131\u011f\u0131m\u0131 hat\u0131rl\u0131yorum .
+2021-10-02 13:25:28,009 - INFO - joeynmt.training - 	Reference:  "When I was 11 , I remember waking up one morning to the sound of joy in my house ."
+2021-10-02 13:25:28,009 - INFO - joeynmt.training - 	Hypothesis: <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk>
+2021-10-02 13:25:28,009 - INFO - joeynmt.training - Example #2
 --- Logging error ---
 Traceback (most recent call last):
   File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/logging/__init__.py", line 1036, in emit
@@ -1323,356 +1314,19 @@ Call stack:
     logger.info("\tSource:     %s", sources[p])
 Message: '\tSource:     %s'
 Arguments: ('"Babam BBC Haber kanal\u0131n\u0131 dinliyordu ; o ufak , gri radyosundan ."',)
-2021-10-02 13:18:48,614 - INFO - joeynmt.training - 	Source:     "Babam BBC Haber kanal\u0131n\u0131 dinliyordu ; o ufak , gri radyosundan ."
-2021-10-02 13:18:48,615 - INFO - joeynmt.training - 	Reference:  "My father was listening to BBC News on his small , gray radio ."
-2021-10-02 13:18:48,615 - INFO - joeynmt.training - 	Hypothesis: "And , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , ,
-2021-10-02 13:18:48,615 - INFO - joeynmt.training - Validation result (greedy) at epoch  17, step     1100: bleu:   0.01, loss: 76881.0312, ppl: 845.4013, duration: 1.4360s
-2021-10-02 13:18:52,251 - INFO - joeynmt.training - Epoch  17: total training loss 8471.37
-2021-10-02 13:18:52,252 - INFO - joeynmt.training - EPOCH 18
-2021-10-02 13:19:00,424 - INFO - joeynmt.training - Epoch  18: total training loss 8471.87
-2021-10-02 13:19:00,425 - INFO - joeynmt.training - EPOCH 19
-2021-10-02 13:19:05,401 - INFO - joeynmt.training - Example #0
-2021-10-02 13:19:05,402 - INFO - joeynmt.training - 	Source:     tr
-2021-10-02 13:19:05,402 - INFO - joeynmt.training - 	Reference:  en
-2021-10-02 13:19:05,402 - INFO - joeynmt.training - 	Hypothesis: "And
-2021-10-02 13:19:05,403 - INFO - joeynmt.training - Example #1
---- Logging error ---
-Traceback (most recent call last):
-  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/logging/__init__.py", line 1036, in emit
-    stream.write(msg)
-UnicodeEncodeError: 'latin-1' codec can't encode character '\u015f' in position 86: ordinal not in range(256)
-Call stack:
-  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 193, in _run_module_as_main
-    "__main__", mod_spec)
-  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 85, in _run_code
-    exec(code, run_globals)
-  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 48, in <module>
-    main()
-  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 35, in main
-    train(cfg_file=args.config_path, skip_test=args.skip_test)
-  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 846, in train
-    trainer.train_and_validate(train_data=train_data, valid_data=dev_data)
-  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 497, in train_and_validate
-    valid_duration = self._validate(valid_data, epoch_no)
-  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 642, in _validate
-    references=valid_references)
-  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 731, in _log_examples
-    logger.debug("\tRaw source:     %s", sources_raw[p])
-Message: '\tRaw source:     %s'
-Arguments: (['1@@', '1', 'ya\u015f@@', '\u0131nday@@', 'ken', 'bir', 'sa@@', 'ba@@', 'h', 'ev@@', 'im@@', 'deki', 'sev@@', 'in@@', 'ç', 'ç@@', '\u0131\u011f@@', 'l\u0131@@', 'klar@@', '\u0131yla', 'u@@', 'yan@@', 'd\u0131\u011f@@', '\u0131m\u0131', 'hat\u0131r@@', 'l\u0131@@', 'yorum', '.'],)
---- Logging error ---
-Traceback (most recent call last):
-  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/logging/__init__.py", line 1036, in emit
-    stream.write(msg)
-UnicodeEncodeError: 'latin-1' codec can't encode characters in position 70-71: ordinal not in range(256)
-Call stack:
-  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 193, in _run_module_as_main
-    "__main__", mod_spec)
-  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 85, in _run_code
-    exec(code, run_globals)
-  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 48, in <module>
-    main()
-  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 35, in main
-    train(cfg_file=args.config_path, skip_test=args.skip_test)
-  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 846, in train
-    trainer.train_and_validate(train_data=train_data, valid_data=dev_data)
-  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 497, in train_and_validate
-    valid_duration = self._validate(valid_data, epoch_no)
-  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 642, in _validate
-    references=valid_references)
-  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 737, in _log_examples
-    logger.info("\tSource:     %s", sources[p])
-Message: '\tSource:     %s'
-Arguments: ('11 ya\u015f\u0131ndayken bir sabah evimdeki sevinç ç\u0131\u011fl\u0131klar\u0131yla uyand\u0131\u011f\u0131m\u0131 hat\u0131rl\u0131yorum .',)
-2021-10-02 13:19:05,405 - INFO - joeynmt.training - 	Source:     11 ya\u015f\u0131ndayken bir sabah evimdeki sevinç ç\u0131\u011fl\u0131klar\u0131yla uyand\u0131\u011f\u0131m\u0131 hat\u0131rl\u0131yorum .
-2021-10-02 13:19:05,405 - INFO - joeynmt.training - 	Reference:  "When I was 11 , I remember waking up one morning to the sound of joy in my house ."
-2021-10-02 13:19:05,406 - INFO - joeynmt.training - 	Hypothesis: "And , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , ,
-2021-10-02 13:19:05,406 - INFO - joeynmt.training - Example #2
---- Logging error ---
-Traceback (most recent call last):
-  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/logging/__init__.py", line 1036, in emit
-    stream.write(msg)
-UnicodeEncodeError: 'latin-1' codec can't encode character '\u0131' in position 151: ordinal not in range(256)
-Call stack:
-  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 193, in _run_module_as_main
-    "__main__", mod_spec)
-  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 85, in _run_code
-    exec(code, run_globals)
-  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 48, in <module>
-    main()
-  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 35, in main
-    train(cfg_file=args.config_path, skip_test=args.skip_test)
-  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 846, in train
-    trainer.train_and_validate(train_data=train_data, valid_data=dev_data)
-  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 497, in train_and_validate
-    valid_duration = self._validate(valid_data, epoch_no)
-  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 642, in _validate
-    references=valid_references)
-  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 731, in _log_examples
-    logger.debug("\tRaw source:     %s", sources_raw[p])
-Message: '\tRaw source:     %s'
-Arguments: (['"B@@', 'ab@@', 'am', 'B@@', 'B@@', 'C', 'H@@', 'ab@@', 'er', 'kan@@', 'al@@', '\u0131n\u0131', 'din@@', 'li@@', 'yordu', ';', 'o', 'uf@@', 'ak', ',', 'gr@@', 'i', 'rad@@', 'y@@', 'os@@', 'undan', '."'],)
---- Logging error ---
-Traceback (most recent call last):
-  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/logging/__init__.py", line 1036, in emit
-    stream.write(msg)
-UnicodeEncodeError: 'latin-1' codec can't encode character '\u0131' in position 87: ordinal not in range(256)
-Call stack:
-  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 193, in _run_module_as_main
-    "__main__", mod_spec)
-  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 85, in _run_code
-    exec(code, run_globals)
-  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 48, in <module>
-    main()
-  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 35, in main
-    train(cfg_file=args.config_path, skip_test=args.skip_test)
-  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 846, in train
-    trainer.train_and_validate(train_data=train_data, valid_data=dev_data)
-  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 497, in train_and_validate
-    valid_duration = self._validate(valid_data, epoch_no)
-  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 642, in _validate
-    references=valid_references)
-  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 737, in _log_examples
-    logger.info("\tSource:     %s", sources[p])
-Message: '\tSource:     %s'
-Arguments: ('"Babam BBC Haber kanal\u0131n\u0131 dinliyordu ; o ufak , gri radyosundan ."',)
-2021-10-02 13:19:05,407 - INFO - joeynmt.training - 	Source:     "Babam BBC Haber kanal\u0131n\u0131 dinliyordu ; o ufak , gri radyosundan ."
-2021-10-02 13:19:05,407 - INFO - joeynmt.training - 	Reference:  "My father was listening to BBC News on his small , gray radio ."
-2021-10-02 13:19:05,408 - INFO - joeynmt.training - 	Hypothesis: "And , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , ,
-2021-10-02 13:19:05,408 - INFO - joeynmt.training - Validation result (greedy) at epoch  19, step     1200: bleu:   0.01, loss: 76881.6562, ppl: 845.4476, duration: 1.1871s
-2021-10-02 13:19:12,773 - INFO - joeynmt.training - Epoch  19: total training loss 8469.22
-2021-10-02 13:19:12,774 - INFO - joeynmt.training - EPOCH 20
-2021-10-02 13:19:22,353 - INFO - joeynmt.training - Example #0
-2021-10-02 13:19:22,353 - INFO - joeynmt.training - 	Source:     tr
-2021-10-02 13:19:22,353 - INFO - joeynmt.training - 	Reference:  en
-2021-10-02 13:19:22,353 - INFO - joeynmt.training - 	Hypothesis: "And
-2021-10-02 13:19:22,353 - INFO - joeynmt.training - Example #1
---- Logging error ---
-Traceback (most recent call last):
-  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/logging/__init__.py", line 1036, in emit
-    stream.write(msg)
-UnicodeEncodeError: 'latin-1' codec can't encode character '\u015f' in position 86: ordinal not in range(256)
-Call stack:
-  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 193, in _run_module_as_main
-    "__main__", mod_spec)
-  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 85, in _run_code
-    exec(code, run_globals)
-  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 48, in <module>
-    main()
-  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 35, in main
-    train(cfg_file=args.config_path, skip_test=args.skip_test)
-  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 846, in train
-    trainer.train_and_validate(train_data=train_data, valid_data=dev_data)
-  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 497, in train_and_validate
-    valid_duration = self._validate(valid_data, epoch_no)
-  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 642, in _validate
-    references=valid_references)
-  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 731, in _log_examples
-    logger.debug("\tRaw source:     %s", sources_raw[p])
-Message: '\tRaw source:     %s'
-Arguments: (['1@@', '1', 'ya\u015f@@', '\u0131nday@@', 'ken', 'bir', 'sa@@', 'ba@@', 'h', 'ev@@', 'im@@', 'deki', 'sev@@', 'in@@', 'ç', 'ç@@', '\u0131\u011f@@', 'l\u0131@@', 'klar@@', '\u0131yla', 'u@@', 'yan@@', 'd\u0131\u011f@@', '\u0131m\u0131', 'hat\u0131r@@', 'l\u0131@@', 'yorum', '.'],)
---- Logging error ---
-Traceback (most recent call last):
-  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/logging/__init__.py", line 1036, in emit
-    stream.write(msg)
-UnicodeEncodeError: 'latin-1' codec can't encode characters in position 70-71: ordinal not in range(256)
-Call stack:
-  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 193, in _run_module_as_main
-    "__main__", mod_spec)
-  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 85, in _run_code
-    exec(code, run_globals)
-  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 48, in <module>
-    main()
-  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 35, in main
-    train(cfg_file=args.config_path, skip_test=args.skip_test)
-  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 846, in train
-    trainer.train_and_validate(train_data=train_data, valid_data=dev_data)
-  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 497, in train_and_validate
-    valid_duration = self._validate(valid_data, epoch_no)
-  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 642, in _validate
-    references=valid_references)
-  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 737, in _log_examples
-    logger.info("\tSource:     %s", sources[p])
-Message: '\tSource:     %s'
-Arguments: ('11 ya\u015f\u0131ndayken bir sabah evimdeki sevinç ç\u0131\u011fl\u0131klar\u0131yla uyand\u0131\u011f\u0131m\u0131 hat\u0131rl\u0131yorum .',)
-2021-10-02 13:19:22,354 - INFO - joeynmt.training - 	Source:     11 ya\u015f\u0131ndayken bir sabah evimdeki sevinç ç\u0131\u011fl\u0131klar\u0131yla uyand\u0131\u011f\u0131m\u0131 hat\u0131rl\u0131yorum .
-2021-10-02 13:19:22,354 - INFO - joeynmt.training - 	Reference:  "When I was 11 , I remember waking up one morning to the sound of joy in my house ."
-2021-10-02 13:19:22,354 - INFO - joeynmt.training - 	Hypothesis: "And , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , ,
-2021-10-02 13:19:22,354 - INFO - joeynmt.training - Example #2
---- Logging error ---
-Traceback (most recent call last):
-  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/logging/__init__.py", line 1036, in emit
-    stream.write(msg)
-UnicodeEncodeError: 'latin-1' codec can't encode character '\u0131' in position 151: ordinal not in range(256)
-Call stack:
-  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 193, in _run_module_as_main
-    "__main__", mod_spec)
-  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 85, in _run_code
-    exec(code, run_globals)
-  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 48, in <module>
-    main()
-  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 35, in main
-    train(cfg_file=args.config_path, skip_test=args.skip_test)
-  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 846, in train
-    trainer.train_and_validate(train_data=train_data, valid_data=dev_data)
-  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 497, in train_and_validate
-    valid_duration = self._validate(valid_data, epoch_no)
-  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 642, in _validate
-    references=valid_references)
-  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 731, in _log_examples
-    logger.debug("\tRaw source:     %s", sources_raw[p])
-Message: '\tRaw source:     %s'
-Arguments: (['"B@@', 'ab@@', 'am', 'B@@', 'B@@', 'C', 'H@@', 'ab@@', 'er', 'kan@@', 'al@@', '\u0131n\u0131', 'din@@', 'li@@', 'yordu', ';', 'o', 'uf@@', 'ak', ',', 'gr@@', 'i', 'rad@@', 'y@@', 'os@@', 'undan', '."'],)
---- Logging error ---
-Traceback (most recent call last):
-  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/logging/__init__.py", line 1036, in emit
-    stream.write(msg)
-UnicodeEncodeError: 'latin-1' codec can't encode character '\u0131' in position 87: ordinal not in range(256)
-Call stack:
-  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 193, in _run_module_as_main
-    "__main__", mod_spec)
-  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 85, in _run_code
-    exec(code, run_globals)
-  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 48, in <module>
-    main()
-  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 35, in main
-    train(cfg_file=args.config_path, skip_test=args.skip_test)
-  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 846, in train
-    trainer.train_and_validate(train_data=train_data, valid_data=dev_data)
-  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 497, in train_and_validate
-    valid_duration = self._validate(valid_data, epoch_no)
-  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 642, in _validate
-    references=valid_references)
-  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 737, in _log_examples
-    logger.info("\tSource:     %s", sources[p])
-Message: '\tSource:     %s'
-Arguments: ('"Babam BBC Haber kanal\u0131n\u0131 dinliyordu ; o ufak , gri radyosundan ."',)
-2021-10-02 13:19:22,355 - INFO - joeynmt.training - 	Source:     "Babam BBC Haber kanal\u0131n\u0131 dinliyordu ; o ufak , gri radyosundan ."
-2021-10-02 13:19:22,356 - INFO - joeynmt.training - 	Reference:  "My father was listening to BBC News on his small , gray radio ."
-2021-10-02 13:19:22,356 - INFO - joeynmt.training - 	Hypothesis: "And , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , ,
-2021-10-02 13:19:22,356 - INFO - joeynmt.training - Validation result (greedy) at epoch  20, step     1300: bleu:   0.01, loss: 76881.5469, ppl: 845.4396, duration: 1.1910s
-2021-10-02 13:19:25,232 - INFO - joeynmt.training - Epoch  20: total training loss 8473.64
-2021-10-02 13:19:25,236 - INFO - joeynmt.training - EPOCH 21
-2021-10-02 13:19:34,929 - INFO - joeynmt.training - Epoch  21: total training loss 8472.01
-2021-10-02 13:19:34,929 - INFO - joeynmt.training - EPOCH 22
-2021-10-02 13:19:41,020 - INFO - joeynmt.training - Example #0
-2021-10-02 13:19:41,021 - INFO - joeynmt.training - 	Source:     tr
-2021-10-02 13:19:41,021 - INFO - joeynmt.training - 	Reference:  en
-2021-10-02 13:19:41,021 - INFO - joeynmt.training - 	Hypothesis: "And
-2021-10-02 13:19:41,021 - INFO - joeynmt.training - Example #1
---- Logging error ---
-Traceback (most recent call last):
-  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/logging/__init__.py", line 1036, in emit
-    stream.write(msg)
-UnicodeEncodeError: 'latin-1' codec can't encode character '\u015f' in position 86: ordinal not in range(256)
-Call stack:
-  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 193, in _run_module_as_main
-    "__main__", mod_spec)
-  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 85, in _run_code
-    exec(code, run_globals)
-  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 48, in <module>
-    main()
-  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 35, in main
-    train(cfg_file=args.config_path, skip_test=args.skip_test)
-  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 846, in train
-    trainer.train_and_validate(train_data=train_data, valid_data=dev_data)
-  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 497, in train_and_validate
-    valid_duration = self._validate(valid_data, epoch_no)
-  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 642, in _validate
-    references=valid_references)
-  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 731, in _log_examples
-    logger.debug("\tRaw source:     %s", sources_raw[p])
-Message: '\tRaw source:     %s'
-Arguments: (['1@@', '1', 'ya\u015f@@', '\u0131nday@@', 'ken', 'bir', 'sa@@', 'ba@@', 'h', 'ev@@', 'im@@', 'deki', 'sev@@', 'in@@', 'ç', 'ç@@', '\u0131\u011f@@', 'l\u0131@@', 'klar@@', '\u0131yla', 'u@@', 'yan@@', 'd\u0131\u011f@@', '\u0131m\u0131', 'hat\u0131r@@', 'l\u0131@@', 'yorum', '.'],)
---- Logging error ---
-Traceback (most recent call last):
-  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/logging/__init__.py", line 1036, in emit
-    stream.write(msg)
-UnicodeEncodeError: 'latin-1' codec can't encode characters in position 70-71: ordinal not in range(256)
-Call stack:
-  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 193, in _run_module_as_main
-    "__main__", mod_spec)
-  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 85, in _run_code
-    exec(code, run_globals)
-  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 48, in <module>
-    main()
-  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 35, in main
-    train(cfg_file=args.config_path, skip_test=args.skip_test)
-  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 846, in train
-    trainer.train_and_validate(train_data=train_data, valid_data=dev_data)
-  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 497, in train_and_validate
-    valid_duration = self._validate(valid_data, epoch_no)
-  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 642, in _validate
-    references=valid_references)
-  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 737, in _log_examples
-    logger.info("\tSource:     %s", sources[p])
-Message: '\tSource:     %s'
-Arguments: ('11 ya\u015f\u0131ndayken bir sabah evimdeki sevinç ç\u0131\u011fl\u0131klar\u0131yla uyand\u0131\u011f\u0131m\u0131 hat\u0131rl\u0131yorum .',)
-2021-10-02 13:19:41,023 - INFO - joeynmt.training - 	Source:     11 ya\u015f\u0131ndayken bir sabah evimdeki sevinç ç\u0131\u011fl\u0131klar\u0131yla uyand\u0131\u011f\u0131m\u0131 hat\u0131rl\u0131yorum .
-2021-10-02 13:19:41,024 - INFO - joeynmt.training - 	Reference:  "When I was 11 , I remember waking up one morning to the sound of joy in my house ."
-2021-10-02 13:19:41,024 - INFO - joeynmt.training - 	Hypothesis: "And , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , ,
-2021-10-02 13:19:41,024 - INFO - joeynmt.training - Example #2
---- Logging error ---
-Traceback (most recent call last):
-  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/logging/__init__.py", line 1036, in emit
-    stream.write(msg)
-UnicodeEncodeError: 'latin-1' codec can't encode character '\u0131' in position 151: ordinal not in range(256)
-Call stack:
-  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 193, in _run_module_as_main
-    "__main__", mod_spec)
-  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 85, in _run_code
-    exec(code, run_globals)
-  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 48, in <module>
-    main()
-  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 35, in main
-    train(cfg_file=args.config_path, skip_test=args.skip_test)
-  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 846, in train
-    trainer.train_and_validate(train_data=train_data, valid_data=dev_data)
-  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 497, in train_and_validate
-    valid_duration = self._validate(valid_data, epoch_no)
-  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 642, in _validate
-    references=valid_references)
-  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 731, in _log_examples
-    logger.debug("\tRaw source:     %s", sources_raw[p])
-Message: '\tRaw source:     %s'
-Arguments: (['"B@@', 'ab@@', 'am', 'B@@', 'B@@', 'C', 'H@@', 'ab@@', 'er', 'kan@@', 'al@@', '\u0131n\u0131', 'din@@', 'li@@', 'yordu', ';', 'o', 'uf@@', 'ak', ',', 'gr@@', 'i', 'rad@@', 'y@@', 'os@@', 'undan', '."'],)
---- Logging error ---
-Traceback (most recent call last):
-  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/logging/__init__.py", line 1036, in emit
-    stream.write(msg)
-UnicodeEncodeError: 'latin-1' codec can't encode character '\u0131' in position 87: ordinal not in range(256)
-Call stack:
-  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 193, in _run_module_as_main
-    "__main__", mod_spec)
-  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 85, in _run_code
-    exec(code, run_globals)
-  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 48, in <module>
-    main()
-  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 35, in main
-    train(cfg_file=args.config_path, skip_test=args.skip_test)
-  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 846, in train
-    trainer.train_and_validate(train_data=train_data, valid_data=dev_data)
-  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 497, in train_and_validate
-    valid_duration = self._validate(valid_data, epoch_no)
-  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 642, in _validate
-    references=valid_references)
-  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 737, in _log_examples
-    logger.info("\tSource:     %s", sources[p])
-Message: '\tSource:     %s'
-Arguments: ('"Babam BBC Haber kanal\u0131n\u0131 dinliyordu ; o ufak , gri radyosundan ."',)
-2021-10-02 13:19:41,024 - INFO - joeynmt.training - 	Source:     "Babam BBC Haber kanal\u0131n\u0131 dinliyordu ; o ufak , gri radyosundan ."
-2021-10-02 13:19:41,025 - INFO - joeynmt.training - 	Reference:  "My father was listening to BBC News on his small , gray radio ."
-2021-10-02 13:19:41,025 - INFO - joeynmt.training - 	Hypothesis: "And , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , ,
-2021-10-02 13:19:41,025 - INFO - joeynmt.training - Validation result (greedy) at epoch  22, step     1400: bleu:   0.01, loss: 76881.5234, ppl: 845.4380, duration: 1.1942s
-2021-10-02 13:19:44,050 - INFO - joeynmt.training - Training ended since minimum lr 1e-08 was reached.
-2021-10-02 13:19:44,054 - INFO - joeynmt.training - Best validation result (greedy) at step      400:   0.02 eval_metric.
-2021-10-02 13:19:44,090 - INFO - joeynmt.prediction - Process device: cuda, n_gpu: 1, batch_size per device: 80
-2021-10-02 13:19:44,090 - INFO - joeynmt.prediction - Loading model from models/tr_en_bpe_model/400.ckpt
-2021-10-02 13:19:44,118 - INFO - joeynmt.model - Building an encoder-decoder model...
-2021-10-02 13:19:44,165 - INFO - joeynmt.model - Enc-dec model built.
-2021-10-02 13:19:44,173 - INFO - joeynmt.prediction - Decoding on dev set (../2DL4NLP/all_data/val.bpe.en)...
-2021-10-02 13:19:50,776 - INFO - joeynmt.prediction -  dev bleu[none]:   0.00 [Beam search decoding with beam size = 5 and alpha = 1.0]
-2021-10-02 13:19:50,778 - INFO - joeynmt.prediction - Translations saved to: models/tr_en_bpe_model/00000400.hyps.dev
-2021-10-02 13:19:50,778 - INFO - joeynmt.prediction - Decoding on test set (../2DL4NLP/all_data/test.bpe.en)...
-2021-10-02 13:19:58,229 - INFO - joeynmt.prediction - test bleu[none]:   0.00 [Beam search decoding with beam size = 5 and alpha = 1.0]
-2021-10-02 13:19:58,232 - INFO - joeynmt.prediction - Translations saved to: models/tr_en_bpe_model/00000400.hyps.test
+2021-10-02 13:25:28,010 - INFO - joeynmt.training - 	Source:     "Babam BBC Haber kanal\u0131n\u0131 dinliyordu ; o ufak , gri radyosundan ."
+2021-10-02 13:25:28,010 - INFO - joeynmt.training - 	Reference:  "My father was listening to BBC News on his small , gray radio ."
+2021-10-02 13:25:28,010 - INFO - joeynmt.training - 	Hypothesis: <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk>
+2021-10-02 13:25:28,010 - INFO - joeynmt.training - Validation result (greedy) at epoch  17, step     1100: bleu:   0.00, loss: 2413.8259, ppl:   1.2357, duration: 1.1938s
+2021-10-02 13:25:32,456 - INFO - joeynmt.training - Training ended since minimum lr 1e-08 was reached.
+2021-10-02 13:25:32,460 - INFO - joeynmt.training - Best validation result (greedy) at step      100:   0.00 eval_metric.
+2021-10-02 13:25:32,489 - INFO - joeynmt.prediction - Process device: cuda, n_gpu: 1, batch_size per device: 80
+2021-10-02 13:25:32,489 - INFO - joeynmt.prediction - Loading model from models/tr_en_bpe_model/100.ckpt
+2021-10-02 13:25:32,511 - INFO - joeynmt.model - Building an encoder-decoder model...
+2021-10-02 13:25:32,545 - INFO - joeynmt.model - Enc-dec model built.
+2021-10-02 13:25:32,551 - INFO - joeynmt.prediction - Decoding on dev set (../2DL4NLP/all_data/val.bpe.en)...
+2021-10-02 13:26:12,579 - INFO - joeynmt.prediction -  dev bleu[none]:   0.00 [Beam search decoding with beam size = 5 and alpha = 1.0]
+2021-10-02 13:26:12,583 - INFO - joeynmt.prediction - Translations saved to: models/tr_en_bpe_model/00000100.hyps.dev
+2021-10-02 13:26:12,583 - INFO - joeynmt.prediction - Decoding on test set (../2DL4NLP/all_data/test.bpe.en)...
+2021-10-02 13:26:56,384 - INFO - joeynmt.prediction - test bleu[none]:   0.00 [Beam search decoding with beam size = 5 and alpha = 1.0]
+2021-10-02 13:26:56,388 - INFO - joeynmt.prediction - Translations saved to: models/tr_en_bpe_model/00000100.hyps.test
