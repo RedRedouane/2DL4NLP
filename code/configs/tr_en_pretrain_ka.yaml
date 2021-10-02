@@ -3,9 +3,9 @@ name: "tr_en_bpe_model"
 data:
     src: "tr"
     trg: "en"
-    train: "../2DL4NLP/all_data/train.bpe"
-    dev: "../2DL4NLP/all_data/val.bpe"
-    test: "../2DL4NLP/all_data/test.bpe"
+    train: "../2DL4NLP/all_data/train.bpe"   # AANPASSEN 
+    dev: "../2DL4NLP/all_data/val.bpe"       # AANPASSEN
+    test: "../2DL4NLP/all_data/test.bpe"     # AANPASSEN
     level: "bpe"
     lowercase: False
     max_sent_length: 50                 # Luong
@@ -25,6 +25,9 @@ testing:
         tokenize: "none"             # `tokenize` option in sacrebleu.corpus_bleu() function (default: 13a)
 
 training:
+    # load_model: "models/{model directory}/best.ckpt" # AANGEPAST VOOR TRANSFER LEARNING
+    # reset_best_ckpt: True         # AANGEPAST VOOR TRANSFER LEARNING
+    # reset_iter_state: True        # AANGEPAST VOOR TRANSFER LEARNING
     random_seed: 42
     optimizer: "adam"                    # all
     # learning_rate: 0.5                  # Zoph
@@ -40,7 +43,7 @@ training:
     validation_freq: 100
     logging_freq: 1000
     eval_metric: "bleu"
-    model_dir: "models/tr_en_bpe_model"
+    model_dir: "models/tr_en_bpe_model"   # AANPASSEN NAAR NIEUWE DIRECTORY
     overwrite: False
     shuffle: True
     use_cuda: True
@@ -51,19 +54,19 @@ model:
     encoder:
         rnn_type: "lstm"
         embeddings:
-            embedding_dim: 128          # Gulcehre
+            embedding_dim: 256          # Gulcehre
             scale: False
-        hidden_size: 128               # Luong & Zoph
+        hidden_size: 1000               # Luong & Zoph
         bidirectional: False            # all
         dropout: 0.2
         num_layers: 1
     decoder:
         rnn_type: "lstm"
         embeddings:
-            embedding_dim: 128          # uncertain
+            embedding_dim: 256          # uncertain
             scale: False
         emb_scale: False
-        hidden_size: 128               # all
+        hidden_size: 1000               # all
         dropout: 0.2
         hidden_dropout: 0.2
         num_layers: 1

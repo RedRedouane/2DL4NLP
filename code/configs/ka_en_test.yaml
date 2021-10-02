@@ -1,11 +1,11 @@
-name: "tr_en_bpe_model"
+name: "ka_en_model"
 
 data:
-    src: "tr"
+    src: "ka"
     trg: "en"
-    train: "../2DL4NLP/all_data/train.bpe"
-    dev: "../2DL4NLP/all_data/val.bpe"
-    test: "../2DL4NLP/all_data/test.bpe"
+    train: "../2DL4NLP/all_data/train"
+    dev: "../2DL4NLP/all_data/val"
+    test: "../2DL4NLP/all_data/test"
     level: "bpe"
     lowercase: False
     max_sent_length: 50                 # Luong
@@ -13,35 +13,29 @@ data:
     src_voc_limit: 10000                # I took the minimum of the 3 papers
     trg_voc_min_freq: 0
     trg_voc_limit: 10000                # here as well
-    src_vocab: "../2DL4NLP/all_data/tr_en_vocab.txt"
-    trg_vocab: "../2DL4NLP/all_data/tr_en_vocab.txt"
-
 
 testing:
     beam_size: 5
     alpha: 1.0
-    sacrebleu:                      # sacrebleu options
-        remove_whitespace: True     # `remove_whitespace` option in sacrebleu.corpus_chrf() function (defalut: True)
-        tokenize: "none"             # `tokenize` option in sacrebleu.corpus_bleu() function (default: 13a)
 
 training:
     random_seed: 42
-    optimizer: "adam"                    # all
-    # learning_rate: 0.5                  # Zoph
-    # learning_rate_min: 0.0000005
+    optimizer: "sgd"                    # all
+    learning_rate: 0.5                  # Zoph
+    learning_rate_min: 0.0000005
     weight_decay: 0.0
-    # clip_grad_norm: 5.0                 # all
+    clip_grad_norm: 5.0                 # all
     batch_size: 80                      # Gulcehre
     scheduling: "plateau"
     patience: 1                         # Zoph
-    # decrease_factor: 0.9                # Zoph
+    decrease_factor: 0.9                # Zoph
     early_stopping_metric: "eval_metric"
-    epochs: 100                         # Zoph
-    validation_freq: 100
+    epochs: 10                         # Zoph
+    validation_freq: 7362
     logging_freq: 1000
     eval_metric: "bleu"
-    model_dir: "models/tr_en_bpe_model"
-    overwrite: False
+    model_dir: "models/ka_en_model"
+    overwrite: True
     shuffle: True
     use_cuda: True
     max_output_length: 60
@@ -51,19 +45,19 @@ model:
     encoder:
         rnn_type: "lstm"
         embeddings:
-            embedding_dim: 128          # Gulcehre
+            embedding_dim: 620          # Gulcehre
             scale: False
-        hidden_size: 128               # Luong & Zoph
+        hidden_size: 1000               # Luong & Zoph
         bidirectional: False            # all
         dropout: 0.2
         num_layers: 1
     decoder:
         rnn_type: "lstm"
         embeddings:
-            embedding_dim: 128          # uncertain
+            embedding_dim: 620          # uncertain
             scale: False
         emb_scale: False
-        hidden_size: 128               # all
+        hidden_size: 1000               # all
         dropout: 0.2
         hidden_dropout: 0.2
         num_layers: 1
