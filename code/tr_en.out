@@ -1,301 +1,130 @@
-2021-09-30 19:07:44,335 - INFO - root - Hello! This is Joey-NMT (version 1.3).
-2021-09-30 19:07:44,433 - INFO - joeynmt.data - Loading training data...
-2021-09-30 19:07:44,526 - INFO - joeynmt.data - Building vocabulary...
-2021-09-30 19:07:46,936 - INFO - joeynmt.data - Loading dev data...
-2021-09-30 19:07:46,945 - INFO - joeynmt.data - Loading test data...
-2021-09-30 19:07:46,955 - INFO - joeynmt.data - Data loaded.
-2021-09-30 19:07:46,955 - INFO - joeynmt.model - Building an encoder-decoder model...
-2021-09-30 19:07:48,099 - INFO - joeynmt.model - Enc-dec model built.
-2021-09-30 19:07:48,107 - INFO - joeynmt.training - Total params: 51390880
-2021-09-30 19:07:52,559 - INFO - joeynmt.helpers - cfg.name                           : tr_en_model
-2021-09-30 19:07:52,559 - INFO - joeynmt.helpers - cfg.data.src                       : tr
-2021-09-30 19:07:52,559 - INFO - joeynmt.helpers - cfg.data.trg                       : en
-2021-09-30 19:07:52,559 - INFO - joeynmt.helpers - cfg.data.train                     : ../2DL4NLP/all_data/train
-2021-09-30 19:07:52,559 - INFO - joeynmt.helpers - cfg.data.dev                       : ../2DL4NLP/all_data/val
-2021-09-30 19:07:52,560 - INFO - joeynmt.helpers - cfg.data.test                      : ../2DL4NLP/all_data/test
-2021-09-30 19:07:52,560 - INFO - joeynmt.helpers - cfg.data.level                     : bpe
-2021-09-30 19:07:52,560 - INFO - joeynmt.helpers - cfg.data.lowercase                 : False
-2021-09-30 19:07:52,560 - INFO - joeynmt.helpers - cfg.data.max_sent_length           : 50
-2021-09-30 19:07:52,560 - INFO - joeynmt.helpers - cfg.data.src_voc_min_freq          : 0
-2021-09-30 19:07:52,560 - INFO - joeynmt.helpers - cfg.data.src_voc_limit             : 10000
-2021-09-30 19:07:52,560 - INFO - joeynmt.helpers - cfg.data.trg_voc_min_freq          : 0
-2021-09-30 19:07:52,560 - INFO - joeynmt.helpers - cfg.data.trg_voc_limit             : 10000
-2021-09-30 19:07:52,560 - INFO - joeynmt.helpers - cfg.testing.beam_size              : 5
-2021-09-30 19:07:52,560 - INFO - joeynmt.helpers - cfg.testing.alpha                  : 1.0
-2021-09-30 19:07:52,560 - INFO - joeynmt.helpers - cfg.training.random_seed           : 42
-2021-09-30 19:07:52,560 - INFO - joeynmt.helpers - cfg.training.optimizer             : sgd
-2021-09-30 19:07:52,560 - INFO - joeynmt.helpers - cfg.training.learning_rate         : 0.5
-2021-09-30 19:07:52,560 - INFO - joeynmt.helpers - cfg.training.learning_rate_min     : 5e-07
-2021-09-30 19:07:52,560 - INFO - joeynmt.helpers - cfg.training.weight_decay          : 0.0
-2021-09-30 19:07:52,560 - INFO - joeynmt.helpers - cfg.training.clip_grad_norm        : 5.0
-2021-09-30 19:07:52,561 - INFO - joeynmt.helpers - cfg.training.batch_size            : 80
-2021-09-30 19:07:52,561 - INFO - joeynmt.helpers - cfg.training.scheduling            : plateau
-2021-09-30 19:07:52,561 - INFO - joeynmt.helpers - cfg.training.patience              : 1
-2021-09-30 19:07:52,561 - INFO - joeynmt.helpers - cfg.training.decrease_factor       : 0.9
-2021-09-30 19:07:52,561 - INFO - joeynmt.helpers - cfg.training.early_stopping_metric : eval_metric
-2021-09-30 19:07:52,561 - INFO - joeynmt.helpers - cfg.training.epochs                : 100
-2021-09-30 19:07:52,561 - INFO - joeynmt.helpers - cfg.training.validation_freq       : 7362
-2021-09-30 19:07:52,561 - INFO - joeynmt.helpers - cfg.training.logging_freq          : 1000
-2021-09-30 19:07:52,561 - INFO - joeynmt.helpers - cfg.training.eval_metric           : bleu
-2021-09-30 19:07:52,561 - INFO - joeynmt.helpers - cfg.training.model_dir             : models/BIG_model
-2021-09-30 19:07:52,561 - INFO - joeynmt.helpers - cfg.training.overwrite             : True
-2021-09-30 19:07:52,561 - INFO - joeynmt.helpers - cfg.training.shuffle               : True
-2021-09-30 19:07:52,561 - INFO - joeynmt.helpers - cfg.training.use_cuda              : True
-2021-09-30 19:07:52,561 - INFO - joeynmt.helpers - cfg.training.max_output_length     : 60
-2021-09-30 19:07:52,561 - INFO - joeynmt.helpers - cfg.training.print_valid_sents     : [0, 1, 2]
-2021-09-30 19:07:52,561 - INFO - joeynmt.helpers - cfg.model.encoder.rnn_type         : lstm
-2021-09-30 19:07:52,562 - INFO - joeynmt.helpers - cfg.model.encoder.embeddings.embedding_dim : 620
-2021-09-30 19:07:52,562 - INFO - joeynmt.helpers - cfg.model.encoder.embeddings.scale : False
-2021-09-30 19:07:52,562 - INFO - joeynmt.helpers - cfg.model.encoder.hidden_size      : 1000
-2021-09-30 19:07:52,562 - INFO - joeynmt.helpers - cfg.model.encoder.bidirectional    : True
-2021-09-30 19:07:52,562 - INFO - joeynmt.helpers - cfg.model.encoder.dropout          : 0.2
-2021-09-30 19:07:52,562 - INFO - joeynmt.helpers - cfg.model.encoder.num_layers       : 1
-2021-09-30 19:07:52,562 - INFO - joeynmt.helpers - cfg.model.decoder.rnn_type         : lstm
-2021-09-30 19:07:52,562 - INFO - joeynmt.helpers - cfg.model.decoder.embeddings.embedding_dim : 620
-2021-09-30 19:07:52,562 - INFO - joeynmt.helpers - cfg.model.decoder.embeddings.scale : False
-2021-09-30 19:07:52,562 - INFO - joeynmt.helpers - cfg.model.decoder.emb_scale        : False
-2021-09-30 19:07:52,562 - INFO - joeynmt.helpers - cfg.model.decoder.hidden_size      : 1000
-2021-09-30 19:07:52,562 - INFO - joeynmt.helpers - cfg.model.decoder.dropout          : 0.2
-2021-09-30 19:07:52,562 - INFO - joeynmt.helpers - cfg.model.decoder.hidden_dropout   : 0.2
-2021-09-30 19:07:52,562 - INFO - joeynmt.helpers - cfg.model.decoder.num_layers       : 1
-2021-09-30 19:07:52,562 - INFO - joeynmt.helpers - cfg.model.decoder.input_feeding    : True
-2021-09-30 19:07:52,562 - INFO - joeynmt.helpers - cfg.model.decoder.init_hidden      : bridge
-2021-09-30 19:07:52,563 - INFO - joeynmt.helpers - cfg.model.decoder.attention        : bahdanau
-2021-09-30 19:07:52,563 - INFO - joeynmt.helpers - Data set sizes: 
+2021-10-01 15:01:21,081 - INFO - root - Hello! This is Joey-NMT (version 1.3).
+2021-10-01 15:01:21,155 - INFO - joeynmt.data - Loading training data...
+2021-10-01 15:01:21,241 - INFO - joeynmt.data - Building vocabulary...
+2021-10-01 15:01:23,667 - INFO - joeynmt.data - Loading dev data...
+2021-10-01 15:01:23,678 - INFO - joeynmt.data - Loading test data...
+2021-10-01 15:01:23,688 - INFO - joeynmt.data - Data loaded.
+2021-10-01 15:01:23,688 - INFO - joeynmt.model - Building an encoder-decoder model...
+2021-10-01 15:01:24,565 - INFO - joeynmt.model - Enc-dec model built.
+2021-10-01 15:01:24,573 - INFO - joeynmt.training - Total params: 39043688
+2021-10-01 15:01:28,962 - INFO - joeynmt.helpers - cfg.name                           : tr_en_model
+2021-10-01 15:01:28,963 - INFO - joeynmt.helpers - cfg.data.src                       : tr
+2021-10-01 15:01:28,963 - INFO - joeynmt.helpers - cfg.data.trg                       : en
+2021-10-01 15:01:28,963 - INFO - joeynmt.helpers - cfg.data.train                     : ../2DL4NLP/all_data/train
+2021-10-01 15:01:28,963 - INFO - joeynmt.helpers - cfg.data.dev                       : ../2DL4NLP/all_data/val
+2021-10-01 15:01:28,963 - INFO - joeynmt.helpers - cfg.data.test                      : ../2DL4NLP/all_data/test
+2021-10-01 15:01:28,963 - INFO - joeynmt.helpers - cfg.data.level                     : bpe
+2021-10-01 15:01:28,963 - INFO - joeynmt.helpers - cfg.data.lowercase                 : False
+2021-10-01 15:01:28,963 - INFO - joeynmt.helpers - cfg.data.max_sent_length           : 50
+2021-10-01 15:01:28,963 - INFO - joeynmt.helpers - cfg.data.src_voc_min_freq          : 0
+2021-10-01 15:01:28,963 - INFO - joeynmt.helpers - cfg.data.src_voc_limit             : 10000
+2021-10-01 15:01:28,963 - INFO - joeynmt.helpers - cfg.data.trg_voc_min_freq          : 0
+2021-10-01 15:01:28,963 - INFO - joeynmt.helpers - cfg.data.trg_voc_limit             : 10000
+2021-10-01 15:01:28,963 - INFO - joeynmt.helpers - cfg.testing.beam_size              : 5
+2021-10-01 15:01:28,963 - INFO - joeynmt.helpers - cfg.testing.alpha                  : 1.0
+2021-10-01 15:01:28,963 - INFO - joeynmt.helpers - cfg.training.random_seed           : 42
+2021-10-01 15:01:28,964 - INFO - joeynmt.helpers - cfg.training.optimizer             : adam
+2021-10-01 15:01:28,964 - INFO - joeynmt.helpers - cfg.training.weight_decay          : 0.0
+2021-10-01 15:01:28,964 - INFO - joeynmt.helpers - cfg.training.batch_size            : 80
+2021-10-01 15:01:28,964 - INFO - joeynmt.helpers - cfg.training.scheduling            : plateau
+2021-10-01 15:01:28,964 - INFO - joeynmt.helpers - cfg.training.patience              : 1
+2021-10-01 15:01:28,964 - INFO - joeynmt.helpers - cfg.training.early_stopping_metric : eval_metric
+2021-10-01 15:01:28,964 - INFO - joeynmt.helpers - cfg.training.epochs                : 100
+2021-10-01 15:01:28,964 - INFO - joeynmt.helpers - cfg.training.validation_freq       : 1000
+2021-10-01 15:01:28,964 - INFO - joeynmt.helpers - cfg.training.logging_freq          : 1000
+2021-10-01 15:01:28,964 - INFO - joeynmt.helpers - cfg.training.eval_metric           : bleu
+2021-10-01 15:01:28,964 - INFO - joeynmt.helpers - cfg.training.model_dir             : models/tr_en_model
+2021-10-01 15:01:28,964 - INFO - joeynmt.helpers - cfg.training.overwrite             : True
+2021-10-01 15:01:28,964 - INFO - joeynmt.helpers - cfg.training.shuffle               : True
+2021-10-01 15:01:28,964 - INFO - joeynmt.helpers - cfg.training.use_cuda              : True
+2021-10-01 15:01:28,964 - INFO - joeynmt.helpers - cfg.training.max_output_length     : 60
+2021-10-01 15:01:28,964 - INFO - joeynmt.helpers - cfg.training.print_valid_sents     : [0, 1, 2]
+2021-10-01 15:01:28,965 - INFO - joeynmt.helpers - cfg.model.encoder.rnn_type         : lstm
+2021-10-01 15:01:28,965 - INFO - joeynmt.helpers - cfg.model.encoder.embeddings.embedding_dim : 512
+2021-10-01 15:01:28,965 - INFO - joeynmt.helpers - cfg.model.encoder.embeddings.scale : False
+2021-10-01 15:01:28,965 - INFO - joeynmt.helpers - cfg.model.encoder.hidden_size      : 1000
+2021-10-01 15:01:28,965 - INFO - joeynmt.helpers - cfg.model.encoder.bidirectional    : False
+2021-10-01 15:01:28,965 - INFO - joeynmt.helpers - cfg.model.encoder.dropout          : 0.2
+2021-10-01 15:01:28,965 - INFO - joeynmt.helpers - cfg.model.encoder.num_layers       : 1
+2021-10-01 15:01:28,965 - INFO - joeynmt.helpers - cfg.model.decoder.rnn_type         : lstm
+2021-10-01 15:01:28,965 - INFO - joeynmt.helpers - cfg.model.decoder.embeddings.embedding_dim : 512
+2021-10-01 15:01:28,965 - INFO - joeynmt.helpers - cfg.model.decoder.embeddings.scale : False
+2021-10-01 15:01:28,965 - INFO - joeynmt.helpers - cfg.model.decoder.emb_scale        : False
+2021-10-01 15:01:28,965 - INFO - joeynmt.helpers - cfg.model.decoder.hidden_size      : 1000
+2021-10-01 15:01:28,965 - INFO - joeynmt.helpers - cfg.model.decoder.dropout          : 0.2
+2021-10-01 15:01:28,965 - INFO - joeynmt.helpers - cfg.model.decoder.hidden_dropout   : 0.2
+2021-10-01 15:01:28,965 - INFO - joeynmt.helpers - cfg.model.decoder.num_layers       : 1
+2021-10-01 15:01:28,965 - INFO - joeynmt.helpers - cfg.model.decoder.input_feeding    : True
+2021-10-01 15:01:28,966 - INFO - joeynmt.helpers - cfg.model.decoder.init_hidden      : bridge
+2021-10-01 15:01:28,966 - INFO - joeynmt.helpers - cfg.model.decoder.attention        : bahdanau
+2021-10-01 15:01:28,966 - INFO - joeynmt.helpers - Data set sizes: 
 	train 5566,
 	valid 551,
 	test 602
-2021-09-30 19:07:52,563 - INFO - joeynmt.helpers - First training example:
+2021-10-01 15:01:28,966 - INFO - joeynmt.helpers - First training example:
 	[SRC] tr
 	[TRG] en
-2021-09-30 19:07:52,563 - INFO - joeynmt.helpers - First 10 words (src): (0) <unk> (1) <pad> (2) <s> (3) </s> (4) , (5) . (6) bir (7) ." (8) ve (9) &quot;
-2021-09-30 19:07:52,563 - INFO - joeynmt.helpers - First 10 words (trg): (0) <unk> (1) <pad> (2) <s> (3) </s> (4) , (5) the (6) . (7) ." (8) of (9) to
-2021-09-30 19:07:52,563 - INFO - joeynmt.helpers - Number of Src words (types): 10004
-2021-09-30 19:07:52,563 - INFO - joeynmt.helpers - Number of Trg words (types): 8470
-2021-09-30 19:07:52,563 - INFO - joeynmt.training - Model(
-	encoder=RecurrentEncoder(LSTM(620, 1000, batch_first=True, bidirectional=True)),
-	decoder=RecurrentDecoder(rnn=LSTM(1620, 1000, batch_first=True), attention=BahdanauAttention),
-	src_embed=Embeddings(embedding_dim=620, vocab_size=10004),
-	trg_embed=Embeddings(embedding_dim=620, vocab_size=8470))
-2021-09-30 19:07:52,586 - INFO - joeynmt.training - Train stats:
+2021-10-01 15:01:28,966 - INFO - joeynmt.helpers - First 10 words (src): (0) <unk> (1) <pad> (2) <s> (3) </s> (4) , (5) . (6) bir (7) ." (8) ve (9) &quot;
+2021-10-01 15:01:28,966 - INFO - joeynmt.helpers - First 10 words (trg): (0) <unk> (1) <pad> (2) <s> (3) </s> (4) , (5) the (6) . (7) ." (8) of (9) to
+2021-10-01 15:01:28,966 - INFO - joeynmt.helpers - Number of Src words (types): 10004
+2021-10-01 15:01:28,966 - INFO - joeynmt.helpers - Number of Trg words (types): 8470
+2021-10-01 15:01:28,967 - INFO - joeynmt.training - Model(
+	encoder=RecurrentEncoder(LSTM(512, 1000, batch_first=True)),
+	decoder=RecurrentDecoder(rnn=LSTM(1512, 1000, batch_first=True), attention=BahdanauAttention),
+	src_embed=Embeddings(embedding_dim=512, vocab_size=10004),
+	trg_embed=Embeddings(embedding_dim=512, vocab_size=8470))
+2021-10-01 15:01:28,989 - INFO - joeynmt.training - Train stats:
 	device: cuda
 	n_gpu: 1
 	16-bits training: False
 	gradient accumulation: 1
 	batch size per device: 80
 	total batch size (w. parallel & accumulation): 80
-2021-09-30 19:07:52,586 - INFO - joeynmt.training - EPOCH 1
-2021-09-30 19:08:11,393 - INFO - joeynmt.training - Epoch   1: total training loss 11465.89
-2021-09-30 19:08:11,394 - INFO - joeynmt.training - EPOCH 2
-2021-09-30 19:08:30,034 - INFO - joeynmt.training - Epoch   2: total training loss 10616.39
-2021-09-30 19:08:30,036 - INFO - joeynmt.training - EPOCH 3
-2021-09-30 19:08:48,652 - INFO - joeynmt.training - Epoch   3: total training loss 9418.87
-2021-09-30 19:08:48,653 - INFO - joeynmt.training - EPOCH 4
-2021-09-30 19:09:07,352 - INFO - joeynmt.training - Epoch   4: total training loss 9168.58
-2021-09-30 19:09:07,353 - INFO - joeynmt.training - EPOCH 5
-2021-09-30 19:09:26,086 - INFO - joeynmt.training - Epoch   5: total training loss 8708.20
-2021-09-30 19:09:26,087 - INFO - joeynmt.training - EPOCH 6
-2021-09-30 19:09:44,902 - INFO - joeynmt.training - Epoch   6: total training loss 8384.90
-2021-09-30 19:09:44,902 - INFO - joeynmt.training - EPOCH 7
-2021-09-30 19:10:03,495 - INFO - joeynmt.training - Epoch   7: total training loss 8262.77
-2021-09-30 19:10:03,496 - INFO - joeynmt.training - EPOCH 8
-2021-09-30 19:10:22,266 - INFO - joeynmt.training - Epoch   8: total training loss 7867.01
-2021-09-30 19:10:22,266 - INFO - joeynmt.training - EPOCH 9
-2021-09-30 19:10:40,999 - INFO - joeynmt.training - Epoch   9: total training loss 7596.48
-2021-09-30 19:10:41,000 - INFO - joeynmt.training - EPOCH 10
-2021-09-30 19:10:59,642 - INFO - joeynmt.training - Epoch  10: total training loss 7303.07
-2021-09-30 19:10:59,642 - INFO - joeynmt.training - EPOCH 11
-2021-09-30 19:11:18,254 - INFO - joeynmt.training - Epoch  11: total training loss 7006.71
-2021-09-30 19:11:18,255 - INFO - joeynmt.training - EPOCH 12
-2021-09-30 19:11:37,014 - INFO - joeynmt.training - Epoch  12: total training loss 6779.94
-2021-09-30 19:11:37,015 - INFO - joeynmt.training - EPOCH 13
-2021-09-30 19:11:55,806 - INFO - joeynmt.training - Epoch  13: total training loss 6586.84
-2021-09-30 19:11:55,806 - INFO - joeynmt.training - EPOCH 14
-2021-09-30 19:12:14,558 - INFO - joeynmt.training - Epoch  14: total training loss 6407.17
-2021-09-30 19:12:14,559 - INFO - joeynmt.training - EPOCH 15
-2021-09-30 19:12:19,984 - INFO - joeynmt.training - Epoch  15, Step:     1000, Batch Loss:    90.174736, Tokens per Sec:     5418, Lr: 0.500000
-2021-09-30 19:12:33,179 - INFO - joeynmt.training - Epoch  15: total training loss 6232.07
-2021-09-30 19:12:33,180 - INFO - joeynmt.training - EPOCH 16
-2021-09-30 19:12:51,896 - INFO - joeynmt.training - Epoch  16: total training loss 6057.89
-2021-09-30 19:12:51,897 - INFO - joeynmt.training - EPOCH 17
-2021-09-30 19:13:10,540 - INFO - joeynmt.training - Epoch  17: total training loss 5877.51
-2021-09-30 19:13:10,541 - INFO - joeynmt.training - EPOCH 18
-2021-09-30 19:13:29,205 - INFO - joeynmt.training - Epoch  18: total training loss 5681.08
-2021-09-30 19:13:29,206 - INFO - joeynmt.training - EPOCH 19
-2021-09-30 19:13:47,880 - INFO - joeynmt.training - Epoch  19: total training loss 5493.64
-2021-09-30 19:13:47,881 - INFO - joeynmt.training - EPOCH 20
-2021-09-30 19:14:06,629 - INFO - joeynmt.training - Epoch  20: total training loss 5303.44
-2021-09-30 19:14:06,630 - INFO - joeynmt.training - EPOCH 21
-2021-09-30 19:14:25,404 - INFO - joeynmt.training - Epoch  21: total training loss 5083.99
-2021-09-30 19:14:25,405 - INFO - joeynmt.training - EPOCH 22
-2021-09-30 19:14:44,272 - INFO - joeynmt.training - Epoch  22: total training loss 4894.18
-2021-09-30 19:14:44,273 - INFO - joeynmt.training - EPOCH 23
-2021-09-30 19:15:03,145 - INFO - joeynmt.training - Epoch  23: total training loss 4680.77
-2021-09-30 19:15:03,145 - INFO - joeynmt.training - EPOCH 24
-2021-09-30 19:15:21,814 - INFO - joeynmt.training - Epoch  24: total training loss 4456.80
-2021-09-30 19:15:21,814 - INFO - joeynmt.training - EPOCH 25
-2021-09-30 19:15:40,532 - INFO - joeynmt.training - Epoch  25: total training loss 4243.29
-2021-09-30 19:15:40,533 - INFO - joeynmt.training - EPOCH 26
-2021-09-30 19:15:59,237 - INFO - joeynmt.training - Epoch  26: total training loss 4024.84
-2021-09-30 19:15:59,238 - INFO - joeynmt.training - EPOCH 27
-2021-09-30 19:16:17,817 - INFO - joeynmt.training - Epoch  27: total training loss 3822.66
-2021-09-30 19:16:17,818 - INFO - joeynmt.training - EPOCH 28
-2021-09-30 19:16:36,610 - INFO - joeynmt.training - Epoch  28: total training loss 3594.06
-2021-09-30 19:16:36,611 - INFO - joeynmt.training - EPOCH 29
-2021-09-30 19:16:47,362 - INFO - joeynmt.training - Epoch  29, Step:     2000, Batch Loss:    51.771694, Tokens per Sec:     5395, Lr: 0.500000
-2021-09-30 19:16:55,246 - INFO - joeynmt.training - Epoch  29: total training loss 3394.58
-2021-09-30 19:16:55,246 - INFO - joeynmt.training - EPOCH 30
-2021-09-30 19:17:13,829 - INFO - joeynmt.training - Epoch  30: total training loss 3198.40
-2021-09-30 19:17:13,830 - INFO - joeynmt.training - EPOCH 31
-2021-09-30 19:17:32,530 - INFO - joeynmt.training - Epoch  31: total training loss 2997.04
-2021-09-30 19:17:32,530 - INFO - joeynmt.training - EPOCH 32
-2021-09-30 19:17:51,122 - INFO - joeynmt.training - Epoch  32: total training loss 2807.63
-2021-09-30 19:17:51,122 - INFO - joeynmt.training - EPOCH 33
-2021-09-30 19:18:09,832 - INFO - joeynmt.training - Epoch  33: total training loss 2624.21
-2021-09-30 19:18:09,832 - INFO - joeynmt.training - EPOCH 34
-2021-09-30 19:18:28,411 - INFO - joeynmt.training - Epoch  34: total training loss 2432.23
-2021-09-30 19:18:28,412 - INFO - joeynmt.training - EPOCH 35
-2021-09-30 19:18:47,206 - INFO - joeynmt.training - Epoch  35: total training loss 2272.85
-2021-09-30 19:18:47,207 - INFO - joeynmt.training - EPOCH 36
-2021-09-30 19:19:05,891 - INFO - joeynmt.training - Epoch  36: total training loss 2120.09
-2021-09-30 19:19:05,891 - INFO - joeynmt.training - EPOCH 37
-2021-09-30 19:19:24,592 - INFO - joeynmt.training - Epoch  37: total training loss 1966.06
-2021-09-30 19:19:24,592 - INFO - joeynmt.training - EPOCH 38
-2021-09-30 19:19:43,212 - INFO - joeynmt.training - Epoch  38: total training loss 1831.70
-2021-09-30 19:19:43,212 - INFO - joeynmt.training - EPOCH 39
-2021-09-30 19:20:02,008 - INFO - joeynmt.training - Epoch  39: total training loss 1697.67
-2021-09-30 19:20:02,009 - INFO - joeynmt.training - EPOCH 40
-2021-09-30 19:20:20,474 - INFO - joeynmt.training - Epoch  40: total training loss 1574.37
-2021-09-30 19:20:20,475 - INFO - joeynmt.training - EPOCH 41
-2021-09-30 19:20:39,309 - INFO - joeynmt.training - Epoch  41: total training loss 1457.41
-2021-09-30 19:20:39,309 - INFO - joeynmt.training - EPOCH 42
-2021-09-30 19:20:57,941 - INFO - joeynmt.training - Epoch  42: total training loss 1353.79
-2021-09-30 19:20:57,941 - INFO - joeynmt.training - EPOCH 43
-2021-09-30 19:21:13,986 - INFO - joeynmt.training - Epoch  43, Step:     3000, Batch Loss:    18.184513, Tokens per Sec:     5440, Lr: 0.500000
-2021-09-30 19:21:16,552 - INFO - joeynmt.training - Epoch  43: total training loss 1254.85
-2021-09-30 19:21:16,552 - INFO - joeynmt.training - EPOCH 44
-2021-09-30 19:21:35,201 - INFO - joeynmt.training - Epoch  44: total training loss 1170.59
-2021-09-30 19:21:35,202 - INFO - joeynmt.training - EPOCH 45
-2021-09-30 19:21:53,967 - INFO - joeynmt.training - Epoch  45: total training loss 1080.41
-2021-09-30 19:21:53,968 - INFO - joeynmt.training - EPOCH 46
-2021-09-30 19:22:12,873 - INFO - joeynmt.training - Epoch  46: total training loss 1008.71
-2021-09-30 19:22:12,873 - INFO - joeynmt.training - EPOCH 47
-2021-09-30 19:22:31,672 - INFO - joeynmt.training - Epoch  47: total training loss 948.05
-2021-09-30 19:22:31,672 - INFO - joeynmt.training - EPOCH 48
-2021-09-30 19:22:50,192 - INFO - joeynmt.training - Epoch  48: total training loss 881.31
-2021-09-30 19:22:50,193 - INFO - joeynmt.training - EPOCH 49
-2021-09-30 19:23:09,118 - INFO - joeynmt.training - Epoch  49: total training loss 824.54
-2021-09-30 19:23:09,119 - INFO - joeynmt.training - EPOCH 50
-2021-09-30 19:23:27,657 - INFO - joeynmt.training - Epoch  50: total training loss 778.06
-2021-09-30 19:23:27,658 - INFO - joeynmt.training - EPOCH 51
-2021-09-30 19:23:46,346 - INFO - joeynmt.training - Epoch  51: total training loss 734.29
-2021-09-30 19:23:46,346 - INFO - joeynmt.training - EPOCH 52
-2021-09-30 19:24:05,092 - INFO - joeynmt.training - Epoch  52: total training loss 683.27
-2021-09-30 19:24:05,092 - INFO - joeynmt.training - EPOCH 53
-2021-09-30 19:24:23,762 - INFO - joeynmt.training - Epoch  53: total training loss 652.01
-2021-09-30 19:24:23,763 - INFO - joeynmt.training - EPOCH 54
-2021-09-30 19:24:42,435 - INFO - joeynmt.training - Epoch  54: total training loss 610.02
-2021-09-30 19:24:42,435 - INFO - joeynmt.training - EPOCH 55
-2021-09-30 19:25:00,969 - INFO - joeynmt.training - Epoch  55: total training loss 584.97
-2021-09-30 19:25:00,970 - INFO - joeynmt.training - EPOCH 56
-2021-09-30 19:25:19,623 - INFO - joeynmt.training - Epoch  56: total training loss 559.84
-2021-09-30 19:25:19,623 - INFO - joeynmt.training - EPOCH 57
-2021-09-30 19:25:38,281 - INFO - joeynmt.training - Epoch  57: total training loss 530.99
-2021-09-30 19:25:38,282 - INFO - joeynmt.training - EPOCH 58
-2021-09-30 19:25:41,028 - INFO - joeynmt.training - Epoch  58, Step:     4000, Batch Loss:     6.559255, Tokens per Sec:     5304, Lr: 0.500000
-2021-09-30 19:25:57,050 - INFO - joeynmt.training - Epoch  58: total training loss 511.33
-2021-09-30 19:25:57,051 - INFO - joeynmt.training - EPOCH 59
-2021-09-30 19:26:15,918 - INFO - joeynmt.training - Epoch  59: total training loss 499.51
-2021-09-30 19:26:15,918 - INFO - joeynmt.training - EPOCH 60
-2021-09-30 19:26:34,609 - INFO - joeynmt.training - Epoch  60: total training loss 472.75
-2021-09-30 19:26:34,610 - INFO - joeynmt.training - EPOCH 61
-2021-09-30 19:26:53,115 - INFO - joeynmt.training - Epoch  61: total training loss 454.72
-2021-09-30 19:26:53,116 - INFO - joeynmt.training - EPOCH 62
-2021-09-30 19:27:11,881 - INFO - joeynmt.training - Epoch  62: total training loss 435.71
-2021-09-30 19:27:11,882 - INFO - joeynmt.training - EPOCH 63
-2021-09-30 19:27:30,518 - INFO - joeynmt.training - Epoch  63: total training loss 423.38
-2021-09-30 19:27:30,519 - INFO - joeynmt.training - EPOCH 64
-2021-09-30 19:27:49,153 - INFO - joeynmt.training - Epoch  64: total training loss 409.82
-2021-09-30 19:27:49,154 - INFO - joeynmt.training - EPOCH 65
-2021-09-30 19:28:08,008 - INFO - joeynmt.training - Epoch  65: total training loss 396.91
-2021-09-30 19:28:08,009 - INFO - joeynmt.training - EPOCH 66
-2021-09-30 19:28:26,704 - INFO - joeynmt.training - Epoch  66: total training loss 385.58
-2021-09-30 19:28:26,705 - INFO - joeynmt.training - EPOCH 67
-2021-09-30 19:28:45,236 - INFO - joeynmt.training - Epoch  67: total training loss 375.57
-2021-09-30 19:28:45,237 - INFO - joeynmt.training - EPOCH 68
-2021-09-30 19:29:03,923 - INFO - joeynmt.training - Epoch  68: total training loss 363.33
-2021-09-30 19:29:03,923 - INFO - joeynmt.training - EPOCH 69
-2021-09-30 19:29:22,468 - INFO - joeynmt.training - Epoch  69: total training loss 354.36
-2021-09-30 19:29:22,468 - INFO - joeynmt.training - EPOCH 70
-2021-09-30 19:29:41,291 - INFO - joeynmt.training - Epoch  70: total training loss 345.25
-2021-09-30 19:29:41,292 - INFO - joeynmt.training - EPOCH 71
-2021-09-30 19:29:59,930 - INFO - joeynmt.training - Epoch  71: total training loss 336.17
-2021-09-30 19:29:59,931 - INFO - joeynmt.training - EPOCH 72
-2021-09-30 19:30:08,069 - INFO - joeynmt.training - Epoch  72, Step:     5000, Batch Loss:     4.228405, Tokens per Sec:     5337, Lr: 0.500000
-2021-09-30 19:30:18,708 - INFO - joeynmt.training - Epoch  72: total training loss 330.62
-2021-09-30 19:30:18,708 - INFO - joeynmt.training - EPOCH 73
-2021-09-30 19:30:37,477 - INFO - joeynmt.training - Epoch  73: total training loss 322.30
-2021-09-30 19:30:37,478 - INFO - joeynmt.training - EPOCH 74
-2021-09-30 19:30:56,292 - INFO - joeynmt.training - Epoch  74: total training loss 310.09
-2021-09-30 19:30:56,292 - INFO - joeynmt.training - EPOCH 75
-2021-09-30 19:31:14,885 - INFO - joeynmt.training - Epoch  75: total training loss 305.57
-2021-09-30 19:31:14,885 - INFO - joeynmt.training - EPOCH 76
-2021-09-30 19:31:33,694 - INFO - joeynmt.training - Epoch  76: total training loss 301.50
-2021-09-30 19:31:33,694 - INFO - joeynmt.training - EPOCH 77
-2021-09-30 19:31:52,483 - INFO - joeynmt.training - Epoch  77: total training loss 298.35
-2021-09-30 19:31:52,484 - INFO - joeynmt.training - EPOCH 78
-2021-09-30 19:32:11,285 - INFO - joeynmt.training - Epoch  78: total training loss 289.13
-2021-09-30 19:32:11,286 - INFO - joeynmt.training - EPOCH 79
-2021-09-30 19:32:30,111 - INFO - joeynmt.training - Epoch  79: total training loss 288.06
-2021-09-30 19:32:30,111 - INFO - joeynmt.training - EPOCH 80
-2021-09-30 19:32:48,801 - INFO - joeynmt.training - Epoch  80: total training loss 286.58
-2021-09-30 19:32:48,801 - INFO - joeynmt.training - EPOCH 81
-2021-09-30 19:33:07,590 - INFO - joeynmt.training - Epoch  81: total training loss 276.44
-2021-09-30 19:33:07,591 - INFO - joeynmt.training - EPOCH 82
-2021-09-30 19:33:26,361 - INFO - joeynmt.training - Epoch  82: total training loss 272.57
-2021-09-30 19:33:26,361 - INFO - joeynmt.training - EPOCH 83
-2021-09-30 19:33:45,071 - INFO - joeynmt.training - Epoch  83: total training loss 271.66
-2021-09-30 19:33:45,071 - INFO - joeynmt.training - EPOCH 84
-2021-09-30 19:34:03,896 - INFO - joeynmt.training - Epoch  84: total training loss 262.97
-2021-09-30 19:34:03,897 - INFO - joeynmt.training - EPOCH 85
-2021-09-30 19:34:22,680 - INFO - joeynmt.training - Epoch  85: total training loss 262.53
-2021-09-30 19:34:22,680 - INFO - joeynmt.training - EPOCH 86
-2021-09-30 19:34:36,023 - INFO - joeynmt.training - Epoch  86, Step:     6000, Batch Loss:     4.084908, Tokens per Sec:     5436, Lr: 0.500000
-2021-09-30 19:34:41,373 - INFO - joeynmt.training - Epoch  86: total training loss 259.65
-2021-09-30 19:34:41,373 - INFO - joeynmt.training - EPOCH 87
-2021-09-30 19:35:00,137 - INFO - joeynmt.training - Epoch  87: total training loss 256.35
-2021-09-30 19:35:00,138 - INFO - joeynmt.training - EPOCH 88
-2021-09-30 19:35:18,943 - INFO - joeynmt.training - Epoch  88: total training loss 251.66
-2021-09-30 19:35:18,944 - INFO - joeynmt.training - EPOCH 89
-2021-09-30 19:35:37,828 - INFO - joeynmt.training - Epoch  89: total training loss 246.66
-2021-09-30 19:35:37,829 - INFO - joeynmt.training - EPOCH 90
-2021-09-30 19:35:56,570 - INFO - joeynmt.training - Epoch  90: total training loss 247.54
-2021-09-30 19:35:56,571 - INFO - joeynmt.training - EPOCH 91
-2021-09-30 19:36:15,460 - INFO - joeynmt.training - Epoch  91: total training loss 248.33
-2021-09-30 19:36:15,460 - INFO - joeynmt.training - EPOCH 92
-2021-09-30 19:36:34,103 - INFO - joeynmt.training - Epoch  92: total training loss 243.92
-2021-09-30 19:36:34,104 - INFO - joeynmt.training - EPOCH 93
-2021-09-30 19:36:52,926 - INFO - joeynmt.training - Epoch  93: total training loss 242.43
-2021-09-30 19:36:52,927 - INFO - joeynmt.training - EPOCH 94
-2021-09-30 19:37:11,552 - INFO - joeynmt.training - Epoch  94: total training loss 235.91
-2021-09-30 19:37:11,552 - INFO - joeynmt.training - EPOCH 95
-2021-09-30 19:37:30,333 - INFO - joeynmt.training - Epoch  95: total training loss 234.44
-2021-09-30 19:37:30,334 - INFO - joeynmt.training - EPOCH 96
-2021-09-30 19:37:49,032 - INFO - joeynmt.training - Epoch  96: total training loss 232.77
-2021-09-30 19:37:49,033 - INFO - joeynmt.training - EPOCH 97
-2021-09-30 19:38:07,783 - INFO - joeynmt.training - Epoch  97: total training loss 231.37
-2021-09-30 19:38:07,784 - INFO - joeynmt.training - EPOCH 98
-2021-09-30 19:38:26,565 - INFO - joeynmt.training - Epoch  98: total training loss 231.44
-2021-09-30 19:38:26,565 - INFO - joeynmt.training - EPOCH 99
-2021-09-30 19:38:45,289 - INFO - joeynmt.training - Epoch  99: total training loss 225.15
-2021-09-30 19:38:45,290 - INFO - joeynmt.training - EPOCH 100
-2021-09-30 19:39:04,034 - INFO - joeynmt.training - Epoch 100, Step:     7000, Batch Loss:     4.457685, Tokens per Sec:     5401, Lr: 0.500000
-2021-09-30 19:39:04,036 - INFO - joeynmt.training - Epoch 100: total training loss 225.53
-2021-09-30 19:39:04,036 - INFO - joeynmt.training - Training ended after 100 epochs.
-2021-09-30 19:39:04,036 - INFO - joeynmt.training - Best validation result (greedy) at step        0:   -inf eval_metric.
-2021-09-30 19:39:04,070 - INFO - joeynmt.prediction - Process device: cuda, n_gpu: 1, batch_size per device: 80
-2021-09-30 19:39:04,070 - INFO - joeynmt.prediction - Loading model from models/BIG_model/0.ckpt
+2021-10-01 15:01:28,990 - INFO - joeynmt.training - EPOCH 1
+2021-10-01 15:01:44,768 - INFO - joeynmt.training - Epoch   1: total training loss 8485.85
+2021-10-01 15:01:44,768 - INFO - joeynmt.training - EPOCH 2
+2021-10-01 15:02:00,512 - INFO - joeynmt.training - Epoch   2: total training loss 7728.11
+2021-10-01 15:02:00,513 - INFO - joeynmt.training - EPOCH 3
+2021-10-01 15:02:16,186 - INFO - joeynmt.training - Epoch   3: total training loss 7526.30
+2021-10-01 15:02:16,187 - INFO - joeynmt.training - EPOCH 4
+2021-10-01 15:02:31,990 - INFO - joeynmt.training - Epoch   4: total training loss 7350.67
+2021-10-01 15:02:31,990 - INFO - joeynmt.training - EPOCH 5
+2021-10-01 15:02:47,768 - INFO - joeynmt.training - Epoch   5: total training loss 7135.19
+2021-10-01 15:02:47,769 - INFO - joeynmt.training - EPOCH 6
+2021-10-01 15:03:03,646 - INFO - joeynmt.training - Epoch   6: total training loss 6950.57
+2021-10-01 15:03:03,646 - INFO - joeynmt.training - EPOCH 7
+2021-10-01 15:03:19,356 - INFO - joeynmt.training - Epoch   7: total training loss 6740.57
+2021-10-01 15:03:19,356 - INFO - joeynmt.training - EPOCH 8
+2021-10-01 15:03:35,216 - INFO - joeynmt.training - Epoch   8: total training loss 6502.06
+2021-10-01 15:03:35,216 - INFO - joeynmt.training - EPOCH 9
+2021-10-01 15:03:51,050 - INFO - joeynmt.training - Epoch   9: total training loss 6268.05
+2021-10-01 15:03:51,050 - INFO - joeynmt.training - EPOCH 10
+2021-10-01 15:04:06,826 - INFO - joeynmt.training - Epoch  10: total training loss 6049.71
+2021-10-01 15:04:06,827 - INFO - joeynmt.training - EPOCH 11
+2021-10-01 15:04:22,596 - INFO - joeynmt.training - Epoch  11: total training loss 5859.13
+2021-10-01 15:04:22,597 - INFO - joeynmt.training - EPOCH 12
+2021-10-01 15:04:38,487 - INFO - joeynmt.training - Epoch  12: total training loss 5681.53
+2021-10-01 15:04:38,487 - INFO - joeynmt.training - EPOCH 13
+2021-10-01 15:04:54,418 - INFO - joeynmt.training - Epoch  13: total training loss 5511.19
+2021-10-01 15:04:54,419 - INFO - joeynmt.training - EPOCH 14
+2021-10-01 15:05:10,282 - INFO - joeynmt.training - Epoch  14: total training loss 5351.48
+2021-10-01 15:05:10,283 - INFO - joeynmt.training - EPOCH 15
+2021-10-01 15:05:14,863 - INFO - joeynmt.training - Epoch  15, Step:     1000, Batch Loss:    73.599655, Tokens per Sec:     6418, Lr: 0.000300
+2021-10-01 15:05:17,387 - WARNING - sacrebleu - That's 100 lines that end in a tokenized period ('.')
+2021-10-01 15:05:17,387 - WARNING - sacrebleu - It looks like you forgot to detokenize your test data, which may hurt your score.
+2021-10-01 15:05:17,388 - WARNING - sacrebleu - If you insist your data is detokenized, or don't care, you can suppress this message with the `force` parameter.
+2021-10-01 15:05:17,392 - INFO - joeynmt.training - Hooray! New best validation result [eval_metric]!
+2021-10-01 15:05:18,784 - INFO - joeynmt.training - Example #0
+2021-10-01 15:05:18,784 - INFO - joeynmt.training - 	Source:     tr
+2021-10-01 15:05:18,784 - INFO - joeynmt.training - 	Reference:  en
+2021-10-01 15:05:18,785 - INFO - joeynmt.training - 	Hypothesis: The first is .
+2021-10-01 15:05:18,785 - INFO - joeynmt.training - Example #1
+--- Logging error ---
 Traceback (most recent call last):
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/logging/__init__.py", line 1036, in emit
+    stream.write(msg)
+UnicodeEncodeError: 'latin-1' codec can't encode characters in position 80-81: ordinal not in range(256)
+Call stack:
   File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 193, in _run_module_as_main
     "__main__", mod_spec)
   File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 85, in _run_code
@@ -304,11 +133,964 @@ Traceback (most recent call last):
     main()
   File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 35, in main
     train(cfg_file=args.config_path, skip_test=args.skip_test)
-  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 863, in train
-    datasets=datasets_to_test)
-  File "/home/lcur0008/joeynmt/joeynmt/prediction.py", line 321, in test
-    model_checkpoint = load_checkpoint(ckpt, use_cuda=use_cuda)
-  File "/home/lcur0008/joeynmt/joeynmt/helpers.py", line 284, in load_checkpoint
-    assert os.path.isfile(path), "Checkpoint %s not found" % path
-AssertionError: Checkpoint models/BIG_model/0.ckpt not found
-srun: error: r31n4: task 0: Exited with exit code 1
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 846, in train
+    trainer.train_and_validate(train_data=train_data, valid_data=dev_data)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 497, in train_and_validate
+    valid_duration = self._validate(valid_data, epoch_no)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 642, in _validate
+    references=valid_references)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 731, in _log_examples
+    logger.debug("\tRaw source:     %s", sources_raw[p])
+Message: '\tRaw source:     %s'
+Arguments: (['11', 'ya\u015f\u0131ndayken', 'bir', 'sabah', 'evimdeki', 'sevinç', 'ç\u0131\u011fl\u0131klar\u0131yla', 'uyand\u0131\u011f\u0131m\u0131', 'hat\u0131rl\u0131yorum', '.'],)
+--- Logging error ---
+Traceback (most recent call last):
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/logging/__init__.py", line 1036, in emit
+    stream.write(msg)
+UnicodeEncodeError: 'latin-1' codec can't encode characters in position 70-71: ordinal not in range(256)
+Call stack:
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 48, in <module>
+    main()
+  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 35, in main
+    train(cfg_file=args.config_path, skip_test=args.skip_test)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 846, in train
+    trainer.train_and_validate(train_data=train_data, valid_data=dev_data)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 497, in train_and_validate
+    valid_duration = self._validate(valid_data, epoch_no)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 642, in _validate
+    references=valid_references)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 737, in _log_examples
+    logger.info("\tSource:     %s", sources[p])
+Message: '\tSource:     %s'
+Arguments: ('11 ya\u015f\u0131ndayken bir sabah evimdeki sevinç ç\u0131\u011fl\u0131klar\u0131yla uyand\u0131\u011f\u0131m\u0131 hat\u0131rl\u0131yorum .',)
+2021-10-01 15:05:18,790 - INFO - joeynmt.training - 	Source:     11 ya\u015f\u0131ndayken bir sabah evimdeki sevinç ç\u0131\u011fl\u0131klar\u0131yla uyand\u0131\u011f\u0131m\u0131 hat\u0131rl\u0131yorum .
+2021-10-01 15:05:18,791 - INFO - joeynmt.training - 	Reference:  "When I was 11 , I remember waking up one morning to the sound of joy in my house ."
+2021-10-01 15:05:18,791 - INFO - joeynmt.training - 	Hypothesis: "I &apos;ve got a lot of the first , and the first , and the same bombsight was a lot of the world ."
+2021-10-01 15:05:18,791 - INFO - joeynmt.training - Example #2
+--- Logging error ---
+Traceback (most recent call last):
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/logging/__init__.py", line 1036, in emit
+    stream.write(msg)
+UnicodeEncodeError: 'latin-1' codec can't encode character '\u0131' in position 103: ordinal not in range(256)
+Call stack:
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 48, in <module>
+    main()
+  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 35, in main
+    train(cfg_file=args.config_path, skip_test=args.skip_test)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 846, in train
+    trainer.train_and_validate(train_data=train_data, valid_data=dev_data)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 497, in train_and_validate
+    valid_duration = self._validate(valid_data, epoch_no)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 642, in _validate
+    references=valid_references)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 731, in _log_examples
+    logger.debug("\tRaw source:     %s", sources_raw[p])
+Message: '\tRaw source:     %s'
+Arguments: (['"Babam', 'BBC', 'Haber', 'kanal\u0131n\u0131', 'dinliyordu', ';', 'o', 'ufak', ',', 'gri', 'radyosundan', '."'],)
+--- Logging error ---
+Traceback (most recent call last):
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/logging/__init__.py", line 1036, in emit
+    stream.write(msg)
+UnicodeEncodeError: 'latin-1' codec can't encode character '\u0131' in position 87: ordinal not in range(256)
+Call stack:
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 48, in <module>
+    main()
+  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 35, in main
+    train(cfg_file=args.config_path, skip_test=args.skip_test)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 846, in train
+    trainer.train_and_validate(train_data=train_data, valid_data=dev_data)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 497, in train_and_validate
+    valid_duration = self._validate(valid_data, epoch_no)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 642, in _validate
+    references=valid_references)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 737, in _log_examples
+    logger.info("\tSource:     %s", sources[p])
+Message: '\tSource:     %s'
+Arguments: ('"Babam BBC Haber kanal\u0131n\u0131 dinliyordu ; o ufak , gri radyosundan ."',)
+2021-10-01 15:05:18,792 - INFO - joeynmt.training - 	Source:     "Babam BBC Haber kanal\u0131n\u0131 dinliyordu ; o ufak , gri radyosundan ."
+2021-10-01 15:05:18,792 - INFO - joeynmt.training - 	Reference:  "My father was listening to BBC News on his small , gray radio ."
+2021-10-01 15:05:18,793 - INFO - joeynmt.training - 	Hypothesis: "In the first War , and they &apos;ve got a lot of the United States of the world ."
+2021-10-01 15:05:18,793 - INFO - joeynmt.training - Validation result (greedy) at epoch  15, step     1000: bleu:   3.61, loss: 64270.4609, ppl: 279.8629, duration: 3.9295s
+2021-10-01 15:05:31,152 - INFO - joeynmt.training - Epoch  15: total training loss 5195.95
+2021-10-01 15:05:31,152 - INFO - joeynmt.training - EPOCH 16
+2021-10-01 15:05:46,964 - INFO - joeynmt.training - Epoch  16: total training loss 5035.19
+2021-10-01 15:05:46,964 - INFO - joeynmt.training - EPOCH 17
+2021-10-01 15:06:02,717 - INFO - joeynmt.training - Epoch  17: total training loss 4901.33
+2021-10-01 15:06:02,718 - INFO - joeynmt.training - EPOCH 18
+2021-10-01 15:06:18,536 - INFO - joeynmt.training - Epoch  18: total training loss 4754.18
+2021-10-01 15:06:18,536 - INFO - joeynmt.training - EPOCH 19
+2021-10-01 15:06:34,352 - INFO - joeynmt.training - Epoch  19: total training loss 4609.48
+2021-10-01 15:06:34,352 - INFO - joeynmt.training - EPOCH 20
+2021-10-01 15:06:50,207 - INFO - joeynmt.training - Epoch  20: total training loss 4478.70
+2021-10-01 15:06:50,208 - INFO - joeynmt.training - EPOCH 21
+2021-10-01 15:07:06,104 - INFO - joeynmt.training - Epoch  21: total training loss 4335.00
+2021-10-01 15:07:06,105 - INFO - joeynmt.training - EPOCH 22
+2021-10-01 15:07:22,101 - INFO - joeynmt.training - Epoch  22: total training loss 4203.32
+2021-10-01 15:07:22,102 - INFO - joeynmt.training - EPOCH 23
+2021-10-01 15:07:38,076 - INFO - joeynmt.training - Epoch  23: total training loss 4088.78
+2021-10-01 15:07:38,076 - INFO - joeynmt.training - EPOCH 24
+2021-10-01 15:07:53,850 - INFO - joeynmt.training - Epoch  24: total training loss 3965.28
+2021-10-01 15:07:53,851 - INFO - joeynmt.training - EPOCH 25
+2021-10-01 15:08:09,685 - INFO - joeynmt.training - Epoch  25: total training loss 3837.71
+2021-10-01 15:08:09,686 - INFO - joeynmt.training - EPOCH 26
+2021-10-01 15:08:25,509 - INFO - joeynmt.training - Epoch  26: total training loss 3714.48
+2021-10-01 15:08:25,510 - INFO - joeynmt.training - EPOCH 27
+2021-10-01 15:08:41,204 - INFO - joeynmt.training - Epoch  27: total training loss 3603.50
+2021-10-01 15:08:41,204 - INFO - joeynmt.training - EPOCH 28
+2021-10-01 15:08:57,122 - INFO - joeynmt.training - Epoch  28: total training loss 3500.11
+2021-10-01 15:08:57,123 - INFO - joeynmt.training - EPOCH 29
+2021-10-01 15:09:06,210 - INFO - joeynmt.training - Epoch  29, Step:     2000, Batch Loss:    51.548290, Tokens per Sec:     6383, Lr: 0.000300
+2021-10-01 15:09:08,677 - WARNING - sacrebleu - That's 100 lines that end in a tokenized period ('.')
+2021-10-01 15:09:08,677 - WARNING - sacrebleu - It looks like you forgot to detokenize your test data, which may hurt your score.
+2021-10-01 15:09:08,677 - WARNING - sacrebleu - If you insist your data is detokenized, or don't care, you can suppress this message with the `force` parameter.
+2021-10-01 15:09:08,682 - INFO - joeynmt.training - Hooray! New best validation result [eval_metric]!
+2021-10-01 15:09:10,101 - INFO - joeynmt.training - Example #0
+2021-10-01 15:09:10,101 - INFO - joeynmt.training - 	Source:     tr
+2021-10-01 15:09:10,101 - INFO - joeynmt.training - 	Reference:  en
+2021-10-01 15:09:10,102 - INFO - joeynmt.training - 	Hypothesis: You have to do .
+2021-10-01 15:09:10,102 - INFO - joeynmt.training - Example #1
+--- Logging error ---
+Traceback (most recent call last):
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/logging/__init__.py", line 1036, in emit
+    stream.write(msg)
+UnicodeEncodeError: 'latin-1' codec can't encode characters in position 80-81: ordinal not in range(256)
+Call stack:
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 48, in <module>
+    main()
+  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 35, in main
+    train(cfg_file=args.config_path, skip_test=args.skip_test)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 846, in train
+    trainer.train_and_validate(train_data=train_data, valid_data=dev_data)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 497, in train_and_validate
+    valid_duration = self._validate(valid_data, epoch_no)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 642, in _validate
+    references=valid_references)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 731, in _log_examples
+    logger.debug("\tRaw source:     %s", sources_raw[p])
+Message: '\tRaw source:     %s'
+Arguments: (['11', 'ya\u015f\u0131ndayken', 'bir', 'sabah', 'evimdeki', 'sevinç', 'ç\u0131\u011fl\u0131klar\u0131yla', 'uyand\u0131\u011f\u0131m\u0131', 'hat\u0131rl\u0131yorum', '.'],)
+--- Logging error ---
+Traceback (most recent call last):
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/logging/__init__.py", line 1036, in emit
+    stream.write(msg)
+UnicodeEncodeError: 'latin-1' codec can't encode characters in position 70-71: ordinal not in range(256)
+Call stack:
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 48, in <module>
+    main()
+  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 35, in main
+    train(cfg_file=args.config_path, skip_test=args.skip_test)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 846, in train
+    trainer.train_and_validate(train_data=train_data, valid_data=dev_data)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 497, in train_and_validate
+    valid_duration = self._validate(valid_data, epoch_no)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 642, in _validate
+    references=valid_references)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 737, in _log_examples
+    logger.info("\tSource:     %s", sources[p])
+Message: '\tSource:     %s'
+Arguments: ('11 ya\u015f\u0131ndayken bir sabah evimdeki sevinç ç\u0131\u011fl\u0131klar\u0131yla uyand\u0131\u011f\u0131m\u0131 hat\u0131rl\u0131yorum .',)
+2021-10-01 15:09:10,105 - INFO - joeynmt.training - 	Source:     11 ya\u015f\u0131ndayken bir sabah evimdeki sevinç ç\u0131\u011fl\u0131klar\u0131yla uyand\u0131\u011f\u0131m\u0131 hat\u0131rl\u0131yorum .
+2021-10-01 15:09:10,106 - INFO - joeynmt.training - 	Reference:  "When I was 11 , I remember waking up one morning to the sound of joy in my house ."
+2021-10-01 15:09:10,106 - INFO - joeynmt.training - 	Hypothesis: "I sat back to the World Trade Center to the World Trade Center to the head of the 19th century ."
+2021-10-01 15:09:10,106 - INFO - joeynmt.training - Example #2
+--- Logging error ---
+Traceback (most recent call last):
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/logging/__init__.py", line 1036, in emit
+    stream.write(msg)
+UnicodeEncodeError: 'latin-1' codec can't encode character '\u0131' in position 103: ordinal not in range(256)
+Call stack:
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 48, in <module>
+    main()
+  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 35, in main
+    train(cfg_file=args.config_path, skip_test=args.skip_test)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 846, in train
+    trainer.train_and_validate(train_data=train_data, valid_data=dev_data)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 497, in train_and_validate
+    valid_duration = self._validate(valid_data, epoch_no)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 642, in _validate
+    references=valid_references)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 731, in _log_examples
+    logger.debug("\tRaw source:     %s", sources_raw[p])
+Message: '\tRaw source:     %s'
+Arguments: (['"Babam', 'BBC', 'Haber', 'kanal\u0131n\u0131', 'dinliyordu', ';', 'o', 'ufak', ',', 'gri', 'radyosundan', '."'],)
+--- Logging error ---
+Traceback (most recent call last):
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/logging/__init__.py", line 1036, in emit
+    stream.write(msg)
+UnicodeEncodeError: 'latin-1' codec can't encode character '\u0131' in position 87: ordinal not in range(256)
+Call stack:
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 48, in <module>
+    main()
+  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 35, in main
+    train(cfg_file=args.config_path, skip_test=args.skip_test)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 846, in train
+    trainer.train_and_validate(train_data=train_data, valid_data=dev_data)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 497, in train_and_validate
+    valid_duration = self._validate(valid_data, epoch_no)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 642, in _validate
+    references=valid_references)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 737, in _log_examples
+    logger.info("\tSource:     %s", sources[p])
+Message: '\tSource:     %s'
+Arguments: ('"Babam BBC Haber kanal\u0131n\u0131 dinliyordu ; o ufak , gri radyosundan ."',)
+2021-10-01 15:09:10,107 - INFO - joeynmt.training - 	Source:     "Babam BBC Haber kanal\u0131n\u0131 dinliyordu ; o ufak , gri radyosundan ."
+2021-10-01 15:09:10,107 - INFO - joeynmt.training - 	Reference:  "My father was listening to BBC News on his small , gray radio ."
+2021-10-01 15:09:10,107 - INFO - joeynmt.training - 	Hypothesis: "She was the World War , we were dancing , and she was the teeth of the cafeteria ."
+2021-10-01 15:09:10,108 - INFO - joeynmt.training - Validation result (greedy) at epoch  29, step     2000: bleu:   4.63, loss: 69149.2422, ppl: 429.2334, duration: 3.8969s
+2021-10-01 15:09:17,811 - INFO - joeynmt.training - Epoch  29: total training loss 3388.11
+2021-10-01 15:09:17,812 - INFO - joeynmt.training - EPOCH 30
+2021-10-01 15:09:33,561 - INFO - joeynmt.training - Epoch  30: total training loss 3283.43
+2021-10-01 15:09:33,561 - INFO - joeynmt.training - EPOCH 31
+2021-10-01 15:09:49,382 - INFO - joeynmt.training - Epoch  31: total training loss 3170.78
+2021-10-01 15:09:49,382 - INFO - joeynmt.training - EPOCH 32
+2021-10-01 15:10:05,089 - INFO - joeynmt.training - Epoch  32: total training loss 3071.97
+2021-10-01 15:10:05,090 - INFO - joeynmt.training - EPOCH 33
+2021-10-01 15:10:20,932 - INFO - joeynmt.training - Epoch  33: total training loss 2982.57
+2021-10-01 15:10:20,932 - INFO - joeynmt.training - EPOCH 34
+2021-10-01 15:10:36,673 - INFO - joeynmt.training - Epoch  34: total training loss 2892.04
+2021-10-01 15:10:36,673 - INFO - joeynmt.training - EPOCH 35
+2021-10-01 15:10:52,569 - INFO - joeynmt.training - Epoch  35: total training loss 2798.93
+2021-10-01 15:10:52,570 - INFO - joeynmt.training - EPOCH 36
+2021-10-01 15:11:08,387 - INFO - joeynmt.training - Epoch  36: total training loss 2699.29
+2021-10-01 15:11:08,387 - INFO - joeynmt.training - EPOCH 37
+2021-10-01 15:11:24,217 - INFO - joeynmt.training - Epoch  37: total training loss 2607.36
+2021-10-01 15:11:24,217 - INFO - joeynmt.training - EPOCH 38
+2021-10-01 15:11:39,993 - INFO - joeynmt.training - Epoch  38: total training loss 2519.42
+2021-10-01 15:11:39,994 - INFO - joeynmt.training - EPOCH 39
+2021-10-01 15:11:55,901 - INFO - joeynmt.training - Epoch  39: total training loss 2435.45
+2021-10-01 15:11:55,901 - INFO - joeynmt.training - EPOCH 40
+2021-10-01 15:12:11,551 - INFO - joeynmt.training - Epoch  40: total training loss 2360.61
+2021-10-01 15:12:11,551 - INFO - joeynmt.training - EPOCH 41
+2021-10-01 15:12:27,459 - INFO - joeynmt.training - Epoch  41: total training loss 2283.38
+2021-10-01 15:12:27,459 - INFO - joeynmt.training - EPOCH 42
+2021-10-01 15:12:43,194 - INFO - joeynmt.training - Epoch  42: total training loss 2208.94
+2021-10-01 15:12:43,194 - INFO - joeynmt.training - EPOCH 43
+2021-10-01 15:12:56,776 - INFO - joeynmt.training - Epoch  43, Step:     3000, Batch Loss:    28.716322, Tokens per Sec:     6426, Lr: 0.000300
+2021-10-01 15:12:59,216 - WARNING - sacrebleu - That's 100 lines that end in a tokenized period ('.')
+2021-10-01 15:12:59,217 - WARNING - sacrebleu - It looks like you forgot to detokenize your test data, which may hurt your score.
+2021-10-01 15:12:59,217 - WARNING - sacrebleu - If you insist your data is detokenized, or don't care, you can suppress this message with the `force` parameter.
+2021-10-01 15:12:59,221 - INFO - joeynmt.training - Hooray! New best validation result [eval_metric]!
+2021-10-01 15:13:00,702 - INFO - joeynmt.training - Example #0
+2021-10-01 15:13:00,703 - INFO - joeynmt.training - 	Source:     tr
+2021-10-01 15:13:00,703 - INFO - joeynmt.training - 	Reference:  en
+2021-10-01 15:13:00,703 - INFO - joeynmt.training - 	Hypothesis: en
+2021-10-01 15:13:00,703 - INFO - joeynmt.training - Example #1
+--- Logging error ---
+Traceback (most recent call last):
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/logging/__init__.py", line 1036, in emit
+    stream.write(msg)
+UnicodeEncodeError: 'latin-1' codec can't encode characters in position 80-81: ordinal not in range(256)
+Call stack:
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 48, in <module>
+    main()
+  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 35, in main
+    train(cfg_file=args.config_path, skip_test=args.skip_test)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 846, in train
+    trainer.train_and_validate(train_data=train_data, valid_data=dev_data)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 497, in train_and_validate
+    valid_duration = self._validate(valid_data, epoch_no)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 642, in _validate
+    references=valid_references)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 731, in _log_examples
+    logger.debug("\tRaw source:     %s", sources_raw[p])
+Message: '\tRaw source:     %s'
+Arguments: (['11', 'ya\u015f\u0131ndayken', 'bir', 'sabah', 'evimdeki', 'sevinç', 'ç\u0131\u011fl\u0131klar\u0131yla', 'uyand\u0131\u011f\u0131m\u0131', 'hat\u0131rl\u0131yorum', '.'],)
+--- Logging error ---
+Traceback (most recent call last):
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/logging/__init__.py", line 1036, in emit
+    stream.write(msg)
+UnicodeEncodeError: 'latin-1' codec can't encode characters in position 70-71: ordinal not in range(256)
+Call stack:
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 48, in <module>
+    main()
+  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 35, in main
+    train(cfg_file=args.config_path, skip_test=args.skip_test)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 846, in train
+    trainer.train_and_validate(train_data=train_data, valid_data=dev_data)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 497, in train_and_validate
+    valid_duration = self._validate(valid_data, epoch_no)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 642, in _validate
+    references=valid_references)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 737, in _log_examples
+    logger.info("\tSource:     %s", sources[p])
+Message: '\tSource:     %s'
+Arguments: ('11 ya\u015f\u0131ndayken bir sabah evimdeki sevinç ç\u0131\u011fl\u0131klar\u0131yla uyand\u0131\u011f\u0131m\u0131 hat\u0131rl\u0131yorum .',)
+2021-10-01 15:13:00,707 - INFO - joeynmt.training - 	Source:     11 ya\u015f\u0131ndayken bir sabah evimdeki sevinç ç\u0131\u011fl\u0131klar\u0131yla uyand\u0131\u011f\u0131m\u0131 hat\u0131rl\u0131yorum .
+2021-10-01 15:13:00,708 - INFO - joeynmt.training - 	Reference:  "When I was 11 , I remember waking up one morning to the sound of joy in my house ."
+2021-10-01 15:13:00,708 - INFO - joeynmt.training - 	Hypothesis: "When I went to the World Trade Center on the morning , I was fascinated with the morning ."
+2021-10-01 15:13:00,708 - INFO - joeynmt.training - Example #2
+--- Logging error ---
+Traceback (most recent call last):
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/logging/__init__.py", line 1036, in emit
+    stream.write(msg)
+UnicodeEncodeError: 'latin-1' codec can't encode character '\u0131' in position 103: ordinal not in range(256)
+Call stack:
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 48, in <module>
+    main()
+  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 35, in main
+    train(cfg_file=args.config_path, skip_test=args.skip_test)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 846, in train
+    trainer.train_and_validate(train_data=train_data, valid_data=dev_data)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 497, in train_and_validate
+    valid_duration = self._validate(valid_data, epoch_no)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 642, in _validate
+    references=valid_references)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 731, in _log_examples
+    logger.debug("\tRaw source:     %s", sources_raw[p])
+Message: '\tRaw source:     %s'
+Arguments: (['"Babam', 'BBC', 'Haber', 'kanal\u0131n\u0131', 'dinliyordu', ';', 'o', 'ufak', ',', 'gri', 'radyosundan', '."'],)
+--- Logging error ---
+Traceback (most recent call last):
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/logging/__init__.py", line 1036, in emit
+    stream.write(msg)
+UnicodeEncodeError: 'latin-1' codec can't encode character '\u0131' in position 87: ordinal not in range(256)
+Call stack:
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 48, in <module>
+    main()
+  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 35, in main
+    train(cfg_file=args.config_path, skip_test=args.skip_test)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 846, in train
+    trainer.train_and_validate(train_data=train_data, valid_data=dev_data)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 497, in train_and_validate
+    valid_duration = self._validate(valid_data, epoch_no)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 642, in _validate
+    references=valid_references)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 737, in _log_examples
+    logger.info("\tSource:     %s", sources[p])
+Message: '\tSource:     %s'
+Arguments: ('"Babam BBC Haber kanal\u0131n\u0131 dinliyordu ; o ufak , gri radyosundan ."',)
+2021-10-01 15:13:00,709 - INFO - joeynmt.training - 	Source:     "Babam BBC Haber kanal\u0131n\u0131 dinliyordu ; o ufak , gri radyosundan ."
+2021-10-01 15:13:00,710 - INFO - joeynmt.training - 	Reference:  "My father was listening to BBC News on his small , gray radio ."
+2021-10-01 15:13:00,710 - INFO - joeynmt.training - 	Hypothesis: "She handled the World War , and she &apos;s 13 years old , we were 32 ."
+2021-10-01 15:13:00,710 - INFO - joeynmt.training - Validation result (greedy) at epoch  43, step     3000: bleu:   4.78, loss: 75630.8984, ppl: 757.6473, duration: 3.9334s
+2021-10-01 15:13:03,991 - INFO - joeynmt.training - Epoch  43: total training loss 2119.79
+2021-10-01 15:13:03,991 - INFO - joeynmt.training - EPOCH 44
+2021-10-01 15:13:19,787 - INFO - joeynmt.training - Epoch  44: total training loss 2049.29
+2021-10-01 15:13:19,788 - INFO - joeynmt.training - EPOCH 45
+2021-10-01 15:13:35,712 - INFO - joeynmt.training - Epoch  45: total training loss 1972.98
+2021-10-01 15:13:35,712 - INFO - joeynmt.training - EPOCH 46
+2021-10-01 15:13:51,699 - INFO - joeynmt.training - Epoch  46: total training loss 1903.30
+2021-10-01 15:13:51,699 - INFO - joeynmt.training - EPOCH 47
+2021-10-01 15:14:07,607 - INFO - joeynmt.training - Epoch  47: total training loss 1838.76
+2021-10-01 15:14:07,607 - INFO - joeynmt.training - EPOCH 48
+2021-10-01 15:14:23,270 - INFO - joeynmt.training - Epoch  48: total training loss 1775.60
+2021-10-01 15:14:23,270 - INFO - joeynmt.training - EPOCH 49
+2021-10-01 15:14:39,264 - INFO - joeynmt.training - Epoch  49: total training loss 1708.11
+2021-10-01 15:14:39,264 - INFO - joeynmt.training - EPOCH 50
+2021-10-01 15:14:54,942 - INFO - joeynmt.training - Epoch  50: total training loss 1640.95
+2021-10-01 15:14:54,942 - INFO - joeynmt.training - EPOCH 51
+2021-10-01 15:15:10,733 - INFO - joeynmt.training - Epoch  51: total training loss 1577.23
+2021-10-01 15:15:10,734 - INFO - joeynmt.training - EPOCH 52
+2021-10-01 15:15:26,597 - INFO - joeynmt.training - Epoch  52: total training loss 1516.16
+2021-10-01 15:15:26,598 - INFO - joeynmt.training - EPOCH 53
+2021-10-01 15:15:42,373 - INFO - joeynmt.training - Epoch  53: total training loss 1458.21
+2021-10-01 15:15:42,373 - INFO - joeynmt.training - EPOCH 54
+2021-10-01 15:15:58,195 - INFO - joeynmt.training - Epoch  54: total training loss 1399.99
+2021-10-01 15:15:58,196 - INFO - joeynmt.training - EPOCH 55
+2021-10-01 15:16:13,848 - INFO - joeynmt.training - Epoch  55: total training loss 1336.25
+2021-10-01 15:16:13,849 - INFO - joeynmt.training - EPOCH 56
+2021-10-01 15:16:29,587 - INFO - joeynmt.training - Epoch  56: total training loss 1284.18
+2021-10-01 15:16:29,587 - INFO - joeynmt.training - EPOCH 57
+2021-10-01 15:16:45,366 - INFO - joeynmt.training - Epoch  57: total training loss 1226.02
+2021-10-01 15:16:45,367 - INFO - joeynmt.training - EPOCH 58
+2021-10-01 15:16:47,695 - INFO - joeynmt.training - Epoch  58, Step:     4000, Batch Loss:    15.300652, Tokens per Sec:     6256, Lr: 0.000300
+2021-10-01 15:16:50,113 - WARNING - sacrebleu - That's 100 lines that end in a tokenized period ('.')
+2021-10-01 15:16:50,114 - WARNING - sacrebleu - It looks like you forgot to detokenize your test data, which may hurt your score.
+2021-10-01 15:16:50,114 - WARNING - sacrebleu - If you insist your data is detokenized, or don't care, you can suppress this message with the `force` parameter.
+2021-10-01 15:16:51,515 - INFO - joeynmt.training - Example #0
+2021-10-01 15:16:51,516 - INFO - joeynmt.training - 	Source:     tr
+2021-10-01 15:16:51,516 - INFO - joeynmt.training - 	Reference:  en
+2021-10-01 15:16:51,516 - INFO - joeynmt.training - 	Hypothesis: You have to have .
+2021-10-01 15:16:51,516 - INFO - joeynmt.training - Example #1
+--- Logging error ---
+Traceback (most recent call last):
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/logging/__init__.py", line 1036, in emit
+    stream.write(msg)
+UnicodeEncodeError: 'latin-1' codec can't encode characters in position 80-81: ordinal not in range(256)
+Call stack:
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 48, in <module>
+    main()
+  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 35, in main
+    train(cfg_file=args.config_path, skip_test=args.skip_test)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 846, in train
+    trainer.train_and_validate(train_data=train_data, valid_data=dev_data)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 497, in train_and_validate
+    valid_duration = self._validate(valid_data, epoch_no)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 642, in _validate
+    references=valid_references)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 731, in _log_examples
+    logger.debug("\tRaw source:     %s", sources_raw[p])
+Message: '\tRaw source:     %s'
+Arguments: (['11', 'ya\u015f\u0131ndayken', 'bir', 'sabah', 'evimdeki', 'sevinç', 'ç\u0131\u011fl\u0131klar\u0131yla', 'uyand\u0131\u011f\u0131m\u0131', 'hat\u0131rl\u0131yorum', '.'],)
+--- Logging error ---
+Traceback (most recent call last):
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/logging/__init__.py", line 1036, in emit
+    stream.write(msg)
+UnicodeEncodeError: 'latin-1' codec can't encode characters in position 70-71: ordinal not in range(256)
+Call stack:
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 48, in <module>
+    main()
+  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 35, in main
+    train(cfg_file=args.config_path, skip_test=args.skip_test)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 846, in train
+    trainer.train_and_validate(train_data=train_data, valid_data=dev_data)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 497, in train_and_validate
+    valid_duration = self._validate(valid_data, epoch_no)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 642, in _validate
+    references=valid_references)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 737, in _log_examples
+    logger.info("\tSource:     %s", sources[p])
+Message: '\tSource:     %s'
+Arguments: ('11 ya\u015f\u0131ndayken bir sabah evimdeki sevinç ç\u0131\u011fl\u0131klar\u0131yla uyand\u0131\u011f\u0131m\u0131 hat\u0131rl\u0131yorum .',)
+2021-10-01 15:16:51,520 - INFO - joeynmt.training - 	Source:     11 ya\u015f\u0131ndayken bir sabah evimdeki sevinç ç\u0131\u011fl\u0131klar\u0131yla uyand\u0131\u011f\u0131m\u0131 hat\u0131rl\u0131yorum .
+2021-10-01 15:16:51,521 - INFO - joeynmt.training - 	Reference:  "When I was 11 , I remember waking up one morning to the sound of joy in my house ."
+2021-10-01 15:16:51,521 - INFO - joeynmt.training - 	Hypothesis: "I &apos;m going to Sierra Leone , the first morning , when he peels him came out of the vest ."
+2021-10-01 15:16:51,521 - INFO - joeynmt.training - Example #2
+--- Logging error ---
+Traceback (most recent call last):
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/logging/__init__.py", line 1036, in emit
+    stream.write(msg)
+UnicodeEncodeError: 'latin-1' codec can't encode character '\u0131' in position 103: ordinal not in range(256)
+Call stack:
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 48, in <module>
+    main()
+  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 35, in main
+    train(cfg_file=args.config_path, skip_test=args.skip_test)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 846, in train
+    trainer.train_and_validate(train_data=train_data, valid_data=dev_data)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 497, in train_and_validate
+    valid_duration = self._validate(valid_data, epoch_no)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 642, in _validate
+    references=valid_references)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 731, in _log_examples
+    logger.debug("\tRaw source:     %s", sources_raw[p])
+Message: '\tRaw source:     %s'
+Arguments: (['"Babam', 'BBC', 'Haber', 'kanal\u0131n\u0131', 'dinliyordu', ';', 'o', 'ufak', ',', 'gri', 'radyosundan', '."'],)
+--- Logging error ---
+Traceback (most recent call last):
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/logging/__init__.py", line 1036, in emit
+    stream.write(msg)
+UnicodeEncodeError: 'latin-1' codec can't encode character '\u0131' in position 87: ordinal not in range(256)
+Call stack:
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 48, in <module>
+    main()
+  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 35, in main
+    train(cfg_file=args.config_path, skip_test=args.skip_test)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 846, in train
+    trainer.train_and_validate(train_data=train_data, valid_data=dev_data)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 497, in train_and_validate
+    valid_duration = self._validate(valid_data, epoch_no)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 642, in _validate
+    references=valid_references)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 737, in _log_examples
+    logger.info("\tSource:     %s", sources[p])
+Message: '\tSource:     %s'
+Arguments: ('"Babam BBC Haber kanal\u0131n\u0131 dinliyordu ; o ufak , gri radyosundan ."',)
+2021-10-01 15:16:51,522 - INFO - joeynmt.training - 	Source:     "Babam BBC Haber kanal\u0131n\u0131 dinliyordu ; o ufak , gri radyosundan ."
+2021-10-01 15:16:51,523 - INFO - joeynmt.training - 	Reference:  "My father was listening to BBC News on his small , gray radio ."
+2021-10-01 15:16:51,523 - INFO - joeynmt.training - 	Hypothesis: "She handled the age of girls , which came from the morning , brought by a nurse ."
+2021-10-01 15:16:51,523 - INFO - joeynmt.training - Validation result (greedy) at epoch  58, step     4000: bleu:   4.34, loss: 82374.5234, ppl: 1368.4052, duration: 3.8275s
+2021-10-01 15:17:06,099 - INFO - joeynmt.training - Epoch  58: total training loss 1178.55
+2021-10-01 15:17:06,100 - INFO - joeynmt.training - EPOCH 59
+2021-10-01 15:17:22,074 - INFO - joeynmt.training - Epoch  59: total training loss 1131.91
+2021-10-01 15:17:22,074 - INFO - joeynmt.training - EPOCH 60
+2021-10-01 15:17:37,905 - INFO - joeynmt.training - Epoch  60: total training loss 1080.00
+2021-10-01 15:17:37,906 - INFO - joeynmt.training - EPOCH 61
+2021-10-01 15:17:53,584 - INFO - joeynmt.training - Epoch  61: total training loss 1035.50
+2021-10-01 15:17:53,585 - INFO - joeynmt.training - EPOCH 62
+2021-10-01 15:18:09,489 - INFO - joeynmt.training - Epoch  62: total training loss 986.74
+2021-10-01 15:18:09,490 - INFO - joeynmt.training - EPOCH 63
+2021-10-01 15:18:25,300 - INFO - joeynmt.training - Epoch  63: total training loss 939.99
+2021-10-01 15:18:25,300 - INFO - joeynmt.training - EPOCH 64
+2021-10-01 15:18:41,098 - INFO - joeynmt.training - Epoch  64: total training loss 896.06
+2021-10-01 15:18:41,099 - INFO - joeynmt.training - EPOCH 65
+2021-10-01 15:18:57,038 - INFO - joeynmt.training - Epoch  65: total training loss 855.95
+2021-10-01 15:18:57,039 - INFO - joeynmt.training - EPOCH 66
+2021-10-01 15:19:12,873 - INFO - joeynmt.training - Epoch  66: total training loss 820.94
+2021-10-01 15:19:12,873 - INFO - joeynmt.training - EPOCH 67
+2021-10-01 15:19:28,608 - INFO - joeynmt.training - Epoch  67: total training loss 787.06
+2021-10-01 15:19:28,608 - INFO - joeynmt.training - EPOCH 68
+2021-10-01 15:19:44,445 - INFO - joeynmt.training - Epoch  68: total training loss 749.13
+2021-10-01 15:19:44,446 - INFO - joeynmt.training - EPOCH 69
+2021-10-01 15:20:00,163 - INFO - joeynmt.training - Epoch  69: total training loss 711.70
+2021-10-01 15:20:00,163 - INFO - joeynmt.training - EPOCH 70
+2021-10-01 15:20:16,099 - INFO - joeynmt.training - Epoch  70: total training loss 674.87
+2021-10-01 15:20:16,099 - INFO - joeynmt.training - EPOCH 71
+2021-10-01 15:20:31,894 - INFO - joeynmt.training - Epoch  71: total training loss 633.90
+2021-10-01 15:20:31,895 - INFO - joeynmt.training - EPOCH 72
+2021-10-01 15:20:38,787 - INFO - joeynmt.training - Epoch  72, Step:     5000, Batch Loss:     7.108128, Tokens per Sec:     6303, Lr: 0.000300
+2021-10-01 15:20:41,163 - WARNING - sacrebleu - That's 100 lines that end in a tokenized period ('.')
+2021-10-01 15:20:41,163 - WARNING - sacrebleu - It looks like you forgot to detokenize your test data, which may hurt your score.
+2021-10-01 15:20:41,163 - WARNING - sacrebleu - If you insist your data is detokenized, or don't care, you can suppress this message with the `force` parameter.
+2021-10-01 15:20:42,606 - INFO - joeynmt.training - Example #0
+2021-10-01 15:20:42,606 - INFO - joeynmt.training - 	Source:     tr
+2021-10-01 15:20:42,606 - INFO - joeynmt.training - 	Reference:  en
+2021-10-01 15:20:42,607 - INFO - joeynmt.training - 	Hypothesis: en
+2021-10-01 15:20:42,607 - INFO - joeynmt.training - Example #1
+--- Logging error ---
+Traceback (most recent call last):
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/logging/__init__.py", line 1036, in emit
+    stream.write(msg)
+UnicodeEncodeError: 'latin-1' codec can't encode characters in position 80-81: ordinal not in range(256)
+Call stack:
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 48, in <module>
+    main()
+  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 35, in main
+    train(cfg_file=args.config_path, skip_test=args.skip_test)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 846, in train
+    trainer.train_and_validate(train_data=train_data, valid_data=dev_data)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 497, in train_and_validate
+    valid_duration = self._validate(valid_data, epoch_no)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 642, in _validate
+    references=valid_references)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 731, in _log_examples
+    logger.debug("\tRaw source:     %s", sources_raw[p])
+Message: '\tRaw source:     %s'
+Arguments: (['11', 'ya\u015f\u0131ndayken', 'bir', 'sabah', 'evimdeki', 'sevinç', 'ç\u0131\u011fl\u0131klar\u0131yla', 'uyand\u0131\u011f\u0131m\u0131', 'hat\u0131rl\u0131yorum', '.'],)
+--- Logging error ---
+Traceback (most recent call last):
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/logging/__init__.py", line 1036, in emit
+    stream.write(msg)
+UnicodeEncodeError: 'latin-1' codec can't encode characters in position 70-71: ordinal not in range(256)
+Call stack:
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 48, in <module>
+    main()
+  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 35, in main
+    train(cfg_file=args.config_path, skip_test=args.skip_test)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 846, in train
+    trainer.train_and_validate(train_data=train_data, valid_data=dev_data)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 497, in train_and_validate
+    valid_duration = self._validate(valid_data, epoch_no)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 642, in _validate
+    references=valid_references)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 737, in _log_examples
+    logger.info("\tSource:     %s", sources[p])
+Message: '\tSource:     %s'
+Arguments: ('11 ya\u015f\u0131ndayken bir sabah evimdeki sevinç ç\u0131\u011fl\u0131klar\u0131yla uyand\u0131\u011f\u0131m\u0131 hat\u0131rl\u0131yorum .',)
+2021-10-01 15:20:42,610 - INFO - joeynmt.training - 	Source:     11 ya\u015f\u0131ndayken bir sabah evimdeki sevinç ç\u0131\u011fl\u0131klar\u0131yla uyand\u0131\u011f\u0131m\u0131 hat\u0131rl\u0131yorum .
+2021-10-01 15:20:42,611 - INFO - joeynmt.training - 	Reference:  "When I was 11 , I remember waking up one morning to the sound of joy in my house ."
+2021-10-01 15:20:42,611 - INFO - joeynmt.training - 	Hypothesis: "When I went through the first press as my son of his morning , he comes on the morning ."
+2021-10-01 15:20:42,611 - INFO - joeynmt.training - Example #2
+--- Logging error ---
+Traceback (most recent call last):
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/logging/__init__.py", line 1036, in emit
+    stream.write(msg)
+UnicodeEncodeError: 'latin-1' codec can't encode character '\u0131' in position 103: ordinal not in range(256)
+Call stack:
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 48, in <module>
+    main()
+  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 35, in main
+    train(cfg_file=args.config_path, skip_test=args.skip_test)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 846, in train
+    trainer.train_and_validate(train_data=train_data, valid_data=dev_data)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 497, in train_and_validate
+    valid_duration = self._validate(valid_data, epoch_no)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 642, in _validate
+    references=valid_references)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 731, in _log_examples
+    logger.debug("\tRaw source:     %s", sources_raw[p])
+Message: '\tRaw source:     %s'
+Arguments: (['"Babam', 'BBC', 'Haber', 'kanal\u0131n\u0131', 'dinliyordu', ';', 'o', 'ufak', ',', 'gri', 'radyosundan', '."'],)
+--- Logging error ---
+Traceback (most recent call last):
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/logging/__init__.py", line 1036, in emit
+    stream.write(msg)
+UnicodeEncodeError: 'latin-1' codec can't encode character '\u0131' in position 87: ordinal not in range(256)
+Call stack:
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 48, in <module>
+    main()
+  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 35, in main
+    train(cfg_file=args.config_path, skip_test=args.skip_test)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 846, in train
+    trainer.train_and_validate(train_data=train_data, valid_data=dev_data)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 497, in train_and_validate
+    valid_duration = self._validate(valid_data, epoch_no)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 642, in _validate
+    references=valid_references)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 737, in _log_examples
+    logger.info("\tSource:     %s", sources[p])
+Message: '\tSource:     %s'
+Arguments: ('"Babam BBC Haber kanal\u0131n\u0131 dinliyordu ; o ufak , gri radyosundan ."',)
+2021-10-01 15:20:42,612 - INFO - joeynmt.training - 	Source:     "Babam BBC Haber kanal\u0131n\u0131 dinliyordu ; o ufak , gri radyosundan ."
+2021-10-01 15:20:42,613 - INFO - joeynmt.training - 	Reference:  "My father was listening to BBC News on his small , gray radio ."
+2021-10-01 15:20:42,613 - INFO - joeynmt.training - 	Hypothesis: "She looks as nine minutes of the morning , which is a bunch of women ."
+2021-10-01 15:20:42,613 - INFO - joeynmt.training - Validation result (greedy) at epoch  72, step     5000: bleu:   4.33, loss: 88961.3281, ppl: 2437.7634, duration: 3.8264s
+2021-10-01 15:20:52,712 - INFO - joeynmt.training - Epoch  72: total training loss 586.26
+2021-10-01 15:20:52,713 - INFO - joeynmt.training - EPOCH 73
+2021-10-01 15:21:08,611 - INFO - joeynmt.training - Epoch  73: total training loss 523.38
+2021-10-01 15:21:08,612 - INFO - joeynmt.training - EPOCH 74
+2021-10-01 15:21:24,563 - INFO - joeynmt.training - Epoch  74: total training loss 505.62
+2021-10-01 15:21:24,564 - INFO - joeynmt.training - EPOCH 75
+2021-10-01 15:21:40,314 - INFO - joeynmt.training - Epoch  75: total training loss 495.69
+2021-10-01 15:21:40,314 - INFO - joeynmt.training - EPOCH 76
+2021-10-01 15:21:56,249 - INFO - joeynmt.training - Epoch  76: total training loss 485.25
+2021-10-01 15:21:56,250 - INFO - joeynmt.training - EPOCH 77
+2021-10-01 15:22:12,169 - INFO - joeynmt.training - Epoch  77: total training loss 477.77
+2021-10-01 15:22:12,169 - INFO - joeynmt.training - EPOCH 78
+2021-10-01 15:22:28,109 - INFO - joeynmt.training - Epoch  78: total training loss 471.56
+2021-10-01 15:22:28,109 - INFO - joeynmt.training - EPOCH 79
+2021-10-01 15:22:44,047 - INFO - joeynmt.training - Epoch  79: total training loss 464.79
+2021-10-01 15:22:44,048 - INFO - joeynmt.training - EPOCH 80
+2021-10-01 15:22:59,871 - INFO - joeynmt.training - Epoch  80: total training loss 461.15
+2021-10-01 15:22:59,872 - INFO - joeynmt.training - EPOCH 81
+2021-10-01 15:23:15,783 - INFO - joeynmt.training - Epoch  81: total training loss 454.91
+2021-10-01 15:23:15,784 - INFO - joeynmt.training - EPOCH 82
+2021-10-01 15:23:31,647 - INFO - joeynmt.training - Epoch  82: total training loss 449.62
+2021-10-01 15:23:31,647 - INFO - joeynmt.training - EPOCH 83
+2021-10-01 15:23:47,481 - INFO - joeynmt.training - Epoch  83: total training loss 444.67
+2021-10-01 15:23:47,481 - INFO - joeynmt.training - EPOCH 84
+2021-10-01 15:24:03,422 - INFO - joeynmt.training - Epoch  84: total training loss 440.25
+2021-10-01 15:24:03,423 - INFO - joeynmt.training - EPOCH 85
+2021-10-01 15:24:19,292 - INFO - joeynmt.training - Epoch  85: total training loss 435.49
+2021-10-01 15:24:19,292 - INFO - joeynmt.training - EPOCH 86
+2021-10-01 15:24:30,542 - INFO - joeynmt.training - Epoch  86, Step:     6000, Batch Loss:     6.079910, Tokens per Sec:     6447, Lr: 0.000030
+2021-10-01 15:24:32,934 - WARNING - sacrebleu - That's 100 lines that end in a tokenized period ('.')
+2021-10-01 15:24:32,934 - WARNING - sacrebleu - It looks like you forgot to detokenize your test data, which may hurt your score.
+2021-10-01 15:24:32,934 - WARNING - sacrebleu - If you insist your data is detokenized, or don't care, you can suppress this message with the `force` parameter.
+2021-10-01 15:24:34,422 - INFO - joeynmt.helpers - delete models/tr_en_model/1000.ckpt
+2021-10-01 15:24:34,535 - INFO - joeynmt.training - Example #0
+2021-10-01 15:24:34,536 - INFO - joeynmt.training - 	Source:     tr
+2021-10-01 15:24:34,536 - INFO - joeynmt.training - 	Reference:  en
+2021-10-01 15:24:34,536 - INFO - joeynmt.training - 	Hypothesis: en
+2021-10-01 15:24:34,536 - INFO - joeynmt.training - Example #1
+--- Logging error ---
+Traceback (most recent call last):
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/logging/__init__.py", line 1036, in emit
+    stream.write(msg)
+UnicodeEncodeError: 'latin-1' codec can't encode characters in position 80-81: ordinal not in range(256)
+Call stack:
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 48, in <module>
+    main()
+  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 35, in main
+    train(cfg_file=args.config_path, skip_test=args.skip_test)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 846, in train
+    trainer.train_and_validate(train_data=train_data, valid_data=dev_data)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 497, in train_and_validate
+    valid_duration = self._validate(valid_data, epoch_no)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 642, in _validate
+    references=valid_references)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 731, in _log_examples
+    logger.debug("\tRaw source:     %s", sources_raw[p])
+Message: '\tRaw source:     %s'
+Arguments: (['11', 'ya\u015f\u0131ndayken', 'bir', 'sabah', 'evimdeki', 'sevinç', 'ç\u0131\u011fl\u0131klar\u0131yla', 'uyand\u0131\u011f\u0131m\u0131', 'hat\u0131rl\u0131yorum', '.'],)
+--- Logging error ---
+Traceback (most recent call last):
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/logging/__init__.py", line 1036, in emit
+    stream.write(msg)
+UnicodeEncodeError: 'latin-1' codec can't encode characters in position 70-71: ordinal not in range(256)
+Call stack:
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 48, in <module>
+    main()
+  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 35, in main
+    train(cfg_file=args.config_path, skip_test=args.skip_test)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 846, in train
+    trainer.train_and_validate(train_data=train_data, valid_data=dev_data)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 497, in train_and_validate
+    valid_duration = self._validate(valid_data, epoch_no)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 642, in _validate
+    references=valid_references)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 737, in _log_examples
+    logger.info("\tSource:     %s", sources[p])
+Message: '\tSource:     %s'
+Arguments: ('11 ya\u015f\u0131ndayken bir sabah evimdeki sevinç ç\u0131\u011fl\u0131klar\u0131yla uyand\u0131\u011f\u0131m\u0131 hat\u0131rl\u0131yorum .',)
+2021-10-01 15:24:34,538 - INFO - joeynmt.training - 	Source:     11 ya\u015f\u0131ndayken bir sabah evimdeki sevinç ç\u0131\u011fl\u0131klar\u0131yla uyand\u0131\u011f\u0131m\u0131 hat\u0131rl\u0131yorum .
+2021-10-01 15:24:34,539 - INFO - joeynmt.training - 	Reference:  "When I was 11 , I remember waking up one morning to the sound of joy in my house ."
+2021-10-01 15:24:34,539 - INFO - joeynmt.training - 	Hypothesis: "When I went through the first press as my son of his morning , he comes back in the morning ."
+2021-10-01 15:24:34,539 - INFO - joeynmt.training - Example #2
+--- Logging error ---
+Traceback (most recent call last):
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/logging/__init__.py", line 1036, in emit
+    stream.write(msg)
+UnicodeEncodeError: 'latin-1' codec can't encode character '\u0131' in position 103: ordinal not in range(256)
+Call stack:
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 48, in <module>
+    main()
+  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 35, in main
+    train(cfg_file=args.config_path, skip_test=args.skip_test)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 846, in train
+    trainer.train_and_validate(train_data=train_data, valid_data=dev_data)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 497, in train_and_validate
+    valid_duration = self._validate(valid_data, epoch_no)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 642, in _validate
+    references=valid_references)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 731, in _log_examples
+    logger.debug("\tRaw source:     %s", sources_raw[p])
+Message: '\tRaw source:     %s'
+Arguments: (['"Babam', 'BBC', 'Haber', 'kanal\u0131n\u0131', 'dinliyordu', ';', 'o', 'ufak', ',', 'gri', 'radyosundan', '."'],)
+--- Logging error ---
+Traceback (most recent call last):
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/logging/__init__.py", line 1036, in emit
+    stream.write(msg)
+UnicodeEncodeError: 'latin-1' codec can't encode character '\u0131' in position 87: ordinal not in range(256)
+Call stack:
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 48, in <module>
+    main()
+  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 35, in main
+    train(cfg_file=args.config_path, skip_test=args.skip_test)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 846, in train
+    trainer.train_and_validate(train_data=train_data, valid_data=dev_data)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 497, in train_and_validate
+    valid_duration = self._validate(valid_data, epoch_no)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 642, in _validate
+    references=valid_references)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 737, in _log_examples
+    logger.info("\tSource:     %s", sources[p])
+Message: '\tSource:     %s'
+Arguments: ('"Babam BBC Haber kanal\u0131n\u0131 dinliyordu ; o ufak , gri radyosundan ."',)
+2021-10-01 15:24:34,539 - INFO - joeynmt.training - 	Source:     "Babam BBC Haber kanal\u0131n\u0131 dinliyordu ; o ufak , gri radyosundan ."
+2021-10-01 15:24:34,540 - INFO - joeynmt.training - 	Reference:  "My father was listening to BBC News on his small , gray radio ."
+2021-10-01 15:24:34,540 - INFO - joeynmt.training - 	Hypothesis: "She got the age of girls , which has full 2 girls , not walk by death ."
+2021-10-01 15:24:34,540 - INFO - joeynmt.training - Validation result (greedy) at epoch  86, step     6000: bleu:   4.63, loss: 90256.9375, ppl: 2730.9817, duration: 3.9970s
+2021-10-01 15:24:40,047 - INFO - joeynmt.training - Epoch  86: total training loss 432.88
+2021-10-01 15:24:40,048 - INFO - joeynmt.training - EPOCH 87
+2021-10-01 15:24:55,897 - INFO - joeynmt.training - Epoch  87: total training loss 428.03
+2021-10-01 15:24:55,898 - INFO - joeynmt.training - EPOCH 88
+2021-10-01 15:25:11,805 - INFO - joeynmt.training - Epoch  88: total training loss 425.46
+2021-10-01 15:25:11,806 - INFO - joeynmt.training - EPOCH 89
+2021-10-01 15:25:27,761 - INFO - joeynmt.training - Epoch  89: total training loss 419.67
+2021-10-01 15:25:27,761 - INFO - joeynmt.training - EPOCH 90
+2021-10-01 15:25:43,660 - INFO - joeynmt.training - Epoch  90: total training loss 417.61
+2021-10-01 15:25:43,661 - INFO - joeynmt.training - EPOCH 91
+2021-10-01 15:25:59,591 - INFO - joeynmt.training - Epoch  91: total training loss 411.37
+2021-10-01 15:25:59,591 - INFO - joeynmt.training - EPOCH 92
+2021-10-01 15:26:15,343 - INFO - joeynmt.training - Epoch  92: total training loss 410.26
+2021-10-01 15:26:15,343 - INFO - joeynmt.training - EPOCH 93
+2021-10-01 15:26:31,222 - INFO - joeynmt.training - Epoch  93: total training loss 405.61
+2021-10-01 15:26:31,222 - INFO - joeynmt.training - EPOCH 94
+2021-10-01 15:26:46,990 - INFO - joeynmt.training - Epoch  94: total training loss 402.33
+2021-10-01 15:26:46,991 - INFO - joeynmt.training - EPOCH 95
+2021-10-01 15:27:02,830 - INFO - joeynmt.training - Epoch  95: total training loss 397.40
+2021-10-01 15:27:02,830 - INFO - joeynmt.training - EPOCH 96
+2021-10-01 15:27:18,598 - INFO - joeynmt.training - Epoch  96: total training loss 395.61
+2021-10-01 15:27:18,598 - INFO - joeynmt.training - EPOCH 97
+2021-10-01 15:27:34,434 - INFO - joeynmt.training - Epoch  97: total training loss 391.02
+2021-10-01 15:27:34,435 - INFO - joeynmt.training - EPOCH 98
+2021-10-01 15:27:50,298 - INFO - joeynmt.training - Epoch  98: total training loss 387.54
+2021-10-01 15:27:50,298 - INFO - joeynmt.training - EPOCH 99
+2021-10-01 15:28:06,107 - INFO - joeynmt.training - Epoch  99: total training loss 382.56
+2021-10-01 15:28:06,108 - INFO - joeynmt.training - EPOCH 100
+2021-10-01 15:28:21,933 - INFO - joeynmt.training - Epoch 100, Step:     7000, Batch Loss:     6.209856, Tokens per Sec:     6397, Lr: 0.000030
+2021-10-01 15:28:24,261 - WARNING - sacrebleu - That's 100 lines that end in a tokenized period ('.')
+2021-10-01 15:28:24,261 - WARNING - sacrebleu - It looks like you forgot to detokenize your test data, which may hurt your score.
+2021-10-01 15:28:24,261 - WARNING - sacrebleu - If you insist your data is detokenized, or don't care, you can suppress this message with the `force` parameter.
+2021-10-01 15:28:25,669 - INFO - joeynmt.helpers - delete models/tr_en_model/5000.ckpt
+2021-10-01 15:28:25,775 - INFO - joeynmt.training - Example #0
+2021-10-01 15:28:25,775 - INFO - joeynmt.training - 	Source:     tr
+2021-10-01 15:28:25,776 - INFO - joeynmt.training - 	Reference:  en
+2021-10-01 15:28:25,776 - INFO - joeynmt.training - 	Hypothesis: en
+2021-10-01 15:28:25,776 - INFO - joeynmt.training - Example #1
+--- Logging error ---
+Traceback (most recent call last):
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/logging/__init__.py", line 1036, in emit
+    stream.write(msg)
+UnicodeEncodeError: 'latin-1' codec can't encode characters in position 80-81: ordinal not in range(256)
+Call stack:
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 48, in <module>
+    main()
+  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 35, in main
+    train(cfg_file=args.config_path, skip_test=args.skip_test)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 846, in train
+    trainer.train_and_validate(train_data=train_data, valid_data=dev_data)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 497, in train_and_validate
+    valid_duration = self._validate(valid_data, epoch_no)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 642, in _validate
+    references=valid_references)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 731, in _log_examples
+    logger.debug("\tRaw source:     %s", sources_raw[p])
+Message: '\tRaw source:     %s'
+Arguments: (['11', 'ya\u015f\u0131ndayken', 'bir', 'sabah', 'evimdeki', 'sevinç', 'ç\u0131\u011fl\u0131klar\u0131yla', 'uyand\u0131\u011f\u0131m\u0131', 'hat\u0131rl\u0131yorum', '.'],)
+--- Logging error ---
+Traceback (most recent call last):
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/logging/__init__.py", line 1036, in emit
+    stream.write(msg)
+UnicodeEncodeError: 'latin-1' codec can't encode characters in position 70-71: ordinal not in range(256)
+Call stack:
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 48, in <module>
+    main()
+  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 35, in main
+    train(cfg_file=args.config_path, skip_test=args.skip_test)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 846, in train
+    trainer.train_and_validate(train_data=train_data, valid_data=dev_data)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 497, in train_and_validate
+    valid_duration = self._validate(valid_data, epoch_no)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 642, in _validate
+    references=valid_references)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 737, in _log_examples
+    logger.info("\tSource:     %s", sources[p])
+Message: '\tSource:     %s'
+Arguments: ('11 ya\u015f\u0131ndayken bir sabah evimdeki sevinç ç\u0131\u011fl\u0131klar\u0131yla uyand\u0131\u011f\u0131m\u0131 hat\u0131rl\u0131yorum .',)
+2021-10-01 15:28:25,778 - INFO - joeynmt.training - 	Source:     11 ya\u015f\u0131ndayken bir sabah evimdeki sevinç ç\u0131\u011fl\u0131klar\u0131yla uyand\u0131\u011f\u0131m\u0131 hat\u0131rl\u0131yorum .
+2021-10-01 15:28:25,779 - INFO - joeynmt.training - 	Reference:  "When I was 11 , I remember waking up one morning to the sound of joy in my house ."
+2021-10-01 15:28:25,779 - INFO - joeynmt.training - 	Hypothesis: "When I was nine years old , I &apos;m 13 years old , we have the first in the morning ."
+2021-10-01 15:28:25,779 - INFO - joeynmt.training - Example #2
+--- Logging error ---
+Traceback (most recent call last):
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/logging/__init__.py", line 1036, in emit
+    stream.write(msg)
+UnicodeEncodeError: 'latin-1' codec can't encode character '\u0131' in position 103: ordinal not in range(256)
+Call stack:
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 48, in <module>
+    main()
+  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 35, in main
+    train(cfg_file=args.config_path, skip_test=args.skip_test)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 846, in train
+    trainer.train_and_validate(train_data=train_data, valid_data=dev_data)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 497, in train_and_validate
+    valid_duration = self._validate(valid_data, epoch_no)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 642, in _validate
+    references=valid_references)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 731, in _log_examples
+    logger.debug("\tRaw source:     %s", sources_raw[p])
+Message: '\tRaw source:     %s'
+Arguments: (['"Babam', 'BBC', 'Haber', 'kanal\u0131n\u0131', 'dinliyordu', ';', 'o', 'ufak', ',', 'gri', 'radyosundan', '."'],)
+--- Logging error ---
+Traceback (most recent call last):
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/logging/__init__.py", line 1036, in emit
+    stream.write(msg)
+UnicodeEncodeError: 'latin-1' codec can't encode character '\u0131' in position 87: ordinal not in range(256)
+Call stack:
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 48, in <module>
+    main()
+  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 35, in main
+    train(cfg_file=args.config_path, skip_test=args.skip_test)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 846, in train
+    trainer.train_and_validate(train_data=train_data, valid_data=dev_data)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 497, in train_and_validate
+    valid_duration = self._validate(valid_data, epoch_no)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 642, in _validate
+    references=valid_references)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 737, in _log_examples
+    logger.info("\tSource:     %s", sources[p])
+Message: '\tSource:     %s'
+Arguments: ('"Babam BBC Haber kanal\u0131n\u0131 dinliyordu ; o ufak , gri radyosundan ."',)
+2021-10-01 15:28:25,779 - INFO - joeynmt.training - 	Source:     "Babam BBC Haber kanal\u0131n\u0131 dinliyordu ; o ufak , gri radyosundan ."
+2021-10-01 15:28:25,779 - INFO - joeynmt.training - 	Reference:  "My father was listening to BBC News on his small , gray radio ."
+2021-10-01 15:28:25,779 - INFO - joeynmt.training - 	Hypothesis: "She got the founder of Body Shop , no five years of my mother ."
+2021-10-01 15:28:25,780 - INFO - joeynmt.training - Validation result (greedy) at epoch 100, step     7000: bleu:   4.51, loss: 91478.7500, ppl: 3039.7405, duration: 3.8464s
+2021-10-01 15:28:26,762 - INFO - joeynmt.training - Epoch 100: total training loss 380.55
+2021-10-01 15:28:26,773 - INFO - joeynmt.training - Training ended after 100 epochs.
+2021-10-01 15:28:26,773 - INFO - joeynmt.training - Best validation result (greedy) at step     3000:   4.78 eval_metric.
+2021-10-01 15:28:26,803 - INFO - joeynmt.prediction - Process device: cuda, n_gpu: 1, batch_size per device: 80
+2021-10-01 15:28:26,803 - INFO - joeynmt.prediction - Loading model from models/tr_en_model/3000.ckpt
+2021-10-01 15:28:27,284 - INFO - joeynmt.model - Building an encoder-decoder model...
+2021-10-01 15:28:28,123 - INFO - joeynmt.model - Enc-dec model built.
+2021-10-01 15:28:28,209 - INFO - joeynmt.prediction - Decoding on dev set (../2DL4NLP/all_data/val.en)...
+2021-10-01 15:28:33,110 - WARNING - sacrebleu - That's 100 lines that end in a tokenized period ('.')
+2021-10-01 15:28:33,110 - WARNING - sacrebleu - It looks like you forgot to detokenize your test data, which may hurt your score.
+2021-10-01 15:28:33,110 - WARNING - sacrebleu - If you insist your data is detokenized, or don't care, you can suppress this message with the `force` parameter.
+2021-10-01 15:28:33,114 - INFO - joeynmt.prediction -  dev bleu[13a]:   5.39 [Beam search decoding with beam size = 5 and alpha = 1.0]
+2021-10-01 15:28:33,117 - INFO - joeynmt.prediction - Translations saved to: models/tr_en_model/00003000.hyps.dev
+2021-10-01 15:28:33,117 - INFO - joeynmt.prediction - Decoding on test set (../2DL4NLP/all_data/test.en)...
+2021-10-01 15:28:38,577 - WARNING - sacrebleu - That's 100 lines that end in a tokenized period ('.')
+2021-10-01 15:28:38,577 - WARNING - sacrebleu - It looks like you forgot to detokenize your test data, which may hurt your score.
+2021-10-01 15:28:38,578 - WARNING - sacrebleu - If you insist your data is detokenized, or don't care, you can suppress this message with the `force` parameter.
+2021-10-01 15:28:38,582 - INFO - joeynmt.prediction - test bleu[13a]:   5.71 [Beam search decoding with beam size = 5 and alpha = 1.0]
+2021-10-01 15:28:38,585 - INFO - joeynmt.prediction - Translations saved to: models/tr_en_model/00003000.hyps.test
