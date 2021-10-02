@@ -34,14 +34,14 @@ training:
     patience: 1
     decrease_factor: 0.9
     early_stopping_metric: "eval_metric"
-    epochs: 2
+    epochs: 1
     validation_freq: 1000
     logging_freq: 100
     eval_metric: "bleu"
     model_dir: "models/tr_en_model_new"
     overwrite: False
     shuffle: True
-    use_cuda: True
+    use_cuda: False
     max_output_length: 30
     print_valid_sents: [0, 3, 6]
     keep_best_ckpts: 2
