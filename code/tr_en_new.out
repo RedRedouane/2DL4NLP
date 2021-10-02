@@ -1,101 +1,101 @@
-2021-10-02 12:00:01,258 - INFO - root - Hello! This is Joey-NMT (version 1.3).
-2021-10-02 12:00:01,323 - INFO - joeynmt.data - Loading training data...
-2021-10-02 12:00:01,429 - INFO - joeynmt.data - Building vocabulary...
-2021-10-02 12:00:01,878 - INFO - joeynmt.data - Loading dev data...
-2021-10-02 12:00:01,892 - INFO - joeynmt.data - Loading test data...
-2021-10-02 12:00:01,903 - INFO - joeynmt.data - Data loaded.
-2021-10-02 12:00:01,903 - INFO - joeynmt.model - Building an encoder-decoder model...
-2021-10-02 12:00:02,450 - INFO - joeynmt.model - Enc-dec model built.
-2021-10-02 12:00:02,457 - INFO - joeynmt.training - Total params: 25320632
-2021-10-02 12:00:06,901 - INFO - joeynmt.helpers - cfg.name                           : tr_en_bpe_model
-2021-10-02 12:00:06,902 - INFO - joeynmt.helpers - cfg.data.src                       : tr
-2021-10-02 12:00:06,902 - INFO - joeynmt.helpers - cfg.data.trg                       : en
-2021-10-02 12:00:06,902 - INFO - joeynmt.helpers - cfg.data.train                     : ../2DL4NLP/all_data/train.bpe
-2021-10-02 12:00:06,902 - INFO - joeynmt.helpers - cfg.data.dev                       : ../2DL4NLP/all_data/val.bpe
-2021-10-02 12:00:06,902 - INFO - joeynmt.helpers - cfg.data.test                      : ../2DL4NLP/all_data/test.bpe
-2021-10-02 12:00:06,902 - INFO - joeynmt.helpers - cfg.data.level                     : bpe
-2021-10-02 12:00:06,902 - INFO - joeynmt.helpers - cfg.data.lowercase                 : False
-2021-10-02 12:00:06,902 - INFO - joeynmt.helpers - cfg.data.max_sent_length           : 50
-2021-10-02 12:00:06,903 - INFO - joeynmt.helpers - cfg.data.src_voc_min_freq          : 0
-2021-10-02 12:00:06,903 - INFO - joeynmt.helpers - cfg.data.src_voc_limit             : 10000
-2021-10-02 12:00:06,903 - INFO - joeynmt.helpers - cfg.data.trg_voc_min_freq          : 0
-2021-10-02 12:00:06,903 - INFO - joeynmt.helpers - cfg.data.trg_voc_limit             : 10000
-2021-10-02 12:00:06,903 - INFO - joeynmt.helpers - cfg.data.src_vocab                 : ../2DL4NLP/all_data/tr_en_vocab.txt
-2021-10-02 12:00:06,903 - INFO - joeynmt.helpers - cfg.data.trg_vocab                 : ../2DL4NLP/all_data/tr_en_vocab.txt
-2021-10-02 12:00:06,903 - INFO - joeynmt.helpers - cfg.testing.beam_size              : 5
-2021-10-02 12:00:06,903 - INFO - joeynmt.helpers - cfg.testing.alpha                  : 1.0
-2021-10-02 12:00:06,903 - INFO - joeynmt.helpers - cfg.testing.sacrebleu.remove_whitespace : True
-2021-10-02 12:00:06,903 - INFO - joeynmt.helpers - cfg.testing.sacrebleu.tokenize     : none
-2021-10-02 12:00:06,903 - INFO - joeynmt.helpers - cfg.training.random_seed           : 42
-2021-10-02 12:00:06,903 - INFO - joeynmt.helpers - cfg.training.optimizer             : adam
-2021-10-02 12:00:06,903 - INFO - joeynmt.helpers - cfg.training.weight_decay          : 0.0
-2021-10-02 12:00:06,903 - INFO - joeynmt.helpers - cfg.training.batch_size            : 80
-2021-10-02 12:00:06,903 - INFO - joeynmt.helpers - cfg.training.scheduling            : plateau
-2021-10-02 12:00:06,904 - INFO - joeynmt.helpers - cfg.training.patience              : 1
-2021-10-02 12:00:06,904 - INFO - joeynmt.helpers - cfg.training.early_stopping_metric : eval_metric
-2021-10-02 12:00:06,904 - INFO - joeynmt.helpers - cfg.training.epochs                : 100
-2021-10-02 12:00:06,904 - INFO - joeynmt.helpers - cfg.training.validation_freq       : 100
-2021-10-02 12:00:06,904 - INFO - joeynmt.helpers - cfg.training.logging_freq          : 1000
-2021-10-02 12:00:06,904 - INFO - joeynmt.helpers - cfg.training.eval_metric           : bleu
-2021-10-02 12:00:06,904 - INFO - joeynmt.helpers - cfg.training.model_dir             : models/tr_en_bpe_model
-2021-10-02 12:00:06,904 - INFO - joeynmt.helpers - cfg.training.overwrite             : False
-2021-10-02 12:00:06,904 - INFO - joeynmt.helpers - cfg.training.shuffle               : True
-2021-10-02 12:00:06,904 - INFO - joeynmt.helpers - cfg.training.use_cuda              : True
-2021-10-02 12:00:06,904 - INFO - joeynmt.helpers - cfg.training.max_output_length     : 60
-2021-10-02 12:00:06,904 - INFO - joeynmt.helpers - cfg.training.print_valid_sents     : [0, 1, 2]
-2021-10-02 12:00:06,904 - INFO - joeynmt.helpers - cfg.model.encoder.rnn_type         : lstm
-2021-10-02 12:00:06,904 - INFO - joeynmt.helpers - cfg.model.encoder.embeddings.embedding_dim : 256
-2021-10-02 12:00:06,904 - INFO - joeynmt.helpers - cfg.model.encoder.embeddings.scale : False
-2021-10-02 12:00:06,905 - INFO - joeynmt.helpers - cfg.model.encoder.hidden_size      : 1000
-2021-10-02 12:00:06,905 - INFO - joeynmt.helpers - cfg.model.encoder.bidirectional    : False
-2021-10-02 12:00:06,905 - INFO - joeynmt.helpers - cfg.model.encoder.dropout          : 0.2
-2021-10-02 12:00:06,905 - INFO - joeynmt.helpers - cfg.model.encoder.num_layers       : 1
-2021-10-02 12:00:06,905 - INFO - joeynmt.helpers - cfg.model.decoder.rnn_type         : lstm
-2021-10-02 12:00:06,905 - INFO - joeynmt.helpers - cfg.model.decoder.embeddings.embedding_dim : 256
-2021-10-02 12:00:06,905 - INFO - joeynmt.helpers - cfg.model.decoder.embeddings.scale : False
-2021-10-02 12:00:06,905 - INFO - joeynmt.helpers - cfg.model.decoder.emb_scale        : False
-2021-10-02 12:00:06,905 - INFO - joeynmt.helpers - cfg.model.decoder.hidden_size      : 1000
-2021-10-02 12:00:06,905 - INFO - joeynmt.helpers - cfg.model.decoder.dropout          : 0.2
-2021-10-02 12:00:06,905 - INFO - joeynmt.helpers - cfg.model.decoder.hidden_dropout   : 0.2
-2021-10-02 12:00:06,905 - INFO - joeynmt.helpers - cfg.model.decoder.num_layers       : 1
-2021-10-02 12:00:06,905 - INFO - joeynmt.helpers - cfg.model.decoder.input_feeding    : True
-2021-10-02 12:00:06,905 - INFO - joeynmt.helpers - cfg.model.decoder.init_hidden      : bridge
-2021-10-02 12:00:06,905 - INFO - joeynmt.helpers - cfg.model.decoder.attention        : bahdanau
-2021-10-02 12:00:06,906 - INFO - joeynmt.helpers - Data set sizes: 
+2021-10-02 12:59:54,652 - INFO - root - Hello! This is Joey-NMT (version 1.3).
+2021-10-02 12:59:54,721 - INFO - joeynmt.data - Loading training data...
+2021-10-02 12:59:54,826 - INFO - joeynmt.data - Building vocabulary...
+2021-10-02 12:59:55,276 - INFO - joeynmt.data - Loading dev data...
+2021-10-02 12:59:55,288 - INFO - joeynmt.data - Loading test data...
+2021-10-02 12:59:55,299 - INFO - joeynmt.data - Data loaded.
+2021-10-02 12:59:55,299 - INFO - joeynmt.model - Building an encoder-decoder model...
+2021-10-02 12:59:55,846 - INFO - joeynmt.model - Enc-dec model built.
+2021-10-02 12:59:55,852 - INFO - joeynmt.training - Total params: 25320632
+2021-10-02 13:00:00,366 - INFO - joeynmt.helpers - cfg.name                           : tr_en_bpe_model
+2021-10-02 13:00:00,367 - INFO - joeynmt.helpers - cfg.data.src                       : tr
+2021-10-02 13:00:00,367 - INFO - joeynmt.helpers - cfg.data.trg                       : en
+2021-10-02 13:00:00,367 - INFO - joeynmt.helpers - cfg.data.train                     : ../2DL4NLP/all_data/train.bpe
+2021-10-02 13:00:00,367 - INFO - joeynmt.helpers - cfg.data.dev                       : ../2DL4NLP/all_data/val.bpe
+2021-10-02 13:00:00,367 - INFO - joeynmt.helpers - cfg.data.test                      : ../2DL4NLP/all_data/test.bpe
+2021-10-02 13:00:00,367 - INFO - joeynmt.helpers - cfg.data.level                     : bpe
+2021-10-02 13:00:00,367 - INFO - joeynmt.helpers - cfg.data.lowercase                 : False
+2021-10-02 13:00:00,367 - INFO - joeynmt.helpers - cfg.data.max_sent_length           : 50
+2021-10-02 13:00:00,367 - INFO - joeynmt.helpers - cfg.data.src_voc_min_freq          : 0
+2021-10-02 13:00:00,367 - INFO - joeynmt.helpers - cfg.data.src_voc_limit             : 10000
+2021-10-02 13:00:00,367 - INFO - joeynmt.helpers - cfg.data.trg_voc_min_freq          : 0
+2021-10-02 13:00:00,368 - INFO - joeynmt.helpers - cfg.data.trg_voc_limit             : 10000
+2021-10-02 13:00:00,368 - INFO - joeynmt.helpers - cfg.data.src_vocab                 : ../2DL4NLP/all_data/tr_en_vocab.txt
+2021-10-02 13:00:00,368 - INFO - joeynmt.helpers - cfg.data.trg_vocab                 : ../2DL4NLP/all_data/tr_en_vocab.txt
+2021-10-02 13:00:00,368 - INFO - joeynmt.helpers - cfg.testing.beam_size              : 5
+2021-10-02 13:00:00,368 - INFO - joeynmt.helpers - cfg.testing.alpha                  : 1.0
+2021-10-02 13:00:00,368 - INFO - joeynmt.helpers - cfg.testing.sacrebleu.remove_whitespace : True
+2021-10-02 13:00:00,368 - INFO - joeynmt.helpers - cfg.testing.sacrebleu.tokenize     : none
+2021-10-02 13:00:00,368 - INFO - joeynmt.helpers - cfg.training.random_seed           : 42
+2021-10-02 13:00:00,368 - INFO - joeynmt.helpers - cfg.training.optimizer             : adam
+2021-10-02 13:00:00,368 - INFO - joeynmt.helpers - cfg.training.weight_decay          : 0.0
+2021-10-02 13:00:00,368 - INFO - joeynmt.helpers - cfg.training.batch_size            : 80
+2021-10-02 13:00:00,368 - INFO - joeynmt.helpers - cfg.training.scheduling            : plateau
+2021-10-02 13:00:00,368 - INFO - joeynmt.helpers - cfg.training.patience              : 1
+2021-10-02 13:00:00,368 - INFO - joeynmt.helpers - cfg.training.early_stopping_metric : eval_metric
+2021-10-02 13:00:00,368 - INFO - joeynmt.helpers - cfg.training.epochs                : 100
+2021-10-02 13:00:00,368 - INFO - joeynmt.helpers - cfg.training.validation_freq       : 100
+2021-10-02 13:00:00,369 - INFO - joeynmt.helpers - cfg.training.logging_freq          : 1000
+2021-10-02 13:00:00,369 - INFO - joeynmt.helpers - cfg.training.eval_metric           : bleu
+2021-10-02 13:00:00,369 - INFO - joeynmt.helpers - cfg.training.model_dir             : models/tr_en_bpe_model
+2021-10-02 13:00:00,369 - INFO - joeynmt.helpers - cfg.training.overwrite             : False
+2021-10-02 13:00:00,369 - INFO - joeynmt.helpers - cfg.training.shuffle               : True
+2021-10-02 13:00:00,369 - INFO - joeynmt.helpers - cfg.training.use_cuda              : True
+2021-10-02 13:00:00,369 - INFO - joeynmt.helpers - cfg.training.max_output_length     : 60
+2021-10-02 13:00:00,369 - INFO - joeynmt.helpers - cfg.training.print_valid_sents     : [0, 1, 2]
+2021-10-02 13:00:00,369 - INFO - joeynmt.helpers - cfg.model.encoder.rnn_type         : lstm
+2021-10-02 13:00:00,369 - INFO - joeynmt.helpers - cfg.model.encoder.embeddings.embedding_dim : 256
+2021-10-02 13:00:00,369 - INFO - joeynmt.helpers - cfg.model.encoder.embeddings.scale : False
+2021-10-02 13:00:00,369 - INFO - joeynmt.helpers - cfg.model.encoder.hidden_size      : 1000
+2021-10-02 13:00:00,369 - INFO - joeynmt.helpers - cfg.model.encoder.bidirectional    : False
+2021-10-02 13:00:00,369 - INFO - joeynmt.helpers - cfg.model.encoder.dropout          : 0.2
+2021-10-02 13:00:00,369 - INFO - joeynmt.helpers - cfg.model.encoder.num_layers       : 1
+2021-10-02 13:00:00,370 - INFO - joeynmt.helpers - cfg.model.decoder.rnn_type         : lstm
+2021-10-02 13:00:00,370 - INFO - joeynmt.helpers - cfg.model.decoder.embeddings.embedding_dim : 256
+2021-10-02 13:00:00,370 - INFO - joeynmt.helpers - cfg.model.decoder.embeddings.scale : False
+2021-10-02 13:00:00,370 - INFO - joeynmt.helpers - cfg.model.decoder.emb_scale        : False
+2021-10-02 13:00:00,370 - INFO - joeynmt.helpers - cfg.model.decoder.hidden_size      : 1000
+2021-10-02 13:00:00,370 - INFO - joeynmt.helpers - cfg.model.decoder.dropout          : 0.2
+2021-10-02 13:00:00,370 - INFO - joeynmt.helpers - cfg.model.decoder.hidden_dropout   : 0.2
+2021-10-02 13:00:00,370 - INFO - joeynmt.helpers - cfg.model.decoder.num_layers       : 1
+2021-10-02 13:00:00,370 - INFO - joeynmt.helpers - cfg.model.decoder.input_feeding    : True
+2021-10-02 13:00:00,370 - INFO - joeynmt.helpers - cfg.model.decoder.init_hidden      : bridge
+2021-10-02 13:00:00,370 - INFO - joeynmt.helpers - cfg.model.decoder.attention        : bahdanau
+2021-10-02 13:00:00,370 - INFO - joeynmt.helpers - Data set sizes: 
 	train 5177,
 	valid 551,
 	test 602
-2021-10-02 12:00:06,906 - INFO - joeynmt.helpers - First training example:
+2021-10-02 13:00:00,370 - INFO - joeynmt.helpers - First training example:
 	[SRC] t@@ r
 	[TRG] en
-2021-10-02 12:00:06,906 - INFO - joeynmt.helpers - First 10 words (src): (0) <unk> (1) <pad> (2) <s> (3) </s> (4) , (5) . (6) ." (7) the (8) a (9) &quot;
-2021-10-02 12:00:06,906 - INFO - joeynmt.helpers - First 10 words (trg): (0) <unk> (1) <pad> (2) <s> (3) </s> (4) , (5) . (6) ." (7) the (8) a (9) &quot;
-2021-10-02 12:00:06,906 - INFO - joeynmt.helpers - Number of Src words (types): 4136
-2021-10-02 12:00:06,906 - INFO - joeynmt.helpers - Number of Trg words (types): 4136
-2021-10-02 12:00:06,907 - INFO - joeynmt.training - Model(
+2021-10-02 13:00:00,370 - INFO - joeynmt.helpers - First 10 words (src): (0) <unk> (1) <pad> (2) <s> (3) </s> (4) , (5) . (6) ." (7) the (8) a (9) &quot;
+2021-10-02 13:00:00,371 - INFO - joeynmt.helpers - First 10 words (trg): (0) <unk> (1) <pad> (2) <s> (3) </s> (4) , (5) . (6) ." (7) the (8) a (9) &quot;
+2021-10-02 13:00:00,371 - INFO - joeynmt.helpers - Number of Src words (types): 4136
+2021-10-02 13:00:00,371 - INFO - joeynmt.helpers - Number of Trg words (types): 4136
+2021-10-02 13:00:00,371 - INFO - joeynmt.training - Model(
 	encoder=RecurrentEncoder(LSTM(256, 1000, batch_first=True)),
 	decoder=RecurrentDecoder(rnn=LSTM(1256, 1000, batch_first=True), attention=BahdanauAttention),
 	src_embed=Embeddings(embedding_dim=256, vocab_size=4136),
 	trg_embed=Embeddings(embedding_dim=256, vocab_size=4136))
-2021-10-02 12:00:06,916 - INFO - joeynmt.training - Train stats:
+2021-10-02 13:00:00,381 - INFO - joeynmt.training - Train stats:
 	device: cuda
 	n_gpu: 1
 	16-bits training: False
 	gradient accumulation: 1
 	batch size per device: 80
 	total batch size (w. parallel & accumulation): 80
-2021-10-02 12:00:06,917 - INFO - joeynmt.training - EPOCH 1
-2021-10-02 12:00:21,519 - INFO - joeynmt.training - Epoch   1: total training loss 9113.77
-2021-10-02 12:00:21,520 - INFO - joeynmt.training - EPOCH 2
-2021-10-02 12:00:32,382 - WARNING - sacrebleu - That's 100 lines that end in a tokenized period ('.')
-2021-10-02 12:00:32,382 - WARNING - sacrebleu - It looks like you forgot to detokenize your test data, which may hurt your score.
-2021-10-02 12:00:32,383 - WARNING - sacrebleu - If you insist your data is detokenized, or don't care, you can suppress this message with the `force` parameter.
-2021-10-02 12:00:32,388 - INFO - joeynmt.training - Hooray! New best validation result [eval_metric]!
-2021-10-02 12:00:33,277 - INFO - joeynmt.training - Example #0
-2021-10-02 12:00:33,278 - INFO - joeynmt.training - 	Source:     tr
-2021-10-02 12:00:33,278 - INFO - joeynmt.training - 	Reference:  en
-2021-10-02 12:00:33,278 - INFO - joeynmt.training - 	Hypothesis: I . .
-2021-10-02 12:00:33,278 - INFO - joeynmt.training - Example #1
+2021-10-02 13:00:00,381 - INFO - joeynmt.training - EPOCH 1
+2021-10-02 13:00:14,884 - INFO - joeynmt.training - Epoch   1: total training loss 9113.77
+2021-10-02 13:00:14,885 - INFO - joeynmt.training - EPOCH 2
+2021-10-02 13:00:25,412 - WARNING - sacrebleu - That's 100 lines that end in a tokenized period ('.')
+2021-10-02 13:00:25,412 - WARNING - sacrebleu - It looks like you forgot to detokenize your test data, which may hurt your score.
+2021-10-02 13:00:25,412 - WARNING - sacrebleu - If you insist your data is detokenized, or don't care, you can suppress this message with the `force` parameter.
+2021-10-02 13:00:25,418 - INFO - joeynmt.training - Hooray! New best validation result [eval_metric]!
+2021-10-02 13:00:26,317 - INFO - joeynmt.training - Example #0
+2021-10-02 13:00:26,317 - INFO - joeynmt.training - 	Source:     tr
+2021-10-02 13:00:26,318 - INFO - joeynmt.training - 	Reference:  en
+2021-10-02 13:00:26,318 - INFO - joeynmt.training - 	Hypothesis: I . .
+2021-10-02 13:00:26,318 - INFO - joeynmt.training - Example #1
 --- Logging error ---
 Traceback (most recent call last):
   File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/logging/__init__.py", line 1036, in emit
@@ -144,10 +144,10 @@ Call stack:
     logger.info("\tSource:     %s", sources[p])
 Message: '\tSource:     %s'
 Arguments: ('11 ya\u015f\u0131ndayken bir sabah evimdeki sevinç ç\u0131\u011fl\u0131klar\u0131yla uyand\u0131\u011f\u0131m\u0131 hat\u0131rl\u0131yorum .',)
-2021-10-02 12:00:33,283 - INFO - joeynmt.training - 	Source:     11 ya\u015f\u0131ndayken bir sabah evimdeki sevinç ç\u0131\u011fl\u0131klar\u0131yla uyand\u0131\u011f\u0131m\u0131 hat\u0131rl\u0131yorum .
-2021-10-02 12:00:33,283 - INFO - joeynmt.training - 	Reference:  "When I was 11 , I remember waking up one morning to the sound of joy in my house ."
-2021-10-02 12:00:33,283 - INFO - joeynmt.training - 	Hypothesis: "And &apos;s is , , , , , , , , , , , , , , , , , , , , , , ,
-2021-10-02 12:00:33,283 - INFO - joeynmt.training - Example #2
+2021-10-02 13:00:26,322 - INFO - joeynmt.training - 	Source:     11 ya\u015f\u0131ndayken bir sabah evimdeki sevinç ç\u0131\u011fl\u0131klar\u0131yla uyand\u0131\u011f\u0131m\u0131 hat\u0131rl\u0131yorum .
+2021-10-02 13:00:26,322 - INFO - joeynmt.training - 	Reference:  "When I was 11 , I remember waking up one morning to the sound of joy in my house ."
+2021-10-02 13:00:26,323 - INFO - joeynmt.training - 	Hypothesis: "And &apos;s is , , , , , , , , , , , , , , , , , , , , , , ,
+2021-10-02 13:00:26,323 - INFO - joeynmt.training - Example #2
 --- Logging error ---
 Traceback (most recent call last):
   File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/logging/__init__.py", line 1036, in emit
@@ -196,23 +196,23 @@ Call stack:
     logger.info("\tSource:     %s", sources[p])
 Message: '\tSource:     %s'
 Arguments: ('"Babam BBC Haber kanal\u0131n\u0131 dinliyordu ; o ufak , gri radyosundan ."',)
-2021-10-02 12:00:33,284 - INFO - joeynmt.training - 	Source:     "Babam BBC Haber kanal\u0131n\u0131 dinliyordu ; o ufak , gri radyosundan ."
-2021-10-02 12:00:33,285 - INFO - joeynmt.training - 	Reference:  "My father was listening to BBC News on his small , gray radio ."
-2021-10-02 12:00:33,285 - INFO - joeynmt.training - 	Hypothesis: "And &apos;s is , , , , , , , , , , , , , , , , , , , ,
-2021-10-02 12:00:33,285 - INFO - joeynmt.training - Validation result (greedy) at epoch   2, step      100: bleu:   0.03, loss: 93852.1719, ppl: 483.4709, duration: 3.9142s
-2021-10-02 12:00:41,365 - INFO - joeynmt.training - Epoch   2: total training loss 8559.88
-2021-10-02 12:00:41,365 - INFO - joeynmt.training - EPOCH 3
-2021-10-02 12:00:55,787 - INFO - joeynmt.training - Epoch   3: total training loss 8410.55
-2021-10-02 12:00:55,788 - INFO - joeynmt.training - EPOCH 4
-2021-10-02 12:00:59,873 - WARNING - sacrebleu - That's 100 lines that end in a tokenized period ('.')
-2021-10-02 12:00:59,873 - WARNING - sacrebleu - It looks like you forgot to detokenize your test data, which may hurt your score.
-2021-10-02 12:00:59,873 - WARNING - sacrebleu - If you insist your data is detokenized, or don't care, you can suppress this message with the `force` parameter.
-2021-10-02 12:00:59,877 - INFO - joeynmt.training - Hooray! New best validation result [eval_metric]!
-2021-10-02 12:01:00,772 - INFO - joeynmt.training - Example #0
-2021-10-02 12:01:00,773 - INFO - joeynmt.training - 	Source:     tr
-2021-10-02 12:01:00,773 - INFO - joeynmt.training - 	Reference:  en
-2021-10-02 12:01:00,773 - INFO - joeynmt.training - 	Hypothesis: ( is .
-2021-10-02 12:01:00,773 - INFO - joeynmt.training - Example #1
+2021-10-02 13:00:26,324 - INFO - joeynmt.training - 	Source:     "Babam BBC Haber kanal\u0131n\u0131 dinliyordu ; o ufak , gri radyosundan ."
+2021-10-02 13:00:26,324 - INFO - joeynmt.training - 	Reference:  "My father was listening to BBC News on his small , gray radio ."
+2021-10-02 13:00:26,324 - INFO - joeynmt.training - 	Hypothesis: "And &apos;s is , , , , , , , , , , , , , , , , , , , ,
+2021-10-02 13:00:26,325 - INFO - joeynmt.training - Validation result (greedy) at epoch   2, step      100: bleu:   0.03, loss: 79011.7578, ppl: 1019.0262, duration: 3.5931s
+2021-10-02 13:00:34,417 - INFO - joeynmt.training - Epoch   2: total training loss 8559.88
+2021-10-02 13:00:34,417 - INFO - joeynmt.training - EPOCH 3
+2021-10-02 13:00:48,841 - INFO - joeynmt.training - Epoch   3: total training loss 8410.55
+2021-10-02 13:00:48,842 - INFO - joeynmt.training - EPOCH 4
+2021-10-02 13:00:52,639 - WARNING - sacrebleu - That's 100 lines that end in a tokenized period ('.')
+2021-10-02 13:00:52,639 - WARNING - sacrebleu - It looks like you forgot to detokenize your test data, which may hurt your score.
+2021-10-02 13:00:52,639 - WARNING - sacrebleu - If you insist your data is detokenized, or don't care, you can suppress this message with the `force` parameter.
+2021-10-02 13:00:52,643 - INFO - joeynmt.training - Hooray! New best validation result [eval_metric]!
+2021-10-02 13:00:53,520 - INFO - joeynmt.training - Example #0
+2021-10-02 13:00:53,521 - INFO - joeynmt.training - 	Source:     tr
+2021-10-02 13:00:53,521 - INFO - joeynmt.training - 	Reference:  en
+2021-10-02 13:00:53,521 - INFO - joeynmt.training - 	Hypothesis: ( is .
+2021-10-02 13:00:53,521 - INFO - joeynmt.training - Example #1
 --- Logging error ---
 Traceback (most recent call last):
   File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/logging/__init__.py", line 1036, in emit
@@ -261,10 +261,10 @@ Call stack:
     logger.info("\tSource:     %s", sources[p])
 Message: '\tSource:     %s'
 Arguments: ('11 ya\u015f\u0131ndayken bir sabah evimdeki sevinç ç\u0131\u011fl\u0131klar\u0131yla uyand\u0131\u011f\u0131m\u0131 hat\u0131rl\u0131yorum .',)
-2021-10-02 12:01:00,776 - INFO - joeynmt.training - 	Source:     11 ya\u015f\u0131ndayken bir sabah evimdeki sevinç ç\u0131\u011fl\u0131klar\u0131yla uyand\u0131\u011f\u0131m\u0131 hat\u0131rl\u0131yorum .
-2021-10-02 12:01:00,777 - INFO - joeynmt.training - 	Reference:  "When I was 11 , I remember waking up one morning to the sound of joy in my house ."
-2021-10-02 12:01:00,777 - INFO - joeynmt.training - 	Hypothesis: "And I the the the , the , the , the , the , the , the , the , the , the , the , the the the the the the ."
-2021-10-02 12:01:00,777 - INFO - joeynmt.training - Example #2
+2021-10-02 13:00:53,524 - INFO - joeynmt.training - 	Source:     11 ya\u015f\u0131ndayken bir sabah evimdeki sevinç ç\u0131\u011fl\u0131klar\u0131yla uyand\u0131\u011f\u0131m\u0131 hat\u0131rl\u0131yorum .
+2021-10-02 13:00:53,525 - INFO - joeynmt.training - 	Reference:  "When I was 11 , I remember waking up one morning to the sound of joy in my house ."
+2021-10-02 13:00:53,525 - INFO - joeynmt.training - 	Hypothesis: "And I the the the , the , the , the , the , the , the , the , the , the , the , the the the the the the ."
+2021-10-02 13:00:53,525 - INFO - joeynmt.training - Example #2
 --- Logging error ---
 Traceback (most recent call last):
   File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/logging/__init__.py", line 1036, in emit
@@ -313,21 +313,21 @@ Call stack:
     logger.info("\tSource:     %s", sources[p])
 Message: '\tSource:     %s'
 Arguments: ('"Babam BBC Haber kanal\u0131n\u0131 dinliyordu ; o ufak , gri radyosundan ."',)
-2021-10-02 12:01:00,778 - INFO - joeynmt.training - 	Source:     "Babam BBC Haber kanal\u0131n\u0131 dinliyordu ; o ufak , gri radyosundan ."
-2021-10-02 12:01:00,779 - INFO - joeynmt.training - 	Reference:  "My father was listening to BBC News on his small , gray radio ."
-2021-10-02 12:01:00,779 - INFO - joeynmt.training - 	Hypothesis: "And I the the the the , the , the , the , the , the the the the the the the the ."
-2021-10-02 12:01:00,779 - INFO - joeynmt.training - Validation result (greedy) at epoch   4, step      200: bleu:   0.06, loss: 92222.7031, ppl: 434.2742, duration: 3.8727s
-2021-10-02 12:01:15,573 - INFO - joeynmt.training - Epoch   4: total training loss 8209.07
-2021-10-02 12:01:15,574 - INFO - joeynmt.training - EPOCH 5
-2021-10-02 12:01:27,616 - WARNING - sacrebleu - That's 100 lines that end in a tokenized period ('.')
-2021-10-02 12:01:27,617 - WARNING - sacrebleu - It looks like you forgot to detokenize your test data, which may hurt your score.
-2021-10-02 12:01:27,617 - WARNING - sacrebleu - If you insist your data is detokenized, or don't care, you can suppress this message with the `force` parameter.
-2021-10-02 12:01:27,621 - INFO - joeynmt.training - Hooray! New best validation result [eval_metric]!
-2021-10-02 12:01:28,695 - INFO - joeynmt.training - Example #0
-2021-10-02 12:01:28,696 - INFO - joeynmt.training - 	Source:     tr
-2021-10-02 12:01:28,696 - INFO - joeynmt.training - 	Reference:  en
-2021-10-02 12:01:28,696 - INFO - joeynmt.training - 	Hypothesis: ( Applause
-2021-10-02 12:01:28,696 - INFO - joeynmt.training - Example #1
+2021-10-02 13:00:53,526 - INFO - joeynmt.training - 	Source:     "Babam BBC Haber kanal\u0131n\u0131 dinliyordu ; o ufak , gri radyosundan ."
+2021-10-02 13:00:53,527 - INFO - joeynmt.training - 	Reference:  "My father was listening to BBC News on his small , gray radio ."
+2021-10-02 13:00:53,527 - INFO - joeynmt.training - 	Hypothesis: "And I the the the the , the , the , the , the , the the the the the the the the ."
+2021-10-02 13:00:53,527 - INFO - joeynmt.training - Validation result (greedy) at epoch   4, step      200: bleu:   0.06, loss: 78267.0938, ppl: 954.6277, duration: 3.5666s
+2021-10-02 13:01:08,327 - INFO - joeynmt.training - Epoch   4: total training loss 8209.07
+2021-10-02 13:01:08,327 - INFO - joeynmt.training - EPOCH 5
+2021-10-02 13:01:20,003 - WARNING - sacrebleu - That's 100 lines that end in a tokenized period ('.')
+2021-10-02 13:01:20,004 - WARNING - sacrebleu - It looks like you forgot to detokenize your test data, which may hurt your score.
+2021-10-02 13:01:20,004 - WARNING - sacrebleu - If you insist your data is detokenized, or don't care, you can suppress this message with the `force` parameter.
+2021-10-02 13:01:20,008 - INFO - joeynmt.training - Hooray! New best validation result [eval_metric]!
+2021-10-02 13:01:21,026 - INFO - joeynmt.training - Example #0
+2021-10-02 13:01:21,026 - INFO - joeynmt.training - 	Source:     tr
+2021-10-02 13:01:21,026 - INFO - joeynmt.training - 	Reference:  en
+2021-10-02 13:01:21,027 - INFO - joeynmt.training - 	Hypothesis: ( Applause
+2021-10-02 13:01:21,027 - INFO - joeynmt.training - Example #1
 --- Logging error ---
 Traceback (most recent call last):
   File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/logging/__init__.py", line 1036, in emit
@@ -376,10 +376,10 @@ Call stack:
     logger.info("\tSource:     %s", sources[p])
 Message: '\tSource:     %s'
 Arguments: ('11 ya\u015f\u0131ndayken bir sabah evimdeki sevinç ç\u0131\u011fl\u0131klar\u0131yla uyand\u0131\u011f\u0131m\u0131 hat\u0131rl\u0131yorum .',)
-2021-10-02 12:01:28,698 - INFO - joeynmt.training - 	Source:     11 ya\u015f\u0131ndayken bir sabah evimdeki sevinç ç\u0131\u011fl\u0131klar\u0131yla uyand\u0131\u011f\u0131m\u0131 hat\u0131rl\u0131yorum .
-2021-10-02 12:01:28,699 - INFO - joeynmt.training - 	Reference:  "When I was 11 , I remember waking up one morning to the sound of joy in my house ."
-2021-10-02 12:01:28,699 - INFO - joeynmt.training - 	Hypothesis: "And the , the , the , the , the , the , the , the , the , the , the , the , the , the , the , the , the , the to the ."
-2021-10-02 12:01:28,699 - INFO - joeynmt.training - Example #2
+2021-10-02 13:01:21,028 - INFO - joeynmt.training - 	Source:     11 ya\u015f\u0131ndayken bir sabah evimdeki sevinç ç\u0131\u011fl\u0131klar\u0131yla uyand\u0131\u011f\u0131m\u0131 hat\u0131rl\u0131yorum .
+2021-10-02 13:01:21,029 - INFO - joeynmt.training - 	Reference:  "When I was 11 , I remember waking up one morning to the sound of joy in my house ."
+2021-10-02 13:01:21,029 - INFO - joeynmt.training - 	Hypothesis: "And the , the , the , the , the , the , the , the , the , the , the , the , the , the , the , the , the , the to the ."
+2021-10-02 13:01:21,029 - INFO - joeynmt.training - Example #2
 --- Logging error ---
 Traceback (most recent call last):
   File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/logging/__init__.py", line 1036, in emit
@@ -428,23 +428,23 @@ Call stack:
     logger.info("\tSource:     %s", sources[p])
 Message: '\tSource:     %s'
 Arguments: ('"Babam BBC Haber kanal\u0131n\u0131 dinliyordu ; o ufak , gri radyosundan ."',)
-2021-10-02 12:01:28,700 - INFO - joeynmt.training - 	Source:     "Babam BBC Haber kanal\u0131n\u0131 dinliyordu ; o ufak , gri radyosundan ."
-2021-10-02 12:01:28,700 - INFO - joeynmt.training - 	Reference:  "My father was listening to BBC News on his small , gray radio ."
-2021-10-02 12:01:28,701 - INFO - joeynmt.training - 	Hypothesis: "And the , the , the , the , the , the , the , the , the , the &apos;s the , the &apos;s the ."
-2021-10-02 12:01:28,701 - INFO - joeynmt.training - Validation result (greedy) at epoch   5, step      300: bleu:   0.13, loss: 88428.2422, ppl: 338.2474, duration: 4.1158s
-2021-10-02 12:01:35,800 - INFO - joeynmt.training - Epoch   5: total training loss 7951.66
-2021-10-02 12:01:35,800 - INFO - joeynmt.training - EPOCH 6
-2021-10-02 12:01:50,280 - INFO - joeynmt.training - Epoch   6: total training loss 7632.99
-2021-10-02 12:01:50,280 - INFO - joeynmt.training - EPOCH 7
-2021-10-02 12:01:55,234 - WARNING - sacrebleu - That's 100 lines that end in a tokenized period ('.')
-2021-10-02 12:01:55,234 - WARNING - sacrebleu - It looks like you forgot to detokenize your test data, which may hurt your score.
-2021-10-02 12:01:55,234 - WARNING - sacrebleu - If you insist your data is detokenized, or don't care, you can suppress this message with the `force` parameter.
-2021-10-02 12:01:55,238 - INFO - joeynmt.training - Hooray! New best validation result [eval_metric]!
-2021-10-02 12:01:56,152 - INFO - joeynmt.training - Example #0
-2021-10-02 12:01:56,153 - INFO - joeynmt.training - 	Source:     tr
-2021-10-02 12:01:56,153 - INFO - joeynmt.training - 	Reference:  en
-2021-10-02 12:01:56,153 - INFO - joeynmt.training - 	Hypothesis: ( Applause ) ) ) )
-2021-10-02 12:01:56,153 - INFO - joeynmt.training - Example #1
+2021-10-02 13:01:21,030 - INFO - joeynmt.training - 	Source:     "Babam BBC Haber kanal\u0131n\u0131 dinliyordu ; o ufak , gri radyosundan ."
+2021-10-02 13:01:21,031 - INFO - joeynmt.training - 	Reference:  "My father was listening to BBC News on his small , gray radio ."
+2021-10-02 13:01:21,031 - INFO - joeynmt.training - 	Hypothesis: "And the , the , the , the , the , the , the , the , the , the &apos;s the , the &apos;s the ."
+2021-10-02 13:01:21,031 - INFO - joeynmt.training - Validation result (greedy) at epoch   5, step      300: bleu:   0.13, loss: 76559.9453, ppl: 821.9366, duration: 3.7167s
+2021-10-02 13:01:28,262 - INFO - joeynmt.training - Epoch   5: total training loss 7951.66
+2021-10-02 13:01:28,262 - INFO - joeynmt.training - EPOCH 6
+2021-10-02 13:01:42,750 - INFO - joeynmt.training - Epoch   6: total training loss 7632.99
+2021-10-02 13:01:42,751 - INFO - joeynmt.training - EPOCH 7
+2021-10-02 13:01:47,421 - WARNING - sacrebleu - That's 100 lines that end in a tokenized period ('.')
+2021-10-02 13:01:47,421 - WARNING - sacrebleu - It looks like you forgot to detokenize your test data, which may hurt your score.
+2021-10-02 13:01:47,421 - WARNING - sacrebleu - If you insist your data is detokenized, or don't care, you can suppress this message with the `force` parameter.
+2021-10-02 13:01:47,425 - INFO - joeynmt.training - Hooray! New best validation result [eval_metric]!
+2021-10-02 13:01:48,380 - INFO - joeynmt.training - Example #0
+2021-10-02 13:01:48,381 - INFO - joeynmt.training - 	Source:     tr
+2021-10-02 13:01:48,381 - INFO - joeynmt.training - 	Reference:  en
+2021-10-02 13:01:48,381 - INFO - joeynmt.training - 	Hypothesis: ( Applause ) ) ) )
+2021-10-02 13:01:48,381 - INFO - joeynmt.training - Example #1
 --- Logging error ---
 Traceback (most recent call last):
   File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/logging/__init__.py", line 1036, in emit
@@ -493,10 +493,10 @@ Call stack:
     logger.info("\tSource:     %s", sources[p])
 Message: '\tSource:     %s'
 Arguments: ('11 ya\u015f\u0131ndayken bir sabah evimdeki sevinç ç\u0131\u011fl\u0131klar\u0131yla uyand\u0131\u011f\u0131m\u0131 hat\u0131rl\u0131yorum .',)
-2021-10-02 12:01:56,155 - INFO - joeynmt.training - 	Source:     11 ya\u015f\u0131ndayken bir sabah evimdeki sevinç ç\u0131\u011fl\u0131klar\u0131yla uyand\u0131\u011f\u0131m\u0131 hat\u0131rl\u0131yorum .
-2021-10-02 12:01:56,156 - INFO - joeynmt.training - 	Reference:  "When I was 11 , I remember waking up one morning to the sound of joy in my house ."
-2021-10-02 12:01:56,156 - INFO - joeynmt.training - 	Hypothesis: "And we the of the , the , the , the , the , the , the , the &apos;s the , the &apos;s the ."
-2021-10-02 12:01:56,156 - INFO - joeynmt.training - Example #2
+2021-10-02 13:01:48,383 - INFO - joeynmt.training - 	Source:     11 ya\u015f\u0131ndayken bir sabah evimdeki sevinç ç\u0131\u011fl\u0131klar\u0131yla uyand\u0131\u011f\u0131m\u0131 hat\u0131rl\u0131yorum .
+2021-10-02 13:01:48,384 - INFO - joeynmt.training - 	Reference:  "When I was 11 , I remember waking up one morning to the sound of joy in my house ."
+2021-10-02 13:01:48,384 - INFO - joeynmt.training - 	Hypothesis: "And we the of the , the , the , the , the , the , the , the &apos;s the , the &apos;s the ."
+2021-10-02 13:01:48,384 - INFO - joeynmt.training - Example #2
 --- Logging error ---
 Traceback (most recent call last):
   File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/logging/__init__.py", line 1036, in emit
@@ -545,21 +545,21 @@ Call stack:
     logger.info("\tSource:     %s", sources[p])
 Message: '\tSource:     %s'
 Arguments: ('"Babam BBC Haber kanal\u0131n\u0131 dinliyordu ; o ufak , gri radyosundan ."',)
-2021-10-02 12:01:56,157 - INFO - joeynmt.training - 	Source:     "Babam BBC Haber kanal\u0131n\u0131 dinliyordu ; o ufak , gri radyosundan ."
-2021-10-02 12:01:56,158 - INFO - joeynmt.training - 	Reference:  "My father was listening to BBC News on his small , gray radio ."
-2021-10-02 12:01:56,158 - INFO - joeynmt.training - 	Hypothesis: "And we the of the of the of the , the &apos;s the , the &apos;s the of the ."
-2021-10-02 12:01:56,158 - INFO - joeynmt.training - Validation result (greedy) at epoch   7, step      400: bleu:   0.24, loss: 83677.3047, ppl: 247.3704, duration: 3.6181s
-2021-10-02 12:02:09,831 - INFO - joeynmt.training - Epoch   7: total training loss 7431.10
-2021-10-02 12:02:09,832 - INFO - joeynmt.training - EPOCH 8
-2021-10-02 12:02:22,891 - WARNING - sacrebleu - That's 100 lines that end in a tokenized period ('.')
-2021-10-02 12:02:22,891 - WARNING - sacrebleu - It looks like you forgot to detokenize your test data, which may hurt your score.
-2021-10-02 12:02:22,891 - WARNING - sacrebleu - If you insist your data is detokenized, or don't care, you can suppress this message with the `force` parameter.
-2021-10-02 12:02:22,896 - INFO - joeynmt.training - Hooray! New best validation result [eval_metric]!
-2021-10-02 12:02:23,823 - INFO - joeynmt.training - Example #0
-2021-10-02 12:02:23,824 - INFO - joeynmt.training - 	Source:     tr
-2021-10-02 12:02:23,824 - INFO - joeynmt.training - 	Reference:  en
-2021-10-02 12:02:23,824 - INFO - joeynmt.training - 	Hypothesis: ( Applause ) ) )
-2021-10-02 12:02:23,824 - INFO - joeynmt.training - Example #1
+2021-10-02 13:01:48,385 - INFO - joeynmt.training - 	Source:     "Babam BBC Haber kanal\u0131n\u0131 dinliyordu ; o ufak , gri radyosundan ."
+2021-10-02 13:01:48,386 - INFO - joeynmt.training - 	Reference:  "My father was listening to BBC News on his small , gray radio ."
+2021-10-02 13:01:48,386 - INFO - joeynmt.training - 	Hypothesis: "And we the of the of the of the , the &apos;s the , the &apos;s the of the ."
+2021-10-02 13:01:48,386 - INFO - joeynmt.training - Validation result (greedy) at epoch   7, step      400: bleu:   0.24, loss: 75491.9062, ppl: 748.4717, duration: 3.3700s
+2021-10-02 13:02:02,201 - INFO - joeynmt.training - Epoch   7: total training loss 7431.10
+2021-10-02 13:02:02,202 - INFO - joeynmt.training - EPOCH 8
+2021-10-02 13:02:15,009 - WARNING - sacrebleu - That's 100 lines that end in a tokenized period ('.')
+2021-10-02 13:02:15,009 - WARNING - sacrebleu - It looks like you forgot to detokenize your test data, which may hurt your score.
+2021-10-02 13:02:15,009 - WARNING - sacrebleu - If you insist your data is detokenized, or don't care, you can suppress this message with the `force` parameter.
+2021-10-02 13:02:15,014 - INFO - joeynmt.training - Hooray! New best validation result [eval_metric]!
+2021-10-02 13:02:15,925 - INFO - joeynmt.training - Example #0
+2021-10-02 13:02:15,925 - INFO - joeynmt.training - 	Source:     tr
+2021-10-02 13:02:15,926 - INFO - joeynmt.training - 	Reference:  en
+2021-10-02 13:02:15,926 - INFO - joeynmt.training - 	Hypothesis: ( Applause ) ) )
+2021-10-02 13:02:15,926 - INFO - joeynmt.training - Example #1
 --- Logging error ---
 Traceback (most recent call last):
   File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/logging/__init__.py", line 1036, in emit
@@ -608,10 +608,10 @@ Call stack:
     logger.info("\tSource:     %s", sources[p])
 Message: '\tSource:     %s'
 Arguments: ('11 ya\u015f\u0131ndayken bir sabah evimdeki sevinç ç\u0131\u011fl\u0131klar\u0131yla uyand\u0131\u011f\u0131m\u0131 hat\u0131rl\u0131yorum .',)
-2021-10-02 12:02:23,827 - INFO - joeynmt.training - 	Source:     11 ya\u015f\u0131ndayken bir sabah evimdeki sevinç ç\u0131\u011fl\u0131klar\u0131yla uyand\u0131\u011f\u0131m\u0131 hat\u0131rl\u0131yorum .
-2021-10-02 12:02:23,828 - INFO - joeynmt.training - 	Reference:  "When I was 11 , I remember waking up one morning to the sound of joy in my house ."
-2021-10-02 12:02:23,828 - INFO - joeynmt.training - 	Hypothesis: "And I , I , I &apos;re a , and I , I &apos;s a , and I &apos;s a , and I &apos;s a very of the world ."
-2021-10-02 12:02:23,828 - INFO - joeynmt.training - Example #2
+2021-10-02 13:02:15,929 - INFO - joeynmt.training - 	Source:     11 ya\u015f\u0131ndayken bir sabah evimdeki sevinç ç\u0131\u011fl\u0131klar\u0131yla uyand\u0131\u011f\u0131m\u0131 hat\u0131rl\u0131yorum .
+2021-10-02 13:02:15,930 - INFO - joeynmt.training - 	Reference:  "When I was 11 , I remember waking up one morning to the sound of joy in my house ."
+2021-10-02 13:02:15,930 - INFO - joeynmt.training - 	Hypothesis: "And I , I , I &apos;re a , and I , I &apos;s a , and I &apos;s a , and I &apos;s a very of the world ."
+2021-10-02 13:02:15,930 - INFO - joeynmt.training - Example #2
 --- Logging error ---
 Traceback (most recent call last):
   File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/logging/__init__.py", line 1036, in emit
@@ -660,23 +660,23 @@ Call stack:
     logger.info("\tSource:     %s", sources[p])
 Message: '\tSource:     %s'
 Arguments: ('"Babam BBC Haber kanal\u0131n\u0131 dinliyordu ; o ufak , gri radyosundan ."',)
-2021-10-02 12:02:23,829 - INFO - joeynmt.training - 	Source:     "Babam BBC Haber kanal\u0131n\u0131 dinliyordu ; o ufak , gri radyosundan ."
-2021-10-02 12:02:23,830 - INFO - joeynmt.training - 	Reference:  "My father was listening to BBC News on his small , gray radio ."
-2021-10-02 12:02:23,830 - INFO - joeynmt.training - 	Hypothesis: "And I think a at the ines , and I &apos;s a world , and I &apos;re a ."
-2021-10-02 12:02:23,830 - INFO - joeynmt.training - Validation result (greedy) at epoch   8, step      500: bleu:   0.48, loss: 82207.7656, ppl: 224.5514, duration: 3.9321s
-2021-10-02 12:02:29,859 - INFO - joeynmt.training - Epoch   8: total training loss 7296.86
-2021-10-02 12:02:29,860 - INFO - joeynmt.training - EPOCH 9
-2021-10-02 12:02:44,334 - INFO - joeynmt.training - Epoch   9: total training loss 7178.34
-2021-10-02 12:02:44,334 - INFO - joeynmt.training - EPOCH 10
-2021-10-02 12:02:50,672 - WARNING - sacrebleu - That's 100 lines that end in a tokenized period ('.')
-2021-10-02 12:02:50,672 - WARNING - sacrebleu - It looks like you forgot to detokenize your test data, which may hurt your score.
-2021-10-02 12:02:50,672 - WARNING - sacrebleu - If you insist your data is detokenized, or don't care, you can suppress this message with the `force` parameter.
-2021-10-02 12:02:51,630 - INFO - joeynmt.helpers - delete models/tr_en_bpe_model/100.ckpt
-2021-10-02 12:02:51,706 - INFO - joeynmt.training - Example #0
-2021-10-02 12:02:51,707 - INFO - joeynmt.training - 	Source:     tr
-2021-10-02 12:02:51,707 - INFO - joeynmt.training - 	Reference:  en
-2021-10-02 12:02:51,707 - INFO - joeynmt.training - 	Hypothesis: ( Applause ) )
-2021-10-02 12:02:51,707 - INFO - joeynmt.training - Example #1
+2021-10-02 13:02:15,931 - INFO - joeynmt.training - 	Source:     "Babam BBC Haber kanal\u0131n\u0131 dinliyordu ; o ufak , gri radyosundan ."
+2021-10-02 13:02:15,932 - INFO - joeynmt.training - 	Reference:  "My father was listening to BBC News on his small , gray radio ."
+2021-10-02 13:02:15,932 - INFO - joeynmt.training - 	Hypothesis: "And I think a at the ines , and I &apos;s a world , and I &apos;re a ."
+2021-10-02 13:02:15,932 - INFO - joeynmt.training - Validation result (greedy) at epoch   8, step      500: bleu:   0.48, loss: 76068.2578, ppl: 787.2608, duration: 3.6290s
+2021-10-02 13:02:21,949 - INFO - joeynmt.training - Epoch   8: total training loss 7296.86
+2021-10-02 13:02:21,949 - INFO - joeynmt.training - EPOCH 9
+2021-10-02 13:02:36,450 - INFO - joeynmt.training - Epoch   9: total training loss 7178.34
+2021-10-02 13:02:36,450 - INFO - joeynmt.training - EPOCH 10
+2021-10-02 13:02:42,552 - WARNING - sacrebleu - That's 100 lines that end in a tokenized period ('.')
+2021-10-02 13:02:42,552 - WARNING - sacrebleu - It looks like you forgot to detokenize your test data, which may hurt your score.
+2021-10-02 13:02:42,552 - WARNING - sacrebleu - If you insist your data is detokenized, or don't care, you can suppress this message with the `force` parameter.
+2021-10-02 13:02:43,501 - INFO - joeynmt.helpers - delete models/tr_en_bpe_model/100.ckpt
+2021-10-02 13:02:43,590 - INFO - joeynmt.training - Example #0
+2021-10-02 13:02:43,590 - INFO - joeynmt.training - 	Source:     tr
+2021-10-02 13:02:43,590 - INFO - joeynmt.training - 	Reference:  en
+2021-10-02 13:02:43,590 - INFO - joeynmt.training - 	Hypothesis: ( Applause ) )
+2021-10-02 13:02:43,590 - INFO - joeynmt.training - Example #1
 --- Logging error ---
 Traceback (most recent call last):
   File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/logging/__init__.py", line 1036, in emit
@@ -725,10 +725,10 @@ Call stack:
     logger.info("\tSource:     %s", sources[p])
 Message: '\tSource:     %s'
 Arguments: ('11 ya\u015f\u0131ndayken bir sabah evimdeki sevinç ç\u0131\u011fl\u0131klar\u0131yla uyand\u0131\u011f\u0131m\u0131 hat\u0131rl\u0131yorum .',)
-2021-10-02 12:02:51,707 - INFO - joeynmt.training - 	Source:     11 ya\u015f\u0131ndayken bir sabah evimdeki sevinç ç\u0131\u011fl\u0131klar\u0131yla uyand\u0131\u011f\u0131m\u0131 hat\u0131rl\u0131yorum .
-2021-10-02 12:02:51,708 - INFO - joeynmt.training - 	Reference:  "When I was 11 , I remember waking up one morning to the sound of joy in my house ."
-2021-10-02 12:02:51,708 - INFO - joeynmt.training - 	Hypothesis: "And the is the , the is the , and the is the , and the is the , and the is the , and the is the , and the universe , and the universe ."
-2021-10-02 12:02:51,708 - INFO - joeynmt.training - Example #2
+2021-10-02 13:02:43,591 - INFO - joeynmt.training - 	Source:     11 ya\u015f\u0131ndayken bir sabah evimdeki sevinç ç\u0131\u011fl\u0131klar\u0131yla uyand\u0131\u011f\u0131m\u0131 hat\u0131rl\u0131yorum .
+2021-10-02 13:02:43,591 - INFO - joeynmt.training - 	Reference:  "When I was 11 , I remember waking up one morning to the sound of joy in my house ."
+2021-10-02 13:02:43,591 - INFO - joeynmt.training - 	Hypothesis: "And the is the , the is the , and the is the , and the is the , and the is the , and the is the , and the universe , and the universe ."
+2021-10-02 13:02:43,591 - INFO - joeynmt.training - Example #2
 --- Logging error ---
 Traceback (most recent call last):
   File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/logging/__init__.py", line 1036, in emit
@@ -777,22 +777,22 @@ Call stack:
     logger.info("\tSource:     %s", sources[p])
 Message: '\tSource:     %s'
 Arguments: ('"Babam BBC Haber kanal\u0131n\u0131 dinliyordu ; o ufak , gri radyosundan ."',)
-2021-10-02 12:02:51,708 - INFO - joeynmt.training - 	Source:     "Babam BBC Haber kanal\u0131n\u0131 dinliyordu ; o ufak , gri radyosundan ."
-2021-10-02 12:02:51,709 - INFO - joeynmt.training - 	Reference:  "My father was listening to BBC News on his small , gray radio ."
-2021-10-02 12:02:51,709 - INFO - joeynmt.training - 	Hypothesis: "And the is the of the , and the is the , and I &apos;re a of the ."
-2021-10-02 12:02:51,709 - INFO - joeynmt.training - Validation result (greedy) at epoch  10, step      600: bleu:   0.38, loss: 80840.8203, ppl: 205.2193, duration: 4.0574s
-2021-10-02 12:03:04,244 - INFO - joeynmt.training - Epoch  10: total training loss 7073.13
-2021-10-02 12:03:04,244 - INFO - joeynmt.training - EPOCH 11
-2021-10-02 12:03:18,328 - WARNING - sacrebleu - That's 100 lines that end in a tokenized period ('.')
-2021-10-02 12:03:18,328 - WARNING - sacrebleu - It looks like you forgot to detokenize your test data, which may hurt your score.
-2021-10-02 12:03:18,328 - WARNING - sacrebleu - If you insist your data is detokenized, or don't care, you can suppress this message with the `force` parameter.
-2021-10-02 12:03:18,332 - INFO - joeynmt.training - Hooray! New best validation result [eval_metric]!
-2021-10-02 12:03:19,288 - INFO - joeynmt.helpers - delete models/tr_en_bpe_model/200.ckpt
-2021-10-02 12:03:19,363 - INFO - joeynmt.training - Example #0
-2021-10-02 12:03:19,363 - INFO - joeynmt.training - 	Source:     tr
-2021-10-02 12:03:19,363 - INFO - joeynmt.training - 	Reference:  en
-2021-10-02 12:03:19,363 - INFO - joeynmt.training - 	Hypothesis: Thank you is .
-2021-10-02 12:03:19,363 - INFO - joeynmt.training - Example #1
+2021-10-02 13:02:43,592 - INFO - joeynmt.training - 	Source:     "Babam BBC Haber kanal\u0131n\u0131 dinliyordu ; o ufak , gri radyosundan ."
+2021-10-02 13:02:43,592 - INFO - joeynmt.training - 	Reference:  "My father was listening to BBC News on his small , gray radio ."
+2021-10-02 13:02:43,592 - INFO - joeynmt.training - 	Hypothesis: "And the is the of the , and the is the , and I &apos;re a of the ."
+2021-10-02 13:02:43,592 - INFO - joeynmt.training - Validation result (greedy) at epoch  10, step      600: bleu:   0.38, loss: 75923.0000, ppl: 777.2991, duration: 3.8101s
+2021-10-02 13:02:56,184 - INFO - joeynmt.training - Epoch  10: total training loss 7073.13
+2021-10-02 13:02:56,184 - INFO - joeynmt.training - EPOCH 11
+2021-10-02 13:03:09,996 - WARNING - sacrebleu - That's 100 lines that end in a tokenized period ('.')
+2021-10-02 13:03:09,996 - WARNING - sacrebleu - It looks like you forgot to detokenize your test data, which may hurt your score.
+2021-10-02 13:03:09,996 - WARNING - sacrebleu - If you insist your data is detokenized, or don't care, you can suppress this message with the `force` parameter.
+2021-10-02 13:03:10,000 - INFO - joeynmt.training - Hooray! New best validation result [eval_metric]!
+2021-10-02 13:03:10,922 - INFO - joeynmt.helpers - delete models/tr_en_bpe_model/200.ckpt
+2021-10-02 13:03:10,996 - INFO - joeynmt.training - Example #0
+2021-10-02 13:03:10,997 - INFO - joeynmt.training - 	Source:     tr
+2021-10-02 13:03:10,997 - INFO - joeynmt.training - 	Reference:  en
+2021-10-02 13:03:10,997 - INFO - joeynmt.training - 	Hypothesis: Thank you is .
+2021-10-02 13:03:10,997 - INFO - joeynmt.training - Example #1
 --- Logging error ---
 Traceback (most recent call last):
   File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/logging/__init__.py", line 1036, in emit
@@ -841,10 +841,10 @@ Call stack:
     logger.info("\tSource:     %s", sources[p])
 Message: '\tSource:     %s'
 Arguments: ('11 ya\u015f\u0131ndayken bir sabah evimdeki sevinç ç\u0131\u011fl\u0131klar\u0131yla uyand\u0131\u011f\u0131m\u0131 hat\u0131rl\u0131yorum .',)
-2021-10-02 12:03:19,365 - INFO - joeynmt.training - 	Source:     11 ya\u015f\u0131ndayken bir sabah evimdeki sevinç ç\u0131\u011fl\u0131klar\u0131yla uyand\u0131\u011f\u0131m\u0131 hat\u0131rl\u0131yorum .
-2021-10-02 12:03:19,365 - INFO - joeynmt.training - 	Reference:  "When I was 11 , I remember waking up one morning to the sound of joy in my house ."
-2021-10-02 12:03:19,365 - INFO - joeynmt.training - 	Hypothesis: "And the is the of the universe , and the universe is the universe , and I can a way , and I can a way , and I &apos;re a way ."
-2021-10-02 12:03:19,366 - INFO - joeynmt.training - Example #2
+2021-10-02 13:03:10,998 - INFO - joeynmt.training - 	Source:     11 ya\u015f\u0131ndayken bir sabah evimdeki sevinç ç\u0131\u011fl\u0131klar\u0131yla uyand\u0131\u011f\u0131m\u0131 hat\u0131rl\u0131yorum .
+2021-10-02 13:03:10,999 - INFO - joeynmt.training - 	Reference:  "When I was 11 , I remember waking up one morning to the sound of joy in my house ."
+2021-10-02 13:03:10,999 - INFO - joeynmt.training - 	Hypothesis: "And the is the of the universe , and the universe is the universe , and I can a way , and I can a way , and I &apos;re a way ."
+2021-10-02 13:03:10,999 - INFO - joeynmt.training - Example #2
 --- Logging error ---
 Traceback (most recent call last):
   File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/logging/__init__.py", line 1036, in emit
@@ -893,24 +893,24 @@ Call stack:
     logger.info("\tSource:     %s", sources[p])
 Message: '\tSource:     %s'
 Arguments: ('"Babam BBC Haber kanal\u0131n\u0131 dinliyordu ; o ufak , gri radyosundan ."',)
-2021-10-02 12:03:19,366 - INFO - joeynmt.training - 	Source:     "Babam BBC Haber kanal\u0131n\u0131 dinliyordu ; o ufak , gri radyosundan ."
-2021-10-02 12:03:19,366 - INFO - joeynmt.training - 	Reference:  "My father was listening to BBC News on his small , gray radio ."
-2021-10-02 12:03:19,366 - INFO - joeynmt.training - 	Hypothesis: "And I think the universe , &quot; &quot; &quot; &quot; &quot; &quot; &quot; &quot; &quot; &quot; &quot; &quot; &quot; &quot; &quot; &quot; &quot; &quot; &quot; &quot; &quot; &quot; &quot; &quot; &quot; &quot; &quot; &quot; &quot; &quot; &quot; &quot; &quot; &quot; &quot; &quot; I &apos;re the future ."
-2021-10-02 12:03:19,366 - INFO - joeynmt.training - Validation result (greedy) at epoch  11, step      700: bleu:   0.66, loss: 79896.8906, ppl: 192.8500, duration: 4.0758s
-2021-10-02 12:03:24,469 - INFO - joeynmt.training - Epoch  11: total training loss 6968.49
-2021-10-02 12:03:24,470 - INFO - joeynmt.training - EPOCH 12
-2021-10-02 12:03:38,938 - INFO - joeynmt.training - Epoch  12: total training loss 6859.42
-2021-10-02 12:03:38,939 - INFO - joeynmt.training - EPOCH 13
-2021-10-02 12:03:46,398 - WARNING - sacrebleu - That's 100 lines that end in a tokenized period ('.')
-2021-10-02 12:03:46,398 - WARNING - sacrebleu - It looks like you forgot to detokenize your test data, which may hurt your score.
-2021-10-02 12:03:46,398 - WARNING - sacrebleu - If you insist your data is detokenized, or don't care, you can suppress this message with the `force` parameter.
-2021-10-02 12:03:46,402 - INFO - joeynmt.training - Hooray! New best validation result [eval_metric]!
-2021-10-02 12:03:47,499 - INFO - joeynmt.helpers - delete models/tr_en_bpe_model/300.ckpt
-2021-10-02 12:03:47,576 - INFO - joeynmt.training - Example #0
-2021-10-02 12:03:47,576 - INFO - joeynmt.training - 	Source:     tr
-2021-10-02 12:03:47,576 - INFO - joeynmt.training - 	Reference:  en
-2021-10-02 12:03:47,577 - INFO - joeynmt.training - 	Hypothesis: ( Applause )
-2021-10-02 12:03:47,577 - INFO - joeynmt.training - Example #1
+2021-10-02 13:03:10,999 - INFO - joeynmt.training - 	Source:     "Babam BBC Haber kanal\u0131n\u0131 dinliyordu ; o ufak , gri radyosundan ."
+2021-10-02 13:03:11,000 - INFO - joeynmt.training - 	Reference:  "My father was listening to BBC News on his small , gray radio ."
+2021-10-02 13:03:11,000 - INFO - joeynmt.training - 	Hypothesis: "And I think the universe , &quot; &quot; &quot; &quot; &quot; &quot; &quot; &quot; &quot; &quot; &quot; &quot; &quot; &quot; &quot; &quot; &quot; &quot; &quot; &quot; &quot; &quot; &quot; &quot; &quot; &quot; &quot; &quot; &quot; &quot; &quot; &quot; &quot; &quot; &quot; &quot; I &apos;re the future ."
+2021-10-02 13:03:11,000 - INFO - joeynmt.training - Validation result (greedy) at epoch  11, step      700: bleu:   0.66, loss: 76367.5938, ppl: 808.1930, duration: 3.7494s
+2021-10-02 13:03:16,078 - INFO - joeynmt.training - Epoch  11: total training loss 6968.49
+2021-10-02 13:03:16,079 - INFO - joeynmt.training - EPOCH 12
+2021-10-02 13:03:30,576 - INFO - joeynmt.training - Epoch  12: total training loss 6859.42
+2021-10-02 13:03:30,576 - INFO - joeynmt.training - EPOCH 13
+2021-10-02 13:03:37,764 - WARNING - sacrebleu - That's 100 lines that end in a tokenized period ('.')
+2021-10-02 13:03:37,764 - WARNING - sacrebleu - It looks like you forgot to detokenize your test data, which may hurt your score.
+2021-10-02 13:03:37,764 - WARNING - sacrebleu - If you insist your data is detokenized, or don't care, you can suppress this message with the `force` parameter.
+2021-10-02 13:03:37,768 - INFO - joeynmt.training - Hooray! New best validation result [eval_metric]!
+2021-10-02 13:03:38,712 - INFO - joeynmt.helpers - delete models/tr_en_bpe_model/300.ckpt
+2021-10-02 13:03:38,795 - INFO - joeynmt.training - Example #0
+2021-10-02 13:03:38,796 - INFO - joeynmt.training - 	Source:     tr
+2021-10-02 13:03:38,796 - INFO - joeynmt.training - 	Reference:  en
+2021-10-02 13:03:38,796 - INFO - joeynmt.training - 	Hypothesis: ( Applause )
+2021-10-02 13:03:38,796 - INFO - joeynmt.training - Example #1
 --- Logging error ---
 Traceback (most recent call last):
   File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/logging/__init__.py", line 1036, in emit
@@ -959,10 +959,10 @@ Call stack:
     logger.info("\tSource:     %s", sources[p])
 Message: '\tSource:     %s'
 Arguments: ('11 ya\u015f\u0131ndayken bir sabah evimdeki sevinç ç\u0131\u011fl\u0131klar\u0131yla uyand\u0131\u011f\u0131m\u0131 hat\u0131rl\u0131yorum .',)
-2021-10-02 12:03:47,578 - INFO - joeynmt.training - 	Source:     11 ya\u015f\u0131ndayken bir sabah evimdeki sevinç ç\u0131\u011fl\u0131klar\u0131yla uyand\u0131\u011f\u0131m\u0131 hat\u0131rl\u0131yorum .
-2021-10-02 12:03:47,579 - INFO - joeynmt.training - 	Reference:  "When I was 11 , I remember waking up one morning to the sound of joy in my house ."
-2021-10-02 12:03:47,579 - INFO - joeynmt.training - 	Hypothesis: "And we have the little years of the universe , and we have a little of the universe , and we have a way , and we have a very ."
-2021-10-02 12:03:47,579 - INFO - joeynmt.training - Example #2
+2021-10-02 13:03:38,798 - INFO - joeynmt.training - 	Source:     11 ya\u015f\u0131ndayken bir sabah evimdeki sevinç ç\u0131\u011fl\u0131klar\u0131yla uyand\u0131\u011f\u0131m\u0131 hat\u0131rl\u0131yorum .
+2021-10-02 13:03:38,798 - INFO - joeynmt.training - 	Reference:  "When I was 11 , I remember waking up one morning to the sound of joy in my house ."
+2021-10-02 13:03:38,798 - INFO - joeynmt.training - 	Hypothesis: "And we have the little years of the universe , and we have a little of the universe , and we have a way , and we have a very ."
+2021-10-02 13:03:38,798 - INFO - joeynmt.training - Example #2
 --- Logging error ---
 Traceback (most recent call last):
   File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/logging/__init__.py", line 1036, in emit
@@ -1011,22 +1011,22 @@ Call stack:
     logger.info("\tSource:     %s", sources[p])
 Message: '\tSource:     %s'
 Arguments: ('"Babam BBC Haber kanal\u0131n\u0131 dinliyordu ; o ufak , gri radyosundan ."',)
-2021-10-02 12:03:47,579 - INFO - joeynmt.training - 	Source:     "Babam BBC Haber kanal\u0131n\u0131 dinliyordu ; o ufak , gri radyosundan ."
-2021-10-02 12:03:47,579 - INFO - joeynmt.training - 	Reference:  "My father was listening to BBC News on his small , gray radio ."
-2021-10-02 12:03:47,580 - INFO - joeynmt.training - 	Hypothesis: "And I &apos;m a little years of the universe , and we have a way , and we have a ."
-2021-10-02 12:03:47,580 - INFO - joeynmt.training - Validation result (greedy) at epoch  13, step      800: bleu:   0.75, loss: 79104.1562, ppl: 183.0399, duration: 4.2005s
-2021-10-02 12:03:58,889 - INFO - joeynmt.training - Epoch  13: total training loss 6774.42
-2021-10-02 12:03:58,889 - INFO - joeynmt.training - EPOCH 14
-2021-10-02 12:04:14,174 - WARNING - sacrebleu - That's 100 lines that end in a tokenized period ('.')
-2021-10-02 12:04:14,175 - WARNING - sacrebleu - It looks like you forgot to detokenize your test data, which may hurt your score.
-2021-10-02 12:04:14,175 - WARNING - sacrebleu - If you insist your data is detokenized, or don't care, you can suppress this message with the `force` parameter.
-2021-10-02 12:04:14,179 - INFO - joeynmt.training - Hooray! New best validation result [eval_metric]!
-2021-10-02 12:04:15,157 - INFO - joeynmt.helpers - delete models/tr_en_bpe_model/400.ckpt
-2021-10-02 12:04:15,234 - INFO - joeynmt.training - Example #0
-2021-10-02 12:04:15,235 - INFO - joeynmt.training - 	Source:     tr
-2021-10-02 12:04:15,235 - INFO - joeynmt.training - 	Reference:  en
-2021-10-02 12:04:15,235 - INFO - joeynmt.training - 	Hypothesis: The is .
-2021-10-02 12:04:15,235 - INFO - joeynmt.training - Example #1
+2021-10-02 13:03:38,799 - INFO - joeynmt.training - 	Source:     "Babam BBC Haber kanal\u0131n\u0131 dinliyordu ; o ufak , gri radyosundan ."
+2021-10-02 13:03:38,799 - INFO - joeynmt.training - 	Reference:  "My father was listening to BBC News on his small , gray radio ."
+2021-10-02 13:03:38,799 - INFO - joeynmt.training - 	Hypothesis: "And I &apos;m a little years of the universe , and we have a way , and we have a ."
+2021-10-02 13:03:38,799 - INFO - joeynmt.training - Validation result (greedy) at epoch  13, step      800: bleu:   0.75, loss: 75993.7969, ppl: 782.1384, duration: 3.7771s
+2021-10-02 13:03:50,186 - INFO - joeynmt.training - Epoch  13: total training loss 6774.42
+2021-10-02 13:03:50,187 - INFO - joeynmt.training - EPOCH 14
+2021-10-02 13:04:05,186 - WARNING - sacrebleu - That's 100 lines that end in a tokenized period ('.')
+2021-10-02 13:04:05,186 - WARNING - sacrebleu - It looks like you forgot to detokenize your test data, which may hurt your score.
+2021-10-02 13:04:05,186 - WARNING - sacrebleu - If you insist your data is detokenized, or don't care, you can suppress this message with the `force` parameter.
+2021-10-02 13:04:05,190 - INFO - joeynmt.training - Hooray! New best validation result [eval_metric]!
+2021-10-02 13:04:06,424 - INFO - joeynmt.helpers - delete models/tr_en_bpe_model/400.ckpt
+2021-10-02 13:04:06,504 - INFO - joeynmt.training - Example #0
+2021-10-02 13:04:06,505 - INFO - joeynmt.training - 	Source:     tr
+2021-10-02 13:04:06,505 - INFO - joeynmt.training - 	Reference:  en
+2021-10-02 13:04:06,505 - INFO - joeynmt.training - 	Hypothesis: The is .
+2021-10-02 13:04:06,505 - INFO - joeynmt.training - Example #1
 --- Logging error ---
 Traceback (most recent call last):
   File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/logging/__init__.py", line 1036, in emit
@@ -1075,10 +1075,10 @@ Call stack:
     logger.info("\tSource:     %s", sources[p])
 Message: '\tSource:     %s'
 Arguments: ('11 ya\u015f\u0131ndayken bir sabah evimdeki sevinç ç\u0131\u011fl\u0131klar\u0131yla uyand\u0131\u011f\u0131m\u0131 hat\u0131rl\u0131yorum .',)
-2021-10-02 12:04:15,235 - INFO - joeynmt.training - 	Source:     11 ya\u015f\u0131ndayken bir sabah evimdeki sevinç ç\u0131\u011fl\u0131klar\u0131yla uyand\u0131\u011f\u0131m\u0131 hat\u0131rl\u0131yorum .
-2021-10-02 12:04:15,236 - INFO - joeynmt.training - 	Reference:  "When I was 11 , I remember waking up one morning to the sound of joy in my house ."
-2021-10-02 12:04:15,236 - INFO - joeynmt.training - 	Hypothesis: "And I think the first of the universe , and I was a little of the world , and we have a little of the world , and we have a little of the world ."
-2021-10-02 12:04:15,236 - INFO - joeynmt.training - Example #2
+2021-10-02 13:04:06,505 - INFO - joeynmt.training - 	Source:     11 ya\u015f\u0131ndayken bir sabah evimdeki sevinç ç\u0131\u011fl\u0131klar\u0131yla uyand\u0131\u011f\u0131m\u0131 hat\u0131rl\u0131yorum .
+2021-10-02 13:04:06,506 - INFO - joeynmt.training - 	Reference:  "When I was 11 , I remember waking up one morning to the sound of joy in my house ."
+2021-10-02 13:04:06,506 - INFO - joeynmt.training - 	Hypothesis: "And I think the first of the universe , and I was a little of the world , and we have a little of the world , and we have a little of the world ."
+2021-10-02 13:04:06,506 - INFO - joeynmt.training - Example #2
 --- Logging error ---
 Traceback (most recent call last):
   File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/logging/__init__.py", line 1036, in emit
@@ -1127,24 +1127,24 @@ Call stack:
     logger.info("\tSource:     %s", sources[p])
 Message: '\tSource:     %s'
 Arguments: ('"Babam BBC Haber kanal\u0131n\u0131 dinliyordu ; o ufak , gri radyosundan ."',)
-2021-10-02 12:04:15,236 - INFO - joeynmt.training - 	Source:     "Babam BBC Haber kanal\u0131n\u0131 dinliyordu ; o ufak , gri radyosundan ."
-2021-10-02 12:04:15,237 - INFO - joeynmt.training - 	Reference:  "My father was listening to BBC News on his small , gray radio ."
-2021-10-02 12:04:15,237 - INFO - joeynmt.training - 	Hypothesis: "And I think the universe , and we have a little of the world , and we have a little of the world ."
-2021-10-02 12:04:15,237 - INFO - joeynmt.training - Validation result (greedy) at epoch  14, step      900: bleu:   1.10, loss: 78196.4453, ppl: 172.4184, duration: 4.0693s
-2021-10-02 12:04:19,070 - INFO - joeynmt.training - Epoch  14: total training loss 6688.58
-2021-10-02 12:04:19,071 - INFO - joeynmt.training - EPOCH 15
-2021-10-02 12:04:33,466 - INFO - joeynmt.training - Epoch  15: total training loss 6602.34
-2021-10-02 12:04:33,467 - INFO - joeynmt.training - EPOCH 16
-2021-10-02 12:04:39,004 - INFO - joeynmt.training - Epoch  16, Step:     1000, Batch Loss:   101.326813, Tokens per Sec:     7734, Lr: 0.000300
-2021-10-02 12:04:41,983 - WARNING - sacrebleu - That's 100 lines that end in a tokenized period ('.')
-2021-10-02 12:04:41,983 - WARNING - sacrebleu - It looks like you forgot to detokenize your test data, which may hurt your score.
-2021-10-02 12:04:41,983 - WARNING - sacrebleu - If you insist your data is detokenized, or don't care, you can suppress this message with the `force` parameter.
-2021-10-02 12:04:42,922 - INFO - joeynmt.helpers - delete models/tr_en_bpe_model/600.ckpt
-2021-10-02 12:04:42,993 - INFO - joeynmt.training - Example #0
-2021-10-02 12:04:42,993 - INFO - joeynmt.training - 	Source:     tr
-2021-10-02 12:04:42,993 - INFO - joeynmt.training - 	Reference:  en
-2021-10-02 12:04:42,993 - INFO - joeynmt.training - 	Hypothesis: And you very much .
-2021-10-02 12:04:42,994 - INFO - joeynmt.training - Example #1
+2021-10-02 13:04:06,506 - INFO - joeynmt.training - 	Source:     "Babam BBC Haber kanal\u0131n\u0131 dinliyordu ; o ufak , gri radyosundan ."
+2021-10-02 13:04:06,507 - INFO - joeynmt.training - 	Reference:  "My father was listening to BBC News on his small , gray radio ."
+2021-10-02 13:04:06,507 - INFO - joeynmt.training - 	Hypothesis: "And I think the universe , and we have a little of the world , and we have a little of the world ."
+2021-10-02 13:04:06,507 - INFO - joeynmt.training - Validation result (greedy) at epoch  14, step      900: bleu:   1.10, loss: 75801.8906, ppl: 769.0900, duration: 4.0337s
+2021-10-02 13:04:10,420 - INFO - joeynmt.training - Epoch  14: total training loss 6688.58
+2021-10-02 13:04:10,421 - INFO - joeynmt.training - EPOCH 15
+2021-10-02 13:04:24,864 - INFO - joeynmt.training - Epoch  15: total training loss 6602.34
+2021-10-02 13:04:24,865 - INFO - joeynmt.training - EPOCH 16
+2021-10-02 13:04:30,433 - INFO - joeynmt.training - Epoch  16, Step:     1000, Batch Loss:   101.326813, Tokens per Sec:     7692, Lr: 0.000300
+2021-10-02 13:04:33,184 - WARNING - sacrebleu - That's 100 lines that end in a tokenized period ('.')
+2021-10-02 13:04:33,184 - WARNING - sacrebleu - It looks like you forgot to detokenize your test data, which may hurt your score.
+2021-10-02 13:04:33,184 - WARNING - sacrebleu - If you insist your data is detokenized, or don't care, you can suppress this message with the `force` parameter.
+2021-10-02 13:04:34,109 - INFO - joeynmt.helpers - delete models/tr_en_bpe_model/600.ckpt
+2021-10-02 13:04:34,184 - INFO - joeynmt.training - Example #0
+2021-10-02 13:04:34,185 - INFO - joeynmt.training - 	Source:     tr
+2021-10-02 13:04:34,185 - INFO - joeynmt.training - 	Reference:  en
+2021-10-02 13:04:34,185 - INFO - joeynmt.training - 	Hypothesis: And you very much .
+2021-10-02 13:04:34,185 - INFO - joeynmt.training - Example #1
 --- Logging error ---
 Traceback (most recent call last):
   File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/logging/__init__.py", line 1036, in emit
@@ -1193,10 +1193,10 @@ Call stack:
     logger.info("\tSource:     %s", sources[p])
 Message: '\tSource:     %s'
 Arguments: ('11 ya\u015f\u0131ndayken bir sabah evimdeki sevinç ç\u0131\u011fl\u0131klar\u0131yla uyand\u0131\u011f\u0131m\u0131 hat\u0131rl\u0131yorum .',)
-2021-10-02 12:04:42,996 - INFO - joeynmt.training - 	Source:     11 ya\u015f\u0131ndayken bir sabah evimdeki sevinç ç\u0131\u011fl\u0131klar\u0131yla uyand\u0131\u011f\u0131m\u0131 hat\u0131rl\u0131yorum .
-2021-10-02 12:04:42,996 - INFO - joeynmt.training - 	Reference:  "When I was 11 , I remember waking up one morning to the sound of joy in my house ."
-2021-10-02 12:04:42,996 - INFO - joeynmt.training - 	Hypothesis: "And the oltzmann is the first years , and I think the first dimensions , and I was a little dimensions of the world , and I was a little dimensions of the world ."
-2021-10-02 12:04:42,996 - INFO - joeynmt.training - Example #2
+2021-10-02 13:04:34,186 - INFO - joeynmt.training - 	Source:     11 ya\u015f\u0131ndayken bir sabah evimdeki sevinç ç\u0131\u011fl\u0131klar\u0131yla uyand\u0131\u011f\u0131m\u0131 hat\u0131rl\u0131yorum .
+2021-10-02 13:04:34,187 - INFO - joeynmt.training - 	Reference:  "When I was 11 , I remember waking up one morning to the sound of joy in my house ."
+2021-10-02 13:04:34,187 - INFO - joeynmt.training - 	Hypothesis: "And the oltzmann is the first years , and I think the first dimensions , and I was a little dimensions of the world , and I was a little dimensions of the world ."
+2021-10-02 13:04:34,187 - INFO - joeynmt.training - Example #2
 --- Logging error ---
 Traceback (most recent call last):
   File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/logging/__init__.py", line 1036, in emit
@@ -1245,21 +1245,21 @@ Call stack:
     logger.info("\tSource:     %s", sources[p])
 Message: '\tSource:     %s'
 Arguments: ('"Babam BBC Haber kanal\u0131n\u0131 dinliyordu ; o ufak , gri radyosundan ."',)
-2021-10-02 12:04:42,997 - INFO - joeynmt.training - 	Source:     "Babam BBC Haber kanal\u0131n\u0131 dinliyordu ; o ufak , gri radyosundan ."
-2021-10-02 12:04:42,997 - INFO - joeynmt.training - 	Reference:  "My father was listening to BBC News on his small , gray radio ."
-2021-10-02 12:04:42,997 - INFO - joeynmt.training - 	Hypothesis: "And I think the first years of the world , and we have to be the best of the world , and we have a very ."
-2021-10-02 12:04:42,997 - INFO - joeynmt.training - Validation result (greedy) at epoch  16, step     1000: bleu:   0.85, loss: 77993.2031, ppl: 170.1259, duration: 3.9923s
-2021-10-02 12:04:53,524 - INFO - joeynmt.training - Epoch  16: total training loss 6529.47
-2021-10-02 12:04:53,524 - INFO - joeynmt.training - EPOCH 17
-2021-10-02 12:05:10,023 - WARNING - sacrebleu - That's 100 lines that end in a tokenized period ('.')
-2021-10-02 12:05:10,024 - WARNING - sacrebleu - It looks like you forgot to detokenize your test data, which may hurt your score.
-2021-10-02 12:05:10,024 - WARNING - sacrebleu - If you insist your data is detokenized, or don't care, you can suppress this message with the `force` parameter.
-2021-10-02 12:05:10,990 - INFO - joeynmt.helpers - delete models/tr_en_bpe_model/500.ckpt
-2021-10-02 12:05:11,057 - INFO - joeynmt.training - Example #0
-2021-10-02 12:05:11,057 - INFO - joeynmt.training - 	Source:     tr
-2021-10-02 12:05:11,057 - INFO - joeynmt.training - 	Reference:  en
-2021-10-02 12:05:11,057 - INFO - joeynmt.training - 	Hypothesis: Not you very much .
-2021-10-02 12:05:11,057 - INFO - joeynmt.training - Example #1
+2021-10-02 13:04:34,187 - INFO - joeynmt.training - 	Source:     "Babam BBC Haber kanal\u0131n\u0131 dinliyordu ; o ufak , gri radyosundan ."
+2021-10-02 13:04:34,188 - INFO - joeynmt.training - 	Reference:  "My father was listening to BBC News on his small , gray radio ."
+2021-10-02 13:04:34,188 - INFO - joeynmt.training - 	Hypothesis: "And I think the first years of the world , and we have to be the best of the world , and we have a very ."
+2021-10-02 13:04:34,188 - INFO - joeynmt.training - Validation result (greedy) at epoch  16, step     1000: bleu:   0.85, loss: 76794.5703, ppl: 839.0176, duration: 3.7537s
+2021-10-02 13:04:44,849 - INFO - joeynmt.training - Epoch  16: total training loss 6529.47
+2021-10-02 13:04:44,849 - INFO - joeynmt.training - EPOCH 17
+2021-10-02 13:05:01,086 - WARNING - sacrebleu - That's 100 lines that end in a tokenized period ('.')
+2021-10-02 13:05:01,086 - WARNING - sacrebleu - It looks like you forgot to detokenize your test data, which may hurt your score.
+2021-10-02 13:05:01,086 - WARNING - sacrebleu - If you insist your data is detokenized, or don't care, you can suppress this message with the `force` parameter.
+2021-10-02 13:05:01,974 - INFO - joeynmt.helpers - delete models/tr_en_bpe_model/500.ckpt
+2021-10-02 13:05:02,052 - INFO - joeynmt.training - Example #0
+2021-10-02 13:05:02,053 - INFO - joeynmt.training - 	Source:     tr
+2021-10-02 13:05:02,053 - INFO - joeynmt.training - 	Reference:  en
+2021-10-02 13:05:02,053 - INFO - joeynmt.training - 	Hypothesis: Not you very much .
+2021-10-02 13:05:02,053 - INFO - joeynmt.training - Example #1
 --- Logging error ---
 Traceback (most recent call last):
   File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/logging/__init__.py", line 1036, in emit
@@ -1308,10 +1308,10 @@ Call stack:
     logger.info("\tSource:     %s", sources[p])
 Message: '\tSource:     %s'
 Arguments: ('11 ya\u015f\u0131ndayken bir sabah evimdeki sevinç ç\u0131\u011fl\u0131klar\u0131yla uyand\u0131\u011f\u0131m\u0131 hat\u0131rl\u0131yorum .',)
-2021-10-02 12:05:11,059 - INFO - joeynmt.training - 	Source:     11 ya\u015f\u0131ndayken bir sabah evimdeki sevinç ç\u0131\u011fl\u0131klar\u0131yla uyand\u0131\u011f\u0131m\u0131 hat\u0131rl\u0131yorum .
-2021-10-02 12:05:11,059 - INFO - joeynmt.training - 	Reference:  "When I was 11 , I remember waking up one morning to the sound of joy in my house ."
-2021-10-02 12:05:11,059 - INFO - joeynmt.training - 	Hypothesis: "And I think I think that I was a little person , and I was a little bit of the world , and I was a little bit of the world ."
-2021-10-02 12:05:11,059 - INFO - joeynmt.training - Example #2
+2021-10-02 13:05:02,055 - INFO - joeynmt.training - 	Source:     11 ya\u015f\u0131ndayken bir sabah evimdeki sevinç ç\u0131\u011fl\u0131klar\u0131yla uyand\u0131\u011f\u0131m\u0131 hat\u0131rl\u0131yorum .
+2021-10-02 13:05:02,055 - INFO - joeynmt.training - 	Reference:  "When I was 11 , I remember waking up one morning to the sound of joy in my house ."
+2021-10-02 13:05:02,055 - INFO - joeynmt.training - 	Hypothesis: "And I think I think that I was a little person , and I was a little bit of the world , and I was a little bit of the world ."
+2021-10-02 13:05:02,055 - INFO - joeynmt.training - Example #2
 --- Logging error ---
 Traceback (most recent call last):
   File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/logging/__init__.py", line 1036, in emit
@@ -1360,24 +1360,24 @@ Call stack:
     logger.info("\tSource:     %s", sources[p])
 Message: '\tSource:     %s'
 Arguments: ('"Babam BBC Haber kanal\u0131n\u0131 dinliyordu ; o ufak , gri radyosundan ."',)
-2021-10-02 12:05:11,060 - INFO - joeynmt.training - 	Source:     "Babam BBC Haber kanal\u0131n\u0131 dinliyordu ; o ufak , gri radyosundan ."
-2021-10-02 12:05:11,060 - INFO - joeynmt.training - 	Reference:  "My father was listening to BBC News on his small , gray radio ."
-2021-10-02 12:05:11,060 - INFO - joeynmt.training - 	Hypothesis: "And I think that we &apos;re going to be a little person , and I was a lot of the world ."
-2021-10-02 12:05:11,060 - INFO - joeynmt.training - Validation result (greedy) at epoch  17, step     1100: bleu:   1.01, loss: 77379.8047, ppl: 163.3902, duration: 4.1059s
-2021-10-02 12:05:13,606 - INFO - joeynmt.training - Epoch  17: total training loss 6454.89
-2021-10-02 12:05:13,606 - INFO - joeynmt.training - EPOCH 18
-2021-10-02 12:05:28,078 - INFO - joeynmt.training - Epoch  18: total training loss 6295.90
-2021-10-02 12:05:28,078 - INFO - joeynmt.training - EPOCH 19
-2021-10-02 12:05:37,838 - WARNING - sacrebleu - That's 100 lines that end in a tokenized period ('.')
-2021-10-02 12:05:37,838 - WARNING - sacrebleu - It looks like you forgot to detokenize your test data, which may hurt your score.
-2021-10-02 12:05:37,838 - WARNING - sacrebleu - If you insist your data is detokenized, or don't care, you can suppress this message with the `force` parameter.
-2021-10-02 12:05:37,842 - INFO - joeynmt.training - Hooray! New best validation result [eval_metric]!
-2021-10-02 12:05:38,727 - INFO - joeynmt.helpers - delete models/tr_en_bpe_model/700.ckpt
-2021-10-02 12:05:38,804 - INFO - joeynmt.training - Example #0
-2021-10-02 12:05:38,805 - INFO - joeynmt.training - 	Source:     tr
-2021-10-02 12:05:38,805 - INFO - joeynmt.training - 	Reference:  en
-2021-10-02 12:05:38,805 - INFO - joeynmt.training - 	Hypothesis: Not you very much .
-2021-10-02 12:05:38,805 - INFO - joeynmt.training - Example #1
+2021-10-02 13:05:02,056 - INFO - joeynmt.training - 	Source:     "Babam BBC Haber kanal\u0131n\u0131 dinliyordu ; o ufak , gri radyosundan ."
+2021-10-02 13:05:02,056 - INFO - joeynmt.training - 	Reference:  "My father was listening to BBC News on his small , gray radio ."
+2021-10-02 13:05:02,056 - INFO - joeynmt.training - 	Hypothesis: "And I think that we &apos;re going to be a little person , and I was a lot of the world ."
+2021-10-02 13:05:02,056 - INFO - joeynmt.training - Validation result (greedy) at epoch  17, step     1100: bleu:   1.01, loss: 75965.6250, ppl: 780.2092, duration: 3.7672s
+2021-10-02 13:05:04,584 - INFO - joeynmt.training - Epoch  17: total training loss 6454.89
+2021-10-02 13:05:04,585 - INFO - joeynmt.training - EPOCH 18
+2021-10-02 13:05:19,022 - INFO - joeynmt.training - Epoch  18: total training loss 6295.90
+2021-10-02 13:05:19,022 - INFO - joeynmt.training - EPOCH 19
+2021-10-02 13:05:28,476 - WARNING - sacrebleu - That's 100 lines that end in a tokenized period ('.')
+2021-10-02 13:05:28,476 - WARNING - sacrebleu - It looks like you forgot to detokenize your test data, which may hurt your score.
+2021-10-02 13:05:28,476 - WARNING - sacrebleu - If you insist your data is detokenized, or don't care, you can suppress this message with the `force` parameter.
+2021-10-02 13:05:28,481 - INFO - joeynmt.training - Hooray! New best validation result [eval_metric]!
+2021-10-02 13:05:29,389 - INFO - joeynmt.helpers - delete models/tr_en_bpe_model/700.ckpt
+2021-10-02 13:05:29,469 - INFO - joeynmt.training - Example #0
+2021-10-02 13:05:29,469 - INFO - joeynmt.training - 	Source:     tr
+2021-10-02 13:05:29,469 - INFO - joeynmt.training - 	Reference:  en
+2021-10-02 13:05:29,469 - INFO - joeynmt.training - 	Hypothesis: Not you very much .
+2021-10-02 13:05:29,469 - INFO - joeynmt.training - Example #1
 --- Logging error ---
 Traceback (most recent call last):
   File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/logging/__init__.py", line 1036, in emit
@@ -1426,10 +1426,10 @@ Call stack:
     logger.info("\tSource:     %s", sources[p])
 Message: '\tSource:     %s'
 Arguments: ('11 ya\u015f\u0131ndayken bir sabah evimdeki sevinç ç\u0131\u011fl\u0131klar\u0131yla uyand\u0131\u011f\u0131m\u0131 hat\u0131rl\u0131yorum .',)
-2021-10-02 12:05:38,806 - INFO - joeynmt.training - 	Source:     11 ya\u015f\u0131ndayken bir sabah evimdeki sevinç ç\u0131\u011fl\u0131klar\u0131yla uyand\u0131\u011f\u0131m\u0131 hat\u0131rl\u0131yorum .
-2021-10-02 12:05:38,807 - INFO - joeynmt.training - 	Reference:  "When I was 11 , I remember waking up one morning to the sound of joy in my house ."
-2021-10-02 12:05:38,807 - INFO - joeynmt.training - 	Hypothesis: "And I think that we &apos;re going to be , and I was a little bit of the universe , and I was a little bit of the world , and we have a very bit ."
-2021-10-02 12:05:38,807 - INFO - joeynmt.training - Example #2
+2021-10-02 13:05:29,470 - INFO - joeynmt.training - 	Source:     11 ya\u015f\u0131ndayken bir sabah evimdeki sevinç ç\u0131\u011fl\u0131klar\u0131yla uyand\u0131\u011f\u0131m\u0131 hat\u0131rl\u0131yorum .
+2021-10-02 13:05:29,470 - INFO - joeynmt.training - 	Reference:  "When I was 11 , I remember waking up one morning to the sound of joy in my house ."
+2021-10-02 13:05:29,470 - INFO - joeynmt.training - 	Hypothesis: "And I think that we &apos;re going to be , and I was a little bit of the universe , and I was a little bit of the world , and we have a very bit ."
+2021-10-02 13:05:29,470 - INFO - joeynmt.training - Example #2
 --- Logging error ---
 Traceback (most recent call last):
   File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/logging/__init__.py", line 1036, in emit
@@ -1478,21 +1478,21 @@ Call stack:
     logger.info("\tSource:     %s", sources[p])
 Message: '\tSource:     %s'
 Arguments: ('"Babam BBC Haber kanal\u0131n\u0131 dinliyordu ; o ufak , gri radyosundan ."',)
-2021-10-02 12:05:38,807 - INFO - joeynmt.training - 	Source:     "Babam BBC Haber kanal\u0131n\u0131 dinliyordu ; o ufak , gri radyosundan ."
-2021-10-02 12:05:38,808 - INFO - joeynmt.training - 	Reference:  "My father was listening to BBC News on his small , gray radio ."
-2021-10-02 12:05:38,808 - INFO - joeynmt.training - 	Hypothesis: "And the point is that we &apos;re going to be a couple of the world , and we have a lot of the world ."
-2021-10-02 12:05:38,808 - INFO - joeynmt.training - Validation result (greedy) at epoch  19, step     1200: bleu:   1.31, loss: 77057.5781, ppl: 159.9593, duration: 3.9747s
-2021-10-02 12:05:48,161 - INFO - joeynmt.training - Epoch  19: total training loss 6263.86
-2021-10-02 12:05:48,161 - INFO - joeynmt.training - EPOCH 20
-2021-10-02 12:06:05,708 - WARNING - sacrebleu - That's 100 lines that end in a tokenized period ('.')
-2021-10-02 12:06:05,708 - WARNING - sacrebleu - It looks like you forgot to detokenize your test data, which may hurt your score.
-2021-10-02 12:06:05,708 - WARNING - sacrebleu - If you insist your data is detokenized, or don't care, you can suppress this message with the `force` parameter.
-2021-10-02 12:06:06,586 - INFO - joeynmt.helpers - delete models/tr_en_bpe_model/800.ckpt
-2021-10-02 12:06:06,663 - INFO - joeynmt.training - Example #0
-2021-10-02 12:06:06,663 - INFO - joeynmt.training - 	Source:     tr
-2021-10-02 12:06:06,663 - INFO - joeynmt.training - 	Reference:  en
-2021-10-02 12:06:06,663 - INFO - joeynmt.training - 	Hypothesis: Not you very much .
-2021-10-02 12:06:06,663 - INFO - joeynmt.training - Example #1
+2021-10-02 13:05:29,471 - INFO - joeynmt.training - 	Source:     "Babam BBC Haber kanal\u0131n\u0131 dinliyordu ; o ufak , gri radyosundan ."
+2021-10-02 13:05:29,471 - INFO - joeynmt.training - 	Reference:  "My father was listening to BBC News on his small , gray radio ."
+2021-10-02 13:05:29,471 - INFO - joeynmt.training - 	Hypothesis: "And the point is that we &apos;re going to be a couple of the world , and we have a lot of the world ."
+2021-10-02 13:05:29,471 - INFO - joeynmt.training - Validation result (greedy) at epoch  19, step     1200: bleu:   1.31, loss: 76181.5781, ppl: 795.1204, duration: 3.6999s
+2021-10-02 13:05:38,838 - INFO - joeynmt.training - Epoch  19: total training loss 6263.86
+2021-10-02 13:05:38,839 - INFO - joeynmt.training - EPOCH 20
+2021-10-02 13:05:55,998 - WARNING - sacrebleu - That's 100 lines that end in a tokenized period ('.')
+2021-10-02 13:05:55,998 - WARNING - sacrebleu - It looks like you forgot to detokenize your test data, which may hurt your score.
+2021-10-02 13:05:55,998 - WARNING - sacrebleu - If you insist your data is detokenized, or don't care, you can suppress this message with the `force` parameter.
+2021-10-02 13:05:56,940 - INFO - joeynmt.helpers - delete models/tr_en_bpe_model/800.ckpt
+2021-10-02 13:05:57,013 - INFO - joeynmt.training - Example #0
+2021-10-02 13:05:57,013 - INFO - joeynmt.training - 	Source:     tr
+2021-10-02 13:05:57,013 - INFO - joeynmt.training - 	Reference:  en
+2021-10-02 13:05:57,013 - INFO - joeynmt.training - 	Hypothesis: Not you very much .
+2021-10-02 13:05:57,013 - INFO - joeynmt.training - Example #1
 --- Logging error ---
 Traceback (most recent call last):
   File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/logging/__init__.py", line 1036, in emit
@@ -1541,10 +1541,10 @@ Call stack:
     logger.info("\tSource:     %s", sources[p])
 Message: '\tSource:     %s'
 Arguments: ('11 ya\u015f\u0131ndayken bir sabah evimdeki sevinç ç\u0131\u011fl\u0131klar\u0131yla uyand\u0131\u011f\u0131m\u0131 hat\u0131rl\u0131yorum .',)
-2021-10-02 12:06:06,665 - INFO - joeynmt.training - 	Source:     11 ya\u015f\u0131ndayken bir sabah evimdeki sevinç ç\u0131\u011fl\u0131klar\u0131yla uyand\u0131\u011f\u0131m\u0131 hat\u0131rl\u0131yorum .
-2021-10-02 12:06:06,665 - INFO - joeynmt.training - 	Reference:  "When I was 11 , I remember waking up one morning to the sound of joy in my house ."
-2021-10-02 12:06:06,665 - INFO - joeynmt.training - 	Hypothesis: "And I think that we have a little end of the world , and I was a little bit of the world , and I was a little bit of the world ."
-2021-10-02 12:06:06,665 - INFO - joeynmt.training - Example #2
+2021-10-02 13:05:57,014 - INFO - joeynmt.training - 	Source:     11 ya\u015f\u0131ndayken bir sabah evimdeki sevinç ç\u0131\u011fl\u0131klar\u0131yla uyand\u0131\u011f\u0131m\u0131 hat\u0131rl\u0131yorum .
+2021-10-02 13:05:57,014 - INFO - joeynmt.training - 	Reference:  "When I was 11 , I remember waking up one morning to the sound of joy in my house ."
+2021-10-02 13:05:57,014 - INFO - joeynmt.training - 	Hypothesis: "And I think that we have a little end of the world , and I was a little bit of the world , and I was a little bit of the world ."
+2021-10-02 13:05:57,014 - INFO - joeynmt.training - Example #2
 --- Logging error ---
 Traceback (most recent call last):
   File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/logging/__init__.py", line 1036, in emit
@@ -1593,23 +1593,23 @@ Call stack:
     logger.info("\tSource:     %s", sources[p])
 Message: '\tSource:     %s'
 Arguments: ('"Babam BBC Haber kanal\u0131n\u0131 dinliyordu ; o ufak , gri radyosundan ."',)
-2021-10-02 12:06:06,666 - INFO - joeynmt.training - 	Source:     "Babam BBC Haber kanal\u0131n\u0131 dinliyordu ; o ufak , gri radyosundan ."
-2021-10-02 12:06:06,666 - INFO - joeynmt.training - 	Reference:  "My father was listening to BBC News on his small , gray radio ."
-2021-10-02 12:06:06,666 - INFO - joeynmt.training - 	Hypothesis: "And the point is , we &apos;re a little bit of the world , and we have a lot of the world ."
-2021-10-02 12:06:06,666 - INFO - joeynmt.training - Validation result (greedy) at epoch  20, step     1300: bleu:   1.30, loss: 77011.0547, ppl: 159.4700, duration: 3.9605s
-2021-10-02 12:06:08,106 - INFO - joeynmt.training - Epoch  20: total training loss 6253.98
-2021-10-02 12:06:08,117 - INFO - joeynmt.training - EPOCH 21
-2021-10-02 12:06:22,609 - INFO - joeynmt.training - Epoch  21: total training loss 6240.15
-2021-10-02 12:06:22,610 - INFO - joeynmt.training - EPOCH 22
-2021-10-02 12:06:33,543 - WARNING - sacrebleu - That's 100 lines that end in a tokenized period ('.')
-2021-10-02 12:06:33,543 - WARNING - sacrebleu - It looks like you forgot to detokenize your test data, which may hurt your score.
-2021-10-02 12:06:33,543 - WARNING - sacrebleu - If you insist your data is detokenized, or don't care, you can suppress this message with the `force` parameter.
-2021-10-02 12:06:34,466 - INFO - joeynmt.helpers - delete models/tr_en_bpe_model/1000.ckpt
-2021-10-02 12:06:34,542 - INFO - joeynmt.training - Example #0
-2021-10-02 12:06:34,542 - INFO - joeynmt.training - 	Source:     tr
-2021-10-02 12:06:34,542 - INFO - joeynmt.training - 	Reference:  en
-2021-10-02 12:06:34,542 - INFO - joeynmt.training - 	Hypothesis: Not you very much .
-2021-10-02 12:06:34,542 - INFO - joeynmt.training - Example #1
+2021-10-02 13:05:57,015 - INFO - joeynmt.training - 	Source:     "Babam BBC Haber kanal\u0131n\u0131 dinliyordu ; o ufak , gri radyosundan ."
+2021-10-02 13:05:57,015 - INFO - joeynmt.training - 	Reference:  "My father was listening to BBC News on his small , gray radio ."
+2021-10-02 13:05:57,015 - INFO - joeynmt.training - 	Hypothesis: "And the point is , we &apos;re a little bit of the world , and we have a lot of the world ."
+2021-10-02 13:05:57,015 - INFO - joeynmt.training - Validation result (greedy) at epoch  20, step     1300: bleu:   1.30, loss: 76360.6484, ppl: 807.7010, duration: 3.6873s
+2021-10-02 13:05:58,471 - INFO - joeynmt.training - Epoch  20: total training loss 6253.98
+2021-10-02 13:05:58,483 - INFO - joeynmt.training - EPOCH 21
+2021-10-02 13:06:12,951 - INFO - joeynmt.training - Epoch  21: total training loss 6240.15
+2021-10-02 13:06:12,952 - INFO - joeynmt.training - EPOCH 22
+2021-10-02 13:06:23,495 - WARNING - sacrebleu - That's 100 lines that end in a tokenized period ('.')
+2021-10-02 13:06:23,495 - WARNING - sacrebleu - It looks like you forgot to detokenize your test data, which may hurt your score.
+2021-10-02 13:06:23,495 - WARNING - sacrebleu - If you insist your data is detokenized, or don't care, you can suppress this message with the `force` parameter.
+2021-10-02 13:06:24,421 - INFO - joeynmt.helpers - delete models/tr_en_bpe_model/1000.ckpt
+2021-10-02 13:06:24,503 - INFO - joeynmt.training - Example #0
+2021-10-02 13:06:24,504 - INFO - joeynmt.training - 	Source:     tr
+2021-10-02 13:06:24,504 - INFO - joeynmt.training - 	Reference:  en
+2021-10-02 13:06:24,504 - INFO - joeynmt.training - 	Hypothesis: Not you very much .
+2021-10-02 13:06:24,504 - INFO - joeynmt.training - Example #1
 --- Logging error ---
 Traceback (most recent call last):
   File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/logging/__init__.py", line 1036, in emit
@@ -1658,10 +1658,10 @@ Call stack:
     logger.info("\tSource:     %s", sources[p])
 Message: '\tSource:     %s'
 Arguments: ('11 ya\u015f\u0131ndayken bir sabah evimdeki sevinç ç\u0131\u011fl\u0131klar\u0131yla uyand\u0131\u011f\u0131m\u0131 hat\u0131rl\u0131yorum .',)
-2021-10-02 12:06:34,544 - INFO - joeynmt.training - 	Source:     11 ya\u015f\u0131ndayken bir sabah evimdeki sevinç ç\u0131\u011fl\u0131klar\u0131yla uyand\u0131\u011f\u0131m\u0131 hat\u0131rl\u0131yorum .
-2021-10-02 12:06:34,544 - INFO - joeynmt.training - 	Reference:  "When I was 11 , I remember waking up one morning to the sound of joy in my house ."
-2021-10-02 12:06:34,544 - INFO - joeynmt.training - 	Hypothesis: "And I think that we have a little dimensions , and I was a little bit of the universe , and I was a little bit of the world , and we have a little dimensions ."
-2021-10-02 12:06:34,544 - INFO - joeynmt.training - Example #2
+2021-10-02 13:06:24,506 - INFO - joeynmt.training - 	Source:     11 ya\u015f\u0131ndayken bir sabah evimdeki sevinç ç\u0131\u011fl\u0131klar\u0131yla uyand\u0131\u011f\u0131m\u0131 hat\u0131rl\u0131yorum .
+2021-10-02 13:06:24,506 - INFO - joeynmt.training - 	Reference:  "When I was 11 , I remember waking up one morning to the sound of joy in my house ."
+2021-10-02 13:06:24,506 - INFO - joeynmt.training - 	Hypothesis: "And I think that we have a little dimensions , and I was a little bit of the universe , and I was a little bit of the world , and we have a little dimensions ."
+2021-10-02 13:06:24,506 - INFO - joeynmt.training - Example #2
 --- Logging error ---
 Traceback (most recent call last):
   File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/logging/__init__.py", line 1036, in emit
@@ -1710,23 +1710,23 @@ Call stack:
     logger.info("\tSource:     %s", sources[p])
 Message: '\tSource:     %s'
 Arguments: ('"Babam BBC Haber kanal\u0131n\u0131 dinliyordu ; o ufak , gri radyosundan ."',)
-2021-10-02 12:06:34,545 - INFO - joeynmt.training - 	Source:     "Babam BBC Haber kanal\u0131n\u0131 dinliyordu ; o ufak , gri radyosundan ."
-2021-10-02 12:06:34,545 - INFO - joeynmt.training - 	Reference:  "My father was listening to BBC News on his small , gray radio ."
-2021-10-02 12:06:34,545 - INFO - joeynmt.training - 	Hypothesis: "And the point is that we &apos;re a little bit of the world , and we have a lot of the world ."
-2021-10-02 12:06:34,545 - INFO - joeynmt.training - Validation result (greedy) at epoch  22, step     1400: bleu:   1.22, loss: 76978.0469, ppl: 159.1237, duration: 4.0219s
-2021-10-02 12:06:42,858 - INFO - joeynmt.training - Epoch  22: total training loss 6224.79
-2021-10-02 12:06:42,858 - INFO - joeynmt.training - EPOCH 23
-2021-10-02 12:06:57,395 - INFO - joeynmt.training - Epoch  23: total training loss 6208.59
-2021-10-02 12:06:57,395 - INFO - joeynmt.training - EPOCH 24
-2021-10-02 12:07:01,552 - WARNING - sacrebleu - That's 100 lines that end in a tokenized period ('.')
-2021-10-02 12:07:01,552 - WARNING - sacrebleu - It looks like you forgot to detokenize your test data, which may hurt your score.
-2021-10-02 12:07:01,552 - WARNING - sacrebleu - If you insist your data is detokenized, or don't care, you can suppress this message with the `force` parameter.
-2021-10-02 12:07:02,515 - INFO - joeynmt.helpers - delete models/tr_en_bpe_model/1100.ckpt
-2021-10-02 12:07:02,593 - INFO - joeynmt.training - Example #0
-2021-10-02 12:07:02,593 - INFO - joeynmt.training - 	Source:     tr
-2021-10-02 12:07:02,594 - INFO - joeynmt.training - 	Reference:  en
-2021-10-02 12:07:02,594 - INFO - joeynmt.training - 	Hypothesis: Not you very much .
-2021-10-02 12:07:02,594 - INFO - joeynmt.training - Example #1
+2021-10-02 13:06:24,507 - INFO - joeynmt.training - 	Source:     "Babam BBC Haber kanal\u0131n\u0131 dinliyordu ; o ufak , gri radyosundan ."
+2021-10-02 13:06:24,507 - INFO - joeynmt.training - 	Reference:  "My father was listening to BBC News on his small , gray radio ."
+2021-10-02 13:06:24,507 - INFO - joeynmt.training - 	Hypothesis: "And the point is that we &apos;re a little bit of the world , and we have a lot of the world ."
+2021-10-02 13:06:24,507 - INFO - joeynmt.training - Validation result (greedy) at epoch  22, step     1400: bleu:   1.22, loss: 76490.4141, ppl: 816.9418, duration: 3.6807s
+2021-10-02 13:06:32,634 - INFO - joeynmt.training - Epoch  22: total training loss 6224.79
+2021-10-02 13:06:32,634 - INFO - joeynmt.training - EPOCH 23
+2021-10-02 13:06:47,127 - INFO - joeynmt.training - Epoch  23: total training loss 6208.59
+2021-10-02 13:06:47,127 - INFO - joeynmt.training - EPOCH 24
+2021-10-02 13:06:51,006 - WARNING - sacrebleu - That's 100 lines that end in a tokenized period ('.')
+2021-10-02 13:06:51,006 - WARNING - sacrebleu - It looks like you forgot to detokenize your test data, which may hurt your score.
+2021-10-02 13:06:51,006 - WARNING - sacrebleu - If you insist your data is detokenized, or don't care, you can suppress this message with the `force` parameter.
+2021-10-02 13:06:52,118 - INFO - joeynmt.helpers - delete models/tr_en_bpe_model/1100.ckpt
+2021-10-02 13:06:52,196 - INFO - joeynmt.training - Example #0
+2021-10-02 13:06:52,196 - INFO - joeynmt.training - 	Source:     tr
+2021-10-02 13:06:52,196 - INFO - joeynmt.training - 	Reference:  en
+2021-10-02 13:06:52,196 - INFO - joeynmt.training - 	Hypothesis: Not you very much .
+2021-10-02 13:06:52,196 - INFO - joeynmt.training - Example #1
 --- Logging error ---
 Traceback (most recent call last):
   File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/logging/__init__.py", line 1036, in emit
@@ -1775,10 +1775,10 @@ Call stack:
     logger.info("\tSource:     %s", sources[p])
 Message: '\tSource:     %s'
 Arguments: ('11 ya\u015f\u0131ndayken bir sabah evimdeki sevinç ç\u0131\u011fl\u0131klar\u0131yla uyand\u0131\u011f\u0131m\u0131 hat\u0131rl\u0131yorum .',)
-2021-10-02 12:07:02,595 - INFO - joeynmt.training - 	Source:     11 ya\u015f\u0131ndayken bir sabah evimdeki sevinç ç\u0131\u011fl\u0131klar\u0131yla uyand\u0131\u011f\u0131m\u0131 hat\u0131rl\u0131yorum .
-2021-10-02 12:07:02,595 - INFO - joeynmt.training - 	Reference:  "When I was 11 , I remember waking up one morning to the sound of joy in my house ."
-2021-10-02 12:07:02,595 - INFO - joeynmt.training - 	Hypothesis: "And I think that we have a little dimensions , and I was a little bit of the universe , and I was a little bit of the world , and we have a little dimensions ."
-2021-10-02 12:07:02,595 - INFO - joeynmt.training - Example #2
+2021-10-02 13:06:52,197 - INFO - joeynmt.training - 	Source:     11 ya\u015f\u0131ndayken bir sabah evimdeki sevinç ç\u0131\u011fl\u0131klar\u0131yla uyand\u0131\u011f\u0131m\u0131 hat\u0131rl\u0131yorum .
+2021-10-02 13:06:52,197 - INFO - joeynmt.training - 	Reference:  "When I was 11 , I remember waking up one morning to the sound of joy in my house ."
+2021-10-02 13:06:52,197 - INFO - joeynmt.training - 	Hypothesis: "And I think that we have a little dimensions , and I was a little bit of the universe , and I was a little bit of the world , and we have a little dimensions ."
+2021-10-02 13:06:52,197 - INFO - joeynmt.training - Example #2
 --- Logging error ---
 Traceback (most recent call last):
   File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/logging/__init__.py", line 1036, in emit
@@ -1827,21 +1827,21 @@ Call stack:
     logger.info("\tSource:     %s", sources[p])
 Message: '\tSource:     %s'
 Arguments: ('"Babam BBC Haber kanal\u0131n\u0131 dinliyordu ; o ufak , gri radyosundan ."',)
-2021-10-02 12:07:02,596 - INFO - joeynmt.training - 	Source:     "Babam BBC Haber kanal\u0131n\u0131 dinliyordu ; o ufak , gri radyosundan ."
-2021-10-02 12:07:02,596 - INFO - joeynmt.training - 	Reference:  "My father was listening to BBC News on his small , gray radio ."
-2021-10-02 12:07:02,596 - INFO - joeynmt.training - 	Hypothesis: "And the point is that we &apos;re a little bit of the world , and we have a lot of the world ."
-2021-10-02 12:07:02,596 - INFO - joeynmt.training - Validation result (greedy) at epoch  24, step     1500: bleu:   1.29, loss: 76967.4609, ppl: 159.0128, duration: 4.0707s
-2021-10-02 12:07:17,518 - INFO - joeynmt.training - Epoch  24: total training loss 6211.22
-2021-10-02 12:07:17,519 - INFO - joeynmt.training - EPOCH 25
-2021-10-02 12:07:29,534 - WARNING - sacrebleu - That's 100 lines that end in a tokenized period ('.')
-2021-10-02 12:07:29,534 - WARNING - sacrebleu - It looks like you forgot to detokenize your test data, which may hurt your score.
-2021-10-02 12:07:29,534 - WARNING - sacrebleu - If you insist your data is detokenized, or don't care, you can suppress this message with the `force` parameter.
-2021-10-02 12:07:30,447 - INFO - joeynmt.helpers - delete models/tr_en_bpe_model/900.ckpt
-2021-10-02 12:07:30,523 - INFO - joeynmt.training - Example #0
-2021-10-02 12:07:30,523 - INFO - joeynmt.training - 	Source:     tr
-2021-10-02 12:07:30,523 - INFO - joeynmt.training - 	Reference:  en
-2021-10-02 12:07:30,523 - INFO - joeynmt.training - 	Hypothesis: Not you very much .
-2021-10-02 12:07:30,523 - INFO - joeynmt.training - Example #1
+2021-10-02 13:06:52,198 - INFO - joeynmt.training - 	Source:     "Babam BBC Haber kanal\u0131n\u0131 dinliyordu ; o ufak , gri radyosundan ."
+2021-10-02 13:06:52,198 - INFO - joeynmt.training - 	Reference:  "My father was listening to BBC News on his small , gray radio ."
+2021-10-02 13:06:52,198 - INFO - joeynmt.training - 	Hypothesis: "And the point is that we &apos;re a little bit of the world , and we have a lot of the world ."
+2021-10-02 13:06:52,198 - INFO - joeynmt.training - Validation result (greedy) at epoch  24, step     1500: bleu:   1.29, loss: 76543.6172, ppl: 820.7609, duration: 3.9418s
+2021-10-02 13:07:06,999 - INFO - joeynmt.training - Epoch  24: total training loss 6211.22
+2021-10-02 13:07:07,000 - INFO - joeynmt.training - EPOCH 25
+2021-10-02 13:07:18,650 - WARNING - sacrebleu - That's 100 lines that end in a tokenized period ('.')
+2021-10-02 13:07:18,651 - WARNING - sacrebleu - It looks like you forgot to detokenize your test data, which may hurt your score.
+2021-10-02 13:07:18,651 - WARNING - sacrebleu - If you insist your data is detokenized, or don't care, you can suppress this message with the `force` parameter.
+2021-10-02 13:07:19,584 - INFO - joeynmt.helpers - delete models/tr_en_bpe_model/900.ckpt
+2021-10-02 13:07:19,658 - INFO - joeynmt.training - Example #0
+2021-10-02 13:07:19,658 - INFO - joeynmt.training - 	Source:     tr
+2021-10-02 13:07:19,658 - INFO - joeynmt.training - 	Reference:  en
+2021-10-02 13:07:19,658 - INFO - joeynmt.training - 	Hypothesis: Not you very much .
+2021-10-02 13:07:19,658 - INFO - joeynmt.training - Example #1
 --- Logging error ---
 Traceback (most recent call last):
   File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/logging/__init__.py", line 1036, in emit
@@ -1890,10 +1890,10 @@ Call stack:
     logger.info("\tSource:     %s", sources[p])
 Message: '\tSource:     %s'
 Arguments: ('11 ya\u015f\u0131ndayken bir sabah evimdeki sevinç ç\u0131\u011fl\u0131klar\u0131yla uyand\u0131\u011f\u0131m\u0131 hat\u0131rl\u0131yorum .',)
-2021-10-02 12:07:30,524 - INFO - joeynmt.training - 	Source:     11 ya\u015f\u0131ndayken bir sabah evimdeki sevinç ç\u0131\u011fl\u0131klar\u0131yla uyand\u0131\u011f\u0131m\u0131 hat\u0131rl\u0131yorum .
-2021-10-02 12:07:30,525 - INFO - joeynmt.training - 	Reference:  "When I was 11 , I remember waking up one morning to the sound of joy in my house ."
-2021-10-02 12:07:30,525 - INFO - joeynmt.training - 	Hypothesis: "And I think that we have a little dimensions , and I was a little bit of the universe , and I was a little bit of the world , and we have a little dimensions ."
-2021-10-02 12:07:30,525 - INFO - joeynmt.training - Example #2
+2021-10-02 13:07:19,659 - INFO - joeynmt.training - 	Source:     11 ya\u015f\u0131ndayken bir sabah evimdeki sevinç ç\u0131\u011fl\u0131klar\u0131yla uyand\u0131\u011f\u0131m\u0131 hat\u0131rl\u0131yorum .
+2021-10-02 13:07:19,660 - INFO - joeynmt.training - 	Reference:  "When I was 11 , I remember waking up one morning to the sound of joy in my house ."
+2021-10-02 13:07:19,660 - INFO - joeynmt.training - 	Hypothesis: "And I think that we have a little dimensions , and I was a little bit of the universe , and I was a little bit of the world , and we have a little dimensions ."
+2021-10-02 13:07:19,660 - INFO - joeynmt.training - Example #2
 --- Logging error ---
 Traceback (most recent call last):
   File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/logging/__init__.py", line 1036, in emit
@@ -1942,23 +1942,23 @@ Call stack:
     logger.info("\tSource:     %s", sources[p])
 Message: '\tSource:     %s'
 Arguments: ('"Babam BBC Haber kanal\u0131n\u0131 dinliyordu ; o ufak , gri radyosundan ."',)
-2021-10-02 12:07:30,525 - INFO - joeynmt.training - 	Source:     "Babam BBC Haber kanal\u0131n\u0131 dinliyordu ; o ufak , gri radyosundan ."
-2021-10-02 12:07:30,526 - INFO - joeynmt.training - 	Reference:  "My father was listening to BBC News on his small , gray radio ."
-2021-10-02 12:07:30,526 - INFO - joeynmt.training - 	Hypothesis: "And the point is that we &apos;re a little bit of the world , and we have a lot of the world ."
-2021-10-02 12:07:30,526 - INFO - joeynmt.training - Validation result (greedy) at epoch  25, step     1600: bleu:   1.30, loss: 76967.4609, ppl: 159.0128, duration: 4.0538s
-2021-10-02 12:07:37,627 - INFO - joeynmt.training - Epoch  25: total training loss 6209.77
-2021-10-02 12:07:37,628 - INFO - joeynmt.training - EPOCH 26
-2021-10-02 12:07:52,104 - INFO - joeynmt.training - Epoch  26: total training loss 6211.16
-2021-10-02 12:07:52,104 - INFO - joeynmt.training - EPOCH 27
-2021-10-02 12:07:57,402 - WARNING - sacrebleu - That's 100 lines that end in a tokenized period ('.')
-2021-10-02 12:07:57,402 - WARNING - sacrebleu - It looks like you forgot to detokenize your test data, which may hurt your score.
-2021-10-02 12:07:57,403 - WARNING - sacrebleu - If you insist your data is detokenized, or don't care, you can suppress this message with the `force` parameter.
-2021-10-02 12:07:58,380 - INFO - joeynmt.helpers - delete models/tr_en_bpe_model/1400.ckpt
-2021-10-02 12:07:58,455 - INFO - joeynmt.training - Example #0
-2021-10-02 12:07:58,455 - INFO - joeynmt.training - 	Source:     tr
-2021-10-02 12:07:58,455 - INFO - joeynmt.training - 	Reference:  en
-2021-10-02 12:07:58,455 - INFO - joeynmt.training - 	Hypothesis: Not you very much .
-2021-10-02 12:07:58,455 - INFO - joeynmt.training - Example #1
+2021-10-02 13:07:19,660 - INFO - joeynmt.training - 	Source:     "Babam BBC Haber kanal\u0131n\u0131 dinliyordu ; o ufak , gri radyosundan ."
+2021-10-02 13:07:19,661 - INFO - joeynmt.training - 	Reference:  "My father was listening to BBC News on his small , gray radio ."
+2021-10-02 13:07:19,661 - INFO - joeynmt.training - 	Hypothesis: "And the point is that we &apos;re a little bit of the world , and we have a lot of the world ."
+2021-10-02 13:07:19,661 - INFO - joeynmt.training - Validation result (greedy) at epoch  25, step     1600: bleu:   1.30, loss: 76522.7578, ppl: 819.2614, duration: 3.7430s
+2021-10-02 13:07:26,771 - INFO - joeynmt.training - Epoch  25: total training loss 6209.77
+2021-10-02 13:07:26,772 - INFO - joeynmt.training - EPOCH 26
+2021-10-02 13:07:41,224 - INFO - joeynmt.training - Epoch  26: total training loss 6211.16
+2021-10-02 13:07:41,224 - INFO - joeynmt.training - EPOCH 27
+2021-10-02 13:07:46,211 - WARNING - sacrebleu - That's 100 lines that end in a tokenized period ('.')
+2021-10-02 13:07:46,212 - WARNING - sacrebleu - It looks like you forgot to detokenize your test data, which may hurt your score.
+2021-10-02 13:07:46,212 - WARNING - sacrebleu - If you insist your data is detokenized, or don't care, you can suppress this message with the `force` parameter.
+2021-10-02 13:07:47,118 - INFO - joeynmt.helpers - delete models/tr_en_bpe_model/1400.ckpt
+2021-10-02 13:07:47,202 - INFO - joeynmt.training - Example #0
+2021-10-02 13:07:47,202 - INFO - joeynmt.training - 	Source:     tr
+2021-10-02 13:07:47,202 - INFO - joeynmt.training - 	Reference:  en
+2021-10-02 13:07:47,202 - INFO - joeynmt.training - 	Hypothesis: Not you very much .
+2021-10-02 13:07:47,202 - INFO - joeynmt.training - Example #1
 --- Logging error ---
 Traceback (most recent call last):
   File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/logging/__init__.py", line 1036, in emit
@@ -2007,10 +2007,10 @@ Call stack:
     logger.info("\tSource:     %s", sources[p])
 Message: '\tSource:     %s'
 Arguments: ('11 ya\u015f\u0131ndayken bir sabah evimdeki sevinç ç\u0131\u011fl\u0131klar\u0131yla uyand\u0131\u011f\u0131m\u0131 hat\u0131rl\u0131yorum .',)
-2021-10-02 12:07:58,457 - INFO - joeynmt.training - 	Source:     11 ya\u015f\u0131ndayken bir sabah evimdeki sevinç ç\u0131\u011fl\u0131klar\u0131yla uyand\u0131\u011f\u0131m\u0131 hat\u0131rl\u0131yorum .
-2021-10-02 12:07:58,457 - INFO - joeynmt.training - 	Reference:  "When I was 11 , I remember waking up one morning to the sound of joy in my house ."
-2021-10-02 12:07:58,457 - INFO - joeynmt.training - 	Hypothesis: "And I think that we have a little dimensions , and I was a little bit of the universe , and I was a little bit of the world , and we have a little dimensions ."
-2021-10-02 12:07:58,457 - INFO - joeynmt.training - Example #2
+2021-10-02 13:07:47,204 - INFO - joeynmt.training - 	Source:     11 ya\u015f\u0131ndayken bir sabah evimdeki sevinç ç\u0131\u011fl\u0131klar\u0131yla uyand\u0131\u011f\u0131m\u0131 hat\u0131rl\u0131yorum .
+2021-10-02 13:07:47,205 - INFO - joeynmt.training - 	Reference:  "When I was 11 , I remember waking up one morning to the sound of joy in my house ."
+2021-10-02 13:07:47,205 - INFO - joeynmt.training - 	Hypothesis: "And I think that we have a little dimensions , and I was a little bit of the universe , and I was a little bit of the world , and we have a little dimensions ."
+2021-10-02 13:07:47,205 - INFO - joeynmt.training - Example #2
 --- Logging error ---
 Traceback (most recent call last):
   File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/logging/__init__.py", line 1036, in emit
@@ -2059,21 +2059,21 @@ Call stack:
     logger.info("\tSource:     %s", sources[p])
 Message: '\tSource:     %s'
 Arguments: ('"Babam BBC Haber kanal\u0131n\u0131 dinliyordu ; o ufak , gri radyosundan ."',)
-2021-10-02 12:07:58,458 - INFO - joeynmt.training - 	Source:     "Babam BBC Haber kanal\u0131n\u0131 dinliyordu ; o ufak , gri radyosundan ."
-2021-10-02 12:07:58,458 - INFO - joeynmt.training - 	Reference:  "My father was listening to BBC News on his small , gray radio ."
-2021-10-02 12:07:58,458 - INFO - joeynmt.training - 	Hypothesis: "And the point is that we &apos;re a little bit of the world , and we have a lot of the world ."
-2021-10-02 12:07:58,458 - INFO - joeynmt.training - Validation result (greedy) at epoch  27, step     1700: bleu:   1.29, loss: 76968.7266, ppl: 159.0260, duration: 4.0949s
-2021-10-02 12:08:12,186 - INFO - joeynmt.training - Epoch  27: total training loss 6206.83
-2021-10-02 12:08:12,186 - INFO - joeynmt.training - EPOCH 28
-2021-10-02 12:08:25,268 - WARNING - sacrebleu - That's 100 lines that end in a tokenized period ('.')
-2021-10-02 12:08:25,268 - WARNING - sacrebleu - It looks like you forgot to detokenize your test data, which may hurt your score.
-2021-10-02 12:08:25,268 - WARNING - sacrebleu - If you insist your data is detokenized, or don't care, you can suppress this message with the `force` parameter.
-2021-10-02 12:08:26,201 - INFO - joeynmt.helpers - delete models/tr_en_bpe_model/1500.ckpt
-2021-10-02 12:08:26,279 - INFO - joeynmt.training - Example #0
-2021-10-02 12:08:26,279 - INFO - joeynmt.training - 	Source:     tr
-2021-10-02 12:08:26,279 - INFO - joeynmt.training - 	Reference:  en
-2021-10-02 12:08:26,279 - INFO - joeynmt.training - 	Hypothesis: Not you very much .
-2021-10-02 12:08:26,279 - INFO - joeynmt.training - Example #1
+2021-10-02 13:07:47,205 - INFO - joeynmt.training - 	Source:     "Babam BBC Haber kanal\u0131n\u0131 dinliyordu ; o ufak , gri radyosundan ."
+2021-10-02 13:07:47,206 - INFO - joeynmt.training - 	Reference:  "My father was listening to BBC News on his small , gray radio ."
+2021-10-02 13:07:47,206 - INFO - joeynmt.training - 	Hypothesis: "And the point is that we &apos;re a little bit of the world , and we have a lot of the world ."
+2021-10-02 13:07:47,206 - INFO - joeynmt.training - Validation result (greedy) at epoch  27, step     1700: bleu:   1.29, loss: 76543.5781, ppl: 820.7582, duration: 3.7267s
+2021-10-02 13:08:01,017 - INFO - joeynmt.training - Epoch  27: total training loss 6206.83
+2021-10-02 13:08:01,018 - INFO - joeynmt.training - EPOCH 28
+2021-10-02 13:08:13,839 - WARNING - sacrebleu - That's 100 lines that end in a tokenized period ('.')
+2021-10-02 13:08:13,839 - WARNING - sacrebleu - It looks like you forgot to detokenize your test data, which may hurt your score.
+2021-10-02 13:08:13,840 - WARNING - sacrebleu - If you insist your data is detokenized, or don't care, you can suppress this message with the `force` parameter.
+2021-10-02 13:08:14,729 - INFO - joeynmt.helpers - delete models/tr_en_bpe_model/1500.ckpt
+2021-10-02 13:08:14,811 - INFO - joeynmt.training - Example #0
+2021-10-02 13:08:14,811 - INFO - joeynmt.training - 	Source:     tr
+2021-10-02 13:08:14,811 - INFO - joeynmt.training - 	Reference:  en
+2021-10-02 13:08:14,811 - INFO - joeynmt.training - 	Hypothesis: Not you very much .
+2021-10-02 13:08:14,811 - INFO - joeynmt.training - Example #1
 --- Logging error ---
 Traceback (most recent call last):
   File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/logging/__init__.py", line 1036, in emit
@@ -2122,10 +2122,10 @@ Call stack:
     logger.info("\tSource:     %s", sources[p])
 Message: '\tSource:     %s'
 Arguments: ('11 ya\u015f\u0131ndayken bir sabah evimdeki sevinç ç\u0131\u011fl\u0131klar\u0131yla uyand\u0131\u011f\u0131m\u0131 hat\u0131rl\u0131yorum .',)
-2021-10-02 12:08:26,281 - INFO - joeynmt.training - 	Source:     11 ya\u015f\u0131ndayken bir sabah evimdeki sevinç ç\u0131\u011fl\u0131klar\u0131yla uyand\u0131\u011f\u0131m\u0131 hat\u0131rl\u0131yorum .
-2021-10-02 12:08:26,281 - INFO - joeynmt.training - 	Reference:  "When I was 11 , I remember waking up one morning to the sound of joy in my house ."
-2021-10-02 12:08:26,281 - INFO - joeynmt.training - 	Hypothesis: "And I think that we have a little dimensions , and I was a little bit of the universe , and I was a little bit of the world , and we have a little dimensions ."
-2021-10-02 12:08:26,281 - INFO - joeynmt.training - Example #2
+2021-10-02 13:08:14,812 - INFO - joeynmt.training - 	Source:     11 ya\u015f\u0131ndayken bir sabah evimdeki sevinç ç\u0131\u011fl\u0131klar\u0131yla uyand\u0131\u011f\u0131m\u0131 hat\u0131rl\u0131yorum .
+2021-10-02 13:08:14,812 - INFO - joeynmt.training - 	Reference:  "When I was 11 , I remember waking up one morning to the sound of joy in my house ."
+2021-10-02 13:08:14,812 - INFO - joeynmt.training - 	Hypothesis: "And I think that we have a little dimensions , and I was a little bit of the universe , and I was a little bit of the world , and we have a little dimensions ."
+2021-10-02 13:08:14,812 - INFO - joeynmt.training - Example #2
 --- Logging error ---
 Traceback (most recent call last):
   File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/logging/__init__.py", line 1036, in emit
@@ -2174,25 +2174,25 @@ Call stack:
     logger.info("\tSource:     %s", sources[p])
 Message: '\tSource:     %s'
 Arguments: ('"Babam BBC Haber kanal\u0131n\u0131 dinliyordu ; o ufak , gri radyosundan ."',)
-2021-10-02 12:08:26,282 - INFO - joeynmt.training - 	Source:     "Babam BBC Haber kanal\u0131n\u0131 dinliyordu ; o ufak , gri radyosundan ."
-2021-10-02 12:08:26,282 - INFO - joeynmt.training - 	Reference:  "My father was listening to BBC News on his small , gray radio ."
-2021-10-02 12:08:26,282 - INFO - joeynmt.training - 	Hypothesis: "And the point is that we &apos;re a little bit of the world , and we have a lot of the world ."
-2021-10-02 12:08:26,282 - INFO - joeynmt.training - Validation result (greedy) at epoch  28, step     1800: bleu:   1.29, loss: 76967.8672, ppl: 159.0170, duration: 4.0756s
-2021-10-02 12:08:32,389 - INFO - joeynmt.training - Epoch  28: total training loss 6209.41
-2021-10-02 12:08:32,389 - INFO - joeynmt.training - EPOCH 29
-2021-10-02 12:08:46,789 - INFO - joeynmt.training - Epoch  29: total training loss 6208.85
-2021-10-02 12:08:46,790 - INFO - joeynmt.training - EPOCH 30
-2021-10-02 12:08:53,166 - WARNING - sacrebleu - That's 100 lines that end in a tokenized period ('.')
-2021-10-02 12:08:53,166 - WARNING - sacrebleu - It looks like you forgot to detokenize your test data, which may hurt your score.
-2021-10-02 12:08:53,166 - WARNING - sacrebleu - If you insist your data is detokenized, or don't care, you can suppress this message with the `force` parameter.
-2021-10-02 12:08:54,202 - INFO - joeynmt.helpers - delete models/tr_en_bpe_model/1800.ckpt
-2021-10-02 12:08:54,278 - INFO - joeynmt.helpers - delete /home/lcur0008/joeynmt/models/tr_en_bpe_model/1800.ckpt
-2021-10-02 12:08:54,278 - WARNING - joeynmt.helpers - Wanted to delete old checkpoint /home/lcur0008/joeynmt/models/tr_en_bpe_model/1800.ckpt but file does not exist. ([Errno 2] No such file or directory: '/home/lcur0008/joeynmt/models/tr_en_bpe_model/1800.ckpt')
-2021-10-02 12:08:54,280 - INFO - joeynmt.training - Example #0
-2021-10-02 12:08:54,281 - INFO - joeynmt.training - 	Source:     tr
-2021-10-02 12:08:54,281 - INFO - joeynmt.training - 	Reference:  en
-2021-10-02 12:08:54,281 - INFO - joeynmt.training - 	Hypothesis: Not you very much .
-2021-10-02 12:08:54,281 - INFO - joeynmt.training - Example #1
+2021-10-02 13:08:14,813 - INFO - joeynmt.training - 	Source:     "Babam BBC Haber kanal\u0131n\u0131 dinliyordu ; o ufak , gri radyosundan ."
+2021-10-02 13:08:14,813 - INFO - joeynmt.training - 	Reference:  "My father was listening to BBC News on his small , gray radio ."
+2021-10-02 13:08:14,813 - INFO - joeynmt.training - 	Hypothesis: "And the point is that we &apos;re a little bit of the world , and we have a lot of the world ."
+2021-10-02 13:08:14,813 - INFO - joeynmt.training - Validation result (greedy) at epoch  28, step     1800: bleu:   1.29, loss: 76551.4375, ppl: 821.3239, duration: 3.7587s
+2021-10-02 13:08:20,941 - INFO - joeynmt.training - Epoch  28: total training loss 6209.41
+2021-10-02 13:08:20,941 - INFO - joeynmt.training - EPOCH 29
+2021-10-02 13:08:35,392 - INFO - joeynmt.training - Epoch  29: total training loss 6208.85
+2021-10-02 13:08:35,392 - INFO - joeynmt.training - EPOCH 30
+2021-10-02 13:08:41,483 - WARNING - sacrebleu - That's 100 lines that end in a tokenized period ('.')
+2021-10-02 13:08:41,483 - WARNING - sacrebleu - It looks like you forgot to detokenize your test data, which may hurt your score.
+2021-10-02 13:08:41,484 - WARNING - sacrebleu - If you insist your data is detokenized, or don't care, you can suppress this message with the `force` parameter.
+2021-10-02 13:08:42,373 - INFO - joeynmt.helpers - delete models/tr_en_bpe_model/1800.ckpt
+2021-10-02 13:08:42,451 - INFO - joeynmt.helpers - delete /home/lcur0008/joeynmt/models/tr_en_bpe_model/1800.ckpt
+2021-10-02 13:08:42,451 - WARNING - joeynmt.helpers - Wanted to delete old checkpoint /home/lcur0008/joeynmt/models/tr_en_bpe_model/1800.ckpt but file does not exist. ([Errno 2] No such file or directory: '/home/lcur0008/joeynmt/models/tr_en_bpe_model/1800.ckpt')
+2021-10-02 13:08:42,453 - INFO - joeynmt.training - Example #0
+2021-10-02 13:08:42,454 - INFO - joeynmt.training - 	Source:     tr
+2021-10-02 13:08:42,454 - INFO - joeynmt.training - 	Reference:  en
+2021-10-02 13:08:42,454 - INFO - joeynmt.training - 	Hypothesis: Not you very much .
+2021-10-02 13:08:42,454 - INFO - joeynmt.training - Example #1
 --- Logging error ---
 Traceback (most recent call last):
   File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/logging/__init__.py", line 1036, in emit
@@ -2241,10 +2241,10 @@ Call stack:
     logger.info("\tSource:     %s", sources[p])
 Message: '\tSource:     %s'
 Arguments: ('11 ya\u015f\u0131ndayken bir sabah evimdeki sevinç ç\u0131\u011fl\u0131klar\u0131yla uyand\u0131\u011f\u0131m\u0131 hat\u0131rl\u0131yorum .',)
-2021-10-02 12:08:54,282 - INFO - joeynmt.training - 	Source:     11 ya\u015f\u0131ndayken bir sabah evimdeki sevinç ç\u0131\u011fl\u0131klar\u0131yla uyand\u0131\u011f\u0131m\u0131 hat\u0131rl\u0131yorum .
-2021-10-02 12:08:54,282 - INFO - joeynmt.training - 	Reference:  "When I was 11 , I remember waking up one morning to the sound of joy in my house ."
-2021-10-02 12:08:54,282 - INFO - joeynmt.training - 	Hypothesis: "And I think that we have a little dimensions , and I was a little bit of the universe , and I was a little bit of the world , and we have a little dimensions ."
-2021-10-02 12:08:54,282 - INFO - joeynmt.training - Example #2
+2021-10-02 13:08:42,455 - INFO - joeynmt.training - 	Source:     11 ya\u015f\u0131ndayken bir sabah evimdeki sevinç ç\u0131\u011fl\u0131klar\u0131yla uyand\u0131\u011f\u0131m\u0131 hat\u0131rl\u0131yorum .
+2021-10-02 13:08:42,455 - INFO - joeynmt.training - 	Reference:  "When I was 11 , I remember waking up one morning to the sound of joy in my house ."
+2021-10-02 13:08:42,455 - INFO - joeynmt.training - 	Hypothesis: "And I think that we have a little dimensions , and I was a little bit of the universe , and I was a little bit of the world , and we have a little dimensions ."
+2021-10-02 13:08:42,455 - INFO - joeynmt.training - Example #2
 --- Logging error ---
 Traceback (most recent call last):
   File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/logging/__init__.py", line 1036, in emit
@@ -2293,21 +2293,21 @@ Call stack:
     logger.info("\tSource:     %s", sources[p])
 Message: '\tSource:     %s'
 Arguments: ('"Babam BBC Haber kanal\u0131n\u0131 dinliyordu ; o ufak , gri radyosundan ."',)
-2021-10-02 12:08:54,283 - INFO - joeynmt.training - 	Source:     "Babam BBC Haber kanal\u0131n\u0131 dinliyordu ; o ufak , gri radyosundan ."
-2021-10-02 12:08:54,283 - INFO - joeynmt.training - 	Reference:  "My father was listening to BBC News on his small , gray radio ."
-2021-10-02 12:08:54,283 - INFO - joeynmt.training - 	Hypothesis: "And the point is that we &apos;re a little bit of the world , and we have a lot of the world ."
-2021-10-02 12:08:54,283 - INFO - joeynmt.training - Validation result (greedy) at epoch  30, step     1900: bleu:   1.29, loss: 76968.3750, ppl: 159.0223, duration: 4.1384s
-2021-10-02 12:09:06,787 - INFO - joeynmt.training - Epoch  30: total training loss 6207.87
-2021-10-02 12:09:06,787 - INFO - joeynmt.training - EPOCH 31
-2021-10-02 12:09:17,911 - INFO - joeynmt.training - Epoch  31, Step:     2000, Batch Loss:    96.927872, Tokens per Sec:     7719, Lr: 0.000000
-2021-10-02 12:09:20,990 - WARNING - sacrebleu - That's 100 lines that end in a tokenized period ('.')
-2021-10-02 12:09:20,991 - WARNING - sacrebleu - It looks like you forgot to detokenize your test data, which may hurt your score.
-2021-10-02 12:09:20,991 - WARNING - sacrebleu - If you insist your data is detokenized, or don't care, you can suppress this message with the `force` parameter.
-2021-10-02 12:09:20,997 - INFO - joeynmt.training - Example #0
-2021-10-02 12:09:20,998 - INFO - joeynmt.training - 	Source:     tr
-2021-10-02 12:09:20,998 - INFO - joeynmt.training - 	Reference:  en
-2021-10-02 12:09:20,998 - INFO - joeynmt.training - 	Hypothesis: Not you very much .
-2021-10-02 12:09:20,998 - INFO - joeynmt.training - Example #1
+2021-10-02 13:08:42,456 - INFO - joeynmt.training - 	Source:     "Babam BBC Haber kanal\u0131n\u0131 dinliyordu ; o ufak , gri radyosundan ."
+2021-10-02 13:08:42,456 - INFO - joeynmt.training - 	Reference:  "My father was listening to BBC News on his small , gray radio ."
+2021-10-02 13:08:42,456 - INFO - joeynmt.training - 	Hypothesis: "And the point is that we &apos;re a little bit of the world , and we have a lot of the world ."
+2021-10-02 13:08:42,456 - INFO - joeynmt.training - Validation result (greedy) at epoch  30, step     1900: bleu:   1.29, loss: 76549.5547, ppl: 821.1884, duration: 3.7123s
+2021-10-02 13:08:55,041 - INFO - joeynmt.training - Epoch  30: total training loss 6207.87
+2021-10-02 13:08:55,041 - INFO - joeynmt.training - EPOCH 31
+2021-10-02 13:09:06,160 - INFO - joeynmt.training - Epoch  31, Step:     2000, Batch Loss:    96.927872, Tokens per Sec:     7722, Lr: 0.000000
+2021-10-02 13:09:08,927 - WARNING - sacrebleu - That's 100 lines that end in a tokenized period ('.')
+2021-10-02 13:09:08,927 - WARNING - sacrebleu - It looks like you forgot to detokenize your test data, which may hurt your score.
+2021-10-02 13:09:08,927 - WARNING - sacrebleu - If you insist your data is detokenized, or don't care, you can suppress this message with the `force` parameter.
+2021-10-02 13:09:08,933 - INFO - joeynmt.training - Example #0
+2021-10-02 13:09:08,933 - INFO - joeynmt.training - 	Source:     tr
+2021-10-02 13:09:08,934 - INFO - joeynmt.training - 	Reference:  en
+2021-10-02 13:09:08,934 - INFO - joeynmt.training - 	Hypothesis: Not you very much .
+2021-10-02 13:09:08,934 - INFO - joeynmt.training - Example #1
 --- Logging error ---
 Traceback (most recent call last):
   File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/logging/__init__.py", line 1036, in emit
@@ -2356,10 +2356,10 @@ Call stack:
     logger.info("\tSource:     %s", sources[p])
 Message: '\tSource:     %s'
 Arguments: ('11 ya\u015f\u0131ndayken bir sabah evimdeki sevinç ç\u0131\u011fl\u0131klar\u0131yla uyand\u0131\u011f\u0131m\u0131 hat\u0131rl\u0131yorum .',)
-2021-10-02 12:09:21,001 - INFO - joeynmt.training - 	Source:     11 ya\u015f\u0131ndayken bir sabah evimdeki sevinç ç\u0131\u011fl\u0131klar\u0131yla uyand\u0131\u011f\u0131m\u0131 hat\u0131rl\u0131yorum .
-2021-10-02 12:09:21,001 - INFO - joeynmt.training - 	Reference:  "When I was 11 , I remember waking up one morning to the sound of joy in my house ."
-2021-10-02 12:09:21,001 - INFO - joeynmt.training - 	Hypothesis: "And I think that we have a little dimensions , and I was a little bit of the universe , and I was a little bit of the world , and we have a little dimensions ."
-2021-10-02 12:09:21,002 - INFO - joeynmt.training - Example #2
+2021-10-02 13:09:08,937 - INFO - joeynmt.training - 	Source:     11 ya\u015f\u0131ndayken bir sabah evimdeki sevinç ç\u0131\u011fl\u0131klar\u0131yla uyand\u0131\u011f\u0131m\u0131 hat\u0131rl\u0131yorum .
+2021-10-02 13:09:08,937 - INFO - joeynmt.training - 	Reference:  "When I was 11 , I remember waking up one morning to the sound of joy in my house ."
+2021-10-02 13:09:08,938 - INFO - joeynmt.training - 	Hypothesis: "And I think that we have a little dimensions , and I was a little bit of the universe , and I was a little bit of the world , and we have a little dimensions ."
+2021-10-02 13:09:08,938 - INFO - joeynmt.training - Example #2
 --- Logging error ---
 Traceback (most recent call last):
   File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/logging/__init__.py", line 1036, in emit
@@ -2408,25 +2408,25 @@ Call stack:
     logger.info("\tSource:     %s", sources[p])
 Message: '\tSource:     %s'
 Arguments: ('"Babam BBC Haber kanal\u0131n\u0131 dinliyordu ; o ufak , gri radyosundan ."',)
-2021-10-02 12:09:21,003 - INFO - joeynmt.training - 	Source:     "Babam BBC Haber kanal\u0131n\u0131 dinliyordu ; o ufak , gri radyosundan ."
-2021-10-02 12:09:21,003 - INFO - joeynmt.training - 	Reference:  "My father was listening to BBC News on his small , gray radio ."
-2021-10-02 12:09:21,003 - INFO - joeynmt.training - 	Hypothesis: "And the point is that we &apos;re a little bit of the world , and we have a lot of the world ."
-2021-10-02 12:09:21,003 - INFO - joeynmt.training - Validation result (greedy) at epoch  31, step     2000: bleu:   1.29, loss: 76968.8438, ppl: 159.0273, duration: 3.0918s
-2021-10-02 12:09:22,677 - INFO - joeynmt.training - Training ended since minimum lr 1e-08 was reached.
-2021-10-02 12:09:22,687 - INFO - joeynmt.training - Best validation result (greedy) at step     1200:   1.31 eval_metric.
-2021-10-02 12:09:22,716 - INFO - joeynmt.prediction - Process device: cuda, n_gpu: 1, batch_size per device: 80
-2021-10-02 12:09:22,716 - INFO - joeynmt.prediction - Loading model from models/tr_en_bpe_model/1200.ckpt
-2021-10-02 12:09:23,049 - INFO - joeynmt.model - Building an encoder-decoder model...
-2021-10-02 12:09:23,577 - INFO - joeynmt.model - Enc-dec model built.
-2021-10-02 12:09:23,632 - INFO - joeynmt.prediction - Decoding on dev set (../2DL4NLP/all_data/val.bpe.en)...
-2021-10-02 12:09:34,543 - WARNING - sacrebleu - That's 100 lines that end in a tokenized period ('.')
-2021-10-02 12:09:34,543 - WARNING - sacrebleu - It looks like you forgot to detokenize your test data, which may hurt your score.
-2021-10-02 12:09:34,543 - WARNING - sacrebleu - If you insist your data is detokenized, or don't care, you can suppress this message with the `force` parameter.
-2021-10-02 12:09:34,546 - INFO - joeynmt.prediction -  dev bleu[none]:   0.84 [Beam search decoding with beam size = 5 and alpha = 1.0]
-2021-10-02 12:09:34,549 - INFO - joeynmt.prediction - Translations saved to: models/tr_en_bpe_model/00001200.hyps.dev
-2021-10-02 12:09:34,549 - INFO - joeynmt.prediction - Decoding on test set (../2DL4NLP/all_data/test.bpe.en)...
-2021-10-02 12:09:46,944 - WARNING - sacrebleu - That's 100 lines that end in a tokenized period ('.')
-2021-10-02 12:09:46,944 - WARNING - sacrebleu - It looks like you forgot to detokenize your test data, which may hurt your score.
-2021-10-02 12:09:46,944 - WARNING - sacrebleu - If you insist your data is detokenized, or don't care, you can suppress this message with the `force` parameter.
-2021-10-02 12:09:46,948 - INFO - joeynmt.prediction - test bleu[none]:   1.00 [Beam search decoding with beam size = 5 and alpha = 1.0]
-2021-10-02 12:09:46,951 - INFO - joeynmt.prediction - Translations saved to: models/tr_en_bpe_model/00001200.hyps.test
+2021-10-02 13:09:08,939 - INFO - joeynmt.training - 	Source:     "Babam BBC Haber kanal\u0131n\u0131 dinliyordu ; o ufak , gri radyosundan ."
+2021-10-02 13:09:08,939 - INFO - joeynmt.training - 	Reference:  "My father was listening to BBC News on his small , gray radio ."
+2021-10-02 13:09:08,939 - INFO - joeynmt.training - 	Hypothesis: "And the point is that we &apos;re a little bit of the world , and we have a lot of the world ."
+2021-10-02 13:09:08,940 - INFO - joeynmt.training - Validation result (greedy) at epoch  31, step     2000: bleu:   1.29, loss: 76549.1016, ppl: 821.1559, duration: 2.7791s
+2021-10-02 13:09:10,480 - INFO - joeynmt.training - Training ended since minimum lr 1e-08 was reached.
+2021-10-02 13:09:10,492 - INFO - joeynmt.training - Best validation result (greedy) at step     1200:   1.31 eval_metric.
+2021-10-02 13:09:10,520 - INFO - joeynmt.prediction - Process device: cuda, n_gpu: 1, batch_size per device: 80
+2021-10-02 13:09:10,520 - INFO - joeynmt.prediction - Loading model from models/tr_en_bpe_model/1200.ckpt
+2021-10-02 13:09:10,852 - INFO - joeynmt.model - Building an encoder-decoder model...
+2021-10-02 13:09:11,379 - INFO - joeynmt.model - Enc-dec model built.
+2021-10-02 13:09:11,434 - INFO - joeynmt.prediction - Decoding on dev set (../2DL4NLP/all_data/val.bpe.en)...
+2021-10-02 13:09:22,101 - WARNING - sacrebleu - That's 100 lines that end in a tokenized period ('.')
+2021-10-02 13:09:22,101 - WARNING - sacrebleu - It looks like you forgot to detokenize your test data, which may hurt your score.
+2021-10-02 13:09:22,101 - WARNING - sacrebleu - If you insist your data is detokenized, or don't care, you can suppress this message with the `force` parameter.
+2021-10-02 13:09:22,104 - INFO - joeynmt.prediction -  dev bleu[none]:   0.84 [Beam search decoding with beam size = 5 and alpha = 1.0]
+2021-10-02 13:09:22,107 - INFO - joeynmt.prediction - Translations saved to: models/tr_en_bpe_model/00001200.hyps.dev
+2021-10-02 13:09:22,108 - INFO - joeynmt.prediction - Decoding on test set (../2DL4NLP/all_data/test.bpe.en)...
+2021-10-02 13:09:34,216 - WARNING - sacrebleu - That's 100 lines that end in a tokenized period ('.')
+2021-10-02 13:09:34,217 - WARNING - sacrebleu - It looks like you forgot to detokenize your test data, which may hurt your score.
+2021-10-02 13:09:34,217 - WARNING - sacrebleu - If you insist your data is detokenized, or don't care, you can suppress this message with the `force` parameter.
+2021-10-02 13:09:34,220 - INFO - joeynmt.prediction - test bleu[none]:   1.00 [Beam search decoding with beam size = 5 and alpha = 1.0]
+2021-10-02 13:09:34,223 - INFO - joeynmt.prediction - Translations saved to: models/tr_en_bpe_model/00001200.hyps.test
