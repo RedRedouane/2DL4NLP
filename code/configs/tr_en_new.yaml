@@ -53,7 +53,7 @@ model:
         embeddings:
             embedding_dim: 256          # Gulcehre
             scale: False
-        hidden_size: 100               # Luong & Zoph
+        hidden_size: 1000               # Luong & Zoph
         bidirectional: True            # all
         dropout: 0.2
         num_layers: 1
