@@ -1,20 +1,26 @@
 name: "test_big_boi"
 
 data:
+<<<<<<< HEAD
     src: "fr"
     trg: "en"
     train: "../2DL4NLP/all_data/fr_en_train.bpe"
     dev: "../2DL4NLP/all_data/fr_en_val.bpe"
     test: "../2DL4NLP/all_data/fr_en_test.bpe"
+=======
+    src: "tr"
+    trg: "en"
+    train: "../2DL4NLP/all_data/train_big"
+    dev: "../2DL4NLP/all_data/val_big"
+    test: "../2DL4NLP/all_data/test_big"
+>>>>>>> 35452601ca362d9d162c9373aa74fc1deb60fb16
     level: "bpe"
     lowercase: False
     max_sent_length: 50
     src_voc_min_freq: 0
     src_voc_limit: 100000
     trg_voc_min_freq: 0
-    trg_voc_limit: 100000
-    src_vocab: "../2DL4NLP/all_data/fr_en_vocab.txt"
-    trg_vocab: "../2DL4NLP/all_data/fr_en_vocab.txt"
+    trg_voc_limit: 1000
 
 testing:
     beam_size: 5
