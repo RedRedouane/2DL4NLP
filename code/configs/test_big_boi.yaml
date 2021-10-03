@@ -1,0 +1,74 @@
+name: "test_big_boi"
+
+data:
+<<<<<<< HEAD
+    src: "fr"
+    trg: "en"
+    train: "../2DL4NLP/all_data/fr_en_train.bpe"
+    dev: "../2DL4NLP/all_data/fr_en_val.bpe"
+    test: "../2DL4NLP/all_data/fr_en_test.bpe"
+=======
+    src: "tr"
+    trg: "en"
+    train: "../2DL4NLP/all_data/train_big"
+    dev: "../2DL4NLP/all_data/val_big"
+    test: "../2DL4NLP/all_data/test_big"
+>>>>>>> 35452601ca362d9d162c9373aa74fc1deb60fb16
+    level: "bpe"
+    lowercase: False
+    max_sent_length: 50
+    src_voc_min_freq: 0
+    src_voc_limit: 100000
+    trg_voc_min_freq: 0
+    trg_voc_limit: 1000
+
+testing:
+    beam_size: 5
+    alpha: 1.0
+
+training:
+    random_seed: 42
+    optimizer: "adam"
+    learning_rate: 0.0003
+    learning_rate_min: 0.0000005
+    weight_decay: 0.0
+    clip_grad_norm: 1.0
+    batch_size: 80
+    scheduling: "plateau"
+    patience: 10
+    decrease_factor: 0.5
+    early_stopping_metric: "eval_metric"
+    epochs: 20
+    validation_freq: 100
+    logging_freq: 1000
+    eval_metric: "bleu"
+    model_dir: "models/test_big_boi_tr_en"
+    overwrite: True
+    shuffle: True
+    use_cuda: True
+    max_output_length: 100
+    print_valid_sents: [0, 1, 2]
+
+model:
+    encoder:
+        rnn_type: "lstm"
+        embeddings:
+            embedding_dim: 500
+            scale: False
+        hidden_size: 500
+        bidirectional: False
+        dropout: 0.2
+        num_layers: 1
+    decoder:
+        rnn_type: "lstm"
+        embeddings:
+            embedding_dim: 500
+            scale: False
+        emb_scale: False
+        hidden_size: 1000
+        dropout: 0.2
+        hidden_dropout: 0.2
+        num_layers: 1
+        input_feeding: True
+        init_hidden: "bridge"
+        attention: "bahdanau"
