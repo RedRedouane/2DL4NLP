@@ -3,7 +3,7 @@ name: "tr_en_bpe_model"
 data:
     src: "tr"
     trg: "en"
-    train: "../2DL4NLP/all_data/train.bpe"   # AANPASSEN 
+    train: "../2DL4NLP/all_data/train.bpe"   # AANPASSEN
     dev: "../2DL4NLP/all_data/val.bpe"       # AANPASSEN
     test: "../2DL4NLP/all_data/test.bpe"     # AANPASSEN
     level: "bpe"
@@ -25,9 +25,9 @@ testing:
         tokenize: "none"             # `tokenize` option in sacrebleu.corpus_bleu() function (default: 13a)
 
 training:
-    # load_model: "models/{model directory}/best.ckpt" # AANGEPAST VOOR TRANSFER LEARNING
-    # reset_best_ckpt: True         # AANGEPAST VOOR TRANSFER LEARNING
-    # reset_iter_state: True        # AANGEPAST VOOR TRANSFER LEARNING
+    load_model: "models/{model directory}/best.ckpt" # AANGEPAST VOOR TRANSFER LEARNING
+    reset_best_ckpt: True         # AANGEPAST VOOR TRANSFER LEARNING
+    reset_iter_state: True        # AANGEPAST VOOR TRANSFER LEARNING
     random_seed: 42
     optimizer: "adam"                    # all
     # learning_rate: 0.5                  # Zoph
