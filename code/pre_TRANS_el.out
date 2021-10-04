@@ -1,13 +1,13 @@
-2021-10-03 17:19:12,200 - INFO - root - Hello! This is Joey-NMT (version 1.3).
-2021-10-03 17:19:12,276 - INFO - joeynmt.data - Loading training data...
-2021-10-03 17:19:12,378 - INFO - joeynmt.data - Building vocabulary...
-2021-10-03 17:19:12,826 - INFO - joeynmt.data - Loading dev data...
-2021-10-03 17:19:12,837 - INFO - joeynmt.data - Loading test data...
-2021-10-03 17:19:12,847 - INFO - joeynmt.data - Data loaded.
-2021-10-03 17:19:12,847 - INFO - joeynmt.model - Building an encoder-decoder model...
-2021-10-03 17:19:13,683 - INFO - joeynmt.model - Enc-dec model built.
-2021-10-03 17:19:13,694 - INFO - joeynmt.training - Total params: 33662976
-2021-10-03 17:19:17,647 - INFO - joeynmt.training - Loading model from ../checkpoints/TRANS_el.ckpt
+2021-10-03 19:07:50,510 - INFO - root - Hello! This is Joey-NMT (version 1.3).
+2021-10-03 19:07:50,574 - INFO - joeynmt.data - Loading training data...
+2021-10-03 19:07:50,680 - INFO - joeynmt.data - Building vocabulary...
+2021-10-03 19:07:51,129 - INFO - joeynmt.data - Loading dev data...
+2021-10-03 19:07:51,142 - INFO - joeynmt.data - Loading test data...
+2021-10-03 19:07:51,153 - INFO - joeynmt.data - Data loaded.
+2021-10-03 19:07:51,153 - INFO - joeynmt.model - Building an encoder-decoder model...
+2021-10-03 19:07:51,984 - INFO - joeynmt.model - Enc-dec model built.
+2021-10-03 19:07:51,994 - INFO - joeynmt.training - Total params: 33662976
+2021-10-03 19:07:56,928 - INFO - joeynmt.training - Loading model from ../checkpoints/TRANS_el.ckpt
 Traceback (most recent call last):
   File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 193, in _run_module_as_main
     "__main__", mod_spec)
@@ -21,9 +21,12 @@ Traceback (most recent call last):
     trainer = TrainManager(model=model, config=cfg)
   File "/home/lcur0008/joeynmt/joeynmt/training.py", line 218, in __init__
     reset_iter_state=train_config.get("reset_iter_state", False))
-  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 327, in init_from_checkpoint
-    model_checkpoint = load_checkpoint(path=path, use_cuda=self.use_cuda)
-  File "/home/lcur0008/joeynmt/joeynmt/helpers.py", line 284, in load_checkpoint
-    assert os.path.isfile(path), "Checkpoint %s not found" % path
-AssertionError: Checkpoint ../checkpoints/TRANS_el.ckpt not found
-srun: error: r30n2: task 0: Exited with exit code 1
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 330, in init_from_checkpoint
+    self.model.load_state_dict(model_checkpoint["model_state"])
+  File "/home/lcur0008/.local/lib/python3.7/site-packages/torch/nn/modules/module.py", line 1407, in load_state_dict
+    self.__class__.__name__, "\n\t".join(error_msgs)))
+RuntimeError: Error(s) in loading state_dict for Model:
+	size mismatch for src_embed.lut.weight: copying a param with shape torch.Size([4230, 512]) from checkpoint, the shape in current model is torch.Size([4136, 512]).
+	size mismatch for trg_embed.lut.weight: copying a param with shape torch.Size([4230, 512]) from checkpoint, the shape in current model is torch.Size([4136, 512]).
+	size mismatch for decoder.output_layer.weight: copying a param with shape torch.Size([4230, 512]) from checkpoint, the shape in current model is torch.Size([4136, 512]).
+srun: error: r30n1: task 0: Exited with exit code 1

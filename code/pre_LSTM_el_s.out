@@ -1,14 +1,117 @@
-2021-10-03 17:22:07,678 - INFO - root - Hello! This is Joey-NMT (version 1.3).
-2021-10-03 17:22:07,738 - INFO - joeynmt.data - Loading training data...
-2021-10-03 17:22:07,840 - INFO - joeynmt.data - Building vocabulary...
-2021-10-03 17:22:08,289 - INFO - joeynmt.data - Loading dev data...
-2021-10-03 17:22:08,300 - INFO - joeynmt.data - Loading test data...
-2021-10-03 17:22:08,309 - INFO - joeynmt.data - Data loaded.
-2021-10-03 17:22:08,309 - INFO - joeynmt.model - Building an encoder-decoder model...
-2021-10-03 17:22:08,849 - INFO - joeynmt.model - Enc-dec model built.
-2021-10-03 17:22:08,855 - INFO - joeynmt.training - Total params: 24738816
-2021-10-03 17:22:12,776 - INFO - joeynmt.training - Loading model from ../checkpoints/LSTM_el.ckpt
+2021-10-04 12:06:16,287 - INFO - root - Hello! This is Joey-NMT (version 1.3).
+2021-10-04 12:06:16,351 - INFO - joeynmt.data - Loading training data...
+2021-10-04 12:06:16,455 - INFO - joeynmt.data - Building vocabulary...
+2021-10-04 12:06:16,906 - INFO - joeynmt.data - Loading dev data...
+2021-10-04 12:06:16,919 - INFO - joeynmt.data - Loading test data...
+2021-10-04 12:06:16,931 - INFO - joeynmt.data - Data loaded.
+2021-10-04 12:06:16,931 - INFO - joeynmt.model - Building an encoder-decoder model...
+2021-10-04 12:06:17,470 - INFO - joeynmt.model - Enc-dec model built.
+2021-10-04 12:06:17,476 - INFO - joeynmt.training - Total params: 24738816
+2021-10-04 12:06:22,059 - INFO - joeynmt.training - Loading model from ../checkpoints/LSTM_el.ckpt
+2021-10-04 12:06:22,410 - INFO - joeynmt.training - Reset tracking of the best checkpoint.
+2021-10-04 12:06:22,410 - INFO - joeynmt.training - Reset train data iterator.
+2021-10-04 12:06:22,425 - INFO - joeynmt.helpers - cfg.name                           : pre_LSTM_el_s
+2021-10-04 12:06:22,425 - INFO - joeynmt.helpers - cfg.data.src                       : tr_s
+2021-10-04 12:06:22,426 - INFO - joeynmt.helpers - cfg.data.trg                       : en_s
+2021-10-04 12:06:22,426 - INFO - joeynmt.helpers - cfg.data.train                     : ../2DL4NLP/all_data/tr_s.en_s/train.bpe
+2021-10-04 12:06:22,426 - INFO - joeynmt.helpers - cfg.data.dev                       : ../2DL4NLP/all_data/tr_s.en_s/val.bpe
+2021-10-04 12:06:22,426 - INFO - joeynmt.helpers - cfg.data.test                      : ../2DL4NLP/all_data/tr_s.en_s/test.bpe
+2021-10-04 12:06:22,426 - INFO - joeynmt.helpers - cfg.data.level                     : bpe
+2021-10-04 12:06:22,426 - INFO - joeynmt.helpers - cfg.data.lowercase                 : False
+2021-10-04 12:06:22,426 - INFO - joeynmt.helpers - cfg.data.max_sent_length           : 50
+2021-10-04 12:06:22,426 - INFO - joeynmt.helpers - cfg.data.src_voc_min_freq          : 0
+2021-10-04 12:06:22,426 - INFO - joeynmt.helpers - cfg.data.src_voc_limit             : 100000
+2021-10-04 12:06:22,426 - INFO - joeynmt.helpers - cfg.data.trg_voc_min_freq          : 0
+2021-10-04 12:06:22,427 - INFO - joeynmt.helpers - cfg.data.trg_voc_limit             : 100000
+2021-10-04 12:06:22,427 - INFO - joeynmt.helpers - cfg.data.src_vocab                 : ../2DL4NLP/all_data/tr_s.en_s/tr_s.en_s.vocab.txt
+2021-10-04 12:06:22,427 - INFO - joeynmt.helpers - cfg.data.trg_vocab                 : ../2DL4NLP/all_data/tr_s.en_s/tr_s.en_s.vocab.txt
+2021-10-04 12:06:22,427 - INFO - joeynmt.helpers - cfg.testing.beam_size              : 5
+2021-10-04 12:06:22,427 - INFO - joeynmt.helpers - cfg.testing.alpha                  : 1.0
+2021-10-04 12:06:22,427 - INFO - joeynmt.helpers - cfg.training.load_model            : ../checkpoints/LSTM_el.ckpt
+2021-10-04 12:06:22,427 - INFO - joeynmt.helpers - cfg.training.reset_best_ckpt       : True
+2021-10-04 12:06:22,427 - INFO - joeynmt.helpers - cfg.training.reset_iter_state      : True
+2021-10-04 12:06:22,427 - INFO - joeynmt.helpers - cfg.training.random_seed           : 42
+2021-10-04 12:06:22,427 - INFO - joeynmt.helpers - cfg.training.optimizer             : adam
+2021-10-04 12:06:22,427 - INFO - joeynmt.helpers - cfg.training.learning_rate         : 0.0003
+2021-10-04 12:06:22,427 - INFO - joeynmt.helpers - cfg.training.learning_rate_min     : 5e-07
+2021-10-04 12:06:22,428 - INFO - joeynmt.helpers - cfg.training.weight_decay          : 0.0
+2021-10-04 12:06:22,428 - INFO - joeynmt.helpers - cfg.training.clip_grad_norm        : 1.0
+2021-10-04 12:06:22,428 - INFO - joeynmt.helpers - cfg.training.batch_size            : 80
+2021-10-04 12:06:22,428 - INFO - joeynmt.helpers - cfg.training.scheduling            : plateau
+2021-10-04 12:06:22,428 - INFO - joeynmt.helpers - cfg.training.patience              : 10
+2021-10-04 12:06:22,428 - INFO - joeynmt.helpers - cfg.training.decrease_factor       : 0.5
+2021-10-04 12:06:22,428 - INFO - joeynmt.helpers - cfg.training.early_stopping_metric : eval_metric
+2021-10-04 12:06:22,428 - INFO - joeynmt.helpers - cfg.training.epochs                : 20
+2021-10-04 12:06:22,428 - INFO - joeynmt.helpers - cfg.training.validation_freq       : 100
+2021-10-04 12:06:22,428 - INFO - joeynmt.helpers - cfg.training.logging_freq          : 1000
+2021-10-04 12:06:22,428 - INFO - joeynmt.helpers - cfg.training.eval_metric           : bleu
+2021-10-04 12:06:22,428 - INFO - joeynmt.helpers - cfg.training.model_dir             : models/pre_LSTM_el_s
+2021-10-04 12:06:22,428 - INFO - joeynmt.helpers - cfg.training.overwrite             : True
+2021-10-04 12:06:22,429 - INFO - joeynmt.helpers - cfg.training.shuffle               : True
+2021-10-04 12:06:22,429 - INFO - joeynmt.helpers - cfg.training.use_cuda              : True
+2021-10-04 12:06:22,429 - INFO - joeynmt.helpers - cfg.training.max_output_length     : 100
+2021-10-04 12:06:22,429 - INFO - joeynmt.helpers - cfg.training.print_valid_sents     : [0, 1, 2]
+2021-10-04 12:06:22,429 - INFO - joeynmt.helpers - cfg.training.keep_best_ckpts       : 1
+2021-10-04 12:06:22,429 - INFO - joeynmt.helpers - cfg.training.save_latest_ckpt      : True
+2021-10-04 12:06:22,429 - INFO - joeynmt.helpers - cfg.model.encoder.rnn_type         : lstm
+2021-10-04 12:06:22,429 - INFO - joeynmt.helpers - cfg.model.encoder.embeddings.embedding_dim : 512
+2021-10-04 12:06:22,429 - INFO - joeynmt.helpers - cfg.model.encoder.embeddings.scale : False
+2021-10-04 12:06:22,429 - INFO - joeynmt.helpers - cfg.model.encoder.hidden_size      : 512
+2021-10-04 12:06:22,429 - INFO - joeynmt.helpers - cfg.model.encoder.bidirectional    : False
+2021-10-04 12:06:22,430 - INFO - joeynmt.helpers - cfg.model.encoder.dropout          : 0.2
+2021-10-04 12:06:22,430 - INFO - joeynmt.helpers - cfg.model.encoder.num_layers       : 1
+2021-10-04 12:06:22,430 - INFO - joeynmt.helpers - cfg.model.decoder.rnn_type         : lstm
+2021-10-04 12:06:22,430 - INFO - joeynmt.helpers - cfg.model.decoder.embeddings.embedding_dim : 512
+2021-10-04 12:06:22,430 - INFO - joeynmt.helpers - cfg.model.decoder.embeddings.scale : False
+2021-10-04 12:06:22,430 - INFO - joeynmt.helpers - cfg.model.decoder.emb_scale        : False
+2021-10-04 12:06:22,430 - INFO - joeynmt.helpers - cfg.model.decoder.hidden_size      : 1024
+2021-10-04 12:06:22,430 - INFO - joeynmt.helpers - cfg.model.decoder.dropout          : 0.2
+2021-10-04 12:06:22,430 - INFO - joeynmt.helpers - cfg.model.decoder.hidden_dropout   : 0.2
+2021-10-04 12:06:22,430 - INFO - joeynmt.helpers - cfg.model.decoder.num_layers       : 1
+2021-10-04 12:06:22,430 - INFO - joeynmt.helpers - cfg.model.decoder.input_feeding    : True
+2021-10-04 12:06:22,430 - INFO - joeynmt.helpers - cfg.model.decoder.init_hidden      : bridge
+2021-10-04 12:06:22,430 - INFO - joeynmt.helpers - cfg.model.decoder.attention        : bahdanau
+2021-10-04 12:06:22,431 - INFO - joeynmt.helpers - Data set sizes: 
+	train 5177,
+	valid 551,
+	test 602
+2021-10-04 12:06:22,431 - INFO - joeynmt.helpers - First training example:
+	[SRC] tr
+	[TRG] en
+2021-10-04 12:06:22,431 - INFO - joeynmt.helpers - First 10 words (src): (0) <unk> (1) <pad> (2) <s> (3) </s> (4) , (5) . (6) ." (7) the (8) a (9) &quot;
+2021-10-04 12:06:22,431 - INFO - joeynmt.helpers - First 10 words (trg): (0) <unk> (1) <pad> (2) <s> (3) </s> (4) , (5) . (6) ." (7) the (8) a (9) &quot;
+2021-10-04 12:06:22,431 - INFO - joeynmt.helpers - Number of Src words (types): 4136
+2021-10-04 12:06:22,431 - INFO - joeynmt.helpers - Number of Trg words (types): 4136
+2021-10-04 12:06:22,431 - INFO - joeynmt.training - Model(
+	encoder=RecurrentEncoder(LSTM(512, 512, batch_first=True)),
+	decoder=RecurrentDecoder(rnn=LSTM(1536, 1024, batch_first=True), attention=BahdanauAttention),
+	src_embed=Embeddings(embedding_dim=512, vocab_size=4136),
+	trg_embed=Embeddings(embedding_dim=512, vocab_size=4136))
+2021-10-04 12:06:22,441 - INFO - joeynmt.training - Train stats:
+	device: cuda
+	n_gpu: 1
+	16-bits training: False
+	gradient accumulation: 1
+	batch size per device: 80
+	total batch size (w. parallel & accumulation): 80
+2021-10-04 12:06:22,442 - INFO - joeynmt.training - EPOCH 1
+2021-10-04 12:06:36,207 - INFO - joeynmt.training - Epoch   1: total training loss 8277.38
+2021-10-04 12:06:36,208 - INFO - joeynmt.training - EPOCH 2
+2021-10-04 12:06:47,231 - WARNING - sacrebleu - That's 100 lines that end in a tokenized period ('.')
+2021-10-04 12:06:47,231 - WARNING - sacrebleu - It looks like you forgot to detokenize your test data, which may hurt your score.
+2021-10-04 12:06:47,231 - WARNING - sacrebleu - If you insist your data is detokenized, or don't care, you can suppress this message with the `force` parameter.
+2021-10-04 12:06:47,237 - INFO - joeynmt.training - Hooray! New best validation result [eval_metric]!
+2021-10-04 12:06:48,150 - INFO - joeynmt.training - Example #0
+2021-10-04 12:06:48,151 - INFO - joeynmt.training - 	Source:     tr
+2021-10-04 12:06:48,151 - INFO - joeynmt.training - 	Reference:  en
+2021-10-04 12:06:48,151 - INFO - joeynmt.training - 	Hypothesis: Thank you &apos;t .
+2021-10-04 12:06:48,151 - INFO - joeynmt.training - Example #1
+--- Logging error ---
 Traceback (most recent call last):
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/logging/__init__.py", line 1036, in emit
+    stream.write(msg)
+UnicodeEncodeError: 'latin-1' codec can't encode character '\u015f' in position 86: ordinal not in range(256)
+Call stack:
   File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 193, in _run_module_as_main
     "__main__", mod_spec)
   File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 85, in _run_code
@@ -17,16 +120,1533 @@ Traceback (most recent call last):
     main()
   File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 35, in main
     train(cfg_file=args.config_path, skip_test=args.skip_test)
-  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 823, in train
-    trainer = TrainManager(model=model, config=cfg)
-  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 218, in __init__
-    reset_iter_state=train_config.get("reset_iter_state", False))
-  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 330, in init_from_checkpoint
-    self.model.load_state_dict(model_checkpoint["model_state"])
-  File "/home/lcur0008/.local/lib/python3.7/site-packages/torch/nn/modules/module.py", line 1407, in load_state_dict
-    self.__class__.__name__, "\n\t".join(error_msgs)))
-RuntimeError: Error(s) in loading state_dict for Model:
-	size mismatch for src_embed.lut.weight: copying a param with shape torch.Size([4230, 512]) from checkpoint, the shape in current model is torch.Size([4136, 512]).
-	size mismatch for trg_embed.lut.weight: copying a param with shape torch.Size([4230, 512]) from checkpoint, the shape in current model is torch.Size([4136, 512]).
-	size mismatch for decoder.output_layer.weight: copying a param with shape torch.Size([4230, 1024]) from checkpoint, the shape in current model is torch.Size([4136, 1024]).
-srun: error: r30n2: task 0: Exited with exit code 1
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 846, in train
+    trainer.train_and_validate(train_data=train_data, valid_data=dev_data)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 497, in train_and_validate
+    valid_duration = self._validate(valid_data, epoch_no)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 642, in _validate
+    references=valid_references)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 731, in _log_examples
+    logger.debug("\tRaw source:     %s", sources_raw[p])
+Message: '\tRaw source:     %s'
+Arguments: (['1@@', '1', 'ya\u015f@@', '\u0131nday@@', 'ken', 'bir', 'sa@@', 'ba@@', 'h', 'ev@@', 'im@@', 'deki', 'sev@@', 'in@@', 'ç', 'ç@@', '\u0131\u011f@@', 'l\u0131@@', 'klar@@', '\u0131yla', 'u@@', 'yan@@', 'd\u0131\u011f@@', '\u0131m\u0131', 'hat\u0131r@@', 'l\u0131@@', 'yorum', '.'],)
+--- Logging error ---
+Traceback (most recent call last):
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/logging/__init__.py", line 1036, in emit
+    stream.write(msg)
+UnicodeEncodeError: 'latin-1' codec can't encode characters in position 70-71: ordinal not in range(256)
+Call stack:
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 48, in <module>
+    main()
+  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 35, in main
+    train(cfg_file=args.config_path, skip_test=args.skip_test)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 846, in train
+    trainer.train_and_validate(train_data=train_data, valid_data=dev_data)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 497, in train_and_validate
+    valid_duration = self._validate(valid_data, epoch_no)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 642, in _validate
+    references=valid_references)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 737, in _log_examples
+    logger.info("\tSource:     %s", sources[p])
+Message: '\tSource:     %s'
+Arguments: ('11 ya\u015f\u0131ndayken bir sabah evimdeki sevinç ç\u0131\u011fl\u0131klar\u0131yla uyand\u0131\u011f\u0131m\u0131 hat\u0131rl\u0131yorum .',)
+2021-10-04 12:06:48,155 - INFO - joeynmt.training - 	Source:     11 ya\u015f\u0131ndayken bir sabah evimdeki sevinç ç\u0131\u011fl\u0131klar\u0131yla uyand\u0131\u011f\u0131m\u0131 hat\u0131rl\u0131yorum .
+2021-10-04 12:06:48,156 - INFO - joeynmt.training - 	Reference:  "When I was 11 , I remember waking up one morning to the sound of joy in my house ."
+2021-10-04 12:06:48,156 - INFO - joeynmt.training - 	Hypothesis: "And I can &apos;t be a first , and I was a fa-thth-th-th-thth , and I can &apos;t be a time ."
+2021-10-04 12:06:48,156 - INFO - joeynmt.training - Example #2
+--- Logging error ---
+Traceback (most recent call last):
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/logging/__init__.py", line 1036, in emit
+    stream.write(msg)
+UnicodeEncodeError: 'latin-1' codec can't encode character '\u0131' in position 151: ordinal not in range(256)
+Call stack:
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 48, in <module>
+    main()
+  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 35, in main
+    train(cfg_file=args.config_path, skip_test=args.skip_test)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 846, in train
+    trainer.train_and_validate(train_data=train_data, valid_data=dev_data)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 497, in train_and_validate
+    valid_duration = self._validate(valid_data, epoch_no)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 642, in _validate
+    references=valid_references)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 731, in _log_examples
+    logger.debug("\tRaw source:     %s", sources_raw[p])
+Message: '\tRaw source:     %s'
+Arguments: (['"B@@', 'ab@@', 'am', 'B@@', 'B@@', 'C', 'H@@', 'ab@@', 'er', 'kan@@', 'al@@', '\u0131n\u0131', 'din@@', 'li@@', 'yordu', ';', 'o', 'uf@@', 'ak', ',', 'gr@@', 'i', 'rad@@', 'y@@', 'os@@', 'undan', '."'],)
+--- Logging error ---
+Traceback (most recent call last):
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/logging/__init__.py", line 1036, in emit
+    stream.write(msg)
+UnicodeEncodeError: 'latin-1' codec can't encode character '\u0131' in position 87: ordinal not in range(256)
+Call stack:
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 48, in <module>
+    main()
+  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 35, in main
+    train(cfg_file=args.config_path, skip_test=args.skip_test)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 846, in train
+    trainer.train_and_validate(train_data=train_data, valid_data=dev_data)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 497, in train_and_validate
+    valid_duration = self._validate(valid_data, epoch_no)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 642, in _validate
+    references=valid_references)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 737, in _log_examples
+    logger.info("\tSource:     %s", sources[p])
+Message: '\tSource:     %s'
+Arguments: ('"Babam BBC Haber kanal\u0131n\u0131 dinliyordu ; o ufak , gri radyosundan ."',)
+2021-10-04 12:06:48,157 - INFO - joeynmt.training - 	Source:     "Babam BBC Haber kanal\u0131n\u0131 dinliyordu ; o ufak , gri radyosundan ."
+2021-10-04 12:06:48,158 - INFO - joeynmt.training - 	Reference:  "My father was listening to BBC News on his small , gray radio ."
+2021-10-04 12:06:48,158 - INFO - joeynmt.training - 	Hypothesis: "The first , I can be a fd-fped , and the world , and we can &apos;t be a world ."
+2021-10-04 12:06:48,158 - INFO - joeynmt.training - Validation result (greedy) at epoch   2, step     1100: bleu:   3.25, loss: 78532.2188, ppl: 176.2736, duration: 4.4832s
+2021-10-04 12:06:56,119 - INFO - joeynmt.training - Epoch   2: total training loss 6903.62
+2021-10-04 12:06:56,120 - INFO - joeynmt.training - EPOCH 3
+2021-10-04 12:07:09,886 - INFO - joeynmt.training - Epoch   3: total training loss 6436.15
+2021-10-04 12:07:09,887 - INFO - joeynmt.training - EPOCH 4
+2021-10-04 12:07:13,910 - WARNING - sacrebleu - That's 100 lines that end in a tokenized period ('.')
+2021-10-04 12:07:13,910 - WARNING - sacrebleu - It looks like you forgot to detokenize your test data, which may hurt your score.
+2021-10-04 12:07:13,910 - WARNING - sacrebleu - If you insist your data is detokenized, or don't care, you can suppress this message with the `force` parameter.
+2021-10-04 12:07:13,914 - INFO - joeynmt.training - Hooray! New best validation result [eval_metric]!
+2021-10-04 12:07:14,806 - INFO - joeynmt.helpers - delete models/pre_LSTM_el_s/1100.ckpt
+2021-10-04 12:07:14,876 - INFO - joeynmt.helpers - delete /home/lcur0008/joeynmt/models/pre_LSTM_el_s/1100.ckpt
+2021-10-04 12:07:14,877 - WARNING - joeynmt.helpers - Wanted to delete old checkpoint /home/lcur0008/joeynmt/models/pre_LSTM_el_s/1100.ckpt but file does not exist. ([Errno 2] No such file or directory: '/home/lcur0008/joeynmt/models/pre_LSTM_el_s/1100.ckpt')
+2021-10-04 12:07:14,879 - INFO - joeynmt.training - Example #0
+2021-10-04 12:07:14,879 - INFO - joeynmt.training - 	Source:     tr
+2021-10-04 12:07:14,879 - INFO - joeynmt.training - 	Reference:  en
+2021-10-04 12:07:14,879 - INFO - joeynmt.training - 	Hypothesis: Thank you .
+2021-10-04 12:07:14,879 - INFO - joeynmt.training - Example #1
+--- Logging error ---
+Traceback (most recent call last):
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/logging/__init__.py", line 1036, in emit
+    stream.write(msg)
+UnicodeEncodeError: 'latin-1' codec can't encode character '\u015f' in position 86: ordinal not in range(256)
+Call stack:
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 48, in <module>
+    main()
+  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 35, in main
+    train(cfg_file=args.config_path, skip_test=args.skip_test)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 846, in train
+    trainer.train_and_validate(train_data=train_data, valid_data=dev_data)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 497, in train_and_validate
+    valid_duration = self._validate(valid_data, epoch_no)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 642, in _validate
+    references=valid_references)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 731, in _log_examples
+    logger.debug("\tRaw source:     %s", sources_raw[p])
+Message: '\tRaw source:     %s'
+Arguments: (['1@@', '1', 'ya\u015f@@', '\u0131nday@@', 'ken', 'bir', 'sa@@', 'ba@@', 'h', 'ev@@', 'im@@', 'deki', 'sev@@', 'in@@', 'ç', 'ç@@', '\u0131\u011f@@', 'l\u0131@@', 'klar@@', '\u0131yla', 'u@@', 'yan@@', 'd\u0131\u011f@@', '\u0131m\u0131', 'hat\u0131r@@', 'l\u0131@@', 'yorum', '.'],)
+--- Logging error ---
+Traceback (most recent call last):
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/logging/__init__.py", line 1036, in emit
+    stream.write(msg)
+UnicodeEncodeError: 'latin-1' codec can't encode characters in position 70-71: ordinal not in range(256)
+Call stack:
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 48, in <module>
+    main()
+  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 35, in main
+    train(cfg_file=args.config_path, skip_test=args.skip_test)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 846, in train
+    trainer.train_and_validate(train_data=train_data, valid_data=dev_data)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 497, in train_and_validate
+    valid_duration = self._validate(valid_data, epoch_no)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 642, in _validate
+    references=valid_references)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 737, in _log_examples
+    logger.info("\tSource:     %s", sources[p])
+Message: '\tSource:     %s'
+Arguments: ('11 ya\u015f\u0131ndayken bir sabah evimdeki sevinç ç\u0131\u011fl\u0131klar\u0131yla uyand\u0131\u011f\u0131m\u0131 hat\u0131rl\u0131yorum .',)
+2021-10-04 12:07:14,881 - INFO - joeynmt.training - 	Source:     11 ya\u015f\u0131ndayken bir sabah evimdeki sevinç ç\u0131\u011fl\u0131klar\u0131yla uyand\u0131\u011f\u0131m\u0131 hat\u0131rl\u0131yorum .
+2021-10-04 12:07:14,882 - INFO - joeynmt.training - 	Reference:  "When I was 11 , I remember waking up one morning to the sound of joy in my house ."
+2021-10-04 12:07:14,882 - INFO - joeynmt.training - 	Hypothesis: "I was a first , and I was a first , and I was a first , and I was a first , and I was a school , and I was a very bit ."
+2021-10-04 12:07:14,882 - INFO - joeynmt.training - Example #2
+--- Logging error ---
+Traceback (most recent call last):
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/logging/__init__.py", line 1036, in emit
+    stream.write(msg)
+UnicodeEncodeError: 'latin-1' codec can't encode character '\u0131' in position 151: ordinal not in range(256)
+Call stack:
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 48, in <module>
+    main()
+  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 35, in main
+    train(cfg_file=args.config_path, skip_test=args.skip_test)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 846, in train
+    trainer.train_and_validate(train_data=train_data, valid_data=dev_data)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 497, in train_and_validate
+    valid_duration = self._validate(valid_data, epoch_no)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 642, in _validate
+    references=valid_references)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 731, in _log_examples
+    logger.debug("\tRaw source:     %s", sources_raw[p])
+Message: '\tRaw source:     %s'
+Arguments: (['"B@@', 'ab@@', 'am', 'B@@', 'B@@', 'C', 'H@@', 'ab@@', 'er', 'kan@@', 'al@@', '\u0131n\u0131', 'din@@', 'li@@', 'yordu', ';', 'o', 'uf@@', 'ak', ',', 'gr@@', 'i', 'rad@@', 'y@@', 'os@@', 'undan', '."'],)
+--- Logging error ---
+Traceback (most recent call last):
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/logging/__init__.py", line 1036, in emit
+    stream.write(msg)
+UnicodeEncodeError: 'latin-1' codec can't encode character '\u0131' in position 87: ordinal not in range(256)
+Call stack:
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 48, in <module>
+    main()
+  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 35, in main
+    train(cfg_file=args.config_path, skip_test=args.skip_test)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 846, in train
+    trainer.train_and_validate(train_data=train_data, valid_data=dev_data)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 497, in train_and_validate
+    valid_duration = self._validate(valid_data, epoch_no)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 642, in _validate
+    references=valid_references)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 737, in _log_examples
+    logger.info("\tSource:     %s", sources[p])
+Message: '\tSource:     %s'
+Arguments: ('"Babam BBC Haber kanal\u0131n\u0131 dinliyordu ; o ufak , gri radyosundan ."',)
+2021-10-04 12:07:14,882 - INFO - joeynmt.training - 	Source:     "Babam BBC Haber kanal\u0131n\u0131 dinliyordu ; o ufak , gri radyosundan ."
+2021-10-04 12:07:14,882 - INFO - joeynmt.training - 	Reference:  "My father was listening to BBC News on his small , gray radio ."
+2021-10-04 12:07:14,882 - INFO - joeynmt.training - 	Hypothesis: The first Sman is the first in the first in the first in the first in the first .
+2021-10-04 12:07:14,883 - INFO - joeynmt.training - Validation result (greedy) at epoch   4, step     1200: bleu:   3.77, loss: 76015.8125, ppl: 149.3526, duration: 3.9289s
+2021-10-04 12:07:28,782 - INFO - joeynmt.training - Epoch   4: total training loss 6174.23
+2021-10-04 12:07:28,783 - INFO - joeynmt.training - EPOCH 5
+2021-10-04 12:07:40,418 - WARNING - sacrebleu - That's 100 lines that end in a tokenized period ('.')
+2021-10-04 12:07:40,418 - WARNING - sacrebleu - It looks like you forgot to detokenize your test data, which may hurt your score.
+2021-10-04 12:07:40,418 - WARNING - sacrebleu - If you insist your data is detokenized, or don't care, you can suppress this message with the `force` parameter.
+2021-10-04 12:07:40,423 - INFO - joeynmt.training - Hooray! New best validation result [eval_metric]!
+2021-10-04 12:07:41,323 - INFO - joeynmt.helpers - delete models/pre_LSTM_el_s/1200.ckpt
+2021-10-04 12:07:41,393 - INFO - joeynmt.helpers - delete /home/lcur0008/joeynmt/models/pre_LSTM_el_s/1200.ckpt
+2021-10-04 12:07:41,393 - WARNING - joeynmt.helpers - Wanted to delete old checkpoint /home/lcur0008/joeynmt/models/pre_LSTM_el_s/1200.ckpt but file does not exist. ([Errno 2] No such file or directory: '/home/lcur0008/joeynmt/models/pre_LSTM_el_s/1200.ckpt')
+2021-10-04 12:07:41,395 - INFO - joeynmt.training - Example #0
+2021-10-04 12:07:41,396 - INFO - joeynmt.training - 	Source:     tr
+2021-10-04 12:07:41,396 - INFO - joeynmt.training - 	Reference:  en
+2021-10-04 12:07:41,396 - INFO - joeynmt.training - 	Hypothesis: Thank you .
+2021-10-04 12:07:41,396 - INFO - joeynmt.training - Example #1
+--- Logging error ---
+Traceback (most recent call last):
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/logging/__init__.py", line 1036, in emit
+    stream.write(msg)
+UnicodeEncodeError: 'latin-1' codec can't encode character '\u015f' in position 86: ordinal not in range(256)
+Call stack:
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 48, in <module>
+    main()
+  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 35, in main
+    train(cfg_file=args.config_path, skip_test=args.skip_test)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 846, in train
+    trainer.train_and_validate(train_data=train_data, valid_data=dev_data)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 497, in train_and_validate
+    valid_duration = self._validate(valid_data, epoch_no)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 642, in _validate
+    references=valid_references)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 731, in _log_examples
+    logger.debug("\tRaw source:     %s", sources_raw[p])
+Message: '\tRaw source:     %s'
+Arguments: (['1@@', '1', 'ya\u015f@@', '\u0131nday@@', 'ken', 'bir', 'sa@@', 'ba@@', 'h', 'ev@@', 'im@@', 'deki', 'sev@@', 'in@@', 'ç', 'ç@@', '\u0131\u011f@@', 'l\u0131@@', 'klar@@', '\u0131yla', 'u@@', 'yan@@', 'd\u0131\u011f@@', '\u0131m\u0131', 'hat\u0131r@@', 'l\u0131@@', 'yorum', '.'],)
+--- Logging error ---
+Traceback (most recent call last):
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/logging/__init__.py", line 1036, in emit
+    stream.write(msg)
+UnicodeEncodeError: 'latin-1' codec can't encode characters in position 70-71: ordinal not in range(256)
+Call stack:
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 48, in <module>
+    main()
+  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 35, in main
+    train(cfg_file=args.config_path, skip_test=args.skip_test)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 846, in train
+    trainer.train_and_validate(train_data=train_data, valid_data=dev_data)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 497, in train_and_validate
+    valid_duration = self._validate(valid_data, epoch_no)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 642, in _validate
+    references=valid_references)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 737, in _log_examples
+    logger.info("\tSource:     %s", sources[p])
+Message: '\tSource:     %s'
+Arguments: ('11 ya\u015f\u0131ndayken bir sabah evimdeki sevinç ç\u0131\u011fl\u0131klar\u0131yla uyand\u0131\u011f\u0131m\u0131 hat\u0131rl\u0131yorum .',)
+2021-10-04 12:07:41,397 - INFO - joeynmt.training - 	Source:     11 ya\u015f\u0131ndayken bir sabah evimdeki sevinç ç\u0131\u011fl\u0131klar\u0131yla uyand\u0131\u011f\u0131m\u0131 hat\u0131rl\u0131yorum .
+2021-10-04 12:07:41,397 - INFO - joeynmt.training - 	Reference:  "When I was 11 , I remember waking up one morning to the sound of joy in my house ."
+2021-10-04 12:07:41,397 - INFO - joeynmt.training - 	Hypothesis: "I was a first a first , and I was a first in the first , and I was a srid , and I was a very bit of the time ."
+2021-10-04 12:07:41,397 - INFO - joeynmt.training - Example #2
+--- Logging error ---
+Traceback (most recent call last):
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/logging/__init__.py", line 1036, in emit
+    stream.write(msg)
+UnicodeEncodeError: 'latin-1' codec can't encode character '\u0131' in position 151: ordinal not in range(256)
+Call stack:
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 48, in <module>
+    main()
+  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 35, in main
+    train(cfg_file=args.config_path, skip_test=args.skip_test)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 846, in train
+    trainer.train_and_validate(train_data=train_data, valid_data=dev_data)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 497, in train_and_validate
+    valid_duration = self._validate(valid_data, epoch_no)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 642, in _validate
+    references=valid_references)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 731, in _log_examples
+    logger.debug("\tRaw source:     %s", sources_raw[p])
+Message: '\tRaw source:     %s'
+Arguments: (['"B@@', 'ab@@', 'am', 'B@@', 'B@@', 'C', 'H@@', 'ab@@', 'er', 'kan@@', 'al@@', '\u0131n\u0131', 'din@@', 'li@@', 'yordu', ';', 'o', 'uf@@', 'ak', ',', 'gr@@', 'i', 'rad@@', 'y@@', 'os@@', 'undan', '."'],)
+--- Logging error ---
+Traceback (most recent call last):
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/logging/__init__.py", line 1036, in emit
+    stream.write(msg)
+UnicodeEncodeError: 'latin-1' codec can't encode character '\u0131' in position 87: ordinal not in range(256)
+Call stack:
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 48, in <module>
+    main()
+  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 35, in main
+    train(cfg_file=args.config_path, skip_test=args.skip_test)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 846, in train
+    trainer.train_and_validate(train_data=train_data, valid_data=dev_data)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 497, in train_and_validate
+    valid_duration = self._validate(valid_data, epoch_no)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 642, in _validate
+    references=valid_references)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 737, in _log_examples
+    logger.info("\tSource:     %s", sources[p])
+Message: '\tSource:     %s'
+Arguments: ('"Babam BBC Haber kanal\u0131n\u0131 dinliyordu ; o ufak , gri radyosundan ."',)
+2021-10-04 12:07:41,398 - INFO - joeynmt.training - 	Source:     "Babam BBC Haber kanal\u0131n\u0131 dinliyordu ; o ufak , gri radyosundan ."
+2021-10-04 12:07:41,398 - INFO - joeynmt.training - 	Reference:  "My father was listening to BBC News on his small , gray radio ."
+2021-10-04 12:07:41,398 - INFO - joeynmt.training - 	Hypothesis: "The first Sswas , and the first in the first , and she was a sel and the first in the world ."
+2021-10-04 12:07:41,398 - INFO - joeynmt.training - Validation result (greedy) at epoch   5, step     1300: bleu:   3.81, loss: 75635.3438, ppl: 145.6567, duration: 4.1343s
+2021-10-04 12:07:48,059 - INFO - joeynmt.training - Epoch   5: total training loss 5983.66
+2021-10-04 12:07:48,060 - INFO - joeynmt.training - EPOCH 6
+2021-10-04 12:08:01,734 - INFO - joeynmt.training - Epoch   6: total training loss 5816.95
+2021-10-04 12:08:01,734 - INFO - joeynmt.training - EPOCH 7
+2021-10-04 12:08:06,747 - WARNING - sacrebleu - That's 100 lines that end in a tokenized period ('.')
+2021-10-04 12:08:06,747 - WARNING - sacrebleu - It looks like you forgot to detokenize your test data, which may hurt your score.
+2021-10-04 12:08:06,747 - WARNING - sacrebleu - If you insist your data is detokenized, or don't care, you can suppress this message with the `force` parameter.
+2021-10-04 12:08:06,751 - INFO - joeynmt.training - Hooray! New best validation result [eval_metric]!
+2021-10-04 12:08:07,628 - INFO - joeynmt.helpers - delete models/pre_LSTM_el_s/1300.ckpt
+2021-10-04 12:08:07,692 - INFO - joeynmt.helpers - delete /home/lcur0008/joeynmt/models/pre_LSTM_el_s/1300.ckpt
+2021-10-04 12:08:07,693 - WARNING - joeynmt.helpers - Wanted to delete old checkpoint /home/lcur0008/joeynmt/models/pre_LSTM_el_s/1300.ckpt but file does not exist. ([Errno 2] No such file or directory: '/home/lcur0008/joeynmt/models/pre_LSTM_el_s/1300.ckpt')
+2021-10-04 12:08:07,695 - INFO - joeynmt.training - Example #0
+2021-10-04 12:08:07,696 - INFO - joeynmt.training - 	Source:     tr
+2021-10-04 12:08:07,696 - INFO - joeynmt.training - 	Reference:  en
+2021-10-04 12:08:07,696 - INFO - joeynmt.training - 	Hypothesis: Thank you .
+2021-10-04 12:08:07,696 - INFO - joeynmt.training - Example #1
+--- Logging error ---
+Traceback (most recent call last):
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/logging/__init__.py", line 1036, in emit
+    stream.write(msg)
+UnicodeEncodeError: 'latin-1' codec can't encode character '\u015f' in position 86: ordinal not in range(256)
+Call stack:
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 48, in <module>
+    main()
+  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 35, in main
+    train(cfg_file=args.config_path, skip_test=args.skip_test)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 846, in train
+    trainer.train_and_validate(train_data=train_data, valid_data=dev_data)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 497, in train_and_validate
+    valid_duration = self._validate(valid_data, epoch_no)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 642, in _validate
+    references=valid_references)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 731, in _log_examples
+    logger.debug("\tRaw source:     %s", sources_raw[p])
+Message: '\tRaw source:     %s'
+Arguments: (['1@@', '1', 'ya\u015f@@', '\u0131nday@@', 'ken', 'bir', 'sa@@', 'ba@@', 'h', 'ev@@', 'im@@', 'deki', 'sev@@', 'in@@', 'ç', 'ç@@', '\u0131\u011f@@', 'l\u0131@@', 'klar@@', '\u0131yla', 'u@@', 'yan@@', 'd\u0131\u011f@@', '\u0131m\u0131', 'hat\u0131r@@', 'l\u0131@@', 'yorum', '.'],)
+--- Logging error ---
+Traceback (most recent call last):
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/logging/__init__.py", line 1036, in emit
+    stream.write(msg)
+UnicodeEncodeError: 'latin-1' codec can't encode characters in position 70-71: ordinal not in range(256)
+Call stack:
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 48, in <module>
+    main()
+  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 35, in main
+    train(cfg_file=args.config_path, skip_test=args.skip_test)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 846, in train
+    trainer.train_and_validate(train_data=train_data, valid_data=dev_data)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 497, in train_and_validate
+    valid_duration = self._validate(valid_data, epoch_no)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 642, in _validate
+    references=valid_references)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 737, in _log_examples
+    logger.info("\tSource:     %s", sources[p])
+Message: '\tSource:     %s'
+Arguments: ('11 ya\u015f\u0131ndayken bir sabah evimdeki sevinç ç\u0131\u011fl\u0131klar\u0131yla uyand\u0131\u011f\u0131m\u0131 hat\u0131rl\u0131yorum .',)
+2021-10-04 12:08:07,698 - INFO - joeynmt.training - 	Source:     11 ya\u015f\u0131ndayken bir sabah evimdeki sevinç ç\u0131\u011fl\u0131klar\u0131yla uyand\u0131\u011f\u0131m\u0131 hat\u0131rl\u0131yorum .
+2021-10-04 12:08:07,699 - INFO - joeynmt.training - 	Reference:  "When I was 11 , I remember waking up one morning to the sound of joy in my house ."
+2021-10-04 12:08:07,699 - INFO - joeynmt.training - 	Hypothesis: "I was a first a man , I was a little man , and I was a little bit of the first , and I was a little bit of the first time ."
+2021-10-04 12:08:07,699 - INFO - joeynmt.training - Example #2
+--- Logging error ---
+Traceback (most recent call last):
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/logging/__init__.py", line 1036, in emit
+    stream.write(msg)
+UnicodeEncodeError: 'latin-1' codec can't encode character '\u0131' in position 151: ordinal not in range(256)
+Call stack:
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 48, in <module>
+    main()
+  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 35, in main
+    train(cfg_file=args.config_path, skip_test=args.skip_test)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 846, in train
+    trainer.train_and_validate(train_data=train_data, valid_data=dev_data)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 497, in train_and_validate
+    valid_duration = self._validate(valid_data, epoch_no)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 642, in _validate
+    references=valid_references)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 731, in _log_examples
+    logger.debug("\tRaw source:     %s", sources_raw[p])
+Message: '\tRaw source:     %s'
+Arguments: (['"B@@', 'ab@@', 'am', 'B@@', 'B@@', 'C', 'H@@', 'ab@@', 'er', 'kan@@', 'al@@', '\u0131n\u0131', 'din@@', 'li@@', 'yordu', ';', 'o', 'uf@@', 'ak', ',', 'gr@@', 'i', 'rad@@', 'y@@', 'os@@', 'undan', '."'],)
+--- Logging error ---
+Traceback (most recent call last):
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/logging/__init__.py", line 1036, in emit
+    stream.write(msg)
+UnicodeEncodeError: 'latin-1' codec can't encode character '\u0131' in position 87: ordinal not in range(256)
+Call stack:
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 48, in <module>
+    main()
+  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 35, in main
+    train(cfg_file=args.config_path, skip_test=args.skip_test)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 846, in train
+    trainer.train_and_validate(train_data=train_data, valid_data=dev_data)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 497, in train_and_validate
+    valid_duration = self._validate(valid_data, epoch_no)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 642, in _validate
+    references=valid_references)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 737, in _log_examples
+    logger.info("\tSource:     %s", sources[p])
+Message: '\tSource:     %s'
+Arguments: ('"Babam BBC Haber kanal\u0131n\u0131 dinliyordu ; o ufak , gri radyosundan ."',)
+2021-10-04 12:08:07,700 - INFO - joeynmt.training - 	Source:     "Babam BBC Haber kanal\u0131n\u0131 dinliyordu ; o ufak , gri radyosundan ."
+2021-10-04 12:08:07,701 - INFO - joeynmt.training - 	Reference:  "My father was listening to BBC News on his small , gray radio ."
+2021-10-04 12:08:07,701 - INFO - joeynmt.training - 	Hypothesis: "In the first man was a first in the first , and the first man was a 200 years of the first ."
+2021-10-04 12:08:07,701 - INFO - joeynmt.training - Validation result (greedy) at epoch   7, step     1400: bleu:   4.28, loss: 75050.5938, ppl: 140.1540, duration: 3.8341s
+2021-10-04 12:08:20,884 - INFO - joeynmt.training - Epoch   7: total training loss 5664.49
+2021-10-04 12:08:20,884 - INFO - joeynmt.training - EPOCH 8
+2021-10-04 12:08:32,949 - WARNING - sacrebleu - That's 100 lines that end in a tokenized period ('.')
+2021-10-04 12:08:32,949 - WARNING - sacrebleu - It looks like you forgot to detokenize your test data, which may hurt your score.
+2021-10-04 12:08:32,949 - WARNING - sacrebleu - If you insist your data is detokenized, or don't care, you can suppress this message with the `force` parameter.
+2021-10-04 12:08:32,953 - INFO - joeynmt.training - Hooray! New best validation result [eval_metric]!
+2021-10-04 12:08:33,839 - INFO - joeynmt.helpers - delete models/pre_LSTM_el_s/1400.ckpt
+2021-10-04 12:08:33,908 - INFO - joeynmt.helpers - delete /home/lcur0008/joeynmt/models/pre_LSTM_el_s/1400.ckpt
+2021-10-04 12:08:33,909 - WARNING - joeynmt.helpers - Wanted to delete old checkpoint /home/lcur0008/joeynmt/models/pre_LSTM_el_s/1400.ckpt but file does not exist. ([Errno 2] No such file or directory: '/home/lcur0008/joeynmt/models/pre_LSTM_el_s/1400.ckpt')
+2021-10-04 12:08:33,911 - INFO - joeynmt.training - Example #0
+2021-10-04 12:08:33,911 - INFO - joeynmt.training - 	Source:     tr
+2021-10-04 12:08:33,911 - INFO - joeynmt.training - 	Reference:  en
+2021-10-04 12:08:33,911 - INFO - joeynmt.training - 	Hypothesis: Thank you .
+2021-10-04 12:08:33,911 - INFO - joeynmt.training - Example #1
+--- Logging error ---
+Traceback (most recent call last):
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/logging/__init__.py", line 1036, in emit
+    stream.write(msg)
+UnicodeEncodeError: 'latin-1' codec can't encode character '\u015f' in position 86: ordinal not in range(256)
+Call stack:
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 48, in <module>
+    main()
+  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 35, in main
+    train(cfg_file=args.config_path, skip_test=args.skip_test)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 846, in train
+    trainer.train_and_validate(train_data=train_data, valid_data=dev_data)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 497, in train_and_validate
+    valid_duration = self._validate(valid_data, epoch_no)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 642, in _validate
+    references=valid_references)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 731, in _log_examples
+    logger.debug("\tRaw source:     %s", sources_raw[p])
+Message: '\tRaw source:     %s'
+Arguments: (['1@@', '1', 'ya\u015f@@', '\u0131nday@@', 'ken', 'bir', 'sa@@', 'ba@@', 'h', 'ev@@', 'im@@', 'deki', 'sev@@', 'in@@', 'ç', 'ç@@', '\u0131\u011f@@', 'l\u0131@@', 'klar@@', '\u0131yla', 'u@@', 'yan@@', 'd\u0131\u011f@@', '\u0131m\u0131', 'hat\u0131r@@', 'l\u0131@@', 'yorum', '.'],)
+--- Logging error ---
+Traceback (most recent call last):
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/logging/__init__.py", line 1036, in emit
+    stream.write(msg)
+UnicodeEncodeError: 'latin-1' codec can't encode characters in position 70-71: ordinal not in range(256)
+Call stack:
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 48, in <module>
+    main()
+  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 35, in main
+    train(cfg_file=args.config_path, skip_test=args.skip_test)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 846, in train
+    trainer.train_and_validate(train_data=train_data, valid_data=dev_data)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 497, in train_and_validate
+    valid_duration = self._validate(valid_data, epoch_no)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 642, in _validate
+    references=valid_references)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 737, in _log_examples
+    logger.info("\tSource:     %s", sources[p])
+Message: '\tSource:     %s'
+Arguments: ('11 ya\u015f\u0131ndayken bir sabah evimdeki sevinç ç\u0131\u011fl\u0131klar\u0131yla uyand\u0131\u011f\u0131m\u0131 hat\u0131rl\u0131yorum .',)
+2021-10-04 12:08:33,913 - INFO - joeynmt.training - 	Source:     11 ya\u015f\u0131ndayken bir sabah evimdeki sevinç ç\u0131\u011fl\u0131klar\u0131yla uyand\u0131\u011f\u0131m\u0131 hat\u0131rl\u0131yorum .
+2021-10-04 12:08:33,913 - INFO - joeynmt.training - 	Reference:  "When I was 11 , I remember waking up one morning to the sound of joy in my house ."
+2021-10-04 12:08:33,913 - INFO - joeynmt.training - 	Hypothesis: "I was a first years ago , I was a first years ago , and I was a little bit of the first , and I was a little bit of the first years ago ."
+2021-10-04 12:08:33,914 - INFO - joeynmt.training - Example #2
+--- Logging error ---
+Traceback (most recent call last):
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/logging/__init__.py", line 1036, in emit
+    stream.write(msg)
+UnicodeEncodeError: 'latin-1' codec can't encode character '\u0131' in position 151: ordinal not in range(256)
+Call stack:
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 48, in <module>
+    main()
+  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 35, in main
+    train(cfg_file=args.config_path, skip_test=args.skip_test)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 846, in train
+    trainer.train_and_validate(train_data=train_data, valid_data=dev_data)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 497, in train_and_validate
+    valid_duration = self._validate(valid_data, epoch_no)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 642, in _validate
+    references=valid_references)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 731, in _log_examples
+    logger.debug("\tRaw source:     %s", sources_raw[p])
+Message: '\tRaw source:     %s'
+Arguments: (['"B@@', 'ab@@', 'am', 'B@@', 'B@@', 'C', 'H@@', 'ab@@', 'er', 'kan@@', 'al@@', '\u0131n\u0131', 'din@@', 'li@@', 'yordu', ';', 'o', 'uf@@', 'ak', ',', 'gr@@', 'i', 'rad@@', 'y@@', 'os@@', 'undan', '."'],)
+--- Logging error ---
+Traceback (most recent call last):
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/logging/__init__.py", line 1036, in emit
+    stream.write(msg)
+UnicodeEncodeError: 'latin-1' codec can't encode character '\u0131' in position 87: ordinal not in range(256)
+Call stack:
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 48, in <module>
+    main()
+  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 35, in main
+    train(cfg_file=args.config_path, skip_test=args.skip_test)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 846, in train
+    trainer.train_and_validate(train_data=train_data, valid_data=dev_data)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 497, in train_and_validate
+    valid_duration = self._validate(valid_data, epoch_no)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 642, in _validate
+    references=valid_references)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 737, in _log_examples
+    logger.info("\tSource:     %s", sources[p])
+Message: '\tSource:     %s'
+Arguments: ('"Babam BBC Haber kanal\u0131n\u0131 dinliyordu ; o ufak , gri radyosundan ."',)
+2021-10-04 12:08:33,914 - INFO - joeynmt.training - 	Source:     "Babam BBC Haber kanal\u0131n\u0131 dinliyordu ; o ufak , gri radyosundan ."
+2021-10-04 12:08:33,914 - INFO - joeynmt.training - 	Reference:  "My father was listening to BBC News on his small , gray radio ."
+2021-10-04 12:08:33,914 - INFO - joeynmt.training - 	Hypothesis: "In the first years of the first , and she was a school , and she was a school in the first of 1,000 years ."
+2021-10-04 12:08:33,914 - INFO - joeynmt.training - Validation result (greedy) at epoch   8, step     1500: bleu:   4.41, loss: 75146.3516, ppl: 141.0406, duration: 3.5800s
+2021-10-04 12:08:39,650 - INFO - joeynmt.training - Epoch   8: total training loss 5532.41
+2021-10-04 12:08:39,651 - INFO - joeynmt.training - EPOCH 9
+2021-10-04 12:08:53,261 - INFO - joeynmt.training - Epoch   9: total training loss 5407.54
+2021-10-04 12:08:53,262 - INFO - joeynmt.training - EPOCH 10
+2021-10-04 12:08:58,971 - WARNING - sacrebleu - That's 100 lines that end in a tokenized period ('.')
+2021-10-04 12:08:58,971 - WARNING - sacrebleu - It looks like you forgot to detokenize your test data, which may hurt your score.
+2021-10-04 12:08:58,971 - WARNING - sacrebleu - If you insist your data is detokenized, or don't care, you can suppress this message with the `force` parameter.
+2021-10-04 12:08:58,976 - INFO - joeynmt.training - Hooray! New best validation result [eval_metric]!
+2021-10-04 12:08:59,845 - INFO - joeynmt.helpers - delete models/pre_LSTM_el_s/1500.ckpt
+2021-10-04 12:08:59,910 - INFO - joeynmt.helpers - delete /home/lcur0008/joeynmt/models/pre_LSTM_el_s/1500.ckpt
+2021-10-04 12:08:59,911 - WARNING - joeynmt.helpers - Wanted to delete old checkpoint /home/lcur0008/joeynmt/models/pre_LSTM_el_s/1500.ckpt but file does not exist. ([Errno 2] No such file or directory: '/home/lcur0008/joeynmt/models/pre_LSTM_el_s/1500.ckpt')
+2021-10-04 12:08:59,913 - INFO - joeynmt.training - Example #0
+2021-10-04 12:08:59,913 - INFO - joeynmt.training - 	Source:     tr
+2021-10-04 12:08:59,913 - INFO - joeynmt.training - 	Reference:  en
+2021-10-04 12:08:59,913 - INFO - joeynmt.training - 	Hypothesis: 
+2021-10-04 12:08:59,913 - INFO - joeynmt.training - Example #1
+--- Logging error ---
+Traceback (most recent call last):
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/logging/__init__.py", line 1036, in emit
+    stream.write(msg)
+UnicodeEncodeError: 'latin-1' codec can't encode character '\u015f' in position 86: ordinal not in range(256)
+Call stack:
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 48, in <module>
+    main()
+  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 35, in main
+    train(cfg_file=args.config_path, skip_test=args.skip_test)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 846, in train
+    trainer.train_and_validate(train_data=train_data, valid_data=dev_data)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 497, in train_and_validate
+    valid_duration = self._validate(valid_data, epoch_no)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 642, in _validate
+    references=valid_references)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 731, in _log_examples
+    logger.debug("\tRaw source:     %s", sources_raw[p])
+Message: '\tRaw source:     %s'
+Arguments: (['1@@', '1', 'ya\u015f@@', '\u0131nday@@', 'ken', 'bir', 'sa@@', 'ba@@', 'h', 'ev@@', 'im@@', 'deki', 'sev@@', 'in@@', 'ç', 'ç@@', '\u0131\u011f@@', 'l\u0131@@', 'klar@@', '\u0131yla', 'u@@', 'yan@@', 'd\u0131\u011f@@', '\u0131m\u0131', 'hat\u0131r@@', 'l\u0131@@', 'yorum', '.'],)
+--- Logging error ---
+Traceback (most recent call last):
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/logging/__init__.py", line 1036, in emit
+    stream.write(msg)
+UnicodeEncodeError: 'latin-1' codec can't encode characters in position 70-71: ordinal not in range(256)
+Call stack:
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 48, in <module>
+    main()
+  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 35, in main
+    train(cfg_file=args.config_path, skip_test=args.skip_test)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 846, in train
+    trainer.train_and_validate(train_data=train_data, valid_data=dev_data)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 497, in train_and_validate
+    valid_duration = self._validate(valid_data, epoch_no)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 642, in _validate
+    references=valid_references)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 737, in _log_examples
+    logger.info("\tSource:     %s", sources[p])
+Message: '\tSource:     %s'
+Arguments: ('11 ya\u015f\u0131ndayken bir sabah evimdeki sevinç ç\u0131\u011fl\u0131klar\u0131yla uyand\u0131\u011f\u0131m\u0131 hat\u0131rl\u0131yorum .',)
+2021-10-04 12:08:59,914 - INFO - joeynmt.training - 	Source:     11 ya\u015f\u0131ndayken bir sabah evimdeki sevinç ç\u0131\u011fl\u0131klar\u0131yla uyand\u0131\u011f\u0131m\u0131 hat\u0131rl\u0131yorum .
+2021-10-04 12:08:59,915 - INFO - joeynmt.training - 	Reference:  "When I was 11 , I remember waking up one morning to the sound of joy in my house ."
+2021-10-04 12:08:59,915 - INFO - joeynmt.training - 	Hypothesis: "I was a first years ago , I was a first , and I was a father who was a little bit of the first , and I was a very bit of the time ."
+2021-10-04 12:08:59,915 - INFO - joeynmt.training - Example #2
+--- Logging error ---
+Traceback (most recent call last):
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/logging/__init__.py", line 1036, in emit
+    stream.write(msg)
+UnicodeEncodeError: 'latin-1' codec can't encode character '\u0131' in position 151: ordinal not in range(256)
+Call stack:
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 48, in <module>
+    main()
+  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 35, in main
+    train(cfg_file=args.config_path, skip_test=args.skip_test)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 846, in train
+    trainer.train_and_validate(train_data=train_data, valid_data=dev_data)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 497, in train_and_validate
+    valid_duration = self._validate(valid_data, epoch_no)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 642, in _validate
+    references=valid_references)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 731, in _log_examples
+    logger.debug("\tRaw source:     %s", sources_raw[p])
+Message: '\tRaw source:     %s'
+Arguments: (['"B@@', 'ab@@', 'am', 'B@@', 'B@@', 'C', 'H@@', 'ab@@', 'er', 'kan@@', 'al@@', '\u0131n\u0131', 'din@@', 'li@@', 'yordu', ';', 'o', 'uf@@', 'ak', ',', 'gr@@', 'i', 'rad@@', 'y@@', 'os@@', 'undan', '."'],)
+--- Logging error ---
+Traceback (most recent call last):
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/logging/__init__.py", line 1036, in emit
+    stream.write(msg)
+UnicodeEncodeError: 'latin-1' codec can't encode character '\u0131' in position 87: ordinal not in range(256)
+Call stack:
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 48, in <module>
+    main()
+  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 35, in main
+    train(cfg_file=args.config_path, skip_test=args.skip_test)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 846, in train
+    trainer.train_and_validate(train_data=train_data, valid_data=dev_data)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 497, in train_and_validate
+    valid_duration = self._validate(valid_data, epoch_no)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 642, in _validate
+    references=valid_references)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 737, in _log_examples
+    logger.info("\tSource:     %s", sources[p])
+Message: '\tSource:     %s'
+Arguments: ('"Babam BBC Haber kanal\u0131n\u0131 dinliyordu ; o ufak , gri radyosundan ."',)
+2021-10-04 12:08:59,915 - INFO - joeynmt.training - 	Source:     "Babam BBC Haber kanal\u0131n\u0131 dinliyordu ; o ufak , gri radyosundan ."
+2021-10-04 12:08:59,916 - INFO - joeynmt.training - 	Reference:  "My father was listening to BBC News on his small , gray radio ."
+2021-10-04 12:08:59,916 - INFO - joeynmt.training - 	Hypothesis: "I was a first in 19York , and the first of Jacd , and the first of the Washington ."
+2021-10-04 12:08:59,916 - INFO - joeynmt.training - Validation result (greedy) at epoch  10, step     1600: bleu:   4.65, loss: 75328.2031, ppl: 142.7400, duration: 3.5378s
+/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/site-packages/matplotlib/image.py:863: UserWarning: Attempting to set identical left==right results
+in singular transformations; automatically expanding.
+left=-0.5, right=-0.5
+  self.axes.set_xlim((xmin, xmax), auto=None)
+2021-10-04 12:09:12,106 - INFO - joeynmt.training - Epoch  10: total training loss 5287.83
+2021-10-04 12:09:12,107 - INFO - joeynmt.training - EPOCH 11
+2021-10-04 12:09:25,099 - WARNING - sacrebleu - That's 100 lines that end in a tokenized period ('.')
+2021-10-04 12:09:25,099 - WARNING - sacrebleu - It looks like you forgot to detokenize your test data, which may hurt your score.
+2021-10-04 12:09:25,099 - WARNING - sacrebleu - If you insist your data is detokenized, or don't care, you can suppress this message with the `force` parameter.
+2021-10-04 12:09:25,106 - INFO - joeynmt.training - Example #0
+2021-10-04 12:09:25,106 - INFO - joeynmt.training - 	Source:     tr
+2021-10-04 12:09:25,106 - INFO - joeynmt.training - 	Reference:  en
+2021-10-04 12:09:25,106 - INFO - joeynmt.training - 	Hypothesis: 
+2021-10-04 12:09:25,107 - INFO - joeynmt.training - Example #1
+--- Logging error ---
+Traceback (most recent call last):
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/logging/__init__.py", line 1036, in emit
+    stream.write(msg)
+UnicodeEncodeError: 'latin-1' codec can't encode character '\u015f' in position 86: ordinal not in range(256)
+Call stack:
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 48, in <module>
+    main()
+  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 35, in main
+    train(cfg_file=args.config_path, skip_test=args.skip_test)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 846, in train
+    trainer.train_and_validate(train_data=train_data, valid_data=dev_data)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 497, in train_and_validate
+    valid_duration = self._validate(valid_data, epoch_no)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 642, in _validate
+    references=valid_references)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 731, in _log_examples
+    logger.debug("\tRaw source:     %s", sources_raw[p])
+Message: '\tRaw source:     %s'
+Arguments: (['1@@', '1', 'ya\u015f@@', '\u0131nday@@', 'ken', 'bir', 'sa@@', 'ba@@', 'h', 'ev@@', 'im@@', 'deki', 'sev@@', 'in@@', 'ç', 'ç@@', '\u0131\u011f@@', 'l\u0131@@', 'klar@@', '\u0131yla', 'u@@', 'yan@@', 'd\u0131\u011f@@', '\u0131m\u0131', 'hat\u0131r@@', 'l\u0131@@', 'yorum', '.'],)
+--- Logging error ---
+Traceback (most recent call last):
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/logging/__init__.py", line 1036, in emit
+    stream.write(msg)
+UnicodeEncodeError: 'latin-1' codec can't encode characters in position 70-71: ordinal not in range(256)
+Call stack:
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 48, in <module>
+    main()
+  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 35, in main
+    train(cfg_file=args.config_path, skip_test=args.skip_test)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 846, in train
+    trainer.train_and_validate(train_data=train_data, valid_data=dev_data)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 497, in train_and_validate
+    valid_duration = self._validate(valid_data, epoch_no)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 642, in _validate
+    references=valid_references)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 737, in _log_examples
+    logger.info("\tSource:     %s", sources[p])
+Message: '\tSource:     %s'
+Arguments: ('11 ya\u015f\u0131ndayken bir sabah evimdeki sevinç ç\u0131\u011fl\u0131klar\u0131yla uyand\u0131\u011f\u0131m\u0131 hat\u0131rl\u0131yorum .',)
+2021-10-04 12:09:25,108 - INFO - joeynmt.training - 	Source:     11 ya\u015f\u0131ndayken bir sabah evimdeki sevinç ç\u0131\u011fl\u0131klar\u0131yla uyand\u0131\u011f\u0131m\u0131 hat\u0131rl\u0131yorum .
+2021-10-04 12:09:25,109 - INFO - joeynmt.training - 	Reference:  "When I was 11 , I remember waking up one morning to the sound of joy in my house ."
+2021-10-04 12:09:25,109 - INFO - joeynmt.training - 	Hypothesis: "I was a first years ago , and I was a first woman , and I was a little bit of a village , and she was a little bit of time ."
+2021-10-04 12:09:25,109 - INFO - joeynmt.training - Example #2
+--- Logging error ---
+Traceback (most recent call last):
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/logging/__init__.py", line 1036, in emit
+    stream.write(msg)
+UnicodeEncodeError: 'latin-1' codec can't encode character '\u0131' in position 151: ordinal not in range(256)
+Call stack:
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 48, in <module>
+    main()
+  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 35, in main
+    train(cfg_file=args.config_path, skip_test=args.skip_test)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 846, in train
+    trainer.train_and_validate(train_data=train_data, valid_data=dev_data)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 497, in train_and_validate
+    valid_duration = self._validate(valid_data, epoch_no)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 642, in _validate
+    references=valid_references)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 731, in _log_examples
+    logger.debug("\tRaw source:     %s", sources_raw[p])
+Message: '\tRaw source:     %s'
+Arguments: (['"B@@', 'ab@@', 'am', 'B@@', 'B@@', 'C', 'H@@', 'ab@@', 'er', 'kan@@', 'al@@', '\u0131n\u0131', 'din@@', 'li@@', 'yordu', ';', 'o', 'uf@@', 'ak', ',', 'gr@@', 'i', 'rad@@', 'y@@', 'os@@', 'undan', '."'],)
+--- Logging error ---
+Traceback (most recent call last):
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/logging/__init__.py", line 1036, in emit
+    stream.write(msg)
+UnicodeEncodeError: 'latin-1' codec can't encode character '\u0131' in position 87: ordinal not in range(256)
+Call stack:
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 48, in <module>
+    main()
+  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 35, in main
+    train(cfg_file=args.config_path, skip_test=args.skip_test)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 846, in train
+    trainer.train_and_validate(train_data=train_data, valid_data=dev_data)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 497, in train_and_validate
+    valid_duration = self._validate(valid_data, epoch_no)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 642, in _validate
+    references=valid_references)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 737, in _log_examples
+    logger.info("\tSource:     %s", sources[p])
+Message: '\tSource:     %s'
+Arguments: ('"Babam BBC Haber kanal\u0131n\u0131 dinliyordu ; o ufak , gri radyosundan ."',)
+2021-10-04 12:09:25,110 - INFO - joeynmt.training - 	Source:     "Babam BBC Haber kanal\u0131n\u0131 dinliyordu ; o ufak , gri radyosundan ."
+2021-10-04 12:09:25,111 - INFO - joeynmt.training - 	Reference:  "My father was listening to BBC News on his small , gray radio ."
+2021-10-04 12:09:25,111 - INFO - joeynmt.training - 	Hypothesis: "In 1969 , the first of 19York , and a man was a sunras of the Washington of the Washington ."
+2021-10-04 12:09:25,111 - INFO - joeynmt.training - Validation result (greedy) at epoch  11, step     1700: bleu:   4.56, loss: 75236.0703, ppl: 141.8765, duration: 2.5676s
+2021-10-04 12:09:29,692 - INFO - joeynmt.training - Epoch  11: total training loss 5166.48
+2021-10-04 12:09:29,693 - INFO - joeynmt.training - EPOCH 12
+2021-10-04 12:09:43,340 - INFO - joeynmt.training - Epoch  12: total training loss 5046.22
+2021-10-04 12:09:43,340 - INFO - joeynmt.training - EPOCH 13
+2021-10-04 12:09:50,080 - WARNING - sacrebleu - That's 100 lines that end in a tokenized period ('.')
+2021-10-04 12:09:50,080 - WARNING - sacrebleu - It looks like you forgot to detokenize your test data, which may hurt your score.
+2021-10-04 12:09:50,080 - WARNING - sacrebleu - If you insist your data is detokenized, or don't care, you can suppress this message with the `force` parameter.
+2021-10-04 12:09:50,084 - INFO - joeynmt.training - Hooray! New best validation result [eval_metric]!
+2021-10-04 12:09:50,976 - INFO - joeynmt.helpers - delete models/pre_LSTM_el_s/1600.ckpt
+2021-10-04 12:09:51,044 - INFO - joeynmt.helpers - delete /home/lcur0008/joeynmt/models/pre_LSTM_el_s/1600.ckpt
+2021-10-04 12:09:51,045 - WARNING - joeynmt.helpers - Wanted to delete old checkpoint /home/lcur0008/joeynmt/models/pre_LSTM_el_s/1600.ckpt but file does not exist. ([Errno 2] No such file or directory: '/home/lcur0008/joeynmt/models/pre_LSTM_el_s/1600.ckpt')
+2021-10-04 12:09:51,047 - INFO - joeynmt.training - Example #0
+2021-10-04 12:09:51,047 - INFO - joeynmt.training - 	Source:     tr
+2021-10-04 12:09:51,047 - INFO - joeynmt.training - 	Reference:  en
+2021-10-04 12:09:51,047 - INFO - joeynmt.training - 	Hypothesis: 
+2021-10-04 12:09:51,047 - INFO - joeynmt.training - Example #1
+--- Logging error ---
+Traceback (most recent call last):
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/logging/__init__.py", line 1036, in emit
+    stream.write(msg)
+UnicodeEncodeError: 'latin-1' codec can't encode character '\u015f' in position 86: ordinal not in range(256)
+Call stack:
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 48, in <module>
+    main()
+  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 35, in main
+    train(cfg_file=args.config_path, skip_test=args.skip_test)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 846, in train
+    trainer.train_and_validate(train_data=train_data, valid_data=dev_data)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 497, in train_and_validate
+    valid_duration = self._validate(valid_data, epoch_no)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 642, in _validate
+    references=valid_references)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 731, in _log_examples
+    logger.debug("\tRaw source:     %s", sources_raw[p])
+Message: '\tRaw source:     %s'
+Arguments: (['1@@', '1', 'ya\u015f@@', '\u0131nday@@', 'ken', 'bir', 'sa@@', 'ba@@', 'h', 'ev@@', 'im@@', 'deki', 'sev@@', 'in@@', 'ç', 'ç@@', '\u0131\u011f@@', 'l\u0131@@', 'klar@@', '\u0131yla', 'u@@', 'yan@@', 'd\u0131\u011f@@', '\u0131m\u0131', 'hat\u0131r@@', 'l\u0131@@', 'yorum', '.'],)
+--- Logging error ---
+Traceback (most recent call last):
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/logging/__init__.py", line 1036, in emit
+    stream.write(msg)
+UnicodeEncodeError: 'latin-1' codec can't encode characters in position 70-71: ordinal not in range(256)
+Call stack:
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 48, in <module>
+    main()
+  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 35, in main
+    train(cfg_file=args.config_path, skip_test=args.skip_test)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 846, in train
+    trainer.train_and_validate(train_data=train_data, valid_data=dev_data)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 497, in train_and_validate
+    valid_duration = self._validate(valid_data, epoch_no)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 642, in _validate
+    references=valid_references)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 737, in _log_examples
+    logger.info("\tSource:     %s", sources[p])
+Message: '\tSource:     %s'
+Arguments: ('11 ya\u015f\u0131ndayken bir sabah evimdeki sevinç ç\u0131\u011fl\u0131klar\u0131yla uyand\u0131\u011f\u0131m\u0131 hat\u0131rl\u0131yorum .',)
+2021-10-04 12:09:51,050 - INFO - joeynmt.training - 	Source:     11 ya\u015f\u0131ndayken bir sabah evimdeki sevinç ç\u0131\u011fl\u0131klar\u0131yla uyand\u0131\u011f\u0131m\u0131 hat\u0131rl\u0131yorum .
+2021-10-04 12:09:51,050 - INFO - joeynmt.training - 	Reference:  "When I was 11 , I remember waking up one morning to the sound of joy in my house ."
+2021-10-04 12:09:51,050 - INFO - joeynmt.training - 	Hypothesis: "I was a first years ago , I was a little bit of my mother , and she was a little bit of a village , and she was a little bit of a village ."
+2021-10-04 12:09:51,050 - INFO - joeynmt.training - Example #2
+--- Logging error ---
+Traceback (most recent call last):
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/logging/__init__.py", line 1036, in emit
+    stream.write(msg)
+UnicodeEncodeError: 'latin-1' codec can't encode character '\u0131' in position 151: ordinal not in range(256)
+Call stack:
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 48, in <module>
+    main()
+  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 35, in main
+    train(cfg_file=args.config_path, skip_test=args.skip_test)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 846, in train
+    trainer.train_and_validate(train_data=train_data, valid_data=dev_data)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 497, in train_and_validate
+    valid_duration = self._validate(valid_data, epoch_no)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 642, in _validate
+    references=valid_references)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 731, in _log_examples
+    logger.debug("\tRaw source:     %s", sources_raw[p])
+Message: '\tRaw source:     %s'
+Arguments: (['"B@@', 'ab@@', 'am', 'B@@', 'B@@', 'C', 'H@@', 'ab@@', 'er', 'kan@@', 'al@@', '\u0131n\u0131', 'din@@', 'li@@', 'yordu', ';', 'o', 'uf@@', 'ak', ',', 'gr@@', 'i', 'rad@@', 'y@@', 'os@@', 'undan', '."'],)
+--- Logging error ---
+Traceback (most recent call last):
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/logging/__init__.py", line 1036, in emit
+    stream.write(msg)
+UnicodeEncodeError: 'latin-1' codec can't encode character '\u0131' in position 87: ordinal not in range(256)
+Call stack:
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 48, in <module>
+    main()
+  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 35, in main
+    train(cfg_file=args.config_path, skip_test=args.skip_test)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 846, in train
+    trainer.train_and_validate(train_data=train_data, valid_data=dev_data)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 497, in train_and_validate
+    valid_duration = self._validate(valid_data, epoch_no)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 642, in _validate
+    references=valid_references)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 737, in _log_examples
+    logger.info("\tSource:     %s", sources[p])
+Message: '\tSource:     %s'
+Arguments: ('"Babam BBC Haber kanal\u0131n\u0131 dinliyordu ; o ufak , gri radyosundan ."',)
+2021-10-04 12:09:51,051 - INFO - joeynmt.training - 	Source:     "Babam BBC Haber kanal\u0131n\u0131 dinliyordu ; o ufak , gri radyosundan ."
+2021-10-04 12:09:51,051 - INFO - joeynmt.training - 	Reference:  "My father was listening to BBC News on his small , gray radio ."
+2021-10-04 12:09:51,051 - INFO - joeynmt.training - 	Hypothesis: "In the first , a mrid , a mrid , a mrid , a mrigher in the Washington ."
+2021-10-04 12:09:51,051 - INFO - joeynmt.training - Validation result (greedy) at epoch  13, step     1800: bleu:   4.71, loss: 75741.2734, ppl: 146.6765, duration: 3.5028s
+2021-10-04 12:10:02,144 - INFO - joeynmt.training - Epoch  13: total training loss 4937.06
+2021-10-04 12:10:02,145 - INFO - joeynmt.training - EPOCH 14
+2021-10-04 12:10:16,444 - WARNING - sacrebleu - That's 100 lines that end in a tokenized period ('.')
+2021-10-04 12:10:16,444 - WARNING - sacrebleu - It looks like you forgot to detokenize your test data, which may hurt your score.
+2021-10-04 12:10:16,444 - WARNING - sacrebleu - If you insist your data is detokenized, or don't care, you can suppress this message with the `force` parameter.
+2021-10-04 12:10:16,451 - INFO - joeynmt.training - Example #0
+2021-10-04 12:10:16,451 - INFO - joeynmt.training - 	Source:     tr
+2021-10-04 12:10:16,452 - INFO - joeynmt.training - 	Reference:  en
+2021-10-04 12:10:16,452 - INFO - joeynmt.training - 	Hypothesis: 
+2021-10-04 12:10:16,452 - INFO - joeynmt.training - Example #1
+--- Logging error ---
+Traceback (most recent call last):
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/logging/__init__.py", line 1036, in emit
+    stream.write(msg)
+UnicodeEncodeError: 'latin-1' codec can't encode character '\u015f' in position 86: ordinal not in range(256)
+Call stack:
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 48, in <module>
+    main()
+  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 35, in main
+    train(cfg_file=args.config_path, skip_test=args.skip_test)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 846, in train
+    trainer.train_and_validate(train_data=train_data, valid_data=dev_data)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 497, in train_and_validate
+    valid_duration = self._validate(valid_data, epoch_no)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 642, in _validate
+    references=valid_references)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 731, in _log_examples
+    logger.debug("\tRaw source:     %s", sources_raw[p])
+Message: '\tRaw source:     %s'
+Arguments: (['1@@', '1', 'ya\u015f@@', '\u0131nday@@', 'ken', 'bir', 'sa@@', 'ba@@', 'h', 'ev@@', 'im@@', 'deki', 'sev@@', 'in@@', 'ç', 'ç@@', '\u0131\u011f@@', 'l\u0131@@', 'klar@@', '\u0131yla', 'u@@', 'yan@@', 'd\u0131\u011f@@', '\u0131m\u0131', 'hat\u0131r@@', 'l\u0131@@', 'yorum', '.'],)
+--- Logging error ---
+Traceback (most recent call last):
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/logging/__init__.py", line 1036, in emit
+    stream.write(msg)
+UnicodeEncodeError: 'latin-1' codec can't encode characters in position 70-71: ordinal not in range(256)
+Call stack:
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 48, in <module>
+    main()
+  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 35, in main
+    train(cfg_file=args.config_path, skip_test=args.skip_test)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 846, in train
+    trainer.train_and_validate(train_data=train_data, valid_data=dev_data)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 497, in train_and_validate
+    valid_duration = self._validate(valid_data, epoch_no)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 642, in _validate
+    references=valid_references)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 737, in _log_examples
+    logger.info("\tSource:     %s", sources[p])
+Message: '\tSource:     %s'
+Arguments: ('11 ya\u015f\u0131ndayken bir sabah evimdeki sevinç ç\u0131\u011fl\u0131klar\u0131yla uyand\u0131\u011f\u0131m\u0131 hat\u0131rl\u0131yorum .',)
+2021-10-04 12:10:16,453 - INFO - joeynmt.training - 	Source:     11 ya\u015f\u0131ndayken bir sabah evimdeki sevinç ç\u0131\u011fl\u0131klar\u0131yla uyand\u0131\u011f\u0131m\u0131 hat\u0131rl\u0131yorum .
+2021-10-04 12:10:16,453 - INFO - joeynmt.training - 	Reference:  "When I was 11 , I remember waking up one morning to the sound of joy in my house ."
+2021-10-04 12:10:16,453 - INFO - joeynmt.training - 	Hypothesis: "I was a little bit of her , and I was a little bit of her , and I was a little bit of her , and she was a little bit of her ."
+2021-10-04 12:10:16,453 - INFO - joeynmt.training - Example #2
+--- Logging error ---
+Traceback (most recent call last):
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/logging/__init__.py", line 1036, in emit
+    stream.write(msg)
+UnicodeEncodeError: 'latin-1' codec can't encode character '\u0131' in position 151: ordinal not in range(256)
+Call stack:
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 48, in <module>
+    main()
+  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 35, in main
+    train(cfg_file=args.config_path, skip_test=args.skip_test)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 846, in train
+    trainer.train_and_validate(train_data=train_data, valid_data=dev_data)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 497, in train_and_validate
+    valid_duration = self._validate(valid_data, epoch_no)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 642, in _validate
+    references=valid_references)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 731, in _log_examples
+    logger.debug("\tRaw source:     %s", sources_raw[p])
+Message: '\tRaw source:     %s'
+Arguments: (['"B@@', 'ab@@', 'am', 'B@@', 'B@@', 'C', 'H@@', 'ab@@', 'er', 'kan@@', 'al@@', '\u0131n\u0131', 'din@@', 'li@@', 'yordu', ';', 'o', 'uf@@', 'ak', ',', 'gr@@', 'i', 'rad@@', 'y@@', 'os@@', 'undan', '."'],)
+--- Logging error ---
+Traceback (most recent call last):
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/logging/__init__.py", line 1036, in emit
+    stream.write(msg)
+UnicodeEncodeError: 'latin-1' codec can't encode character '\u0131' in position 87: ordinal not in range(256)
+Call stack:
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 48, in <module>
+    main()
+  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 35, in main
+    train(cfg_file=args.config_path, skip_test=args.skip_test)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 846, in train
+    trainer.train_and_validate(train_data=train_data, valid_data=dev_data)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 497, in train_and_validate
+    valid_duration = self._validate(valid_data, epoch_no)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 642, in _validate
+    references=valid_references)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 737, in _log_examples
+    logger.info("\tSource:     %s", sources[p])
+Message: '\tSource:     %s'
+Arguments: ('"Babam BBC Haber kanal\u0131n\u0131 dinliyordu ; o ufak , gri radyosundan ."',)
+2021-10-04 12:10:16,454 - INFO - joeynmt.training - 	Source:     "Babam BBC Haber kanal\u0131n\u0131 dinliyordu ; o ufak , gri radyosundan ."
+2021-10-04 12:10:16,454 - INFO - joeynmt.training - 	Reference:  "My father was listening to BBC News on his small , gray radio ."
+2021-10-04 12:10:16,454 - INFO - joeynmt.training - 	Hypothesis: "My Marg was a very man , and a man who had a write in Joler in Afgher ."
+2021-10-04 12:10:16,454 - INFO - joeynmt.training - Validation result (greedy) at epoch  14, step     1900: bleu:   4.52, loss: 75598.4688, ppl: 145.3034, duration: 2.7363s
+2021-10-04 12:10:19,937 - INFO - joeynmt.training - Epoch  14: total training loss 4825.61
+2021-10-04 12:10:19,938 - INFO - joeynmt.training - EPOCH 15
+2021-10-04 12:10:33,472 - INFO - joeynmt.training - Epoch  15: total training loss 4724.89
+2021-10-04 12:10:33,473 - INFO - joeynmt.training - EPOCH 16
+2021-10-04 12:10:38,673 - INFO - joeynmt.training - Epoch  16, Step:     2000, Batch Loss:    72.004349, Tokens per Sec:     8236, Lr: 0.000300
+2021-10-04 12:10:41,337 - WARNING - sacrebleu - That's 100 lines that end in a tokenized period ('.')
+2021-10-04 12:10:41,337 - WARNING - sacrebleu - It looks like you forgot to detokenize your test data, which may hurt your score.
+2021-10-04 12:10:41,337 - WARNING - sacrebleu - If you insist your data is detokenized, or don't care, you can suppress this message with the `force` parameter.
+2021-10-04 12:10:41,341 - INFO - joeynmt.training - Hooray! New best validation result [eval_metric]!
+2021-10-04 12:10:42,231 - INFO - joeynmt.helpers - delete models/pre_LSTM_el_s/1800.ckpt
+2021-10-04 12:10:42,302 - INFO - joeynmt.helpers - delete /home/lcur0008/joeynmt/models/pre_LSTM_el_s/1800.ckpt
+2021-10-04 12:10:42,302 - WARNING - joeynmt.helpers - Wanted to delete old checkpoint /home/lcur0008/joeynmt/models/pre_LSTM_el_s/1800.ckpt but file does not exist. ([Errno 2] No such file or directory: '/home/lcur0008/joeynmt/models/pre_LSTM_el_s/1800.ckpt')
+2021-10-04 12:10:42,304 - INFO - joeynmt.training - Example #0
+2021-10-04 12:10:42,304 - INFO - joeynmt.training - 	Source:     tr
+2021-10-04 12:10:42,304 - INFO - joeynmt.training - 	Reference:  en
+2021-10-04 12:10:42,304 - INFO - joeynmt.training - 	Hypothesis: 
+2021-10-04 12:10:42,304 - INFO - joeynmt.training - Example #1
+--- Logging error ---
+Traceback (most recent call last):
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/logging/__init__.py", line 1036, in emit
+    stream.write(msg)
+UnicodeEncodeError: 'latin-1' codec can't encode character '\u015f' in position 86: ordinal not in range(256)
+Call stack:
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 48, in <module>
+    main()
+  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 35, in main
+    train(cfg_file=args.config_path, skip_test=args.skip_test)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 846, in train
+    trainer.train_and_validate(train_data=train_data, valid_data=dev_data)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 497, in train_and_validate
+    valid_duration = self._validate(valid_data, epoch_no)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 642, in _validate
+    references=valid_references)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 731, in _log_examples
+    logger.debug("\tRaw source:     %s", sources_raw[p])
+Message: '\tRaw source:     %s'
+Arguments: (['1@@', '1', 'ya\u015f@@', '\u0131nday@@', 'ken', 'bir', 'sa@@', 'ba@@', 'h', 'ev@@', 'im@@', 'deki', 'sev@@', 'in@@', 'ç', 'ç@@', '\u0131\u011f@@', 'l\u0131@@', 'klar@@', '\u0131yla', 'u@@', 'yan@@', 'd\u0131\u011f@@', '\u0131m\u0131', 'hat\u0131r@@', 'l\u0131@@', 'yorum', '.'],)
+--- Logging error ---
+Traceback (most recent call last):
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/logging/__init__.py", line 1036, in emit
+    stream.write(msg)
+UnicodeEncodeError: 'latin-1' codec can't encode characters in position 70-71: ordinal not in range(256)
+Call stack:
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 48, in <module>
+    main()
+  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 35, in main
+    train(cfg_file=args.config_path, skip_test=args.skip_test)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 846, in train
+    trainer.train_and_validate(train_data=train_data, valid_data=dev_data)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 497, in train_and_validate
+    valid_duration = self._validate(valid_data, epoch_no)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 642, in _validate
+    references=valid_references)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 737, in _log_examples
+    logger.info("\tSource:     %s", sources[p])
+Message: '\tSource:     %s'
+Arguments: ('11 ya\u015f\u0131ndayken bir sabah evimdeki sevinç ç\u0131\u011fl\u0131klar\u0131yla uyand\u0131\u011f\u0131m\u0131 hat\u0131rl\u0131yorum .',)
+2021-10-04 12:10:42,305 - INFO - joeynmt.training - 	Source:     11 ya\u015f\u0131ndayken bir sabah evimdeki sevinç ç\u0131\u011fl\u0131klar\u0131yla uyand\u0131\u011f\u0131m\u0131 hat\u0131rl\u0131yorum .
+2021-10-04 12:10:42,306 - INFO - joeynmt.training - 	Reference:  "When I was 11 , I remember waking up one morning to the sound of joy in my house ."
+2021-10-04 12:10:42,306 - INFO - joeynmt.training - 	Hypothesis: "I was a little bit of the first , and she was a little bit of her man was a little bit of her man who was married in the first time ."
+2021-10-04 12:10:42,306 - INFO - joeynmt.training - Example #2
+--- Logging error ---
+Traceback (most recent call last):
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/logging/__init__.py", line 1036, in emit
+    stream.write(msg)
+UnicodeEncodeError: 'latin-1' codec can't encode character '\u0131' in position 151: ordinal not in range(256)
+Call stack:
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 48, in <module>
+    main()
+  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 35, in main
+    train(cfg_file=args.config_path, skip_test=args.skip_test)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 846, in train
+    trainer.train_and_validate(train_data=train_data, valid_data=dev_data)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 497, in train_and_validate
+    valid_duration = self._validate(valid_data, epoch_no)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 642, in _validate
+    references=valid_references)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 731, in _log_examples
+    logger.debug("\tRaw source:     %s", sources_raw[p])
+Message: '\tRaw source:     %s'
+Arguments: (['"B@@', 'ab@@', 'am', 'B@@', 'B@@', 'C', 'H@@', 'ab@@', 'er', 'kan@@', 'al@@', '\u0131n\u0131', 'din@@', 'li@@', 'yordu', ';', 'o', 'uf@@', 'ak', ',', 'gr@@', 'i', 'rad@@', 'y@@', 'os@@', 'undan', '."'],)
+--- Logging error ---
+Traceback (most recent call last):
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/logging/__init__.py", line 1036, in emit
+    stream.write(msg)
+UnicodeEncodeError: 'latin-1' codec can't encode character '\u0131' in position 87: ordinal not in range(256)
+Call stack:
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 48, in <module>
+    main()
+  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 35, in main
+    train(cfg_file=args.config_path, skip_test=args.skip_test)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 846, in train
+    trainer.train_and_validate(train_data=train_data, valid_data=dev_data)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 497, in train_and_validate
+    valid_duration = self._validate(valid_data, epoch_no)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 642, in _validate
+    references=valid_references)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 737, in _log_examples
+    logger.info("\tSource:     %s", sources[p])
+Message: '\tSource:     %s'
+Arguments: ('"Babam BBC Haber kanal\u0131n\u0131 dinliyordu ; o ufak , gri radyosundan ."',)
+2021-10-04 12:10:42,306 - INFO - joeynmt.training - 	Source:     "Babam BBC Haber kanal\u0131n\u0131 dinliyordu ; o ufak , gri radyosundan ."
+2021-10-04 12:10:42,307 - INFO - joeynmt.training - 	Reference:  "My father was listening to BBC News on his small , gray radio ."
+2021-10-04 12:10:42,307 - INFO - joeynmt.training - 	Hypothesis: "My Jack , the New York Times , and she had a student in Jack ."
+2021-10-04 12:10:42,307 - INFO - joeynmt.training - Validation result (greedy) at epoch  16, step     2000: bleu:   4.76, loss: 76519.4688, ppl: 154.3897, duration: 3.6334s
+2021-10-04 12:10:52,244 - INFO - joeynmt.training - Epoch  16: total training loss 4618.42
+2021-10-04 12:10:52,244 - INFO - joeynmt.training - EPOCH 17
+2021-10-04 12:11:07,459 - WARNING - sacrebleu - That's 100 lines that end in a tokenized period ('.')
+2021-10-04 12:11:07,459 - WARNING - sacrebleu - It looks like you forgot to detokenize your test data, which may hurt your score.
+2021-10-04 12:11:07,460 - WARNING - sacrebleu - If you insist your data is detokenized, or don't care, you can suppress this message with the `force` parameter.
+2021-10-04 12:11:07,464 - INFO - joeynmt.training - Hooray! New best validation result [eval_metric]!
+2021-10-04 12:11:08,377 - INFO - joeynmt.helpers - delete models/pre_LSTM_el_s/2000.ckpt
+2021-10-04 12:11:08,449 - INFO - joeynmt.helpers - delete /home/lcur0008/joeynmt/models/pre_LSTM_el_s/2000.ckpt
+2021-10-04 12:11:08,450 - WARNING - joeynmt.helpers - Wanted to delete old checkpoint /home/lcur0008/joeynmt/models/pre_LSTM_el_s/2000.ckpt but file does not exist. ([Errno 2] No such file or directory: '/home/lcur0008/joeynmt/models/pre_LSTM_el_s/2000.ckpt')
+2021-10-04 12:11:08,452 - INFO - joeynmt.training - Example #0
+2021-10-04 12:11:08,452 - INFO - joeynmt.training - 	Source:     tr
+2021-10-04 12:11:08,452 - INFO - joeynmt.training - 	Reference:  en
+2021-10-04 12:11:08,452 - INFO - joeynmt.training - 	Hypothesis: 
+2021-10-04 12:11:08,452 - INFO - joeynmt.training - Example #1
+--- Logging error ---
+Traceback (most recent call last):
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/logging/__init__.py", line 1036, in emit
+    stream.write(msg)
+UnicodeEncodeError: 'latin-1' codec can't encode character '\u015f' in position 86: ordinal not in range(256)
+Call stack:
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 48, in <module>
+    main()
+  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 35, in main
+    train(cfg_file=args.config_path, skip_test=args.skip_test)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 846, in train
+    trainer.train_and_validate(train_data=train_data, valid_data=dev_data)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 497, in train_and_validate
+    valid_duration = self._validate(valid_data, epoch_no)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 642, in _validate
+    references=valid_references)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 731, in _log_examples
+    logger.debug("\tRaw source:     %s", sources_raw[p])
+Message: '\tRaw source:     %s'
+Arguments: (['1@@', '1', 'ya\u015f@@', '\u0131nday@@', 'ken', 'bir', 'sa@@', 'ba@@', 'h', 'ev@@', 'im@@', 'deki', 'sev@@', 'in@@', 'ç', 'ç@@', '\u0131\u011f@@', 'l\u0131@@', 'klar@@', '\u0131yla', 'u@@', 'yan@@', 'd\u0131\u011f@@', '\u0131m\u0131', 'hat\u0131r@@', 'l\u0131@@', 'yorum', '.'],)
+--- Logging error ---
+Traceback (most recent call last):
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/logging/__init__.py", line 1036, in emit
+    stream.write(msg)
+UnicodeEncodeError: 'latin-1' codec can't encode characters in position 70-71: ordinal not in range(256)
+Call stack:
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 48, in <module>
+    main()
+  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 35, in main
+    train(cfg_file=args.config_path, skip_test=args.skip_test)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 846, in train
+    trainer.train_and_validate(train_data=train_data, valid_data=dev_data)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 497, in train_and_validate
+    valid_duration = self._validate(valid_data, epoch_no)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 642, in _validate
+    references=valid_references)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 737, in _log_examples
+    logger.info("\tSource:     %s", sources[p])
+Message: '\tSource:     %s'
+Arguments: ('11 ya\u015f\u0131ndayken bir sabah evimdeki sevinç ç\u0131\u011fl\u0131klar\u0131yla uyand\u0131\u011f\u0131m\u0131 hat\u0131rl\u0131yorum .',)
+2021-10-04 12:11:08,454 - INFO - joeynmt.training - 	Source:     11 ya\u015f\u0131ndayken bir sabah evimdeki sevinç ç\u0131\u011fl\u0131klar\u0131yla uyand\u0131\u011f\u0131m\u0131 hat\u0131rl\u0131yorum .
+2021-10-04 12:11:08,454 - INFO - joeynmt.training - 	Reference:  "When I was 11 , I remember waking up one morning to the sound of joy in my house ."
+2021-10-04 12:11:08,454 - INFO - joeynmt.training - 	Hypothesis: "I was a little bit of her , and I was a little bit of her , and I was a little bit of her , and I was a little bit of her ."
+2021-10-04 12:11:08,454 - INFO - joeynmt.training - Example #2
+--- Logging error ---
+Traceback (most recent call last):
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/logging/__init__.py", line 1036, in emit
+    stream.write(msg)
+UnicodeEncodeError: 'latin-1' codec can't encode character '\u0131' in position 151: ordinal not in range(256)
+Call stack:
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 48, in <module>
+    main()
+  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 35, in main
+    train(cfg_file=args.config_path, skip_test=args.skip_test)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 846, in train
+    trainer.train_and_validate(train_data=train_data, valid_data=dev_data)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 497, in train_and_validate
+    valid_duration = self._validate(valid_data, epoch_no)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 642, in _validate
+    references=valid_references)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 731, in _log_examples
+    logger.debug("\tRaw source:     %s", sources_raw[p])
+Message: '\tRaw source:     %s'
+Arguments: (['"B@@', 'ab@@', 'am', 'B@@', 'B@@', 'C', 'H@@', 'ab@@', 'er', 'kan@@', 'al@@', '\u0131n\u0131', 'din@@', 'li@@', 'yordu', ';', 'o', 'uf@@', 'ak', ',', 'gr@@', 'i', 'rad@@', 'y@@', 'os@@', 'undan', '."'],)
+--- Logging error ---
+Traceback (most recent call last):
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/logging/__init__.py", line 1036, in emit
+    stream.write(msg)
+UnicodeEncodeError: 'latin-1' codec can't encode character '\u0131' in position 87: ordinal not in range(256)
+Call stack:
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 48, in <module>
+    main()
+  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 35, in main
+    train(cfg_file=args.config_path, skip_test=args.skip_test)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 846, in train
+    trainer.train_and_validate(train_data=train_data, valid_data=dev_data)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 497, in train_and_validate
+    valid_duration = self._validate(valid_data, epoch_no)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 642, in _validate
+    references=valid_references)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 737, in _log_examples
+    logger.info("\tSource:     %s", sources[p])
+Message: '\tSource:     %s'
+Arguments: ('"Babam BBC Haber kanal\u0131n\u0131 dinliyordu ; o ufak , gri radyosundan ."',)
+2021-10-04 12:11:08,455 - INFO - joeynmt.training - 	Source:     "Babam BBC Haber kanal\u0131n\u0131 dinliyordu ; o ufak , gri radyosundan ."
+2021-10-04 12:11:08,455 - INFO - joeynmt.training - 	Reference:  "My father was listening to BBC News on his small , gray radio ."
+2021-10-04 12:11:08,455 - INFO - joeynmt.training - 	Hypothesis: "My Jack , my mother , and she was a Jold , and a mother was a school ."
+2021-10-04 12:11:08,455 - INFO - joeynmt.training - Validation result (greedy) at epoch  17, step     2100: bleu:   5.08, loss: 76848.7344, ppl: 157.7743, duration: 3.4598s
+2021-10-04 12:11:10,866 - INFO - joeynmt.training - Epoch  17: total training loss 4514.92
+2021-10-04 12:11:10,866 - INFO - joeynmt.training - EPOCH 18
+2021-10-04 12:11:24,548 - INFO - joeynmt.training - Epoch  18: total training loss 4341.30
+2021-10-04 12:11:24,549 - INFO - joeynmt.training - EPOCH 19
+2021-10-04 12:11:33,426 - WARNING - sacrebleu - That's 100 lines that end in a tokenized period ('.')
+2021-10-04 12:11:33,426 - WARNING - sacrebleu - It looks like you forgot to detokenize your test data, which may hurt your score.
+2021-10-04 12:11:33,426 - WARNING - sacrebleu - If you insist your data is detokenized, or don't care, you can suppress this message with the `force` parameter.
+2021-10-04 12:11:33,431 - INFO - joeynmt.training - Hooray! New best validation result [eval_metric]!
+2021-10-04 12:11:34,317 - INFO - joeynmt.helpers - delete models/pre_LSTM_el_s/2100.ckpt
+2021-10-04 12:11:34,387 - INFO - joeynmt.helpers - delete /home/lcur0008/joeynmt/models/pre_LSTM_el_s/2100.ckpt
+2021-10-04 12:11:34,388 - WARNING - joeynmt.helpers - Wanted to delete old checkpoint /home/lcur0008/joeynmt/models/pre_LSTM_el_s/2100.ckpt but file does not exist. ([Errno 2] No such file or directory: '/home/lcur0008/joeynmt/models/pre_LSTM_el_s/2100.ckpt')
+2021-10-04 12:11:34,389 - INFO - joeynmt.training - Example #0
+2021-10-04 12:11:34,390 - INFO - joeynmt.training - 	Source:     tr
+2021-10-04 12:11:34,390 - INFO - joeynmt.training - 	Reference:  en
+2021-10-04 12:11:34,390 - INFO - joeynmt.training - 	Hypothesis: en
+2021-10-04 12:11:34,390 - INFO - joeynmt.training - Example #1
+--- Logging error ---
+Traceback (most recent call last):
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/logging/__init__.py", line 1036, in emit
+    stream.write(msg)
+UnicodeEncodeError: 'latin-1' codec can't encode character '\u015f' in position 86: ordinal not in range(256)
+Call stack:
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 48, in <module>
+    main()
+  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 35, in main
+    train(cfg_file=args.config_path, skip_test=args.skip_test)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 846, in train
+    trainer.train_and_validate(train_data=train_data, valid_data=dev_data)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 497, in train_and_validate
+    valid_duration = self._validate(valid_data, epoch_no)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 642, in _validate
+    references=valid_references)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 731, in _log_examples
+    logger.debug("\tRaw source:     %s", sources_raw[p])
+Message: '\tRaw source:     %s'
+Arguments: (['1@@', '1', 'ya\u015f@@', '\u0131nday@@', 'ken', 'bir', 'sa@@', 'ba@@', 'h', 'ev@@', 'im@@', 'deki', 'sev@@', 'in@@', 'ç', 'ç@@', '\u0131\u011f@@', 'l\u0131@@', 'klar@@', '\u0131yla', 'u@@', 'yan@@', 'd\u0131\u011f@@', '\u0131m\u0131', 'hat\u0131r@@', 'l\u0131@@', 'yorum', '.'],)
+--- Logging error ---
+Traceback (most recent call last):
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/logging/__init__.py", line 1036, in emit
+    stream.write(msg)
+UnicodeEncodeError: 'latin-1' codec can't encode characters in position 70-71: ordinal not in range(256)
+Call stack:
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 48, in <module>
+    main()
+  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 35, in main
+    train(cfg_file=args.config_path, skip_test=args.skip_test)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 846, in train
+    trainer.train_and_validate(train_data=train_data, valid_data=dev_data)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 497, in train_and_validate
+    valid_duration = self._validate(valid_data, epoch_no)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 642, in _validate
+    references=valid_references)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 737, in _log_examples
+    logger.info("\tSource:     %s", sources[p])
+Message: '\tSource:     %s'
+Arguments: ('11 ya\u015f\u0131ndayken bir sabah evimdeki sevinç ç\u0131\u011fl\u0131klar\u0131yla uyand\u0131\u011f\u0131m\u0131 hat\u0131rl\u0131yorum .',)
+2021-10-04 12:11:34,391 - INFO - joeynmt.training - 	Source:     11 ya\u015f\u0131ndayken bir sabah evimdeki sevinç ç\u0131\u011fl\u0131klar\u0131yla uyand\u0131\u011f\u0131m\u0131 hat\u0131rl\u0131yorum .
+2021-10-04 12:11:34,391 - INFO - joeynmt.training - 	Reference:  "When I was 11 , I remember waking up one morning to the sound of joy in my house ."
+2021-10-04 12:11:34,391 - INFO - joeynmt.training - 	Hypothesis: "I was a little bit of the first , I was a little bit of her son and a 2th century , and she was a very bit of her son ."
+2021-10-04 12:11:34,391 - INFO - joeynmt.training - Example #2
+--- Logging error ---
+Traceback (most recent call last):
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/logging/__init__.py", line 1036, in emit
+    stream.write(msg)
+UnicodeEncodeError: 'latin-1' codec can't encode character '\u0131' in position 151: ordinal not in range(256)
+Call stack:
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 48, in <module>
+    main()
+  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 35, in main
+    train(cfg_file=args.config_path, skip_test=args.skip_test)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 846, in train
+    trainer.train_and_validate(train_data=train_data, valid_data=dev_data)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 497, in train_and_validate
+    valid_duration = self._validate(valid_data, epoch_no)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 642, in _validate
+    references=valid_references)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 731, in _log_examples
+    logger.debug("\tRaw source:     %s", sources_raw[p])
+Message: '\tRaw source:     %s'
+Arguments: (['"B@@', 'ab@@', 'am', 'B@@', 'B@@', 'C', 'H@@', 'ab@@', 'er', 'kan@@', 'al@@', '\u0131n\u0131', 'din@@', 'li@@', 'yordu', ';', 'o', 'uf@@', 'ak', ',', 'gr@@', 'i', 'rad@@', 'y@@', 'os@@', 'undan', '."'],)
+--- Logging error ---
+Traceback (most recent call last):
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/logging/__init__.py", line 1036, in emit
+    stream.write(msg)
+UnicodeEncodeError: 'latin-1' codec can't encode character '\u0131' in position 87: ordinal not in range(256)
+Call stack:
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 48, in <module>
+    main()
+  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 35, in main
+    train(cfg_file=args.config_path, skip_test=args.skip_test)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 846, in train
+    trainer.train_and_validate(train_data=train_data, valid_data=dev_data)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 497, in train_and_validate
+    valid_duration = self._validate(valid_data, epoch_no)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 642, in _validate
+    references=valid_references)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 737, in _log_examples
+    logger.info("\tSource:     %s", sources[p])
+Message: '\tSource:     %s'
+Arguments: ('"Babam BBC Haber kanal\u0131n\u0131 dinliyordu ; o ufak , gri radyosundan ."',)
+2021-10-04 12:11:34,392 - INFO - joeynmt.training - 	Source:     "Babam BBC Haber kanal\u0131n\u0131 dinliyordu ; o ufak , gri radyosundan ."
+2021-10-04 12:11:34,392 - INFO - joeynmt.training - 	Reference:  "My father was listening to BBC News on his small , gray radio ."
+2021-10-04 12:11:34,392 - INFO - joeynmt.training - 	Hypothesis: "He was a Jacd , and she was a Jeoter , and she had a hero for Junleer ."
+2021-10-04 12:11:34,392 - INFO - joeynmt.training - Validation result (greedy) at epoch  19, step     2200: bleu:   5.10, loss: 77184.3828, ppl: 161.3007, duration: 3.4559s
+2021-10-04 12:11:43,356 - INFO - joeynmt.training - Epoch  19: total training loss 4266.24
+2021-10-04 12:11:43,357 - INFO - joeynmt.training - EPOCH 20
+2021-10-04 12:11:59,593 - WARNING - sacrebleu - That's 100 lines that end in a tokenized period ('.')
+2021-10-04 12:11:59,593 - WARNING - sacrebleu - It looks like you forgot to detokenize your test data, which may hurt your score.
+2021-10-04 12:11:59,594 - WARNING - sacrebleu - If you insist your data is detokenized, or don't care, you can suppress this message with the `force` parameter.
+2021-10-04 12:11:59,600 - INFO - joeynmt.training - Example #0
+2021-10-04 12:11:59,601 - INFO - joeynmt.training - 	Source:     tr
+2021-10-04 12:11:59,601 - INFO - joeynmt.training - 	Reference:  en
+2021-10-04 12:11:59,601 - INFO - joeynmt.training - 	Hypothesis: en
+2021-10-04 12:11:59,601 - INFO - joeynmt.training - Example #1
+--- Logging error ---
+Traceback (most recent call last):
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/logging/__init__.py", line 1036, in emit
+    stream.write(msg)
+UnicodeEncodeError: 'latin-1' codec can't encode character '\u015f' in position 86: ordinal not in range(256)
+Call stack:
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 48, in <module>
+    main()
+  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 35, in main
+    train(cfg_file=args.config_path, skip_test=args.skip_test)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 846, in train
+    trainer.train_and_validate(train_data=train_data, valid_data=dev_data)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 497, in train_and_validate
+    valid_duration = self._validate(valid_data, epoch_no)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 642, in _validate
+    references=valid_references)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 731, in _log_examples
+    logger.debug("\tRaw source:     %s", sources_raw[p])
+Message: '\tRaw source:     %s'
+Arguments: (['1@@', '1', 'ya\u015f@@', '\u0131nday@@', 'ken', 'bir', 'sa@@', 'ba@@', 'h', 'ev@@', 'im@@', 'deki', 'sev@@', 'in@@', 'ç', 'ç@@', '\u0131\u011f@@', 'l\u0131@@', 'klar@@', '\u0131yla', 'u@@', 'yan@@', 'd\u0131\u011f@@', '\u0131m\u0131', 'hat\u0131r@@', 'l\u0131@@', 'yorum', '.'],)
+--- Logging error ---
+Traceback (most recent call last):
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/logging/__init__.py", line 1036, in emit
+    stream.write(msg)
+UnicodeEncodeError: 'latin-1' codec can't encode characters in position 70-71: ordinal not in range(256)
+Call stack:
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 48, in <module>
+    main()
+  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 35, in main
+    train(cfg_file=args.config_path, skip_test=args.skip_test)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 846, in train
+    trainer.train_and_validate(train_data=train_data, valid_data=dev_data)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 497, in train_and_validate
+    valid_duration = self._validate(valid_data, epoch_no)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 642, in _validate
+    references=valid_references)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 737, in _log_examples
+    logger.info("\tSource:     %s", sources[p])
+Message: '\tSource:     %s'
+Arguments: ('11 ya\u015f\u0131ndayken bir sabah evimdeki sevinç ç\u0131\u011fl\u0131klar\u0131yla uyand\u0131\u011f\u0131m\u0131 hat\u0131rl\u0131yorum .',)
+2021-10-04 12:11:59,602 - INFO - joeynmt.training - 	Source:     11 ya\u015f\u0131ndayken bir sabah evimdeki sevinç ç\u0131\u011fl\u0131klar\u0131yla uyand\u0131\u011f\u0131m\u0131 hat\u0131rl\u0131yorum .
+2021-10-04 12:11:59,603 - INFO - joeynmt.training - 	Reference:  "When I was 11 , I remember waking up one morning to the sound of joy in my house ."
+2021-10-04 12:11:59,603 - INFO - joeynmt.training - 	Hypothesis: "I was a little bit of the school , and I was a little bit of her son , and I was a very bit of her son and a bit of her son ."
+2021-10-04 12:11:59,603 - INFO - joeynmt.training - Example #2
+--- Logging error ---
+Traceback (most recent call last):
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/logging/__init__.py", line 1036, in emit
+    stream.write(msg)
+UnicodeEncodeError: 'latin-1' codec can't encode character '\u0131' in position 151: ordinal not in range(256)
+Call stack:
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 48, in <module>
+    main()
+  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 35, in main
+    train(cfg_file=args.config_path, skip_test=args.skip_test)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 846, in train
+    trainer.train_and_validate(train_data=train_data, valid_data=dev_data)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 497, in train_and_validate
+    valid_duration = self._validate(valid_data, epoch_no)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 642, in _validate
+    references=valid_references)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 731, in _log_examples
+    logger.debug("\tRaw source:     %s", sources_raw[p])
+Message: '\tRaw source:     %s'
+Arguments: (['"B@@', 'ab@@', 'am', 'B@@', 'B@@', 'C', 'H@@', 'ab@@', 'er', 'kan@@', 'al@@', '\u0131n\u0131', 'din@@', 'li@@', 'yordu', ';', 'o', 'uf@@', 'ak', ',', 'gr@@', 'i', 'rad@@', 'y@@', 'os@@', 'undan', '."'],)
+--- Logging error ---
+Traceback (most recent call last):
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/logging/__init__.py", line 1036, in emit
+    stream.write(msg)
+UnicodeEncodeError: 'latin-1' codec can't encode character '\u0131' in position 87: ordinal not in range(256)
+Call stack:
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/sw/arch/Debian10/EB_production/2019/software/Anaconda3/2018.12/lib/python3.7/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 48, in <module>
+    main()
+  File "/home/lcur0008/joeynmt/joeynmt/__main__.py", line 35, in main
+    train(cfg_file=args.config_path, skip_test=args.skip_test)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 846, in train
+    trainer.train_and_validate(train_data=train_data, valid_data=dev_data)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 497, in train_and_validate
+    valid_duration = self._validate(valid_data, epoch_no)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 642, in _validate
+    references=valid_references)
+  File "/home/lcur0008/joeynmt/joeynmt/training.py", line 737, in _log_examples
+    logger.info("\tSource:     %s", sources[p])
+Message: '\tSource:     %s'
+Arguments: ('"Babam BBC Haber kanal\u0131n\u0131 dinliyordu ; o ufak , gri radyosundan ."',)
+2021-10-04 12:11:59,603 - INFO - joeynmt.training - 	Source:     "Babam BBC Haber kanal\u0131n\u0131 dinliyordu ; o ufak , gri radyosundan ."
+2021-10-04 12:11:59,604 - INFO - joeynmt.training - 	Reference:  "My father was listening to BBC News on his small , gray radio ."
+2021-10-04 12:11:59,604 - INFO - joeynmt.training - 	Hypothesis: "My Jununer , a New York , a man who had a herold of Junununam ."
+2021-10-04 12:11:59,604 - INFO - joeynmt.training - Validation result (greedy) at epoch  20, step     2300: bleu:   5.01, loss: 77525.6562, ppl: 164.9671, duration: 2.5349s
+2021-10-04 12:12:01,089 - INFO - joeynmt.training - Epoch  20: total training loss 4197.69
+2021-10-04 12:12:01,100 - INFO - joeynmt.training - Training ended after  20 epochs.
+2021-10-04 12:12:01,100 - INFO - joeynmt.training - Best validation result (greedy) at step     2200:   5.10 eval_metric.
+2021-10-04 12:12:01,129 - INFO - joeynmt.prediction - Process device: cuda, n_gpu: 1, batch_size per device: 80
+2021-10-04 12:12:01,130 - INFO - joeynmt.prediction - Loading model from models/pre_LSTM_el_s/2200.ckpt
+2021-10-04 12:12:01,439 - INFO - joeynmt.model - Building an encoder-decoder model...
+2021-10-04 12:12:01,958 - INFO - joeynmt.model - Enc-dec model built.
+2021-10-04 12:12:02,013 - INFO - joeynmt.prediction - Decoding on dev set (../2DL4NLP/all_data/tr_s.en_s/val.bpe.en_s)...
+2021-10-04 12:12:09,732 - WARNING - sacrebleu - That's 100 lines that end in a tokenized period ('.')
+2021-10-04 12:12:09,732 - WARNING - sacrebleu - It looks like you forgot to detokenize your test data, which may hurt your score.
+2021-10-04 12:12:09,732 - WARNING - sacrebleu - If you insist your data is detokenized, or don't care, you can suppress this message with the `force` parameter.
+2021-10-04 12:12:09,736 - INFO - joeynmt.prediction -  dev bleu[13a]:   5.49 [Beam search decoding with beam size = 5 and alpha = 1.0]
+2021-10-04 12:12:09,738 - INFO - joeynmt.prediction - Translations saved to: models/pre_LSTM_el_s/00002200.hyps.dev
+2021-10-04 12:12:09,738 - INFO - joeynmt.prediction - Decoding on test set (../2DL4NLP/all_data/tr_s.en_s/test.bpe.en_s)...
+2021-10-04 12:12:19,124 - WARNING - sacrebleu - That's 100 lines that end in a tokenized period ('.')
+2021-10-04 12:12:19,125 - WARNING - sacrebleu - It looks like you forgot to detokenize your test data, which may hurt your score.
+2021-10-04 12:12:19,125 - WARNING - sacrebleu - If you insist your data is detokenized, or don't care, you can suppress this message with the `force` parameter.
+2021-10-04 12:12:19,129 - INFO - joeynmt.prediction - test bleu[13a]:   6.40 [Beam search decoding with beam size = 5 and alpha = 1.0]
+2021-10-04 12:12:19,131 - INFO - joeynmt.prediction - Translations saved to: models/pre_LSTM_el_s/00002200.hyps.test
