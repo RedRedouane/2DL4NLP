@@ -33,7 +33,7 @@ training:
     patience: 1                         # Zoph
     #decrease_factor: 0.9                # Zoph
     early_stopping_metric: "eval_metric"
-    epochs: 1                        # Zoph
+    epochs: 20                        # Zoph
     validation_freq: 1000
     logging_freq: 1000
     eval_metric: "bleu"
