@@ -2,10 +2,10 @@ name: "LSTM_ka_r_b"
 
 data:
     src: "ka_r_b"
-    trg: "en_b_el"
-    train: "../2DL4NLP/all_data/ka_r_b.en_b_el/train.bpe"
-    dev: "../2DL4NLP/all_data/ka_r_b.en_b_el/val.bpe"
-    test: "../2DL4NLP/all_data/ka_r_b.en_b_el/test.bpe"
+    trg: "en_b_ka"
+    train: "../2DL4NLP/all_data/ka_r_b.en_b_ka/train.bpe"
+    dev: "../2DL4NLP/all_data/ka_r_b.en_b_ka/val.bpe"
+    test: "../2DL4NLP/all_data/ka_r_b.en_b_ka/test.bpe"
     level: "bpe"
     lowercase: False
     max_sent_length: 50
@@ -13,8 +13,8 @@ data:
     src_voc_limit: 100000
     trg_voc_min_freq: 0
     trg_voc_limit: 100000
-    src_vocab: "../2DL4NLP/all_data/ka_r_b.en_b_el/ka_r_b.en_b_el.vocab.txt"
-    trg_vocab: "../2DL4NLP/all_data/ka_r_b.en_b_el/ka_r_b.en_b_el.vocab.txt"
+    src_vocab: "../2DL4NLP/all_data/ka_r_b.en_b_ka/ka_r_b.en_b_ka.vocab.txt"
+    trg_vocab: "../2DL4NLP/all_data/ka_r_b.en_b_ka/ka_r_b.en_b_ka.vocab.txt"
 
 testing:
     beam_size: 5

@@ -2,10 +2,10 @@ name: "LSTM_th_r_b"
 
 data:
     src: "th_r_b"
-    trg: "en_b_el"
-    train: "../2DL4NLP/all_data/th_r_b.en_b_el/train.bpe"
-    dev: "../2DL4NLP/all_data/th_r_b.en_b_el/val.bpe"
-    test: "../2DL4NLP/all_data/th_r_b.en_b_el/test.bpe"
+    trg: "en_b_th"
+    train: "../2DL4NLP/all_data/th_r_b.en_b_th/train.bpe"
+    dev: "../2DL4NLP/all_data/th_r_b.en_b_th/val.bpe"
+    test: "../2DL4NLP/all_data/th_r_b.en_b_th/test.bpe"
     level: "bpe"
     lowercase: False
     max_sent_length: 50
@@ -13,8 +13,8 @@ data:
     src_voc_limit: 100000
     trg_voc_min_freq: 0
     trg_voc_limit: 100000
-    src_vocab: "../2DL4NLP/all_data/th_r_b.en_b_el/th_r_b.en_b_el.vocab.txt"
-    trg_vocab: "../2DL4NLP/all_data/th_r_b.en_b_el/th_r_b.en_b_el.vocab.txt"
+    src_vocab: "../2DL4NLP/all_data/th_r_b.en_b_th/th_r_b.en_b_th.vocab.txt"
+    trg_vocab: "../2DL4NLP/all_data/th_r_b.en_b_th/th_r_b.en_b_th.vocab.txt"
 
 testing:
     beam_size: 5
