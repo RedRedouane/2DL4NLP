@@ -21,7 +21,7 @@ testing:
     alpha: 1.0
 
 training:
-    load_model: "../checkpoints/el"
+    load_model: "../checkpoints/el.ckpt"
     reset_best_ckpt: True
     reset_iter_state: True
     reset_scheduler: True
