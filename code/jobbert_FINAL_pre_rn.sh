@@ -2,12 +2,12 @@
 
 #SBATCH --partition=gpu_shared_course
 #SBATCH --gres=gpu:1
-#SBATCH --job-name=FINAL_pre_rn_r
+#SBATCH --job-name=FINAL_pre_rn
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=4
 #SBATCH --time=24:00:00
 #SBATCH --mem=32000M
-#SBATCH --output=FINAL_pre_rn_r.out
+#SBATCH --output=FINAL_pre_rn.out
 
 module purge
 module load 2019
@@ -22,4 +22,4 @@ cd $HOME/joeynmt/
 # Activate your environment
 # source $HOME/joeynmt/jnmt/bin/activate
 # Run your code
-srun python -u -m joeynmt train ../2DL4NLP/code/configs/FINAL_pre_rn_r.yaml
+srun python -u -m joeynmt train ../2DL4NLP/code/configs/FINAL_pre_rn.yaml
